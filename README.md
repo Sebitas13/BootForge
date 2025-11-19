@@ -57,4 +57,5 @@
 **Clonar el repo**
 ```bash
 git clone https://github.com/Sebitas13/bootforge.git
+
 cd bootforge
