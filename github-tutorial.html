@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 GitHub Master - Tutorial Optimizado</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .github-gradient {
+            background: linear-gradient(135deg, #6f42c1 0%, #0366d6 100%) !important;
+        }
+
+        .command-line {
+            background: #0d1117;
+            color: #f0f6fc;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            border-left: 4px solid #28a745;
+            margin: 1rem 0;
+        }
+
+        .git-step {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #6f42c1;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: #6f42c1;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        /* Eliminamos animaciones pesadas */
+        .github-card {
+            transition: none;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .checklist-icon {
+            color: #28a745;
+            margin-right: 0.75rem;
+        }
+
+        .tutorial-navigation {
+            position: sticky;
+            top: 20px;
+        }
+
+        /* Simplificamos el laboratorio */
+        .lab-environment {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 768px) {
+            .git-step {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR SIMPLIFICADA -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark github-gradient">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="ProyectoFinal.html">
+                        Bootstrap 5 Tutorial
+                    </a>
+                    <a class="btn btn-sm btn-outline-light ms-auto" href="github-tutorial.html">
+                        <i class="bi bi-github"></i> GitHub Tutorial
+                    </a>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION SIMPLIFICADA -->
+            <div class="site-hero" style="background-image:url('Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white text-center py-5">
+                    <h1 class="display-5 fw-bold">🚀 GitHub Master</h1>
+                    <p class="lead">Aprende Git y GitHub desde cero hasta nivel profesional</p>
+                    <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR SIMPLIFICADO -->
+            <aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end">
+                <div class="position-sticky tutorial-navigation pt-3">
+                    <h6 class="px-3">🚀 ÍNDICE</h6>
+                    <nav class="nav flex-column small">
+                        <a class="nav-link" href="#introduccion">Introducción</a>
+                        <a class="nav-link" href="#configuracion-inicial">Configuración</a>
+                        <a class="nav-link" href="#flujo-trabajo-basico">Flujo Básico</a>
+                        <a class="nav-link" href="#ramas-merging">Ramas</a>
+                        <a class="nav-link" href="#github-pages">GitHub Pages</a>
+                        <a class="nav-link" href="#mejores-practicas">Mejores Prácticas</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT OPTIMIZADO -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card">
+                        <div class="card-header github-gradient text-white">
+                            <h2 class="h3 mb-0">🎯 Introducción a Git y GitHub</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Git es el sistema de control de versiones más utilizado, y GitHub es la plataforma que lo hace colaborativo.</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="git-step">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="step-number">1</span>
+                                            <h5 class="mb-0">¿Qué es Git?</h5>
+                                        </div>
+                                        <p class="mb-0">Sistema de control de versiones distribuido que permite rastrear cambios en archivos y facilitar la colaboración.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="git-step">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="step-number">2</span>
+                                            <h5 class="mb-0">¿Qué es GitHub?</h5>
+                                        </div>
+                                        <p class="mb-0">Plataforma de alojamiento para repositorios Git con herramientas de colaboración y GitHub Pages.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN CONFIGURACIÓN INICIAL -->
+                <section id="configuracion-inicial" class="mb-5">
+                    <div class="card">
+                        <div class="card-header github-gradient text-white">
+                            <h2 class="h3 mb-0">⚙️ Configuración Inicial</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">1</span>
+                                    <h5 class="mb-0">Instalar Git</h5>
+                                </div>
+                                <p>Descarga desde: <code>https://git-scm.com/downloads</code></p>
+                            </div>
+
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">2</span>
+                                    <h5 class="mb-0">Configurar Identidad</h5>
+                                </div>
+                                <div class="command-line">
+                                    git config --global user.name "Tu Nombre"<br>
+                                    git config --global user.email "tu@email.com"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN FLUJO DE TRABAJO BÁSICO -->
+                <section id="flujo-trabajo-basico" class="mb-5">
+                    <div class="card">
+                        <div class="card-header github-gradient text-white">
+                            <h2 class="h3 mb-0">🔄 Flujo de Trabajo Básico</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">1</span>
+                                    <h5 class="mb-0">Inicializar Repositorio</h5>
+                                </div>
+                                <div class="command-line">
+                                    git init
+                                </div>
+                            </div>
+
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">2</span>
+                                    <h5 class="mb-0">Añadir Archivos</h5>
+                                </div>
+                                <div class="command-line">
+                                    git add .
+                                </div>
+                            </div>
+
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">3</span>
+                                    <h5 class="mb-0">Confirmar Cambios</h5>
+                                </div>
+                                <div class="command-line">
+                                    git commit -m "Mensaje descriptivo"
+                                </div>
+                            </div>
+
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">4</span>
+                                    <h5 class="mb-0">Conectar con GitHub</h5>
+                                </div>
+                                <div class="command-line">
+                                    git remote add origin https://github.com/usuario/repositorio.git
+                                </div>
+                            </div>
+
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">5</span>
+                                    <h5 class="mb-0">Subir Cambios</h5>
+                                </div>
+                                <div class="command-line">
+                                    git push -u origin main
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN RAMAS Y FUSIONES -->
+                <section id="ramas-merging" class="mb-5">
+                    <div class="card">
+                        <div class="card-header github-gradient text-white">
+                            <h2 class="h3 mb-0">🌿 Ramas y Fusiones</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">1</span>
+                                    <h5 class="mb-0">Crear Nueva Rama</h5>
+                                </div>
+                                <div class="command-line">
+                                    git checkout -b feature/nueva-funcionalidad
+                                </div>
+                            </div>
+
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">2</span>
+                                    <h5 class="mb-0">Trabajar en la Rama</h5>
+                                </div>
+                                <div class="command-line">
+                                    git add .<br>
+                                    git commit -m "Añade nueva funcionalidad"
+                                </div>
+                            </div>
+
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">3</span>
+                                    <h5 class="mb-0">Fusionar con Main</h5>
+                                </div>
+                                <div class="command-line">
+                                    git checkout main<br>
+                                    git merge feature/nueva-funcionalidad
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN GITHUB PAGES -->
+                <section id="github-pages" class="mb-5">
+                    <div class="card">
+                        <div class="card-header github-gradient text-white">
+                            <h2 class="h3 mb-0">🌐 GitHub Pages</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">1</span>
+                                    <h5 class="mb-0">Configurar GitHub Pages</h5>
+                                </div>
+                                <ol>
+                                    <li>Ve a tu repositorio en GitHub</li>
+                                    <li>Settings → Pages</li>
+                                    <li>Selecciona la rama (main) y carpeta (/root)</li>
+                                    <li>¡Tu sitio estará disponible en minutos!</li>
+                                </ol>
+                            </div>
+
+                            <div class="git-step">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="step-number">2</span>
+                                    <h5 class="mb-0">URL de tu Sitio</h5>
+                                </div>
+                                <div class="command-line">
+                                    https://tuusuario.github.io/turepositorio
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MEJORES PRÁCTICAS -->
+                <section id="mejores-practicas" class="mb-5">
+                    <div class="card">
+                        <div class="card-header github-gradient text-white">
+                            <h2 class="h3 mb-0">💡 Mejores Prácticas</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="checklist-item">
+                                <i class="bi bi-check-circle-fill checklist-icon"></i>
+                                <div>
+                                    <strong>Commits atómicos</strong>
+                                    <p class="small mb-0">Cada commit debe ser una unidad lógica de trabajo</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="bi bi-check-circle-fill checklist-icon"></i>
+                                <div>
+                                    <strong>Mensajes descriptivos</strong>
+                                    <p class="small mb-0">Usa el formato: "tipo: descripción breve"</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="bi bi-check-circle-fill checklist-icon"></i>
+                                <div>
+                                    <strong>Ramas con nombres claros</strong>
+                                    <p class="small mb-0">feature/nombre, bugfix/descripcion, hotfix/urgente</p>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="bi bi-check-circle-fill checklist-icon"></i>
+                                <div>
+                                    <strong>PRs pequeños</strong>
+                                    <p class="small mb-0">Más fáciles de revisar y menos propensos a errores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LABORATORIO SIMPLIFICADO -->
+                <section class="mb-5">
+                    <div class="card">
+                        <div class="card-header github-gradient text-white">
+                            <h2 class="h3 mb-0">🔬 Práctica Rápida</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="lab-environment">
+                                <h5>Comandos para Practicar</h5>
+                                <div class="command-line">
+                                    # Inicializar repositorio<br>
+                                    git init<br><br>
+                                    
+                                    # Añadir todos los archivos<br>
+                                    git add .<br><br>
+                                    
+                                    # Hacer commit<br>
+                                    git commit -m "Primer commit"<br><br>
+                                    
+                                    # Ver estado<br>
+                                    git status<br><br>
+                                    
+                                    # Ver historial<br>
+                                    git log --oneline
+                                </div>
+                                <div class="mt-3">
+                                    <button class="btn btn-primary btn-sm" onclick="copiarComandos()">
+                                        <i class="bi bi-clipboard"></i> Copiar Comandos
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER SIMPLIFICADO -->
+                <footer class="site-footer mt-5 py-4 bg-dark text-white">
+                    <div class="container text-center">
+                        <p class="mb-0">Bootstrap 5 Tutorial - Hecho para la comunidad</p>
+                        <small>© 2025 Sebastián</small>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- SCRIPTS OPTIMIZADOS -->
+    <script src="bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="JS/script1.js"></script>
+    <script src="JS/buscar.js"></script>
+    <script src="JS/main.js"></script>
+    
+    <script>
+        // Solo funcionalidades básicas para evitar carga
+        function copiarComandos() {
+            const comandos = `git init
+git add .
+git commit -m "Primer commit"
+git status
+git log --oneline`;
+            
+            navigator.clipboard.writeText(comandos).then(() => {
+                alert('Comandos copiados al portapapeles ✅');
+            });
+        }
+
+        // Navegación suave simplificada
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Detectar secciones visibles para progreso (opcional, puede comentarse si causa problemas)
+        let observer;
+        try {
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('section-visible');
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        } catch (e) {
+            console.log('Observer no soportado');
+        }
+    </script>
+</body>
+
+</html>

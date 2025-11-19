@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumbotron - Bootstrap 5 Tutorial Completo</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary" id="mainNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../ProyectoFinal.html">
+                        <img src="../Imagenes/logo-32.png" alt="logo" width="36" height="36" class="rounded">
+                        <span>
+                            <span class="fs-5">Bootstrap 5</span>
+                            <small class="d-block text-white-50" style="font-size:.68rem;">Tutorial Completo</small>
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../ProyectoFinal.html"> Inicio</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    📐 Layout
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../containers.html">Containers</a></li>
+                                    <li><a class="dropdown-item" href="../grid.html">Grid System</a></li>
+                                    <li><a class="dropdown-item" href="../typography.html">Typography</a></li>
+                                    <li><a class="dropdown-item" href="../colors.html">Colors</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Resto del menú igual que en ProyectoFinal.html -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🧩 Componentes
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="tables.html">Tables</a></li>
+                                    <li><a class="dropdown-item" href="images.html">Images</a></li>
+                                    <li><a class="dropdown-item active" href="jumbotron.html">Jumbotron</a></li>
+                                    <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+                                    <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                                    <li><a class="dropdown-item" href="button-groups.html">Button Groups</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item" href="progress-bars.html">Progress Bars</a></li>
+                                    <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+                                    <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+                                    <li><a class="dropdown-item" href="list-groups.html">List Groups</a></li>
+                                    <li><a class="dropdown-item" href="cards.html">Cards</a></li>
+                                    <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+                                    <li><a class="dropdown-item" href="collapse.html">Collapse</a></li>
+                                    <li><a class="dropdown-item" href="navs.html">Navs</a></li>
+                                    <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+                                    <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+                                    <li><a class="dropdown-item" href="tooltip.html">Tooltip</a></li>
+                                    <li><a class="dropdown-item" href="popover.html">Popover</a></li>
+                                    <li><a class="dropdown-item" href="toast.html">Toast</a></li>
+                                    <li><a class="dropdown-item" href="scrollspy.html">Scrollspy</a></li>
+                                    <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📝 Forms
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../forms/basic-forms.html">Formularios
+                                            Básicos</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/select.html">Select Menus</a></li>
+                                    <li><a class="dropdown-item" href="../forms/checks-radios.html">Checks & Radios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/range.html">Range</a></li>
+                                    <li><a class="dropdown-item" href="../forms/input-groups.html">Input Groups</a></li>
+                                    <li><a class="dropdown-item" href="../forms/floating-labels.html">Floating
+                                            Labels</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/validation.html">Form Validation</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🛠️ Utilidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../utilities/spacing.html">Spacing</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/flex.html">Flexbox</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/dark-mode.html">Dark Mode</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🚀 Recursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../templates/basic.html">Template Básico</a></li>
+                                    <li><a class="dropdown-item" href="../templates/medium.html">Template Medio</a></li>
+                                    <li><a class="dropdown-item" href="../templates/advanced.html">Template Avanzado</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../exercises.html">Ejercicios</a></li>
+                                    <li><a class="dropdown-item" href="../quiz.html">Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../syllabus.html">Plan de Estudio</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+                                    href="../github-tutorial.html" title="Tutorial GitHub"
+                                    style="padding: 0.25rem 0.5rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    <span class="d-none d-md-inline" style="font-size: 0.8rem;"> GitHub Tutorial</span>
+                                </a></li>
+                        </ul>
+
+                        <!-- Buscador -->
+                        <form class="d-flex me-2" role="search" onsubmit="return performSearch(event)">
+                            <input id="globalSearchInput" name="query" class="form-control form-control-sm me-2"
+                                type="search" placeholder="Buscar (ej. cards, modal)" aria-label="Buscar">
+                            <button class="btn btn-sm btn-outline-light" type="submit" title="Buscar">🔍</button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <button id="themeToggle" class="btn btn-sm btn-outline-light"
+                                title="Alternar tema (claro/oscuro)" aria-pressed="false">
+                                <span class="theme-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <a class="btn btn-sm btn-light d-flex align-items-center gap-1"
+                                href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                title="Repositorio GitHub" style="padding: 0.25rem 0.5rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="d-none d-md-inline" style="font-size: 0.8rem;">Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <div class="site-hero" style="background-image:url('../Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center fade-in-up visible">
+                            <h1 class="display-5 fw-bold">🚀 <span class="text-warning">Jumbotron</span> en Bootstrap 5
+                            </h1>
+                            <p class="lead">Domina la creación de secciones hero impactantes usando el sistema de
+                                utilidades de Bootstrap 5.</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                                <a href="#ejemplo-basico" class="btn btn-outline-light btn-lg">Ver Ejemplos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR JUMBOTRON MEJORADO -->
+            <aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end mobile-sidebar"
+                id="sidebar" aria-label="Tabla de contenido">
+                <div class="position-sticky" style="top:20px">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header text-center text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h5 class="mb-0">🚀 ÍNDICE - JUMBOTRON</h5>
+                        </div>
+                        <div class="card-body p-2">
+                            <nav class="nav flex-column small">
+                                <a class="nav-link" href="#introduccion">📋 Introducción</a>
+                                <a class="nav-link" href="#evolucion">🔄 Evolución en Bootstrap</a>
+                                <a class="nav-link" href="#ejemplo-basico">🔰 Ejemplo Básico</a>
+                                <a class="nav-link" href="#jumbotron-moderno">🎨 Jumbotron Moderno</a>
+                                <a class="nav-link" href="#con-fondo">🖼️ Con Imagen de Fondo</a>
+                                <a class="nav-link" href="#con-gradiente">🌈 Con Gradiente</a>
+                                <a class="nav-link" href="#con-video">🎥 Con Video</a>
+                                <a class="nav-link" href="#responsive">📱 Técnicas Responsive</a>
+                                <a class="nav-link" href="#mejores-practicas">💡 Mejores Prácticas</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="small mb-2 fw-bold">📊 Tu Progreso</h6>
+                            <div class="progress" style="height:1.2rem">
+                                <div id="courseProgress"
+                                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                    style="width:0%">0%</div>
+                            </div>
+                            <p class="mt-2 mb-0 small text-muted">Completa las secciones para avanzar</p>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="#mainContent" class="btn btn-outline-primary btn-sm">🏠 Inicio</a>
+                        <a href="alerts.html" class="btn btn-outline-success btn-sm">➡️ Siguiente: Alerts</a>
+                        <a href="#" class="btn btn-outline-info btn-sm" onclick="resetProgress(); return false;">🔄
+                            Reset Progreso</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">📋 Introducción al Jumbotron</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">El Jumbotron es un componente diseñado para mostrar contenido clave de
+                                manera prominente, ideal para secciones hero, llamadas a la acción y presentaciones
+                                principales.</p>
+
+                            <div class="alert alert-info">
+                                <strong>💡 ¿Qué es un Jumbotron?</strong><br>
+                                Un Jumbotron es un contenedor grande y llamativo que amplía el contenido para crear una
+                                sección hero impactante. Perfecto para landing pages y páginas de inicio.
+                            </div>
+
+                            <h3 class="h5 mt-4">Características Principales</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🎯 Propósito</h5>
+                                            <ul class="small mb-0">
+                                                <li>Captar la atención inmediata</li>
+                                                <li>Comunicar valor principal</li>
+                                                <li>Guiar hacia acciones específicas</li>
+                                                <li>Establecer jerarquía visual</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🚀 Elementos Clave</h5>
+                                            <ul class="small mb-0">
+                                                <li>Título impactante</li>
+                                                <li>Descripción concisa</li>
+                                                <li>Llamadas a la acción</li>
+                                                <li>Diseño visual atractivo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN EVOLUCIÓN -->
+                <section id="evolucion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">🔄 Evolución en Bootstrap</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">El Jumbotron ha evolucionado significativamente desde Bootstrap 4 hasta
+                                Bootstrap 5.</p>
+
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Versión</th>
+                                            <th>Enfoque</th>
+                                            <th>Implementación</th>
+                                            <th>Ventajas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Bootstrap 4</strong></td>
+                                            <td>Componente específico</td>
+                                            <td><code>.jumbotron</code></td>
+                                            <td>Fácil de usar, estilos predefinidos</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Bootstrap 5</strong></td>
+                                            <td>Sistema de utilidades</td>
+                                            <td>Combinación de clases</td>
+                                            <td>Más flexible, personalizable y moderno</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="alert alert-warning">
+                                <strong>⚠️ Cambio importante:</strong> En Bootstrap 5, el componente Jumbotron fue
+                                eliminado.
+                                Ahora se crea usando utilidades como <code>.bg-light</code>, <code>.p-5</code>, y
+                                <code>.rounded-3</code>.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN EJEMPLO BÁSICO -->
+                <section id="ejemplo-basico" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🔰 Ejemplo Básico de Jumbotron</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Un Jumbotron básico usando únicamente utilidades de Bootstrap 5.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Jumbotron Básico -->
+                                <div class="p-5 mb-4 bg-light rounded-3">
+                                    <div class="container-fluid py-5">
+                                        <h1 class="display-5 fw-bold">¡Bienvenido a Bootstrap 5!</h1>
+                                        <p class="col-md-8 fs-4">Crea secciones hero impactantes usando el sistema de
+                                            utilidades. Este es el reemplazo moderno del antiguo componente Jumbotron.
+                                        </p>
+                                        <button class="btn btn-primary btn-lg mt-3" type="button">Comenzar
+                                            Ahora</button>
+                                        <button class="btn btn-outline-secondary btn-lg mt-3 ms-2" type="button">Saber
+                                            Más</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Jumbotron Básico Bootstrap 5 --&gt;
+&lt;div class="p-5 mb-4 bg-light rounded-3"&gt;
+    &lt;div class="container-fluid py-5"&gt;
+        &lt;h1 class="display-5 fw-bold"&gt;¡Bienvenido a Bootstrap 5!&lt;/h1&gt;
+        &lt;p class="col-md-8 fs-4"&gt;Crea secciones hero impactantes usando el sistema de utilidades.&lt;/p&gt;
+        &lt;button class="btn btn-primary btn-lg mt-3" type="button"&gt;Comenzar Ahora&lt;/button&gt;
+        &lt;button class="btn btn-outline-secondary btn-lg mt-3 ms-2" type="button"&gt;Saber Más&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🔧 Utilidades Usadas</h6>
+                                            <ul class="small mb-0">
+                                                <li><code>.p-5</code> - Padding grande</li>
+                                                <li><code>.bg-light</code> - Fondo claro</li>
+                                                <li><code>.rounded-3</code> - Bordes redondeados</li>
+                                                <li><code>.display-5</code> - Tamaño de display</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎯 Buenas Prácticas</h6>
+                                            <ul class="small mb-0">
+                                                <li>Usa display headings para títulos</li>
+                                                <li>Mantén el texto conciso y claro</li>
+                                                <li>Incluye llamadas a la acción claras</li>
+                                                <li>Usa contraste adecuado</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN JUMBOTRON MODERNO -->
+                <section id="jumbotron-moderno" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">🎨 Jumbotron Moderno con Sombras</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Añade profundidad y modernidad con sombras y efectos visuales.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Jumbotron Moderno -->
+                                <div class="p-5 mb-4 bg-white rounded-3 shadow-lg border-0">
+                                    <div class="container-fluid py-5 text-center">
+                                        <h1 class="display-4 fw-bold text-gradient">Diseño Moderno</h1>
+                                        <p class="lead text-muted mb-4">Combina sombras, gradientes y efectos para crear
+                                            un Jumbotron contemporáneo.</p>
+                                        <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                            <button class="btn btn-primary btn-lg px-4 py-2">Explorar Features</button>
+                                            <button class="btn btn-outline-dark btn-lg px-4 py-2">
+                                                <i class="bi bi-play-circle me-2"></i>Ver Demo
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Jumbotron Moderno con Sombras --&gt;
+&lt;div class="p-5 mb-4 bg-white rounded-3 shadow-lg border-0"&gt;
+    &lt;div class="container-fluid py-5 text-center"&gt;
+        &lt;h1 class="display-4 fw-bold text-gradient"&gt;Diseño Moderno&lt;/h1&gt;
+        &lt;p class="lead text-muted mb-4"&gt;Combina sombras y efectos para un look contemporáneo.&lt;/p&gt;
+        &lt;div class="d-flex gap-3 justify-content-center flex-wrap"&gt;
+            &lt;button class="btn btn-primary btn-lg px-4 py-2"&gt;Explorar Features&lt;/button&gt;
+            &lt;button class="btn btn-outline-dark btn-lg px-4 py-2"&gt;
+                &lt;i class="bi bi-play-circle me-2"&gt;&lt;/i&gt;Ver Demo
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Tip de Diseño:</strong> Usa <code>.shadow-lg</code> para sombras pronunciadas
+                                y
+                                <code>.border-0</code> para eliminar bordes predeterminados. Combina con gradientes CSS
+                                para efectos modernos.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN CON FONDO -->
+                <section id="con-fondo" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger text-white">
+                            <h2 class="h3 mb-0">🖼️ Jumbotron con Imagen de Fondo</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea Jumbotrones impactantes usando imágenes de fondo con overlay para mejor
+                                legibilidad.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Jumbotron con Fondo -->
+                                <div class="p-5 mb-4 text-white rounded-3 position-relative overflow-hidden"
+                                    style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x600/667eea/764ba2') center/cover no-repeat; min-height: 400px;">
+                                    <div class="container-fluid py-5 position-relative z-2">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-8">
+                                                <h1 class="display-4 fw-bold mb-3">Impresiona con Fondos</h1>
+                                                <p class="lead mb-4">Usa imágenes de alta calidad con overlays para
+                                                    crear secciones hero memorables. Perfecto para landing pages y
+                                                    portfolios.</p>
+                                                <div class="d-flex gap-2 flex-wrap">
+                                                    <button class="btn btn-light btn-lg">Ver Proyectos</button>
+                                                    <button class="btn btn-outline-light btn-lg">Contactar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Jumbotron con Imagen de Fondo --&gt;
+&lt;div class="p-5 mb-4 text-white rounded-3 position-relative overflow-hidden" 
+     style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('ruta/imagen.jpg') center/cover no-repeat; min-height: 400px;"&gt;
+    &lt;div class="container-fluid py-5 position-relative z-2"&gt;
+        &lt;div class="row align-items-center"&gt;
+            &lt;div class="col-lg-8"&gt;
+                &lt;h1 class="display-4 fw-bold mb-3"&gt;Impresiona con Fondos&lt;/h1&gt;
+                &lt;p class="lead mb-4"&gt;Usa imágenes de alta calidad con overlays.&lt;/p&gt;
+                &lt;div class="d-flex gap-2 flex-wrap"&gt;
+                    &lt;button class="btn btn-light btn-lg"&gt;Ver Proyectos&lt;/button&gt;
+                    &lt;button class="btn btn-outline-light btn-lg"&gt;Contactar&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6>🎨 Técnicas de Overlay</h6>
+                                    <ul class="small">
+                                        <li><strong>Gradiente lineal:</strong>
+                                            <code>linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))</code>
+                                        </li>
+                                        <li><strong>Capas CSS:</strong> Usa <code>::before</code> para overlays
+                                            complejos</li>
+                                        <li><strong>Opacidad:</strong> Ajusta la transparencia según necesidad</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>📐 Optimización</h6>
+                                    <ul class="small">
+                                        <li>Usa imágenes WebP para mejor rendimiento</li>
+                                        <li>Optimiza el tamaño según viewport</li>
+                                        <li>Considera lazy loading para móviles</li>
+                                        <li>Proporciona fallbacks para navegadores antiguos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN CON GRADIENTE -->
+                <section id="con-gradiente" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-purple text-white">
+                            <h2 class="h3 mb-0">🌈 Jumbotron con Gradientes Modernos</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Los gradientes CSS ofrecen una alternativa moderna y ligera a las imágenes
+                                de fondo.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Jumbotron con Gradiente -->
+                                <div class="p-5 mb-4 text-white rounded-3"
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <div class="container-fluid py-5 text-center">
+                                        <h1 class="display-3 fw-bold mb-3">Gradientes Modernos</h1>
+                                        <p class="lead mb-4 opacity-90">Combina colores vibrantes para crear fondos
+                                            únicos sin necesidad de imágenes.</p>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-8">
+                                                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                                    <button class="btn btn-light btn-lg px-4">Descubrir Más</button>
+                                                    <button
+                                                        class="btn btn-outline-light btn-lg px-4">Características</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Jumbotron con Gradiente --&gt;
+&lt;div class="p-5 mb-4 text-white rounded-3" 
+     style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"&gt;
+    &lt;div class="container-fluid py-5 text-center"&gt;
+        &lt;h1 class="display-3 fw-bold mb-3"&gt;Gradientes Modernos&lt;/h1&gt;
+        &lt;p class="lead mb-4 opacity-90"&gt;Combina colores vibrantes.&lt;/p&gt;
+        &lt;div class="row justify-content-center"&gt;
+            &lt;div class="col-md-8"&gt;
+                &lt;div class="d-flex gap-3 justify-content-center flex-wrap"&gt;
+                    &lt;button class="btn btn-light btn-lg px-4"&gt;Descubrir Más&lt;/button&gt;
+                    &lt;button class="btn btn-outline-light btn-lg px-4"&gt;Características&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <h4 class="h5 mt-4">🎨 Combinaciones de Gradientes Populares</h4>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card border-0 text-white"
+                                        style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); height: 80px;">
+                                    </div>
+                                    <small class="text-center d-block mt-1">Coral Sunset</small>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card border-0 text-white"
+                                        style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); height: 80px;">
+                                    </div>
+                                    <small class="text-center d-block mt-1">Ocean Blue</small>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card border-0 text-white"
+                                        style="background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%); height: 80px;">
+                                    </div>
+                                    <small class="text-center d-block mt-1">Purple Dream</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN CON VIDEO -->
+                <section id="con-video" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">🎥 Jumbotron con Video de Fondo</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Para máxima inmersión, usa videos de fondo que capturen la atención
+                                inmediatamente.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light position-relative" style="min-height: 400px;">
+                                <!-- Jumbotron con Video Real -->
+                                <div class="p-5 text-white rounded-3 position-relative overflow-hidden w-100 h-100"
+                                    style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));">
+                                    <video autoplay muted loop class="position-absolute top-0 start-0 w-100 h-100"
+                                        style="object-fit: cover; z-index: 1;">
+                                        <source
+                                            src="../Imagenes/203923-922675870_small.mp4"
+                                            type="video/mp4">
+                                        <!-- Fallback para navegadores que no soportan video -->
+                                        Tu navegador no soporta el elemento video.
+                                    </video>
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+                                        style="z-index: 2;"></div>
+                                    <div class="position-relative" style="z-index: 3;">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-8">
+                                                <h1 class="display-6 fw-bold mb-2">Experiencia Inmersiva</h1>
+                                                <p class="lead mb-3">Los videos de fondo crean una conexión emocional
+                                                    inmediata.</p>
+                                                <div class="d-flex gap-2 flex-wrap">
+                                                    <button class="btn btn-light btn-sm">Ver Demo</button>
+                                                    <button class="btn btn-outline-light btn-sm">Más Info</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+<pre class="code-block"><code>&lt;!-- Jumbotron con Video de Fondo --&gt;
+&lt;div class="p-5 mb-4 text-white rounded-3 position-relative overflow-hidden" style="min-height: 500px;"&gt;
+    &lt;video autoplay muted loop class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover; z-index: 1;"&gt;
+        &lt;source src="https://cdn.pixabay.com/video/2021/01/19/62390-504238714_tiny.mp4" type="video/mp4"&gt;
+        &lt;!-- Fallback para navegadores que no soportan video --&gt;
+        &lt;img src="../Imagenes/Cebada.jpg" alt="Fallback image" style="width: 100%; height: 100%; object-fit: cover;"&gt;
+    &lt;/video&gt;
+    &lt;div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50" style="z-index: 2;"&gt;&lt;/div&gt;
+    &lt;div class="container-fluid py-5 position-relative" style="z-index: 3;"&gt;
+        &lt;div class="row align-items-center min-vh-50"&gt;
+            &lt;div class="col-lg-6"&gt;
+                &lt;h1 class="display-4 fw-bold mb-3"&gt;Experiencia Inmersiva&lt;/h1&gt;
+                &lt;p class="lead mb-4"&gt;Los videos de fondo crean una conexión emocional inmediata con tus usuarios.&lt;/p&gt;
+                &lt;div class="d-flex gap-2 flex-wrap"&gt;
+                    &lt;button class="btn btn-primary btn-lg"&gt;Ver Demo&lt;/button&gt;
+                    &lt;button class="btn btn-outline-light btn-lg"&gt;Más Información&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-danger">
+                                <strong>🚨 Consideraciones de Rendimiento:</strong>
+                                <ul class="mb-0 mt-2">
+                                    <li>Optimiza videos (max 5-10MB)</li>
+                                    <li>Usa formatos modernos como WebM</li>
+                                    <li>Implementa lazy loading</li>
+                                    <li>Proporciona fallback para móviles</li>
+                                    <li>Considera autoplay silenciado solamente</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN RESPONSIVE -->
+                <section id="responsive" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-secondary text-white">
+                            <h2 class="h3 mb-0">📱 Técnicas Responsive para Jumbotrons</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Asegura que tus Jumbotrons se vean perfectos en todos los dispositivos.</p>
+
+                            <h3 class="h5">Estrategias Responsive</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h6>📐 Ajuste de Tamaño</h6>
+                                            <ul class="small">
+                                                <li><code>.py-md-5 .py-3</code> - Padding diferente por breakpoint</li>
+                                                <li><code>.display-4 .display-5</code> - Títulos escalables</li>
+                                                <li><code>.text-center .text-md-start</code> - Alineación adaptable</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h6>🖼️ Imágenes Responsive</h6>
+                                            <ul class="small">
+                                                <li>Usa <code>srcset</code> para imágenes</li>
+                                                <li>Implementa art direction con <code>picture</code></li>
+                                                <li>Considera diferentes ratios para móvil/desktop</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="h5 mt-4">Ejemplo de Jumbotron Responsive</h4>
+                            <pre class="code-block"><code>&lt;!-- Jumbotron completamente responsive --&gt;
+&lt;div class="py-5 py-md-6 py-lg-7 bg-light"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row align-items-center"&gt;
+            &lt;div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0"&gt;
+                &lt;h1 class="display-4 display-md-3 display-lg-2 fw-bold"&gt;
+                    Título Responsive
+                &lt;/h1&gt;
+                &lt;p class="lead mb-4"&gt;
+                    Este contenido se adapta perfectamente a todos los dispositivos.
+                &lt;/p&gt;
+                &lt;div class="d-flex gap-2 justify-content-center justify-content-lg-start flex-wrap"&gt;
+                    &lt;button class="btn btn-primary btn-lg"&gt;Acción Principal&lt;/button&gt;
+                    &lt;button class="btn btn-outline-secondary btn-lg"&gt;Secundaria&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-lg-6"&gt;
+                &lt;img src="hero-image.jpg" alt="Hero" class="img-fluid rounded-3"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MEJORES PRÁCTICAS -->
+                <section id="mejores-practicas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">💡 Mejores Prácticas y Consejos Avanzados</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Optimiza tus Jumbotrons para máximo impacto y rendimiento.</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🎯 UX/UI</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Jerarquía clara:</strong> Título → Descripción → CTA</li>
+                                                <li><strong>Contraste adecuado:</strong> Texto legible sobre fondos</li>
+                                                <li><strong>Espaciado consistente:</strong> Usa el sistema de spacing
+                                                </li>
+                                                <li><strong>Loading states:</strong> Para imágenes/videos pesados</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">⚡ Rendimiento</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Lazy loading:</strong> Para imágenes y videos</li>
+                                                <li><strong>Optimización:</strong> Comprime assets</li>
+                                                <li><strong>Fallbacks:</strong> Para navegadores antiguos</li>
+                                                <li><strong>WebP:</strong> Usa formatos modernos</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="h5 mt-4">🚀 Patrones Avanzados</h4>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🎨</div>
+                                            <h6>Glass Morphism</h6>
+                                            <p class="small">Efectos de vidrio esmerilado con backdrop-filter</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">⚡</div>
+                                            <h6>Scroll Animations</h6>
+                                            <p class="small">Animaciones al hacer scroll con Intersection Observer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🎭</div>
+                                            <h6>Parallax Effects</h6>
+                                            <p class="small">Fondos que se mueven a diferente velocidad</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4">
+                                <strong>💡 Pro Tip:</strong> Combina múltiples técnicas pero mantén la simplicidad.
+                                Un Jumbotron efectivo comunica claramente su mensaje sin distracciones innecesarias.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="site-footer mt-5 py-5">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-4">
+                                <h5>Bootstrap 5 Tutorial</h5>
+                                <p class="small mb-2">Tutorial interactivo y open-source. Aprende con ejemplos,
+                                    ejercicios y despliega en GitHub Pages.</p>
+                                <p class="small mb-0">© 2025 Sebastián — Hecho para la comunidad.</p>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Guía rápida</h6>
+                                <ul class="list-unstyled small">
+                                    <li><a href="../index.html#grid">Grid System</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a href="../forms.html">Forms</a></li>
+                                    <li><a href="../github-tutorial.html">Subir a GitHub</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Comunidad</h6>
+                                <div class="d-flex gap-2">
+                                    <!-- Redes sociales -->
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://twitter.com/tu_usuario" target="_blank" rel="noopener"
+                                        aria-label="Twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                        aria-label="GitHub">
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <h6>Newsletter</h6>
+                                <form id="footerSubscribe" class="d-flex flex-column">
+                                    <input type="email" class="form-control form-control-sm mb-2"
+                                        placeholder="tu@email.com">
+                                    <button class="btn btn-sm btn-primary">Suscribirme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <div class="list-group" id="searchResultsList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Live preview modal para cualquier seccion.html -->
+    <div class="modal fade" id="livePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Vista Previa - Jumbotron</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe id="livePreviewIframe" style="width:100%;height:70vh;border:0;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-outline-secondary" id="openInNew">Abrir en nueva pestaña</button>
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botón flotante para TOC móvil -->
+    <button class="mobile-toc-toggle d-md-none" id="mobileTocToggle" aria-label="Abrir índice de contenido">
+        <span class="toc-icon">📚</span>
+        <span class="toc-text">Índice</span>
+    </button>
+
+    <!-- Overlay para móvil -->
+    <div class="mobile-sidebar-overlay d-md-none" id="mobileSidebarOverlay"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="../JS/buscar.js"></script>
+    <script src="../JS/main.js"></script>
+
+    <script>
+        // ===== TOC MÓVIL MEJORADO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileTocToggle = document.getElementById('mobileTocToggle');
+            const mobileSidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobileSidebarOverlay');
+
+            if (mobileTocToggle && mobileSidebar && mobileOverlay) {
+                function toggleMobileTOC() {
+                    const isOpening = !mobileSidebar.classList.contains('mobile-open');
+
+                    if (isOpening) {
+                        mobileSidebar.classList.add('mobile-open');
+                        mobileOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                }
+
+                mobileTocToggle.addEventListener('click', toggleMobileTOC);
+                mobileOverlay.addEventListener('click', toggleMobileTOC);
+
+                const tocLinks = mobileSidebar.querySelectorAll('a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth < 768) {
+                            toggleMobileTOC();
+                        }
+                    });
+                });
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 768) {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileSidebar.classList.contains('mobile-open')) {
+                        toggleMobileTOC();
+                    }
+                });
+            }
+        });
+
+        // Función global para reset del progreso
+        function resetProgress() {
+            localStorage.setItem('tutorialProgress', '{}');
+            const progressBar = document.getElementById('courseProgress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+            }
+            alert('Progreso reiniciado correctamente ✅');
+        }
+    </script>
+
+    <style>
+        .bg-purple {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .py-6 {
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+        }
+
+        .py-7 {
+            padding-top: 6rem !important;
+            padding-bottom: 6rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .display-md-3 {
+                font-size: calc(1.525rem + 3.3vw) !important;
+            }
+        }
+    </style>
+</body>
+
+</html>

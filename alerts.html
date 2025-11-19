@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts - Bootstrap 5 Tutorial Completo</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary" id="mainNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../ProyectoFinal.html">
+                        <img src="../Imagenes/logo-32.png" alt="logo" width="36" height="36" class="rounded">
+                        <span>
+                            <span class="fs-5">Bootstrap 5</span>
+                            <small class="d-block text-white-50" style="font-size:.68rem;">Tutorial Completo</small>
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../ProyectoFinal.html"> Inicio</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📐 Layout
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../containers.html">Containers</a></li>
+                                    <li><a class="dropdown-item" href="../grid.html">Grid System</a></li>
+                                    <li><a class="dropdown-item" href="../typography.html">Typography</a></li>
+                                    <li><a class="dropdown-item" href="../colors.html">Colors</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Resto del menú igual que en ProyectoFinal.html -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    🧩 Componentes
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="tables.html">Tables</a></li>
+                                    <li><a class="dropdown-item" href="images.html">Images</a></li>
+                                    <li><a class="dropdown-item" href="jumbotron.html">Jumbotron</a></li>
+                                    <li><a class="dropdown-item active" href="alerts.html">Alerts</a></li>
+                                    <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                                    <li><a class="dropdown-item" href="button-groups.html">Button Groups</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="components/badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item" href="components/progress-bars.html">Progress Bars</a></li>
+                                    <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+                                    <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+                                    <li><a class="dropdown-item" href="list-groups.html">List Groups</a></li>
+                                    <li><a class="dropdown-item" href="cards.html">Cards</a></li>
+                                    <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+                                    <li><a class="dropdown-item" href="collapse.html">Collapse</a></li>
+                                    <li><a class="dropdown-item" href="navs.html">Navs</a></li>
+                                    <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+                                    <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+                                    <li><a class="dropdown-item" href="tooltip.html">Tooltip</a></li>
+                                    <li><a class="dropdown-item" href="popover.html">Popover</a></li>
+                                    <li><a class="dropdown-item" href="toast.html">Toast</a></li>
+                                    <li><a class="dropdown-item" href="scrollspy.html">Scrollspy</a></li>
+                                    <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📝 Forms
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../forms/basic-forms.html">Formularios
+                                            Básicos</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/select.html">Select Menus</a></li>
+                                    <li><a class="dropdown-item" href="../forms/checks-radios.html">Checks & Radios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/range.html">Range</a></li>
+                                    <li><a class="dropdown-item" href="../forms/input-groups.html">Input Groups</a></li>
+                                    <li><a class="dropdown-item" href="../forms/floating-labels.html">Floating
+                                            Labels</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/validation.html">Form Validation</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🛠️ Utilidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../utilities/spacing.html">Spacing</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/flex.html">Flexbox</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/dark-mode.html">Dark Mode</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🚀 Recursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../templates/basic.html">Template Básico</a></li>
+                                    <li><a class="dropdown-item" href="../templates/medium.html">Template Medio</a></li>
+                                    <li><a class="dropdown-item" href="../templates/advanced.html">Template Avanzado</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../exercises.html">Ejercicios</a></li>
+                                    <li><a class="dropdown-item" href="../quiz.html">Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../syllabus.html">Plan de Estudio</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+                                    href="../github-tutorial.html" title="Tutorial GitHub"
+                                    style="padding: 0.25rem 0.5rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    <span class="d-none d-md-inline" style="font-size: 0.8rem;"> GitHub Tutorial</span>
+                                </a></li>
+                        </ul>
+
+                        <!-- Buscador -->
+                        <form class="d-flex me-2" role="search" onsubmit="return performSearch(event)">
+                            <input id="globalSearchInput" name="query" class="form-control form-control-sm me-2"
+                                type="search" placeholder="Buscar (ej. cards, modal)" aria-label="Buscar">
+                            <button class="btn btn-sm btn-outline-light" type="submit" title="Buscar">🔍</button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <button id="themeToggle" class="btn btn-sm btn-outline-light"
+                                title="Alternar tema (claro/oscuro)" aria-pressed="false">
+                                <span class="theme-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <a class="btn btn-sm btn-light d-flex align-items-center gap-1"
+                                href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                title="Repositorio GitHub" style="padding: 0.25rem 0.5rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="d-none d-md-inline" style="font-size: 0.8rem;">Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <div class="site-hero" style="background-image:url('../Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center fade-in-up visible">
+                            <h1 class="display-5 fw-bold">🚨 <span class="text-warning">Alerts</span> en Bootstrap 5
+                            </h1>
+                            <p class="lead">Domina la creación de mensajes de alerta contextuales y efectivos para
+                                mejorar la experiencia de usuario.</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                                <a href="#alertas-basicas" class="btn btn-outline-light btn-lg">Ver Ejemplos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR ALERTS MEJORADO -->
+            <aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end mobile-sidebar"
+                id="sidebar" aria-label="Tabla de contenido">
+                <div class="position-sticky" style="top:20px">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header text-center text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h5 class="mb-0">🚨 ÍNDICE - ALERTS</h5>
+                        </div>
+                        <div class="card-body p-2">
+                            <nav class="nav flex-column small">
+                                <a class="nav-link" href="#introduccion">📋 Introducción</a>
+                                <a class="nav-link" href="#alertas-basicas">🔰 Alertas Básicas</a>
+                                <a class="nav-link" href="#alertas-con-enlaces">🔗 Alertas con Enlaces</a>
+                                <a class="nav-link" href="#alertas-con-cierre">❌ Alertas con Cierre</a>
+                                <a class="nav-link" href="#alertas-animadas">🎬 Alertas Animadas</a>
+                                <a class="nav-link" href="#alertas-con-iconos">🦄 Alertas con Iconos</a>
+                                <a class="nav-link" href="#alertas-personalizadas">🎨 Alertas Personalizadas</a>
+                                <a class="nav-link" href="#mejores-practicas">💡 Mejores Prácticas</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="small mb-2 fw-bold">📊 Tu Progreso</h6>
+                            <div class="progress" style="height:1.2rem">
+                                <div id="courseProgress"
+                                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                    style="width:0%">0%</div>
+                            </div>
+                            <p class="mt-2 mb-0 small text-muted">Completa las secciones para avanzar</p>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="#mainContent" class="btn btn-outline-primary btn-sm">🏠 Inicio</a>
+                        <a href="buttons.html" class="btn btn-outline-success btn-sm">➡️ Siguiente: Buttons</a>
+                        <a href="#" class="btn btn-outline-info btn-sm" onclick="resetProgress(); return false;">🔄
+                            Reset Progreso</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">📋 Introducción a las Alertas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Las alertas en Bootstrap 5 son componentes flexibles que proporcionan
+                                mensajes contextuales de retroalimentación para acciones típicas del usuario.</p>
+
+                            <div class="alert alert-info">
+                                <strong>💡 ¿Qué son las Alertas?</strong><br>
+                                Las alertas son mensajes que informan al usuario sobre el estado de una acción,
+                                proporcionando retroalimentación inmediata y contextual. Son fundamentales para una
+                                buena experiencia de usuario.
+                            </div>
+
+                            <h3 class="h5 mt-4">Características Principales</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🎯 Propósito</h5>
+                                            <ul class="small mb-0">
+                                                <li>Informar sobre estados del sistema</li>
+                                                <li>Confirmar acciones exitosas</li>
+                                                <li>Alertar sobre errores o problemas</li>
+                                                <li>Guiar al usuario en flujos complejos</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🚀 Elementos Clave</h5>
+                                            <ul class="small mb-0">
+                                                <li>Contexto visual (colores semánticos)</li>
+                                                <li>Contenido claro y conciso</li>
+                                                <li>Opciones de cierre</li>
+                                                <li>Compatibilidad con iconos y enlaces</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ALERTAS BÁSICAS -->
+                <section id="alertas-basicas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🔰 Alertas Básicas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Bootstrap 5 proporciona una manera fácil de crear mensajes de alerta
+                                predefinidos usando clases contextuales.</p>
+
+                            <h3 class="h5">Tipos de Alertas Disponibles</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Ejemplos de Alertas Básicas -->
+                                <div class="alert alert-primary" role="alert">
+                                    <strong>Primary!</strong> Esta es una alerta primaria.
+                                </div>
+                                <div class="alert alert-secondary" role="alert">
+                                    <strong>Secondary!</strong> Esta es una alerta secundaria.
+                                </div>
+                                <div class="alert alert-success" role="alert">
+                                    <strong>Success!</strong> Indica una acción exitosa o positiva.
+                                </div>
+                                <div class="alert alert-danger" role="alert">
+                                    <strong>Danger!</strong> Indica una acción peligrosa o potencialmente negativa.
+                                </div>
+                                <div class="alert alert-warning" role="alert">
+                                    <strong>Warning!</strong> Indica una advertencia que requiere atención.
+                                </div>
+                                <div class="alert alert-info" role="alert">
+                                    <strong>Info!</strong> Esta es una alerta informativa.
+                                </div>
+                                <div class="alert alert-light" role="alert">
+                                    <strong>Light!</strong> Esta es una alerta con tema claro.
+                                </div>
+                                <div class="alert alert-dark" role="alert">
+                                    <strong>Dark!</strong> Esta es una alerta con tema oscuro.
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Alertas Básicas Bootstrap 5 --&gt;
+&lt;div class="alert alert-primary" role="alert"&gt;
+  &lt;strong&gt;Primary!&lt;/strong&gt; Esta es una alerta primaria.
+&lt;/div&gt;
+
+&lt;div class="alert alert-secondary" role="alert"&gt;
+  &lt;strong&gt;Secondary!&lt;/strong&gt; Esta es una alerta secundaria.
+&lt;/div&gt;
+
+&lt;div class="alert alert-success" role="alert"&gt;
+  &lt;strong&gt;Success!&lt;/strong&gt; Indica una acción exitosa o positiva.
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger" role="alert"&gt;
+  &lt;strong&gt;Danger!&lt;/strong&gt; Indica una acción peligrosa o potencialmente negativa.
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning" role="alert"&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; Indica una advertencia que requiere atención.
+&lt;/div&gt;
+
+&lt;div class="alert alert-info" role="alert"&gt;
+  &lt;strong&gt;Info!&lt;/strong&gt; Esta es una alerta informativa.
+&lt;/div&gt;
+
+&lt;div class="alert alert-light" role="alert"&gt;
+  &lt;strong&gt;Light!&lt;/strong&gt; Esta es una alerta con tema claro.
+&lt;/div&gt;
+
+&lt;div class="alert alert-dark" role="alert"&gt;
+  &lt;strong&gt;Dark!&lt;/strong&gt; Esta es una alerta con tema oscuro.
+&lt;/div&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎨 Clases de Color</h6>
+                                            <ul class="small mb-0">
+                                                <li><code>.alert-primary</code> - Color primario</li>
+                                                <li><code>.alert-secondary</code> - Color secundario</li>
+                                                <li><code>.alert-success</code> - Éxito/positivo</li>
+                                                <li><code>.alert-danger</code> - Error/peligro</li>
+                                                <li><code>.alert-warning</code> - Advertencia</li>
+                                                <li><code>.alert-info</code> - Informativo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎯 Buenas Prácticas</h6>
+                                            <ul class="small mb-0">
+                                                <li>Usa colores semánticamente apropiados</li>
+                                                <li>Mantén el mensaje claro y conciso</li>
+                                                <li>Incluye el atributo <code>role="alert"</code></li>
+                                                <li>Considera la accesibilidad</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ALERTAS CON ENLACES -->
+                <section id="alertas-con-enlaces" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">🔗 Alertas con Enlaces</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Añade la clase <code>.alert-link</code> a cualquier enlace dentro de la
+                                alerta para crear enlaces que combinen con el color de la alerta.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Alertas con Enlaces -->
+                                <div class="alert alert-success" role="alert">
+                                    <strong>Success!</strong> Deberías <a href="#" class="alert-link">leer este
+                                        mensaje</a>.
+                                </div>
+                                <div class="alert alert-danger" role="alert">
+                                    <strong>Error crítico!</strong> Por favor <a href="#" class="alert-link">contacta al
+                                        soporte técnico</a> inmediatamente.
+                                </div>
+                                <div class="alert alert-info" role="alert">
+                                    <strong>Nueva actualización disponible!</strong> <a href="#"
+                                        class="alert-link">Descarga la versión 2.0 aquí</a> para obtener las últimas
+                                    características.
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Alertas con Enlaces --&gt;
+&lt;div class="alert alert-success" role="alert"&gt;
+  &lt;strong&gt;Success!&lt;/strong&gt; Deberías &lt;a href="#" class="alert-link"&gt;leer este mensaje&lt;/a&gt;.
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger" role="alert"&gt;
+  &lt;strong&gt;Error crítico!&lt;/strong&gt; Por favor &lt;a href="#" class="alert-link"&gt;contacta al soporte técnico&lt;/a&gt; inmediatamente.
+&lt;/div&gt;
+
+&lt;div class="alert alert-info" role="alert"&gt;
+  &lt;strong&gt;Nueva actualización disponible!&lt;/strong&gt; &lt;a href="#" class="alert-link"&gt;Descarga la versión 2.0 aquí&lt;/a&gt;.
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Tip de Diseño:</strong> La clase <code>.alert-link</code> aplica
+                                automáticamente el color apropiado para el enlace, manteniendo la coherencia visual con
+                                el contexto de la alerta.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ALERTAS CON CIERRE - VERSIÓN CORREGIDA -->
+                <section id="alertas-con-cierre" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger text-white">
+                            <h2 class="h3 mb-0">❌ Alertas con Cierre</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Añade funcionalidad de cierre a las alertas usando la clase
+                                <code>.alert-dismissible</code> y un botón de cierre.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Alertas con Cierre - VERSIÓN MEJORADA -->
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>Advertencia!</strong> Esta alerta se puede cerrar haciendo clic en la X.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong>Éxito!</strong> Tu formulario ha sido enviado correctamente.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                    <strong>Información!</strong> Hemos actualizado nuestros términos y condiciones.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Alertas con Cierre --&gt;
+&lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+  &lt;strong&gt;Advertencia!&lt;/strong&gt; Esta alerta se puede cerrar haciendo clic en la X.
+  &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-success alert-dismissible fade show" role="alert"&gt;
+  &lt;strong&gt;Éxito!&lt;/strong&gt; Tu formulario ha sido enviado correctamente.
+  &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-info alert-dismissible fade show" role="alert"&gt;
+  &lt;strong&gt;Información!&lt;/strong&gt; Hemos actualizado nuestros términos y condiciones.
+  &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info mt-4">
+                                <strong>💡 Nota importante:</strong> Los botones de cierre ahora tienen popovers
+                                informativos
+                                que se destruyen automáticamente cuando cierras la alerta, evitando que persistan en la
+                                página.
+                            </div>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6>🔧 Elementos Requeridos</h6>
+                                    <ul class="small">
+                                        <li><code>.alert-dismissible</code> - Habilita el comportamiento de cierre</li>
+                                        <li><code>.btn-close</code> - Estilo del botón de cierre</li>
+                                        <li><code>data-bs-dismiss="alert"</code> - Acción de cierre</li>
+                                        <li><code>aria-label="Close"</code> - Accesibilidad</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>🎯 Casos de Uso</h6>
+                                    <ul class="small">
+                                        <li>Notificaciones temporales</li>
+                                        <li>Mensajes de confirmación</li>
+                                        <li>Avisos que no requieren acción</li>
+                                        <li>Alertas informativas opcionales</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ALERTAS ANIMADAS -->
+                <section id="alertas-animadas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-purple text-white">
+                            <h2 class="h3 mb-0">🎬 Alertas Animadas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Las clases <code>.fade</code> y <code>.show</code> añaden un efecto de
+                                desvanecimiento al cerrar el mensaje de alerta.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Alertas Animadas -->
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>Error crítico!</strong> Esta alerta tiene animación al cerrarse.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                    <strong>Información importante!</strong> Esta alerta también se desvanece al cerrar.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Alertas Animadas --&gt;
+&lt;div class="alert alert-danger alert-dismissible fade show" role="alert"&gt;
+  &lt;strong&gt;Error crítico!&lt;/strong&gt; Esta alerta tiene animación al cerrarse.
+  &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-primary alert-dismissible fade show" role="alert"&gt;
+  &lt;strong&gt;Información importante!&lt;/strong&gt; Esta alerta también se desvanece al cerrar.
+  &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-warning">
+                                <strong>⚠️ Nota importante:</strong> La clase <code>.show</code> es necesaria para que
+                                la alerta sea visible inicialmente cuando se usa <code>.fade</code>. Sin ella, la alerta
+                                estaría oculta.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ALERTAS CON ICONOS -->
+                <section id="alertas-con-iconos" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">🦄 Alertas con Iconos</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Mejora la claridad visual de tus alertas añadiendo iconos relevantes que
+                                refuercen el mensaje.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Alertas con Iconos -->
+                                <div class="alert alert-success d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                        aria-label="Success:">
+                                        <use xlink:href="#check-circle-fill" />
+                                    </svg>
+                                    <div>
+                                        <strong>Éxito!</strong> Tu operación se completó correctamente.
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                        aria-label="Danger:">
+                                        <use xlink:href="#exclamation-triangle-fill" />
+                                    </svg>
+                                    <div>
+                                        <strong>Error!</strong> Ha ocurrido un problema con tu solicitud.
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                        aria-label="Warning:">
+                                        <use xlink:href="#exclamation-triangle-fill" />
+                                    </svg>
+                                    <div>
+                                        <strong>Advertencia!</strong> Tu suscripción expirará pronto.
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                        aria-label="Info:">
+                                        <use xlink:href="#info-fill" />
+                                    </svg>
+                                    <div>
+                                        <strong>Información!</strong> Nueva actualización disponible.
+                                    </div>
+                                </div>
+
+                                <!-- Bootstrap Icons (hidden in production) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                    <symbol id="check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </symbol>
+                                    <symbol id="info-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                    </symbol>
+                                    <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                    </symbol>
+                                </svg>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Alertas con Iconos --&gt;
+&lt;div class="alert alert-success d-flex align-items-center" role="alert"&gt;
+  &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"&gt;
+    &lt;use xlink:href="#check-circle-fill"/&gt;
+  &lt;/svg&gt;
+  &lt;div&gt;
+    &lt;strong&gt;Éxito!&lt;/strong&gt; Tu operación se completó correctamente.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Definición de iconos SVG (oculta) --&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
+  &lt;symbol id="check-circle-fill" viewBox="0 0 16 16"&gt;
+    &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+  &lt;/symbol&gt;
+  &lt;!-- Más símbolos aquí --&gt;
+&lt;/svg&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Tip de Accesibilidad:</strong> Siempre incluye el atributo
+                                <code>aria-label</code> en los iconos SVG para describir su propósito a los usuarios de
+                                lectores de pantalla.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ALERTAS PERSONALIZADAS -->
+                <section id="alertas-personalizadas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">🎨 Alertas Personalizadas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea alertas únicas y adaptadas a tus necesidades específicas con estilos
+                                personalizados y contenido adicional.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Alertas Personalizadas -->
+                                <div class="alert alert-custom-1 border-0 shadow-sm" role="alert">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <span class="alert-icon">🎉</span>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h4 class="alert-heading mb-1">¡Felicitaciones!</h4>
+                                            <p class="mb-2">Has completado exitosamente el tutorial de Bootstrap 5.</p>
+                                            <hr>
+                                            <p class="mb-0 small">Puedes continuar con el siguiente módulo cuando estés
+                                                listo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-custom-2 border-0" role="alert">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <span class="alert-icon">📢</span>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <strong>Anuncio importante:</strong> Mantenimiento programado para el
+                                                sábado.
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"></button>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-custom-3 border-start border-5 border-primary" role="alert">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mb-1">Recordatorio</h5>
+                                            <p class="mb-0">Tu prueba gratuita expira en 3 días. Actualiza tu plan para
+                                                continuar disfrutando de todas las funciones.</p>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-3">
+                                            <button class="btn btn-primary btn-sm">Actualizar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Alertas Personalizadas --&gt;
+&lt;div class="alert alert-custom-1 border-0 shadow-sm" role="alert"&gt;
+  &lt;div class="d-flex"&gt;
+    &lt;div class="flex-shrink-0"&gt;
+      &lt;span class="alert-icon"&gt;🎉&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="flex-grow-1 ms-3"&gt;
+      &lt;h4 class="alert-heading mb-1"&gt;¡Felicitaciones!&lt;/h4&gt;
+      &lt;p class="mb-2"&gt;Has completado exitosamente el tutorial.&lt;/p&gt;
+      &lt;hr&gt;
+      &lt;p class="mb-0 small"&gt;Puedes continuar con el siguiente módulo.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-custom-3 border-start border-5 border-primary" role="alert"&gt;
+  &lt;div class="d-flex"&gt;
+    &lt;div class="flex-grow-1"&gt;
+      &lt;h5 class="mb-1"&gt;Recordatorio&lt;/h5&gt;
+      &lt;p class="mb-0"&gt;Tu prueba gratuita expira en 3 días.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="flex-shrink-0 ms-3"&gt;
+      &lt;button class="btn btn-primary btn-sm"&gt;Actualizar&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <h4 class="h5 mt-4">🎨 CSS Personalizado para Alertas</h4>
+                            <pre class="code-block"><code>/* Estilos personalizados para alertas */
+.alert-custom-1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.alert-custom-2 {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.alert-custom-3 {
+  background-color: #f8f9fa;
+}
+
+.alert-icon {
+  font-size: 1.5rem;
+}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MEJORES PRÁCTICAS -->
+                <section id="mejores-practicas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">💡 Mejores Prácticas y Consejos Avanzados</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Optimiza el uso de alertas para máxima efectividad y mejor experiencia de
+                                usuario.</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🎯 UX/UI</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Jerarquía semántica:</strong> Usa colores apropiados para
+                                                    cada tipo de mensaje</li>
+                                                <li><strong>Contenido claro:</strong> Mensajes concisos y fáciles de
+                                                    entender</li>
+                                                <li><strong>Posicionamiento:</strong> Coloca las alertas donde no
+                                                    interrumpan el flujo principal</li>
+                                                <li><strong>Tiempo de visualización:</strong> Considera cuánto tiempo
+                                                    debe permanecer visible</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">♿ Accesibilidad</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Role adecuado:</strong> Siempre incluye
+                                                    <code>role="alert"</code>
+                                                </li>
+                                                <li><strong>Etiquetas ARIA:</strong> Describe botones de cierre con
+                                                    <code>aria-label</code>
+                                                </li>
+                                                <li><strong>Contraste de color:</strong> Asegura legibilidad para
+                                                    usuarios con discapacidad visual</li>
+                                                <li><strong>Focus management:</strong> Considera el orden de tabulación
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="h5 mt-4">🚀 Patrones Avanzados</h4>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">⏰</div>
+                                            <h6>Alertas Temporales</h6>
+                                            <p class="small">Desaparecen automáticamente después de un tiempo
+                                                determinado</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">📱</div>
+                                            <h6>Alertas Responsive</h6>
+                                            <p class="small">Adaptan su diseño según el tamaño de pantalla</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🎭</div>
+                                            <h6>Alertas Dinámicas</h6>
+                                            <p class="small">Se generan y actualizan mediante JavaScript</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-warning mt-4">
+                                <strong>⚠️ Consideraciones Importantes:</strong>
+                                <ul class="mb-0 mt-2">
+                                    <li>No abuses de las alertas - pueden ser molestas para los usuarios</li>
+                                    <li>Considera alternativas como modales o toasts para mensajes menos críticos</li>
+                                    <li>Prueba siempre la accesibilidad de tus alertas</li>
+                                    <li>Documenta patrones de uso consistentes en tu aplicación</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="site-footer mt-5 py-5">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-4">
+                                <h5>Bootstrap 5 Tutorial</h5>
+                                <p class="small mb-2">Tutorial interactivo y open-source. Aprende con ejemplos,
+                                    ejercicios y despliega en GitHub Pages.</p>
+                                <p class="small mb-0">© 2025 Sebastián — Hecho para la comunidad.</p>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Guía rápida</h6>
+                                <ul class="list-unstyled small">
+                                    <li><a href="../index.html#grid">Grid System</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a href="../forms.html">Forms</a></li>
+                                    <li><a href="../github-tutorial.html">Subir a GitHub</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Comunidad</h6>
+                                <div class="d-flex gap-2">
+                                    <!-- Redes sociales -->
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://twitter.com/tu_usuario" target="_blank" rel="noopener"
+                                        aria-label="Twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                        aria-label="GitHub">
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <h6>Newsletter</h6>
+                                <form id="footerSubscribe" class="d-flex flex-column">
+                                    <input type="email" class="form-control form-control-sm mb-2"
+                                        placeholder="tu@email.com">
+                                    <button class="btn btn-sm btn-primary">Suscribirme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <div class="list-group" id="searchResultsList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Live preview modal para cualquier seccion.html -->
+    <div class="modal fade" id="livePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Vista Previa - Alerts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe id="livePreviewIframe" style="width:100%;height:70vh;border:0;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-outline-secondary" id="openInNew">Abrir en nueva pestaña</button>
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botón flotante para TOC móvil -->
+    <button class="mobile-toc-toggle d-md-none" id="mobileTocToggle" aria-label="Abrir índice de contenido">
+        <span class="toc-icon">📚</span>
+        <span class="toc-text">Índice</span>
+    </button>
+
+    <!-- Overlay para móvil -->
+    <div class="mobile-sidebar-overlay d-md-none" id="mobileSidebarOverlay"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="../JS/buscar.js"></script>
+    <script src="../JS/main.js"></script>
+
+    <script>
+        // ===== TOC MÓVIL MEJORADO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileTocToggle = document.getElementById('mobileTocToggle');
+            const mobileSidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobileSidebarOverlay');
+
+            if (mobileTocToggle && mobileSidebar && mobileOverlay) {
+                function toggleMobileTOC() {
+                    const isOpening = !mobileSidebar.classList.contains('mobile-open');
+
+                    if (isOpening) {
+                        mobileSidebar.classList.add('mobile-open');
+                        mobileOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                }
+
+                mobileTocToggle.addEventListener('click', toggleMobileTOC);
+                mobileOverlay.addEventListener('click', toggleMobileTOC);
+
+                const tocLinks = mobileSidebar.querySelectorAll('a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth < 768) {
+                            toggleMobileTOC();
+                        }
+                    });
+                });
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 768) {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileSidebar.classList.contains('mobile-open')) {
+                        toggleMobileTOC();
+                    }
+                });
+            }
+        });
+
+        // Función global para reset del progreso
+        function resetProgress() {
+            localStorage.setItem('tutorialProgress', '{}');
+            const progressBar = document.getElementById('courseProgress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+            }
+            alert('Progreso reiniciado correctamente ✅');
+        }
+    </script>
+
+    <style>
+        .bg-purple {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Estilos personalizados para alertas */
+        .alert-custom-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .alert-custom-2 {
+            background-color: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        .alert-custom-3 {
+            background-color: #f8f9fa;
+        }
+
+        .alert-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Mejorar la apariencia de los popovers en botones de cierre */
+        .btn-close[data-bs-toggle="popover"] {
+            cursor: pointer;
+        }
+
+        .py-6 {
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+        }
+
+        .py-7 {
+            padding-top: 6rem !important;
+            padding-bottom: 6rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .display-md-3 {
+                font-size: calc(1.525rem + 3.3vw) !important;
+            }
+        }
+    </style>
+</body>
+
+</html>

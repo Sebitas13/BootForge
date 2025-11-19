@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores - Bootstrap Tutorial Completo</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .color-demo {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-demo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .color-card {
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .opacity-demo {
+            background: linear-gradient(45deg, #000 25%, transparent 25%),
+                linear-gradient(-45deg, #000 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #000 75%),
+                linear-gradient(-45deg, transparent 75%, #000 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary" id="mainNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                        <img src="Imagenes/logo-32.png" alt="logo" width="36" height="36" class="rounded">
+                        <span>
+                            <span class="fs-5">Bootstrap 5</span>
+                            <small class="d-block text-white-50" style="font-size:.68rem;">Tutorial Completo</small>
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html#inicio"> Inicio</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    📐 Layout
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="containers.html">Containers</a></li>
+                                    <li><a class="dropdown-item" href="grid.html">Grid System</a></li>
+                                    <li><a class="dropdown-item" href="typography.html">Typography</a></li>
+                                    <li><a class="dropdown-item active" href="colors.html">Colors</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Resto del menú igual que en ProyectoFinal.html -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🧩 Componentes
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="components/tables.html">Tables</a></li>
+                                    <li><a class="dropdown-item" href="components/images.html">Images</a></li>
+                                    <li><a class="dropdown-item" href="components/jumbotron.html">Jumbotron</a></li>
+                                    <li><a class="dropdown-item" href="components/alerts.html">Alerts</a></li>
+                                    <li><a class="dropdown-item" href="components/buttons.html">Buttons</a></li>
+                                    <li><a class="dropdown-item" href="components/button-groups.html">Button Groups</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="components/badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item" href="components/progress-bars.html">Progress Bars</a></li>
+                                    <li><a class="dropdown-item" href="components/spinners.html">Spinners</a></li>
+                                    <li><a class="dropdown-item" href="components/pagination.html">Pagination</a></li>
+                                    <li><a class="dropdown-item" href="components/list-groups.html">List Groups</a></li>
+                                    <li><a class="dropdown-item" href="components/cards.html">Cards</a></li>
+                                    <li><a class="dropdown-item" href="components/dropdowns.html">Dropdowns</a></li>
+                                    <li><a class="dropdown-item" href="components/collapse.html">Collapse</a></li>
+                                    <li><a class="dropdown-item" href="components/navs.html">Navs</a></li>
+                                    <li><a class="dropdown-item" href="components/navbar.html">Navbar</a></li>
+                                    <li><a class="dropdown-item" href="components/carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="components/modal.html">Modal</a></li>
+                                    <li><a class="dropdown-item" href="components/tooltip.html">Tooltip</a></li>
+                                    <li><a class="dropdown-item" href="components/popover.html">Popover</a></li>
+                                    <li><a class="dropdown-item" href="components/toast.html">Toast</a></li>
+                                    <li><a class="dropdown-item" href="components/scrollspy.html">Scrollspy</a></li>
+                                    <li><a class="dropdown-item" href="components/offcanvas.html">Offcanvas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📝 Forms
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="forms/basic-forms.html">Formularios Básicos</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="forms/select.html">Select Menus</a></li>
+                                    <li><a class="dropdown-item" href="forms/checks-radios.html">Checks & Radios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="forms/range.html">Range</a></li>
+                                    <li><a class="dropdown-item" href="forms/input-groups.html">Input Groups</a></li>
+                                    <li><a class="dropdown-item" href="forms/floating-labels.html">Floating Labels</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="forms/validation.html">Form Validation</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🛠️ Utilidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="utilities/spacing.html">Spacing</a></li>
+                                    <li><a class="dropdown-item" href="utilities/flex.html">Flexbox</a></li>
+                                    <li><a class="dropdown-item" href="utilities/dark-mode.html">Dark Mode</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🚀 Recursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="templates/basic.html">Template Básico</a></li>
+                                    <li><a class="dropdown-item" href="templates/medium.html">Template Medio</a></li>
+                                    <li><a class="dropdown-item" href="templates/advanced.html">Template Avanzado</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="exercises.html">Ejercicios</a></li>
+                                    <li><a class="dropdown-item" href="quiz.html">Quiz</a></li>
+                                    <li><a class="dropdown-item" href="syllabus.html">Plan de Estudio</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+                                    href="github-tutorial.html" title="Tutorial GitHub"
+                                    style="padding: 0.25rem 0.5rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    <span class="d-none d-md-inline" style="font-size: 0.8rem;"> GitHub Tutorial</span>
+                                </a></li>
+                        </ul>
+
+                        <!-- Buscador -->
+                        <form class="d-flex me-2" role="search" onsubmit="return performSearch(event)">
+                            <input id="globalSearchInput" name="query" class="form-control form-control-sm me-2"
+                                type="search" placeholder="Buscar (ej. cards, modal)" aria-label="Buscar">
+                            <button class="btn btn-sm btn-outline-light" type="submit" title="Buscar">🔍</button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <button id="themeToggle" class="btn btn-sm btn-outline-light"
+                                title="Alternar tema (claro/oscuro)" aria-pressed="false">
+                                <span class="theme-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <a class="btn btn-sm btn-light d-flex align-items-center gap-1"
+                                href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                title="Repositorio GitHub" style="padding: 0.25rem 0.5rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="d-none d-md-inline" style="font-size: 0.8rem;">Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <div class="site-hero" style="background-image:url('Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center fade-in-up visible">
+                            <h1 class="display-5 fw-bold">🎨 <span class="text-warning">Sistema de Colores</span> en
+                                Bootstrap 5</h1>
+                            <p class="lead">Domina la paleta de colores de Bootstrap - Textos, fondos, opacidades y
+                                combinaciones perfectas.</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                                <a href="#paleta-completa" class="btn btn-outline-light btn-lg">Ver Paleta Completa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR COLORES MEJORADO -->
+<aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end mobile-sidebar" id="sidebar"
+    aria-label="Tabla de contenido">
+    <div class="position-sticky" style="top:20px">
+        <div class="card mb-3 shadow-sm">
+            <div class="card-header text-center text-white"
+                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <h5 class="mb-0">🎨 ÍNDICE - COLORES</h5>
+            </div>
+            <div class="card-body p-2">
+                <nav class="nav flex-column small">
+                    <a class="nav-link" href="#introduccion">📋 Introducción</a>
+                    <a class="nav-link" href="#colores-texto">✏️ Colores de Texto</a>
+                    <a class="nav-link" href="#opacidad-texto">🌫️ Opacidad en Texto</a>
+                    <a class="nav-link" href="#colores-fondo">🎨 Colores de Fondo</a>
+                    <a class="nav-link" href="#combinacion-textbg">✨ Combinación Text-Bg</a>
+                    <a class="nav-link" href="#paleta-completa">🌈 Paleta Completa</a>
+                    <a class="nav-link" href="#enlaces-colores">🔗 Enlaces con Colores</a>
+                    <a class="nav-link" href="#ejemplos-practicos">💡 Ejemplos Prácticos</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body p-3">
+                <h6 class="small mb-2 fw-bold">📊 Tu Progreso</h6>
+                <div class="progress" style="height:1.2rem">
+                    <div id="courseProgress"
+                        class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                        style="width:0%">0%</div>
+                </div>
+                <p class="mt-2 mb-0 small text-muted">Completa las secciones para avanzar</p>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2">
+            <a href="#mainContent" class="btn btn-outline-primary btn-sm">🏠 Inicio</a>
+            <a href="typography.html" class="btn btn-outline-success btn-sm">➡️ Siguiente: Tipografía</a>
+            <a href="#" class="btn btn-outline-info btn-sm" onclick="resetProgress(); return false;">🔄
+                Reset Progreso</a>
+        </div>
+    </div>
+</aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h2 class="h3 mb-0">📋 Introducción al Sistema de Colores</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Bootstrap 5 incluye un <strong>sistema de colores robusto y
+                                    consistente</strong> que sigue las mejores prácticas de diseño y accesibilidad.</p>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="alert alert-info">
+                                        <strong>🎯 Características Principales:</strong>
+                                        <ul class="mb-0 mt-2">
+                                            <li>Paleta de colores semántica</li>
+                                            <li>Colores accesibles (contraste WCAG)</li>
+                                            <li>Clases utilitarias consistentes</li>
+                                            <li>Fácil personalización</li>
+                                            <li>Modo oscuro integrado</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="alert alert-warning">
+                                        <strong>💡 Mejoras en Bootstrap 5:</strong>
+                                        <ul class="mb-0 mt-2">
+                                            <li>Nueva clase <code>.text-bg-*</code></li>
+                                            <li>Mejor contraste en modo oscuro</li>
+                                            <li>Variables CSS mejoradas</li>
+                                            <li>Colores más vibrantes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5 mt-4">Estructura de Clases de Color</h3>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Tipo</th>
+                                            <th>Prefijo de Clase</th>
+                                            <th>Ejemplo</th>
+                                            <th>Uso</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Texto</td>
+                                            <td><code>.text-*</code></td>
+                                            <td><code>.text-primary</code></td>
+                                            <td>Color del texto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fondo</td>
+                                            <td><code>.bg-*</code></td>
+                                            <td><code>.bg-success</code></td>
+                                            <td>Color de fondo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Combinado</td>
+                                            <td><code>.text-bg-*</code></td>
+                                            <td><code>.text-bg-warning</code></td>
+                                            <td>Texto + fondo optimizado</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Borde</td>
+                                            <td><code>.border-*</code></td>
+                                            <td><code>.border-danger</code></td>
+                                            <td>Color del borde</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN COLORES DE TEXTO -->
+                <section id="colores-texto" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">✏️ Colores de Texto</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Usa <code>.text-{color}</code> para aplicar colores semánticos a tu texto.
+                            </p>
+
+                            <h3 class="h5">Paleta de Colores de Texto</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 border rounded color-demo">
+                                        <p class="text-primary fw-bold mb-1">.text-primary</p>
+                                        <p class="text-muted small mb-0">Color principal de tu marca</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 border rounded color-demo">
+                                        <p class="text-secondary fw-bold mb-1">.text-secondary</p>
+                                        <p class="text-muted small mb-0">Color secundario</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 border rounded color-demo">
+                                        <p class="text-success fw-bold mb-1">.text-success</p>
+                                        <p class="text-muted small mb-0">Acciones exitosas</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 border rounded color-demo">
+                                        <p class="text-danger fw-bold mb-1">.text-danger</p>
+                                        <p class="text-muted small mb-0">Errores y advertencias</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 border rounded color-demo">
+                                        <p class="text-warning fw-bold mb-1">.text-warning</p>
+                                        <p class="text-muted small mb-0">Advertencias</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 border rounded color-demo">
+                                        <p class="text-info fw-bold mb-1">.text-info</p>
+                                        <p class="text-muted small mb-0">Información</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 border rounded color-demo">
+                                        <p class="text-light bg-dark fw-bold mb-1">.text-light</p>
+                                        <p class="text-muted small mb-0">Texto claro</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 border rounded color-demo">
+                                        <p class="text-dark fw-bold mb-1">.text-dark</p>
+                                        <p class="text-muted small mb-0">Texto oscuro</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="p-3 border rounded color-demo">
+                                        <p class="text-muted fw-bold mb-1">.text-muted</p>
+                                        <p class="text-muted small mb-0">Texto deshabilitado</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código de Uso</h3>
+                            <pre class="code-block"><code>&lt;!-- Colores de texto básicos --&gt;
+&lt;p class="text-primary"&gt;Texto principal&lt;/p&gt;
+&lt;p class="text-success"&gt;Texto de éxito&lt;/p&gt;
+&lt;p class="text-danger"&gt;Texto de peligro&lt;/p&gt;
+&lt;p class="text-warning"&gt;Texto de advertencia&lt;/p&gt;
+&lt;p class="text-info"&gt;Texto informativo&lt;/p&gt;
+
+&lt;!-- Colores neutros --&gt;
+&lt;p class="text-dark"&gt;Texto oscuro&lt;/p&gt;
+&lt;p class="text-muted"&gt;Texto atenuado&lt;/p&gt;</code></pre>
+
+                            <div class="alert alert-primary">
+                                <strong>💡 Tip:</strong> Los colores semánticos (<code>.primary</code>,
+                                <code>.success</code>, etc.) se adaptan automáticamente al modo oscuro.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN OPACIDAD EN TEXTO -->
+                <section id="opacidad-texto" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">🌫️ Opacidad en Texto</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Controla la transparencia del texto con
+                                <code>.text-{color}-{opacity}</code>.
+                            </p>
+
+                            <h3 class="h5">Escala de Opacidad</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <h6>Opacidad con Negro (.text-black-*)</h6>
+                                    <div class="opacity-demo">
+                                        <p class="text-black-100 fw-bold mb-1">.text-black-100 (100%)</p>
+                                        <p class="text-black-75 fw-bold mb-1">.text-black-75 (75%)</p>
+                                        <p class="text-black-50 fw-bold mb-1">.text-black-50 (50%)</p>
+                                        <p class="text-black-25 fw-bold mb-1">.text-black-25 (25%)</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Opacidad con Blanco (.text-white-*)</h6>
+                                    <div class="bg-dark rounded p-3">
+                                        <p class="text-white-100 fw-bold mb-1">.text-white-100 (100%)</p>
+                                        <p class="text-white-75 fw-bold mb-1">.text-white-75 (75%)</p>
+                                        <p class="text-white-50 fw-bold mb-1">.text-white-50 (50%)</p>
+                                        <p class="text-white-25 fw-bold mb-1">.text-white-25 (25%)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Opacidad en Colores Semánticos</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <div class="p-3 border rounded">
+                                        <p class="text-primary fw-bold mb-1">Primary 100%</p>
+                                        <p class="text-primary opacity-75 fw-bold mb-1">Primary 75% (.opacity-75)</p>
+                                        <p class="text-primary opacity-50 fw-bold mb-1">Primary 50% (.opacity-50)</p>
+                                        <p class="text-primary opacity-25 fw-bold mb-1">Primary 25% (.opacity-25)</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 border rounded">
+                                        <p class="text-success fw-bold mb-1">Success 100%</p>
+                                        <p class="text-success opacity-75 fw-bold mb-1">Success 75% (.opacity-75)</p>
+                                        <p class="text-success opacity-50 fw-bold mb-1">Success 50% (.opacity-50)</p>
+                                        <p class="text-success opacity-25 fw-bold mb-1">Success 25% (.opacity-25)</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 border rounded">
+                                        <p class="text-danger fw-bold mb-1">Danger 100%</p>
+                                        <p class="text-danger opacity-75 fw-bold mb-1">Danger 75% (.opacity-75)</p>
+                                        <p class="text-danger opacity-50 fw-bold mb-1">Danger 50% (.opacity-50)</p>
+                                        <p class="text-danger opacity-25 fw-bold mb-1">Danger 25% (.opacity-25)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código de Uso</h3>
+                            <pre class="code-block"><code>&lt;!-- Opacidad con negro y blanco --&gt;
+&lt;p class="text-black-50"&gt;Texto negro al 50% de opacidad&lt;/p&gt;
+&lt;p class="text-white-75"&gt;Texto blanco al 75% de opacidad&lt;/p&gt;
+
+&lt;!-- Opacidad en colores semánticos --&gt;
+&lt;p class="text-primary opacity-75"&gt;Primary al 75%&lt;/p&gt;
+&lt;p class="text-success opacity-50"&gt;Success al 50%&lt;/p&gt;
+&lt;p class="text-danger opacity-25"&gt;Danger al 25%&lt;/p&gt;
+
+&lt;!-- Clases de opacidad general --&gt;
+&lt;div class="opacity-100"&gt;100% opaco&lt;/div&gt;
+&lt;div class="opacity-75"&gt;75% opaco&lt;/div&gt;
+&lt;div class="opacity-50"&gt;50% opaco&lt;/div&gt;
+&lt;div class="opacity-25"&gt;25% opaco&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>🎨 Diseño:</strong> La opacidad es perfecta para jerarquizar información, crear
+                                estados hover, o indicar elementos deshabilitados.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN COLORES DE FONDO -->
+                <section id="colores-fondo" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🎨 Colores de Fondo</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Aplica colores de fondo con <code>.bg-{color}</code> para crear secciones
+                                visualmente atractivas.</p>
+
+                            <h3 class="h5">Paleta de Fondos</h3>
+                            <div class="color-grid mb-4">
+                                <div class="color-card bg-primary">
+                                    <div>.bg-primary</div>
+                                    <small>#0d6efd</small>
+                                </div>
+                                <div class="color-card bg-secondary">
+                                    <div>.bg-secondary</div>
+                                    <small>#6c757d</small>
+                                </div>
+                                <div class="color-card bg-success">
+                                    <div>.bg-success</div>
+                                    <small>#198754</small>
+                                </div>
+                                <div class="color-card bg-danger">
+                                    <div>.bg-danger</div>
+                                    <small>#dc3545</small>
+                                </div>
+                                <div class="color-card bg-warning text-dark">
+                                    <div>.bg-warning</div>
+                                    <small>#ffc107</small>
+                                </div>
+                                <div class="color-card bg-info text-dark">
+                                    <div>.bg-info</div>
+                                    <small>#0dcaf0</small>
+                                </div>
+                                <div class="color-card bg-light text-dark">
+                                    <div>.bg-light</div>
+                                    <small>#f8f9fa</small>
+                                </div>
+                                <div class="color-card bg-dark">
+                                    <div>.bg-dark</div>
+                                    <small>#212529</small>
+                                </div>
+                                <div class="color-card bg-white text-dark border">
+                                    <div>.bg-white</div>
+                                    <small>#ffffff</small>
+                                </div>
+                                <div class="color-card bg-transparent text-dark border">
+                                    <div>.bg-transparent</div>
+                                    <small>transparente</small>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Fondos con Gradientes</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <div class="p-4 text-white rounded bg-gradient-primary">
+                                        <h6>.bg-gradient-primary</h6>
+                                        <p class="mb-0">Gradiente con colores primarios</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-4 text-white rounded bg-gradient-success">
+                                        <h6>.bg-gradient-success</h6>
+                                        <p class="mb-0">Gradiente con colores de éxito</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código de Uso</h3>
+                            <pre class="code-block"><code>&lt;!-- Fondos básicos --&gt;
+&lt;div class="bg-primary text-white p-3"&gt;Fondo primary&lt;/div&gt;
+&lt;div class="bg-success text-white p-3"&gt;Fondo success&lt;/div&gt;
+&lt;div class="bg-warning text-dark p-3"&gt;Fondo warning&lt;/div&gt;
+
+&lt;!-- Fondos con gradientes --&gt;
+&lt;div class="bg-gradient-primary text-white p-4"&gt;
+  Gradiente primary
+&lt;/div&gt;
+
+&lt;!-- Fondos especiales --&gt;
+&lt;div class="bg-light p-3"&gt;Fondo claro&lt;/div&gt;
+&lt;div class="bg-transparent p-3"&gt;Fondo transparente&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-success">
+                                <strong>🚀 Pro Tip:</strong> Usa <code>.bg-gradient-*</code> para crear fondos más
+                                modernos y atractivos sin necesidad de CSS personalizado.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN COMBINACIÓN TEXT-BG -->
+                <section id="combinacion-textbg" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">✨ Combinación Text-Bg (.text-bg-*)</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead"><strong>Novedad en Bootstrap 5:</strong> <code>.text-bg-{color}</code>
+                                combina automáticamente el color de texto y fondo con el contraste perfecto.</p>
+
+                            <h3 class="h5">Comparación: Viejo vs Nuevo Enfoque</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h6>❌ Enfoque Antiguo (Bootstrap 4)</h6>
+                                        <div class="bg-primary text-white p-2 mb-2 rounded">
+                                            <code>.bg-primary .text-white</code>
+                                        </div>
+                                        <div class="bg-success text-white p-2 mb-2 rounded">
+                                            <code>.bg-success .text-white</code>
+                                        </div>
+                                        <div class="bg-warning text-dark p-2 rounded">
+                                            <code>.bg-warning .text-dark</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h6>✅ Enfoque Nuevo (Bootstrap 5)</h6>
+                                        <div class="text-bg-primary p-2 mb-2 rounded">
+                                            <code>.text-bg-primary</code>
+                                        </div>
+                                        <div class="text-bg-success p-2 mb-2 rounded">
+                                            <code>.text-bg-success</code>
+                                        </div>
+                                        <div class="text-bg-warning p-2 rounded">
+                                            <code>.text-bg-warning</code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Paleta Completa .text-bg-*</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <div class="text-bg-primary p-3 rounded text-center">
+                                        <strong>.text-bg-primary</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-bg-secondary p-3 rounded text-center">
+                                        <strong>.text-bg-secondary</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-bg-success p-3 rounded text-center">
+                                        <strong>.text-bg-success</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-bg-danger p-3 rounded text-center">
+                                        <strong>.text-bg-danger</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-bg-warning p-3 rounded text-center">
+                                        <strong>.text-bg-warning</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-bg-info p-3 rounded text-center">
+                                        <strong>.text-bg-info</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-bg-light p-3 rounded text-center">
+                                        <strong>.text-bg-light</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-bg-dark p-3 rounded text-center">
+                                        <strong>.text-bg-dark</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código de Uso</h3>
+                            <pre class="code-block"><code>&lt;!-- Nuevo enfoque Bootstrap 5 --&gt;
+&lt;div class="text-bg-primary p-3"&gt;Primary combinado&lt;/div&gt;
+&lt;div class="text-bg-success p-3"&gt;Success combinado&lt;/div&gt;
+&lt;div class="text-bg-warning p-3"&gt;Warning combinado&lt;/div&gt;
+&lt;div class="text-bg-danger p-3"&gt;Danger combinado&lt;/div&gt;
+
+&lt;!-- En componentes --&gt;
+&lt;div class="card text-bg-primary"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Card con color&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Contraste automático perfecto.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-warning">
+                                <strong>🔥 Ventaja Principal:</strong> <code>.text-bg-*</code> garantiza automáticamente
+                                el contraste WCAG adecuado y se adapta perfectamente al modo oscuro.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN PALETA COMPLETA -->
+                <section id="paleta-completa" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger text-white">
+                            <h2 class="h3 mb-0">🌈 Paleta de Colores Completa</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Explora toda la gama de colores disponibles en Bootstrap 5, incluyendo
+                                colores adicionales.</p>
+
+                            <h3 class="h5">Colores Semánticos Principales</h3>
+                            <div class="table-responsive mb-4">
+                                <table class="table table-bordered">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Variable SCSS</th>
+                                            <th>Clase</th>
+                                            <th>Valor HEX</th>
+                                            <th>Muestra</th>
+                                            <th>Uso Recomendado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>$primary</code></td>
+                                            <td><code>.text-primary</code></td>
+                                            <td>#0d6efd</td>
+                                            <td>
+                                                <div
+                                                    style="width:20px;height:20px;background:#0d6efd;border:1px solid #ddd">
+                                                </div>
+                                            </td>
+                                            <td>Acciones principales, enlaces</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>$secondary</code></td>
+                                            <td><code>.text-secondary</code></td>
+                                            <td>#6c757d</td>
+                                            <td>
+                                                <div
+                                                    style="width:20px;height:20px;background:#6c757d;border:1px solid #ddd">
+                                                </div>
+                                            </td>
+                                            <td>Contenido menos importante</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>$success</code></td>
+                                            <td><code>.text-success</code></td>
+                                            <td>#198754</td>
+                                            <td>
+                                                <div
+                                                    style="width:20px;height:20px;background:#198754;border:1px solid #ddd">
+                                                </div>
+                                            </td>
+                                            <td>Acciones exitosas, confirmaciones</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>$danger</code></td>
+                                            <td><code>.text-danger</code></td>
+                                            <td>#dc3545</td>
+                                            <td>
+                                                <div
+                                                    style="width:20px;height:20px;background:#dc3545;border:1px solid #ddd">
+                                                </div>
+                                            </td>
+                                            <td>Errores, acciones destructivas</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>$warning</code></td>
+                                            <td><code>.text-warning</code></td>
+                                            <td>#ffc107</td>
+                                            <td>
+                                                <div
+                                                    style="width:20px;height:20px;background:#ffc107;border:1px solid #ddd">
+                                                </div>
+                                            </td>
+                                            <td>Advertencias, atención requerida</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>$info</code></td>
+                                            <td><code>.text-info</code></td>
+                                            <td>#0dcaf0</td>
+                                            <td>
+                                                <div
+                                                    style="width:20px;height:20px;background:#0dcaf0;border:1px solid #ddd">
+                                                </div>
+                                            </td>
+                                            <td>Información, tooltips</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>$light</code></td>
+                                            <td><code>.text-light</code></td>
+                                            <td>#f8f9fa</td>
+                                            <td>
+                                                <div
+                                                    style="width:20px;height:20px;background:#f8f9fa;border:1px solid #ddd">
+                                                </div>
+                                            </td>
+                                            <td>Fondos claros</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>$dark</code></td>
+                                            <td><code>.text-dark</code></td>
+                                            <td>#212529</td>
+                                            <td>
+                                                <div
+                                                    style="width:20px;height:20px;background:#212529;border:1px solid #ddd">
+                                                </div>
+                                            </td>
+                                            <td>Texto principal, fondos oscuros</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3 class="h5">Colores Adicionales (Extended Palette)</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-3 col-6">
+                                    <div class="color-card" style="background-color: #8b5cf6;">
+                                        <div>Indigo</div>
+                                        <small>#8b5cf6</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="color-card" style="background-color: #ec4899;">
+                                        <div>Pink</div>
+                                        <small>#ec4899</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="color-card" style="background-color: #f59e0b;">
+                                        <div>Amber</div>
+                                        <small>#f59e0b</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="color-card" style="background-color: #10b981;">
+                                        <div>Emerald</div>
+                                        <small>#10b981</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-danger">
+                                <strong>🎨 Personalización:</strong> Puedes extender esta paleta modificando las
+                                variables SCSS de Bootstrap o añadiendo tus propios colores personalizados.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ENLACES CON COLORES -->
+                <section id="enlaces-colores" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">🔗 Enlaces con Colores</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Aplica colores semánticos a los enlaces manteniendo los estados hover y
+                                focus.</p>
+
+                            <h3 class="h5">Enlaces Coloreados</h3>
+                            <div class="p-4 border rounded mb-4">
+                                <p>
+                                    <a href="#" class="link-primary">Enlace primary</a> -
+                                    <a href="#" class="link-secondary">Enlace secondary</a> -
+                                    <a href="#" class="link-success">Enlace success</a> -
+                                    <a href="#" class="link-danger">Enlace danger</a> -
+                                    <a href="#" class="link-warning">Enlace warning</a> -
+                                    <a href="#" class="link-info">Enlace info</a> -
+                                    <a href="#" class="link-light bg-dark">Enlace light</a> -
+                                    <a href="#" class="link-dark">Enlace dark</a>
+                                </p>
+                            </div>
+
+                            <h3 class="h5">Enlaces con Clase .text-*</h3>
+                            <div class="p-4 border rounded mb-4">
+                                <p>
+                                    <a href="#" class="text-primary">Texto primary (como enlace)</a> -
+                                    <a href="#" class="text-success">Texto success (como enlace)</a> -
+                                    <a href="#" class="text-danger">Texto danger (como enlace)</a>
+                                </p>
+                                <p class="text-muted small">Nota: Los enlaces con <code>.text-*</code> no tienen
+                                    subrayado por defecto.</p>
+                            </div>
+
+                            <h3 class="h5">Código de Uso</h3>
+                            <pre class="code-block"><code>&lt;!-- Enlaces con clases .link-* --&gt;
+&lt;a href="#" class="link-primary"&gt;Enlace primary&lt;/a&gt;
+&lt;a href="#" class="link-success"&gt;Enlace success&lt;/a&gt;
+&lt;a href="#" class="link-danger"&gt;Enlace danger&lt;/a&gt;
+
+&lt;!-- Enlaces con clases .text-* --&gt;
+&lt;a href="#" class="text-primary"&gt;Texto como enlace&lt;/a&gt;
+&lt;a href="#" class="text-success text-decoration-none"&gt;Sin subrayado&lt;/a&gt;
+
+&lt;!-- Restaurar subrayado --&gt;
+&lt;a href="#" class="text-primary text-decoration-underline"&gt;Con subrayado&lt;/a&gt;</code></pre>
+
+                            <div class="alert alert-dark">
+                                <strong>🔗 Diferencias:</strong> <code>.link-*</code> está específicamente diseñado para
+                                enlaces y mantiene todos los estados interactivos, mientras que <code>.text-*</code>
+                                solo cambia el color.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN EJEMPLOS PRÁCTICOS -->
+                <section id="ejemplos-practicos" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h2 class="h3 mb-0">💡 Ejemplos Prácticos</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Aplica todo lo aprendido en ejemplos del mundo real.</p>
+
+                            <h3 class="h5">Ejemplo 1: Sistema de Alertas</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <div class="text-bg-primary p-3 rounded">
+                                        <strong>💡 Información Importante</strong>
+                                        <p class="mb-0">Usa <code>.text-bg-primary</code> para alertas informativas.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-bg-success p-3 rounded">
+                                        <strong>✅ Operación Exitosa</strong>
+                                        <p class="mb-0">Perfecto para confirmaciones con <code>.text-bg-success</code>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-bg-warning p-3 rounded">
+                                        <strong>⚠️ Advertencia</strong>
+                                        <p class="mb-0">Alertas de precaución con <code>.text-bg-warning</code>.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-bg-danger p-3 rounded">
+                                        <strong>❌ Error Crítico</strong>
+                                        <p class="mb-0">Para errores importantes usa <code>.text-bg-danger</code>.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Ejemplo 2: Tarjetas con Colores</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <div class="card text-bg-primary">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Feature Primary</h5>
+                                            <p class="card-text">Destaca características importantes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-bg-success">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Feature Success</h5>
+                                            <p class="card-text">Para funciones exitosas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-bg-warning">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Feature Warning</h5>
+                                            <p class="card-text">Características con advertencias.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Ejemplo 3: Badges y Etiquetas</h3>
+                            <div class="p-4 border rounded mb-4">
+                                <span class="badge text-bg-primary">Primary</span>
+                                <span class="badge text-bg-secondary">Secondary</span>
+                                <span class="badge text-bg-success">Success</span>
+                                <span class="badge text-bg-danger">Danger</span>
+                                <span class="badge text-bg-warning">Warning</span>
+                                <span class="badge text-bg-info">Info</span>
+                                <span class="badge text-bg-light">Light</span>
+                                <span class="badge text-bg-dark">Dark</span>
+                            </div>
+
+                            <h3 class="h5">Código de los Ejemplos</h3>
+                            <pre class="code-block"><code>&lt;!-- Sistema de alertas --&gt;
+&lt;div class="text-bg-primary p-3 rounded"&gt;
+  &lt;strong&gt;Información Importante&lt;/strong&gt;
+  &lt;p&gt;Contenido de la alerta...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Tarjetas con colores --&gt;
+&lt;div class="card text-bg-primary"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Título&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Contenido...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Badges --&gt;
+&lt;span class="badge text-bg-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge text-bg-success"&gt;Success&lt;/span&gt;</code></pre>
+
+                            <div class="alert alert-success">
+                                <strong>🚀 Combinación Perfecta:</strong> Usa <code>.text-bg-*</code> en componentes
+                                como cards, alerts y badges para un diseño consistente y accesible.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="site-footer mt-5 py-5">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-4">
+                                <h5>Bootstrap 5 Tutorial</h5>
+                                <p class="small mb-2">Tutorial interactivo y open-source. Aprende con ejemplos,
+                                    ejercicios y despliega en GitHub Pages.</p>
+                                <p class="small mb-0">© 2025 Sebastián — Hecho para la comunidad.</p>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Guía rápida</h6>
+                                <ul class="list-unstyled small">
+                                    <li><a href="index.html#grid">Grid System</a></li>
+                                    <li><a href="components/buttons.html">Buttons</a></li>
+                                    <li><a href="forms.html">Forms</a></li>
+                                    <li><a href="github-tutorial.html">Subir a GitHub</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Comunidad</h6>
+                                <div class="d-flex gap-2">
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://twitter.com/tu_usuario" target="_blank" rel="noopener"
+                                        aria-label="Twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                        aria-label="GitHub">
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <h6>Newsletter</h6>
+                                <form id="footerSubscribe" class="d-flex flex-column">
+                                    <input type="email" class="form-control form-control-sm mb-2"
+                                        placeholder="tu@email.com">
+                                    <button class="btn btn-sm btn-primary">Suscribirme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <div class="list-group" id="searchResultsList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Live preview modal para grid.html -->
+    <div class="modal fade" id="livePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Vista Previa - Colores</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe id="livePreviewIframe" style="width:100%;height:70vh;border:0;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-outline-secondary" id="openInNew">Abrir en nueva pestaña</button>
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botón flotante para TOC móvil -->
+    <button class="mobile-toc-toggle d-md-none" id="mobileTocToggle" aria-label="Abrir índice de contenido">
+        <span class="toc-icon">📚</span>
+        <span class="toc-text">Índice</span>
+    </button>
+
+    <!-- Overlay para móvil -->
+    <div class="mobile-sidebar-overlay d-md-none" id="mobileSidebarOverlay"></div>
+
+    <!-- Overlay para cerrar TOC -->
+    <div class="sidebar-overlay d-md-none" onclick="toggleMobileTOC()"></div>
+    <!-- SCRIPTS -->
+    <script src="bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="JS/script1.js"></script>
+    <script src="JS/buscar.js"></script>
+    <script src="JS/main.js"></script>
+
+    <script>
+        // Efectos interactivos para las demostraciones de color
+        document.addEventListener('DOMContentLoaded', function () {
+            const colorDemos = document.querySelectorAll('.color-demo');
+            colorDemos.forEach(demo => {
+                demo.addEventListener('click', function () {
+                    const text = this.querySelector('.fw-bold').textContent;
+                    navigator.clipboard.writeText(text).then(() => {
+                        const originalBg = this.style.backgroundColor;
+                        this.style.backgroundColor = '#e9ecef';
+                        setTimeout(() => {
+                            this.style.backgroundColor = originalBg;
+                        }, 300);
+                    });
+                });
+            });
+        });
+    </script>
+    <!-- Script para TOC móvil -->
+    <script>
+        function toggleMobileTOC() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+
+            if (sidebar.classList.contains('mobile-open')) {
+                sidebar.classList.remove('mobile-open');
+                overlay.classList.remove('active');
+            } else {
+                sidebar.classList.add('mobile-open');
+                overlay.classList.remove('active');
+                setTimeout(() => overlay.classList.add('active'), 10);
+            }
+        }
+
+        // Cerrar TOC al hacer clic en un enlace (en móviles)
+        document.addEventListener('click', function (e) {
+            if (window.innerWidth < 768) {
+                if (e.target.closest('#sidebar a')) {
+                    toggleMobileTOC();
+                }
+            }
+        });
+    </script>
+
+    <script>
+// ===== TOC MÓVIL MEJORADO =====
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileTocToggle = document.getElementById('mobileTocToggle');
+    const mobileSidebar = document.getElementById('sidebar');
+    const mobileOverlay = document.getElementById('mobileSidebarOverlay');
+    
+    if (mobileTocToggle && mobileSidebar && mobileOverlay) {
+        // Función para abrir/cerrar el TOC
+        function toggleMobileTOC() {
+            const isOpening = !mobileSidebar.classList.contains('mobile-open');
+            
+            if (isOpening) {
+                // Abrir
+                mobileSidebar.classList.add('mobile-open');
+                mobileOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+            } else {
+                // Cerrar
+                mobileSidebar.classList.remove('mobile-open');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Restaurar scroll
+            }
+        }
+        
+        // Eventos
+        mobileTocToggle.addEventListener('click', toggleMobileTOC);
+        mobileOverlay.addEventListener('click', toggleMobileTOC);
+        
+        // Cerrar al hacer clic en un enlace del TOC (solo en móviles)
+        const tocLinks = mobileSidebar.querySelectorAll('a');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 768) {
+                    toggleMobileTOC();
+                }
+            });
+        });
+        
+        // Cerrar al cambiar el tamaño de la ventana a desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                mobileSidebar.classList.remove('mobile-open');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Cerrar con tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileSidebar.classList.contains('mobile-open')) {
+                toggleMobileTOC();
+            }
+        });
+    }
+});
+
+// Función global para reset del progreso
+function resetProgress() {
+    localStorage.setItem('tutorialProgress', '{}');
+    const progressBar = document.getElementById('courseProgress');
+    if (progressBar) {
+        progressBar.style.width = '0%';
+        progressBar.textContent = '0%';
+    }
+    alert('Progreso reiniciado correctamente ✅');
+}
+</script>
+</body>
+
+</html>

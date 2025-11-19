@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination - Bootstrap 5 Tutorial Completo</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary" id="mainNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../ProyectoFinal.html">
+                        <img src="../Imagenes/logo-32.png" alt="logo" width="36" height="36" class="rounded">
+                        <span>
+                            <span class="fs-5">Bootstrap 5</span>
+                            <small class="d-block text-white-50" style="font-size:.68rem;">Tutorial Completo</small>
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../ProyectoFinal.html"> Inicio</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📐 Layout
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../containers.html">Containers</a></li>
+                                    <li><a class="dropdown-item" href="../grid.html">Grid System</a></li>
+                                    <li><a class="dropdown-item" href="../typography.html">Typography</a></li>
+                                    <li><a class="dropdown-item" href="../colors.html">Colors</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Resto del menú igual que en ProyectoFinal.html -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    🧩 Componentes
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="tables.html">Tables</a></li>
+                                    <li><a class="dropdown-item" href="images.html">Images</a></li>
+                                    <li><a class="dropdown-item" href="jumbotron.html">Jumbotron</a></li>
+                                    <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+                                    <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                                    <li><a class="dropdown-item" href="button-groups.html">Button Groups</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item" href="progress-bars.html">Progress Bars</a></li>
+                                    <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+                                    <li><a class="dropdown-item active" href="pagination.html">Pagination</a></li>
+                                    <li><a class="dropdown-item" href="list-groups.html">List Groups</a></li>
+                                    <li><a class="dropdown-item" href="cards.html">Cards</a></li>
+                                    <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+                                    <li><a class="dropdown-item" href="collapse.html">Collapse</a></li>
+                                    <li><a class="dropdown-item" href="navs.html">Navs</a></li>
+                                    <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+                                    <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+                                    <li><a class="dropdown-item" href="tooltip.html">Tooltip</a></li>
+                                    <li><a class="dropdown-item" href="popover.html">Popover</a></li>
+                                    <li><a class="dropdown-item" href="toast.html">Toast</a></li>
+                                    <li><a class="dropdown-item" href="scrollspy.html">Scrollspy</a></li>
+                                    <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📝 Forms
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../forms/basic-forms.html">Formularios
+                                            Básicos</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/select.html">Select Menus</a></li>
+                                    <li><a class="dropdown-item" href="../forms/checks-radios.html">Checks & Radios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/range.html">Range</a></li>
+                                    <li><a class="dropdown-item" href="../forms/input-groups.html">Input Groups</a></li>
+                                    <li><a class="dropdown-item" href="../forms/floating-labels.html">Floating
+                                            Labels</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/validation.html">Form Validation</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🛠️ Utilidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../utilities/spacing.html">Spacing</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/flex.html">Flexbox</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/dark-mode.html">Dark Mode</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🚀 Recursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../templates/basic.html">Template Básico</a></li>
+                                    <li><a class="dropdown-item" href="../templates/medium.html">Template Medio</a></li>
+                                    <li><a class="dropdown-item" href="../templates/advanced.html">Template Avanzado</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../exercises.html">Ejercicios</a></li>
+                                    <li><a class="dropdown-item" href="../quiz.html">Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../syllabus.html">Plan de Estudio</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+                                    href="../github-tutorial.html" title="Tutorial GitHub"
+                                    style="padding: 0.25rem 0.5rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    <span class="d-none d-md-inline" style="font-size: 0.8rem;"> GitHub Tutorial</span>
+                                </a></li>
+
+                        </ul>
+
+                        <!-- Buscador -->
+                        <form class="d-flex me-2" role="search" onsubmit="return performSearch(event)">
+                            <input id="globalSearchInput" name="query" class="form-control form-control-sm me-2"
+                                type="search" placeholder="Buscar (ej. cards, modal)" aria-label="Buscar">
+                            <button class="btn btn-sm btn-outline-light" type="submit" title="Buscar">🔍</button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <button id="themeToggle" class="btn btn-sm btn-outline-light"
+                                title="Alternar tema (claro/oscuro)" aria-pressed="false">
+                                <span class="theme-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <a class="btn btn-sm btn-light d-flex align-items-center gap-1"
+                                href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                title="Repositorio GitHub" style="padding: 0.25rem 0.5rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="d-none d-md-inline" style="font-size: 0.8rem;">Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <div class="site-hero" style="background-image:url('../Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center fade-in-up visible">
+                            <h1 class="display-5 fw-bold">📄 <span class="text-warning">Pagination</span> en Bootstrap 5
+                            </h1>
+                            <p class="lead">Domina los sistemas de navegación por páginas para crear experiencias de usuario fluidas, organizadas y profesionales en aplicaciones con contenido extenso.</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                                <a href="#pagination-basica" class="btn btn-outline-light btn-lg">Ver Ejemplos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR PAGINATION MEJORADO -->
+            <aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end mobile-sidebar"
+                id="sidebar" aria-label="Tabla de contenido">
+                <div class="position-sticky" style="top:20px">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header text-center text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h5 class="mb-0">📄 ÍNDICE - PAGINATION</h5>
+                        </div>
+                        <div class="card-body p-2">
+                            <nav class="nav flex-column small">
+                                <a class="nav-link" href="#introduccion">📋 Introducción</a>
+                                <a class="nav-link" href="#pagination-basica">🔰 Paginación Básica</a>
+                                <a class="nav-link" href="#pagination-estados">🎯 Estados Activo/Deshabilitado</a>
+                                <a class="nav-link" href="#pagination-tamanos">📏 Tamaños de Paginación</a>
+                                <a class="nav-link" href="#pagination-alineacion">🎪 Alineación de Paginación</a>
+                                <a class="nav-link" href="#breadcrumbs">🍞 Sistema de Breadcrumbs</a>
+                                <a class="nav-link" href="#laboratorio-pagination">🔬 Laboratorio de Paginación</a>
+                                <a class="nav-link" href="#pagination-avanzada">🚀 Paginación Avanzada</a>
+                                <a class="nav-link" href="#ejemplo-avanzado">💼 Ejemplo Avanzado</a>
+                                <a class="nav-link" href="#mejores-practicas">💡 Mejores Prácticas</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="small mb-2 fw-bold">📊 Tu Progreso</h6>
+                            <div class="progress" style="height:1.2rem">
+                                <div id="courseProgress"
+                                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                    style="width:0%">0%</div>
+                            </div>
+                            <p class="mt-2 mb-0 small text-muted">Completa las secciones para avanzar</p>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="#mainContent" class="btn btn-outline-primary btn-sm">🏠 Inicio</a>
+                        <a href="list-groups.html" class="btn btn-outline-success btn-sm">➡️ Siguiente: List Groups</a>
+                        <a href="#" class="btn btn-outline-info btn-sm" onclick="resetProgress(); return false;">🔄
+                            Reset Progreso</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">📋 Introducción a la Pagination</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Los sistemas de paginación en Bootstrap 5 permiten dividir contenido extenso en páginas navegables, mejorando la experiencia de usuario y el rendimiento de aplicaciones web.</p>
+
+                            <div class="alert alert-info">
+                                <strong>💡 ¿Qué es la Paginación?</strong><br>
+                                La paginación es un patrón de diseño que divide un conjunto grande de elementos (como artículos, productos o registros) en páginas más pequeñas y manejables. Proporciona controles de navegación para moverse entre estas páginas, mejorando la usabilidad y el rendimiento de la aplicación.
+                            </div>
+
+                            <h3 class="h5 mt-4">Casos de Uso Comunes</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🎯 Aplicaciones Prácticas</h5>
+                                            <ul class="small mb-0">
+                                                <li><strong>E-commerce:</strong> Catálogos de productos extensos</li>
+                                                <li><strong>Blogs:</strong> Listados de artículos y posts</li>
+                                                <li><strong>Sistemas de gestión:</strong> Tablas de datos y registros</li>
+                                                <li><strong>Resultados de búsqueda:</strong> Dividir grandes conjuntos de resultados</li>
+                                                <li><strong>Galerías:</strong> Imágenes o medios organizados por páginas</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🚀 Beneficios Clave</h5>
+                                            <ul class="small mb-0">
+                                                <li>Mejora del rendimiento de carga</li>
+                                                <li>Navegación estructurada y predecible</li>
+                                                <li>Mejor experiencia de usuario en móviles</li>
+                                                <li>Organización clara del contenido</li>
+                                                <li>SEO mejorado para contenido indexable</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mini demostración introductoria -->
+                            <div class="mt-4 p-4 bg-light rounded border">
+                                <h6 class="mb-3">🎮 Vista Previa Rápida - Lo que Aprenderás</h6>
+                                <div class="row text-center">
+                                    <div class="col-md-4">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination justify-content-center">
+                                                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                                            </ul>
+                                        </nav>
+                                        <small>Paginación Básica</small>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb justify-content-center">
+                                                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Biblioteca</a></li>
+                                                <li class="breadcrumb-item active">Datos</li>
+                                            </ol>
+                                        </nav>
+                                        <small>Breadcrumbs</small>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination pagination-sm justify-content-center">
+                                                <li class="page-item disabled"><a class="page-link" href="#">‹</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">›</a></li>
+                                            </ul>
+                                        </nav>
+                                        <small>Paginación Compacta</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN PAGINACIÓN BÁSICA -->
+                <section id="pagination-basica" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🔰 Paginación Básica</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea una paginación básica usando un elemento <code>&lt;ul&gt;</code> con la clase <code>.pagination</code> y elementos <code>&lt;li&gt;</code> con <code>.page-item</code> que contengan enlaces con <code>.page-link</code>.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📚 Sistema de Gestión de Biblioteca</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">Listado de Libros (Página 1 de 5)</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Contenido de ejemplo -->
+                                        <div class="list-group mb-3">
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-1">El Quijote - Miguel de Cervantes</h6>
+                                                    <small class="text-muted">Publicado: 1605 | Género: Novela</small>
+                                                </div>
+                                                <span class="badge bg-success">Disponible</span>
+                                            </div>
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-1">Cien Años de Soledad - Gabriel García Márquez</h6>
+                                                    <small class="text-muted">Publicado: 1967 | Género: Realismo mágico</small>
+                                                </div>
+                                                <span class="badge bg-warning">Prestado</span>
+                                            </div>
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-1">1984 - George Orwell</h6>
+                                                    <small class="text-muted">Publicado: 1949 | Género: Distopía</small>
+                                                </div>
+                                                <span class="badge bg-success">Disponible</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Paginación -->
+                                        <nav aria-label="Navegación de libros">
+                                            <ul class="pagination justify-content-center mb-0">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                                                </li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">Siguiente</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🛒 Catálogo de Productos E-commerce</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h6 class="mb-0">Productos Destacados</h6>
+                                            <small class="text-muted">Mostrando 1-12 de 48 productos</small>
+                                        </div>
+                                        
+                                        <!-- Grid de productos de ejemplo -->
+                                        <div class="row mb-3">
+                                            <div class="col-6 col-md-3 mb-3">
+                                                <div class="card h-100">
+                                                    <div class="card-body text-center">
+                                                        <div class="placeholder-img bg-light mb-2" style="height: 80px;"></div>
+                                                        <small>Producto 1</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3 mb-3">
+                                                <div class="card h-100">
+                                                    <div class="card-body text-center">
+                                                        <div class="placeholder-img bg-light mb-2" style="height: 80px;"></div>
+                                                        <small>Producto 2</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3 mb-3">
+                                                <div class="card h-100">
+                                                    <div class="card-body text-center">
+                                                        <div class="placeholder-img bg-light mb-2" style="height: 80px;"></div>
+                                                        <small>Producto 3</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3 mb-3">
+                                                <div class="card h-100">
+                                                    <div class="card-body text-center">
+                                                        <div class="placeholder-img bg-light mb-2" style="height: 80px;"></div>
+                                                        <small>Producto 4</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Paginación centrada -->
+                                        <nav aria-label="Navegación de productos">
+                                            <ul class="pagination justify-content-center mb-0">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Anterior">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Siguiente">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Paginación Básica --&gt;
+&lt;nav aria-label="Navegación de página"&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Anterior&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Siguiente&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Paginación con Iconos --&gt;
+&lt;nav aria-label="Navegación de página"&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item"&gt;
+      &lt;a class="page-link" href="#" aria-label="Anterior"&gt;
+        &lt;span aria-hidden="true"&gt;&amp;laquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;
+      &lt;a class="page-link" href="#" aria-label="Siguiente"&gt;
+        &lt;span aria-hidden="true"&gt;&amp;raquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🔧 Elementos Clave</h6>
+                                            <ul class="small mb-0">
+                                                <li><code>.pagination</code> - Contenedor principal</li>
+                                                <li><code>.page-item</code> - Elemento individual de página</li>
+                                                <li><code>.page-link</code> - Enlace de página</li>
+                                                <li><code>aria-label</code> - Accesibilidad para navegación</li>
+                                                <li><code>aria-current</code> - Indica página actual</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎯 Buenas Prácticas</h6>
+                                            <ul class="small mb-0">
+                                                <li>Siempre incluye etiquetas ARIA para accesibilidad</li>
+                                                <li>Usa iconos claros para navegación anterior/siguiente</li>
+                                                <li>Muestra el rango de elementos visibles vs totales</li>
+                                                <li>Considera el contexto de uso para el diseño</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ESTADOS ACTIVO/DESHABILITADO -->
+                <section id="pagination-estados" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">🎯 Estados Activo y Deshabilitado</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Utiliza las clases <code>.active</code> y <code>.disabled</code> para indicar visualmente la página actual y deshabilitar navegación cuando no esté disponible.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📊 Sistema de Reportes Empresariales</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">Reporte de Ventas Mensuales</h6>
+                                        <span class="badge bg-primary">Página 3 de 8</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Contenido del reporte -->
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Producto</th>
+                                                        <th>Ventas</th>
+                                                        <th>Ingresos</th>
+                                                        <th>Crecimiento</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Laptop Pro X1</td>
+                                                        <td>147 unidades</td>
+                                                        <td>$45,290</td>
+                                                        <td><span class="badge bg-success">+12%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tablet Elite T5</td>
+                                                        <td>89 unidades</td>
+                                                        <td>$22,150</td>
+                                                        <td><span class="badge bg-warning">+3%</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Smartphone Z3</td>
+                                                        <td>203 unidades</td>
+                                                        <td>$61,450</td>
+                                                        <td><span class="badge bg-success">+18%</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <!-- Paginación con estados -->
+                                        <nav aria-label="Navegación de reportes">
+                                            <ul class="pagination justify-content-center mb-0">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Anterior">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">3</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Siguiente">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🔐 Sistema de Usuarios con Navegación Limitada</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h6 class="mb-0">Gestión de Usuarios</h6>
+                                            <div class="alert alert-warning py-1 mb-0" role="alert">
+                                                <small><strong>Permisos limitados:</strong> Solo lectura</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Lista de usuarios -->
+                                        <div class="list-group mb-3">
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-1">María González</h6>
+                                                    <small class="text-muted">maria.gonzalez@empresa.com | Departamento: Ventas</small>
+                                                </div>
+                                                <span class="badge bg-success">Activo</span>
+                                            </div>
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="mb-1">Carlos Rodríguez</h6>
+                                                    <small class="text-muted">carlos.rodriguez@empresa.com | Departamento: IT</small>
+                                                </div>
+                                                <span class="badge bg-warning">Vacaciones</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Paginación con estado deshabilitado -->
+                                        <nav aria-label="Navegación de usuarios">
+                                            <ul class="pagination justify-content-center mb-0">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true" aria-label="Anterior">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true" aria-label="Siguiente">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="text-center mt-2">
+                                            <small class="text-muted">La navegación está limitada por permisos de usuario</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Estado Activo --&gt;
+&lt;li class="page-item active" aria-current="page"&gt;
+  &lt;a class="page-link" href="#"&gt;3&lt;/a&gt;
+&lt;/li&gt;
+
+&lt;!-- Estado Deshabilitado --&gt;
+&lt;li class="page-item disabled"&gt;
+  &lt;a class="page-link" href="#" tabindex="-1" aria-disabled="true"&gt;Anterior&lt;/a&gt;
+&lt;/li&gt;
+
+&lt;!-- Ejemplo Completo con Ambos Estados --&gt;
+&lt;nav aria-label="Navegación de página"&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item disabled"&gt;
+      &lt;a class="page-link" href="#" tabindex="-1" aria-disabled="true"&gt;&amp;laquo;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active" aria-current="page"&gt;
+      &lt;a class="page-link" href="#"&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;
+      &lt;a class="page-link" href="#"&gt;&amp;raquo;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 UX de Estados en Paginación:</strong> Los estados visuales claros son cruciales para una buena experiencia de usuario. El estado <code>.active</code> debe destacar claramente la página actual, mientras que <code>.disabled</code> debe indicar visualmente que la navegación no está disponible. Esto ayuda a los usuarios a entender inmediatamente su posición y las opciones de navegación disponibles.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN TAMAÑOS DE PAGINACIÓN -->
+                <section id="pagination-tamanos" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">📏 Tamaños de Paginación</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Personaliza el tamaño de tu paginación usando las clases <code>.pagination-lg</code> para tamaño grande o <code>.pagination-sm</code> para tamaño pequeño.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📱 Diferentes Tamaños para Diferentes Contextos</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">Grande (.pagination-lg) - Ideal para pantallas táctiles</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="small text-muted mb-3">Perfecto para aplicaciones móviles o interfaces donde los usuarios interactúan principalmente con el tacto.</p>
+                                        <nav aria-label="Paginación grande">
+                                            <ul class="pagination pagination-lg justify-content-center">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                                                </li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">Siguiente</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">Normal - Tamaño estándar para uso general</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="small text-muted mb-3">Ideal para la mayoría de aplicaciones web y dashboards empresariales.</p>
+                                        <nav aria-label="Paginación normal">
+                                            <ul class="pagination justify-content-center">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Anterior">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Siguiente">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">Pequeño (.pagination-sm) - Para interfaces compactas</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="small text-muted mb-3">Perfecto para tablas de datos, interfaces administrativas o cualquier lugar donde el espacio sea limitado.</p>
+                                        <nav aria-label="Paginación pequeña">
+                                            <ul class="pagination pagination-sm justify-content-center">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">&raquo;</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Paginación Grande --&gt;
+&lt;nav aria-label="Paginación grande"&gt;
+  &lt;ul class="pagination pagination-lg"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Paginación Normal (por defecto) --&gt;
+&lt;nav aria-label="Paginación normal"&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Paginación Pequeña --&gt;
+&lt;nav aria-label="Paginación pequeña"&gt;
+  &lt;ul class="pagination pagination-sm"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6>🎯 Casos de Uso Ideales</h6>
+                                    <ul class="small">
+                                        <li><strong>Grande:</strong> Aplicaciones móviles, pantallas táctiles</li>
+                                        <li><strong>Normal:</strong> Aplicaciones web estándar, dashboards</li>
+                                        <li><strong>Pequeño:</strong> Tablas de datos, interfaces compactas</li>
+                                        <li><strong>Responsive:</strong> Adaptar tamaño según breakpoint</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>🔧 Consideraciones Técnicas</h6>
+                                    <ul class="small">
+                                        <li>Los tamaños afectan padding y font-size</li>
+                                        <li>Mantén consistencia en toda la aplicación</li>
+                                        <li>Considera la accesibilidad en tamaños pequeños</li>
+                                        <li>Prueba en diferentes dispositivos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ALINEACIÓN DE PAGINACIÓN -->
+                <section id="pagination-alineacion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-purple text-white">
+                            <h2 class="h3 mb-0">🎪 Alineación de Paginación</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Controla la alineación horizontal de tu paginación usando las clases de utilidad de flexbox de Bootstrap: <code>.justify-content-center</code> o <code>.justify-content-end</code>.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">🎨 Diferentes Alineaciones para Diferentes Diseños</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">Alineación Izquierda (Por Defecto)</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="small text-muted mb-3">Ideal cuando la paginación es el elemento principal de navegación y quieres que los usuarios la encuentren fácilmente al inicio del contenido.</p>
+                                        <nav aria-label="Paginación alineada a la izquierda">
+                                            <ul class="pagination">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                                                </li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">Siguiente</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">Alineación Centrada (.justify-content-center)</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="small text-muted mb-3">Perfecta para dashboards y aplicaciones donde la paginación es un elemento central de la interfaz y quieres balance visual.</p>
+                                        <nav aria-label="Paginación centrada">
+                                            <ul class="pagination justify-content-center">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Anterior">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Siguiente">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">Alineación Derecha (.justify-content-end)</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="small text-muted mb-3">Ideal para interfaces donde la paginación es un elemento secundario o cuando se combina con otros controles en la misma fila.</p>
+                                        <nav aria-label="Paginación alineada a la derecha">
+                                            <ul class="pagination justify-content-end">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">&raquo;</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <h6 class="mt-4 mb-3">📊 Ejemplo en Dashboard con Múltiples Controles</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <h6 class="mb-0">Reporte de Ventas</h6>
+                                                <small class="text-muted">Mostrando 1-10 de 125 registros</small>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-outline-primary btn-sm">Exportar</button>
+                                                <button class="btn btn-outline-primary btn-sm">Filtrar</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Tabla de ejemplo -->
+                                        <div class="table-responsive mb-3">
+                                            <table class="table table-striped table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Cliente</th>
+                                                        <th>Monto</th>
+                                                        <th>Fecha</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>#001</td>
+                                                        <td>Empresa ABC</td>
+                                                        <td>$1,250.00</td>
+                                                        <td>15/03/2024</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#002</td>
+                                                        <td>Compañía XYZ</td>
+                                                        <td>$3,450.00</td>
+                                                        <td>16/03/2024</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <!-- Paginación alineada a la derecha en contexto -->
+                                        <nav aria-label="Navegación de reportes">
+                                            <ul class="pagination justify-content-end mb-0">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Anterior">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item active" aria-current="page">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Siguiente">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Alineación Izquierda (por defecto) --&gt;
+&lt;nav aria-label="Paginación izquierda"&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Alineación Centrada --&gt;
+&lt;nav aria-label="Paginación centrada"&gt;
+  &lt;ul class="pagination justify-content-center"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Alineación Derecha --&gt;
+&lt;nav aria-label="Paginación derecha"&gt;
+  &lt;ul class="pagination justify-content-end"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+                            <div class="alert alert-warning">
+                                <strong>⚠️ Psicología de la Alineación en UX:</strong> La alineación de la paginación afecta cómo los usuarios interactúan con tu interfaz. La alineación izquierda es más natural para lenguajes que se leen de izquierda a derecha, la centrada crea balance visual, y la derecha es ideal cuando la paginación comparte espacio con otros controles. Considera el flujo de lectura y la jerarquía visual de tu diseño al elegir la alineación.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN BREADCRUMBS -->
+                <section id="breadcrumbs" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger text-white">
+                            <h2 class="h3 mb-0">🍞 Sistema de Breadcrumbs</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Los breadcrumbs (migas de pan) muestran la ubicación actual del usuario dentro de una jerarquía de navegación, proporcionando contexto y una forma fácil de retroceder.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">🏪 Sistema de E-commerce con Breadcrumbs</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Electrónicos</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Computadoras</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Laptops</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Laptop Gaming Pro X1</li>
+                                            </ol>
+                                        </nav>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="card">
+                                                    <div class="card-body text-center">
+                                                        <div class="placeholder-img bg-light mb-3" style="height: 150px;"></div>
+                                                        <h5>Laptop Gaming Pro X1</h5>
+                                                        <p class="text-success fw-bold">$1,299.99</p>
+                                                        <button class="btn btn-primary">Agregar al Carrito</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h5>Descripción del Producto</h5>
+                                                <p>La Laptop Gaming Pro X1 está diseñada para gamers exigentes que buscan máximo rendimiento. Con procesador Intel i9, 32GB RAM y tarjeta gráfica RTX 4080.</p>
+                                                
+                                                <h6>Especificaciones:</h6>
+                                                <ul>
+                                                    <li>Procesador: Intel Core i9-13900H</li>
+                                                    <li>Memoria: 32GB DDR5</li>
+                                                    <li>Almacenamiento: 2TB SSD NVMe</li>
+                                                    <li>Gráficos: NVIDIA GeForce RTX 4080</li>
+                                                    <li>Pantalla: 17.3" QHD 240Hz</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">📁 Sistema de Archivos con Breadcrumbs</h6>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door"></i> Inicio</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Documentos</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Proyectos</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Cliente ABC</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Diseño Web</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Wireframes</li>
+                                            </ol>
+                                        </nav>
+                                        
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nombre</th>
+                                                        <th>Tamaño</th>
+                                                        <th>Modificado</th>
+                                                        <th>Tipo</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><i class="bi bi-file-earmark-text text-primary"></i> home-wireframe.fig</td>
+                                                        <td>2.4 MB</td>
+                                                        <td>15/03/2024</td>
+                                                        <td>Archivo FIGMA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="bi bi-file-earmark-text text-primary"></i> dashboard-wireframe.fig</td>
+                                                        <td>3.1 MB</td>
+                                                        <td>14/03/2024</td>
+                                                        <td>Archivo FIGMA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="bi bi-folder-fill text-warning"></i> feedback-cliente</td>
+                                                        <td>-</td>
+                                                        <td>13/03/2024</td>
+                                                        <td>Carpeta</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">📚 Sistema de Cursos con Breadcrumbs</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Cursos</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Desarrollo Web</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Frontend</a></li>
+                                                <li class="breadcrumb-item"><a href="#">Bootstrap 5</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Componentes de Paginación</li>
+                                            </ol>
+                                        </nav>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <h4>Componentes de Paginación en Bootstrap 5</h4>
+                                                <p>En esta lección aprenderás a implementar sistemas de paginación completos usando los componentes de Bootstrap 5.</p>
+                                                
+                                                <div class="card mb-3">
+                                                    <div class="card-header bg-light">
+                                                        <h6 class="mb-0">Contenido de la Lección</h6>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <ul>
+                                                            <li>Paginación básica y avanzada</li>
+                                                            <li>Estados activos y deshabilitados</li>
+                                                            <li>Sistemas de breadcrumbs</li>
+                                                            <li>Mejores prácticas de UX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Progreso del Curso</h6>
+                                                        <div class="progress mb-2">
+                                                            <div class="progress-bar" style="width: 65%">65%</div>
+                                                        </div>
+                                                        <small class="text-muted">13 de 20 lecciones completadas</small>
+                                                        
+                                                        <div class="mt-3">
+                                                            <button class="btn btn-primary w-100 mb-2">Lección Anterior</button>
+                                                            <button class="btn btn-success w-100">Siguiente Lección</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Breadcrumbs Básicos --&gt;
+&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Biblioteca&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;Datos&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;!-- Breadcrumbs con Iconos --&gt;
+&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;&lt;i class="bi bi-house-door"&gt;&lt;/i&gt; Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Proyectos&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;Actual&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;!-- Breadcrumbs sin Enlaces --&gt;
+&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;Inicio&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;Productos&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;Detalles&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🔧 Elementos Clave</h6>
+                                            <ul class="small mb-0">
+                                                <li><code>.breadcrumb</code> - Contenedor principal</li>
+                                                <li><code>.breadcrumb-item</code> - Elemento individual</li>
+                                                <li><code>.active</code> - Elemento actual (sin enlace)</li>
+                                                <li><code>aria-current="page"</code> - Accesibilidad</li>
+                                                <li>Separadores automáticos con CSS</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎯 Buenas Prácticas</h6>
+                                            <ul class="small mb-0">
+                                                <li>Máximo 5-7 niveles de profundidad</li>
+                                                <li>Usa enlaces para todos los niveles excepto el actual</li>
+                                                <li>Considera el contexto móvil (pueden requerir scroll)</li>
+                                                <li>Mantén la consistencia en toda la aplicación</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LABORATORIO DE PAGINACIÓN -->
+                <section id="laboratorio-pagination" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">🔬 Laboratorio de Paginación - Personalización Avanzada</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Experimenta con diferentes configuraciones de paginación en tiempo real. Crea el sistema de navegación perfecto para tu aplicación.</p>
+
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="mb-3">⚙️ Configuración de Paginación</h6>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Número Total de Páginas: <span id="totalPagesValue">7</span></label>
+                                            <input type="range" class="form-range" id="totalPagesRange" min="3" max="15" value="7">
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Página Activa: <span id="activePageValue">3</span></label>
+                                            <input type="range" class="form-range" id="activePageRange" min="1" max="7" value="3">
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Tamaño:</label>
+                                            <select class="form-select" id="sizeSelect">
+                                                <option value="pagination-sm">Pequeño</option>
+                                                <option value="" selected>Normal</option>
+                                                <option value="pagination-lg">Grande</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Alineación:</label>
+                                            <select class="form-select" id="alignmentSelect">
+                                                <option value="justify-content-start" selected>Izquierda</option>
+                                                <option value="justify-content-center">Centro</option>
+                                                <option value="justify-content-end">Derecha</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="showPrevNextCheck" checked>
+                                                <label class="form-check-label" for="showPrevNextCheck">
+                                                    Mostrar Anterior/Siguiente
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="showFirstLastCheck">
+                                                <label class="form-check-label" for="showFirstLastCheck">
+                                                    Mostrar Primera/Última
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="disabledStateCheck">
+                                                <label class="form-check-label" for="disabledStateCheck">
+                                                    Estado deshabilitado en extremos
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Tipo de Navegación:</label>
+                                            <select class="form-select" id="navTypeSelect">
+                                                <option value="text" selected>Texto (Anterior/Siguiente)</option>
+                                                <option value="icons">Iconos (‹/›)</option>
+                                                <option value="arrows">Flechas (←/→)</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <button class="btn btn-primary" onclick="resetPaginationLab()">🔄 Reiniciar Laboratorio</button>
+                                        <button class="btn btn-success" onclick="copyPaginationCode()">📋 Copiar Código</button>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h6 class="mb-3">👁️ Vista Previa en Tiempo Real</h6>
+                                        
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div id="paginationPreview" class="mb-3">
+                                                    <!-- La paginación se generará aquí dinámicamente -->
+                                                </div>
+                                                
+                                                <div class="text-center">
+                                                    <small class="text-muted" id="paginationInfo">Mostrando página 3 de 7</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <h6>📋 Código Generado:</h6>
+                                            <pre class="bg-dark text-light p-3 rounded small" id="generatedPaginationCode"></pre>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <h6>💡 Explicación:</h6>
+                                            <p class="small text-muted" id="paginationExplanation">
+                                                Esta paginación de tamaño normal con 7 páginas totales y página activa 3 está alineada a la izquierda. Incluye navegación anterior/siguiente con texto.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">🎯 Casos de Uso con la Configuración Actual</h3>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">📱</div>
+                                            <h6>Aplicación Móvil</h6>
+                                            <p class="small">Ideal para apps con listas de contenido paginado</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">💻</div>
+                                            <h6>Dashboard Web</h6>
+                                            <p class="small">Perfecto para sistemas de gestión con tablas de datos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🛒</div>
+                                            <h6>E-commerce</h6>
+                                            <p class="small">Excelente para catálogos de productos extensos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN PAGINACIÓN AVANZADA -->
+                <section id="pagination-avanzada" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🚀 Paginación Avanzada</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Explora técnicas avanzadas y patrones creativos con paginación para crear experiencias de usuario excepcionales en aplicaciones complejas.</p>
+
+                            <h3 class="h5">🛠️ Técnicas Avanzadas en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <!-- Paginación con Dropdown -->
+                                <h6 class="mb-3">🎯 Paginación con Navegación Rápida</h6>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                            <nav aria-label="Navegación de página">
+                                                <ul class="pagination mb-0">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Anterior">
+                                                            <span aria-hidden="true">&laquo;</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Siguiente">
+                                                            <span aria-hidden="true">&raquo;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                            
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="small text-muted">Ir a página:</span>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                                        Página 2
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Página 1</a></li>
+                                                        <li><a class="dropdown-item active" href="#">Página 2</a></li>
+                                                        <li><a class="dropdown-item" href="#">Página 3</a></li>
+                                                        <li><a class="dropdown-item" href="#">Página 4</a></li>
+                                                        <li><a class="dropdown-item" href="#">Página 5</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Paginación con Información Contextual -->
+                                <h6 class="mb-3">📊 Paginación con Métricas en Tiempo Real</h6>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <span class="small text-muted">Mostrando <strong>1-10</strong> de <strong>247</strong> registros</span>
+                                                    <span class="badge bg-info">Página 1 de 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <nav aria-label="Navegación de página">
+                                                    <ul class="pagination justify-content-end mb-0">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                                                <i class="bi bi-chevron-left"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">
+                                                                <i class="bi bi-chevron-right"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Paginación Responsive Adaptativa -->
+                                <h6 class="mb-3">📱 Paginación Responsive con Comportamiento Adaptativo</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-none d-md-block">
+                                            <!-- Versión desktop -->
+                                            <nav aria-label="Navegación desktop">
+                                                <ul class="pagination justify-content-center">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Anterior">
+                                                            <span aria-hidden="true">&laquo;</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Siguiente">
+                                                            <span aria-hidden="true">&raquo;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <div class="d-md-none">
+                                            <!-- Versión móvil -->
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <button class="btn btn-outline-primary btn-sm">
+                                                    <i class="bi bi-chevron-left"></i> Anterior
+                                                </button>
+                                                <span class="small text-muted">Página 2 de 7</span>
+                                                <button class="btn btn-outline-primary btn-sm">
+                                                    Siguiente <i class="bi bi-chevron-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="text-center mt-2">
+                                            <small class="text-muted">La paginación se adapta automáticamente al tamaño de pantalla</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Paginación con Dropdown --&gt;
+&lt;div class="d-flex justify-content-between align-items-center"&gt;
+  &lt;nav aria-label="Navegación de página"&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;!-- Elementos de paginación --&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  
+  &lt;div class="d-flex align-items-center gap-2"&gt;
+    &lt;span class="small text-muted"&gt;Ir a página:&lt;/span&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"&gt;
+        Página 2
+      &lt;/button&gt;
+      &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Página 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item active" href="#"&gt;Página 2&lt;/a&gt;&lt;/li&gt;
+        &lt;!-- Más páginas --&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Paginación Responsive --&gt;
+&lt;div class="d-none d-md-block"&gt;
+  &lt;!-- Versión desktop completa --&gt;
+  &lt;nav aria-label="Navegación desktop"&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;!-- Paginación completa --&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;
+&lt;div class="d-md-none"&gt;
+  &lt;!-- Versión móvil simplificada --&gt;
+  &lt;div class="d-flex justify-content-between align-items-center"&gt;
+    &lt;button class="btn btn-outline-primary btn-sm"&gt;
+      &lt;i class="bi bi-chevron-left"&gt;&lt;/i&gt; Anterior
+    &lt;/button&gt;
+    &lt;span class="small text-muted"&gt;Página 2 de 7&lt;/span&gt;
+    &lt;button class="btn btn-outline-primary btn-sm"&gt;
+      Siguiente &lt;i class="bi bi-chevron-right"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Innovación en Patrones de Paginación:</strong> Los patrones avanzados de paginación pueden transformar significativamente la experiencia de usuario. La navegación rápida con dropdowns es ideal para conjuntos de datos muy grandes, las métricas contextuales ayudan a los usuarios a entender su posición, y la paginación responsive asegura una experiencia óptima en todos los dispositivos. Experimenta con estos patrones para encontrar el equilibrio perfecto entre funcionalidad y usabilidad.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EJEMPLO AVANZADO -->
+                <section id="ejemplo-avanzado" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">💼 Ejemplo Avanzado: Dashboard de Analytics con Paginación Inteligente</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea un dashboard empresarial completo que utilice sistemas de paginación avanzados para manejar grandes volúmenes de datos con una experiencia de usuario excepcional.</p>
+
+                            <h3 class="h5">🛠️ Dashboard de Analytics "DataVision Pro"</h3>
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <!-- Header del Dashboard -->
+                                <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-white rounded shadow-sm">
+                                    <div>
+                                        <h5 class="mb-0 text-dark">📊 Dashboard - DataVision Pro</h5>
+                                        <p class="mb-0 text-muted">Analítica avanzada con navegación inteligente</p>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="badge bg-success">En Tiempo Real</span>
+                                        <div class="spinner-grow spinner-grow-sm text-success"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Filtros y Controles -->
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <div class="d-flex flex-wrap gap-2 align-items-center">
+                                                    <span class="small fw-bold">Filtros:</span>
+                                                    <select class="form-select form-select-sm" style="width: auto;">
+                                                        <option>Todos los productos</option>
+                                                        <option>Electrónicos</option>
+                                                        <option>Ropa</option>
+                                                        <option>Hogar</option>
+                                                    </select>
+                                                    <select class="form-select form-select-sm" style="width: auto;">
+                                                        <option>Últimos 30 días</option>
+                                                        <option>Últimos 7 días</option>
+                                                        <option>Este mes</option>
+                                                        <option>Trimestre actual</option>
+                                                    </select>
+                                                    <button class="btn btn-outline-primary btn-sm">Aplicar Filtros</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 text-end">
+                                                <div class="d-flex justify-content-end gap-2">
+                                                    <button class="btn btn-outline-secondary btn-sm">
+                                                        <i class="bi bi-download"></i> Exportar
+                                                    </button>
+                                                    <button class="btn btn-outline-primary btn-sm">
+                                                        <i class="bi bi-arrow-clockwise"></i> Actualizar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sistema de Métricas Paginadas -->
+                                <div class="row mb-4">
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-primary">1,247</h5>
+                                                <p class="card-text small">Usuarios Activos</p>
+                                                <div class="progress" style="height: 4px;">
+                                                    <div class="progress-bar bg-primary" style="width: 75%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-success">$45.2K</h5>
+                                                <p class="card-text small">Ingresos Mensuales</p>
+                                                <div class="progress" style="height: 4px;">
+                                                    <div class="progress-bar bg-success" style="width: 82%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning">7.8%</h5>
+                                                <p class="card-text small">Tasa de Conversión</p>
+                                                <div class="progress" style="height: 4px;">
+                                                    <div class="progress-bar bg-warning" style="width: 65%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-info">3.2K</h5>
+                                                <p class="card-text small">Nuevos Registros</p>
+                                                <div class="progress" style="height: 4px;">
+                                                    <div class="progress-bar bg-info" style="width: 90%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tabla de Datos con Paginación Compleja -->
+                                <div class="card">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">📋 Transacciones Recientes</h6>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="badge bg-primary">Página 3 de 12</span>
+                                            <span class="small text-muted">Mostrando 25 de 287 registros</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Cliente</th>
+                                                        <th>Producto</th>
+                                                        <th>Fecha</th>
+                                                        <th>Monto</th>
+                                                        <th>Estado</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>#001</td>
+                                                        <td>Empresa ABC</td>
+                                                        <td>Laptop Pro X1</td>
+                                                        <td>15/03/2024</td>
+                                                        <td>$1,250.00</td>
+                                                        <td><span class="badge bg-success">Completado</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#002</td>
+                                                        <td>Compañía XYZ</td>
+                                                        <td>Tablet Elite T5</td>
+                                                        <td>16/03/2024</td>
+                                                        <td>$899.99</td>
+                                                        <td><span class="badge bg-warning">Pendiente</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#003</td>
+                                                        <td>Corporación Global</td>
+                                                        <td>Smartphone Z3</td>
+                                                        <td>16/03/2024</td>
+                                                        <td>$699.99</td>
+                                                        <td><span class="badge bg-success">Completado</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#004</td>
+                                                        <td>StartUp Innovadora</td>
+                                                        <td>Monitor 4K</td>
+                                                        <td>17/03/2024</td>
+                                                        <td>$450.00</td>
+                                                        <td><span class="badge bg-danger">Cancelado</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#005</td>
+                                                        <td>Empresa Familiar</td>
+                                                        <td>Teclado Mecánico</td>
+                                                        <td>17/03/2024</td>
+                                                        <td>$129.99</td>
+                                                        <td><span class="badge bg-success">Completado</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        
+                                        <!-- Paginación Avanzada Completa -->
+                                        <div class="card-footer bg-light">
+                                            <div class="row align-items-center">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <span class="small text-muted">Mostrando <strong>51-75</strong> de <strong>287</strong> registros</span>
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                                                25 por página
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">10 por página</a></li>
+                                                                <li><a class="dropdown-item active" href="#">25 por página</a></li>
+                                                                <li><a class="dropdown-item" href="#">50 por página</a></li>
+                                                                <li><a class="dropdown-item" href="#">100 por página</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <nav aria-label="Navegación avanzada">
+                                                        <ul class="pagination justify-content-end mb-0">
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#" aria-label="Primera">
+                                                                    <span aria-hidden="true">&laquo;&laquo;</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#" aria-label="Anterior">
+                                                                    <span aria-hidden="true">&laquo;</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                            <li class="page-item active" aria-current="page">
+                                                                <a class="page-link" href="#">3</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#" aria-label="Siguiente">
+                                                                    <span aria-hidden="true">&raquo;</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#" aria-label="Última">
+                                                                    <span aria-hidden="true">&raquo;&raquo;</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">💡 Lo que Aprendemos de Este Ejemplo</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎨 Patrones de Paginación Inteligentes</h6>
+                                            <ul class="small mb-0">
+                                                <li><strong>Paginación contextual:</strong> Información sobre posición y totales</li>
+                                                <li><strong>Navegación rápida:</strong> Dropdowns para saltar entre páginas</li>
+                                                <li><strong>Controles de densidad:</strong> Cambiar elementos por página</li>
+                                                <li><strong>Navegación extrema:</strong> Primera/última página</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>⚡ Técnicas Avanzadas Implementadas</h6>
+                                            <ul class="small mb-0">
+                                                <li><strong>Paginación híbrida:</strong> Combinación de controles</li>
+                                                <li><strong>Información en tiempo real:</strong> Métricas y estados</li>
+                                                <li><strong>UX adaptativa:</strong> Diferentes patrones según contexto</li>
+                                                <li><strong>Accesibilidad completa:</strong> ARIA labels y navegación por teclado</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MEJORES PRÁCTICAS -->
+                <section id="mejores-practicas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">💡 Mejores Prácticas y Consejos Avanzados</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Optimiza el uso de paginación para crear experiencias de usuario excepcionales que sean tanto funcionales como visualmente atractivas.</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🎯 UX/UI</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Límites razonables:</strong> 7-9 elementos de página visibles</li>
+                                                <li><strong>Estados claros:</strong> Active y disabled bien diferenciados</li>
+                                                <li><strong>Navegación intuitiva:</strong> Iconos reconocibles</li>
+                                                <li><strong>Información contextual:</strong> Mostrar posición y totales</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">♿ Accesibilidad</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>ARIA labels:</strong> Describe el propósito de navegación</li>
+                                                <li><strong>Navegación por teclado:</strong> Tab y teclas de acceso</li>
+                                                <li><strong>Contraste adecuado:</strong> Estados claramente visibles</li>
+                                                <li><strong>Screen readers:</strong> Anuncia cambios de página</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="h5 mt-4">🚀 Patrones Avanzados</h4>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">📱</div>
+                                            <h6>Paginación Adaptativa</h6>
+                                            <p class="small">Que se ajusta automáticamente al dispositivo y contexto</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🎮</div>
+                                            <h6>Paginación Inteligente</h6>
+                                            <p class="small">Con carga progresiva y predicción de navegación</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🔧</div>
+                                            <h6>Paginación Híbrida</h6>
+                                            <p class="small">Combinando múltiples patrones según necesidades</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4">
+                                <strong>💡 Conclusión Final:</strong> La paginación es mucho más que simples controles de navegación. Cuando se implementa correctamente, se convierte en una herramienta poderosa para organizar contenido, mejorar el rendimiento y crear experiencias de usuario fluidas y profesionales. Domina estos patrones para transformar la navegación en aplicaciones complejas en experiencias intuitivas y eficientes.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="site-footer mt-5 py-5">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-4">
+                                <h5>Bootstrap 5 Tutorial</h5>
+                                <p class="small mb-2">Tutorial interactivo y open-source. Aprende con ejemplos, ejercicios y despliega en GitHub Pages.</p>
+                                <p class="small mb-0">© 2025 Sebastián — Hecho para la comunidad.</p>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Guía rápida</h6>
+                                <ul class="list-unstyled small">
+                                    <li><a href="../index.html#grid">Grid System</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a href="../forms.html">Forms</a></li>
+                                    <li><a href="../github-tutorial.html">Subir a GitHub</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Comunidad</h6>
+                                <div class="d-flex gap-2">
+                                    <!-- Redes sociales -->
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://twitter.com/tu_usuario" target="_blank" rel="noopener"
+                                        aria-label="Twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                        aria-label="GitHub">
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <h6>Newsletter</h6>
+                                <form id="footerSubscribe" class="d-flex flex-column">
+                                    <input type="email" class="form-control form-control-sm mb-2"
+                                        placeholder="tu@email.com">
+                                    <button class="btn btn-sm btn-primary">Suscribirme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <div class="list-group" id="searchResultsList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Live preview modal para cualquier seccion.html -->
+    <div class="modal fade" id="livePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Vista Previa - Pagination</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe id="livePreviewIframe" style="width:100%;height:70vh;border:0;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-outline-secondary" id="openInNew">Abrir en nueva pestaña</button>
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante para TOC móvil -->
+    <button class="mobile-toc-toggle d-md-none" id="mobileTocToggle" aria-label="Abrir índice de contenido">
+        <span class="toc-icon">📚</span>
+        <span class="toc-text">Índice</span>
+    </button>
+
+    <!-- Overlay para móvil -->
+    <div class="mobile-sidebar-overlay d-md-none" id="mobileSidebarOverlay"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="../JS/buscar.js"></script>
+    <script src="../JS/main.js"></script>
+
+    <script>
+        // ===== TOC MÓVIL MEJORADO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileTocToggle = document.getElementById('mobileTocToggle');
+            const mobileSidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobileSidebarOverlay');
+
+            if (mobileTocToggle && mobileSidebar && mobileOverlay) {
+                function toggleMobileTOC() {
+                    const isOpening = !mobileSidebar.classList.contains('mobile-open');
+
+                    if (isOpening) {
+                        mobileSidebar.classList.add('mobile-open');
+                        mobileOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                }
+
+                mobileTocToggle.addEventListener('click', toggleMobileTOC);
+                mobileOverlay.addEventListener('click', toggleMobileTOC);
+
+                const tocLinks = mobileSidebar.querySelectorAll('a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth < 768) {
+                            toggleMobileTOC();
+                        }
+                    });
+                });
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 768) {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileSidebar.classList.contains('mobile-open')) {
+                        toggleMobileTOC();
+                    }
+                });
+            }
+        });
+
+        // Función global para reset del progreso
+        function resetProgress() {
+            localStorage.setItem('tutorialProgress', '{}');
+            const progressBar = document.getElementById('courseProgress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+            }
+            alert('Progreso reiniciado correctamente ✅');
+        }
+
+        // ===== LABORATORIO DE PAGINACIÓN INTERACTIVO =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos del laboratorio
+            const totalPagesRange = document.getElementById('totalPagesRange');
+            const activePageRange = document.getElementById('activePageRange');
+            const sizeSelect = document.getElementById('sizeSelect');
+            const alignmentSelect = document.getElementById('alignmentSelect');
+            const showPrevNextCheck = document.getElementById('showPrevNextCheck');
+            const showFirstLastCheck = document.getElementById('showFirstLastCheck');
+            const disabledStateCheck = document.getElementById('disabledStateCheck');
+            const navTypeSelect = document.getElementById('navTypeSelect');
+            const paginationPreview = document.getElementById('paginationPreview');
+            const totalPagesValue = document.getElementById('totalPagesValue');
+            const activePageValue = document.getElementById('activePageValue');
+            const paginationInfo = document.getElementById('paginationInfo');
+            const generatedPaginationCode = document.getElementById('generatedPaginationCode');
+            const paginationExplanation = document.getElementById('paginationExplanation');
+
+            // Actualizar la vista previa
+            function updatePaginationPreview() {
+                const totalPages = parseInt(totalPagesRange.value);
+                const activePage = parseInt(activePageRange.value);
+                const size = sizeSelect.value;
+                const alignment = alignmentSelect.value;
+                const showPrevNext = showPrevNextCheck.checked;
+                const showFirstLast = showFirstLastCheck.checked;
+                const disabledState = disabledStateCheck.checked;
+                const navType = navTypeSelect.value;
+
+                // Actualizar valores mostrados
+                totalPagesValue.textContent = totalPages;
+                activePageValue.textContent = activePage;
+                paginationInfo.textContent = `Mostrando página ${activePage} de ${totalPages}`;
+
+                // Generar HTML de paginación
+                let paginationHTML = '<nav aria-label="Paginación personalizada"><ul class="pagination';
+                
+                // Aplicar tamaño
+                if (size) {
+                    paginationHTML += ' ' + size;
+                }
+                
+                // Aplicar alineación
+                paginationHTML += ' ' + alignment;
+                
+                paginationHTML += '">';
+
+                // Primera página
+                if (showFirstLast) {
+                    const isDisabled = disabledState && activePage === 1;
+                    paginationHTML += `<li class="page-item ${isDisabled ? 'disabled' : ''}">
+                        <a class="page-link" href="#" ${isDisabled ? 'tabindex="-1" aria-disabled="true"' : ''} aria-label="Primera página">
+                            <span aria-hidden="true">&laquo;&laquo;</span>
+                        </a>
+                    </li>`;
+                }
+
+                // Anterior
+                if (showPrevNext) {
+                    const isDisabled = disabledState && activePage === 1;
+                    let navContent = '';
+                    
+                    switch(navType) {
+                        case 'icons':
+                            navContent = '<span aria-hidden="true">&laquo;</span>';
+                            break;
+                        case 'arrows':
+                            navContent = '<span aria-hidden="true">←</span>';
+                            break;
+                        default:
+                            navContent = 'Anterior';
+                    }
+                    
+                    paginationHTML += `<li class="page-item ${isDisabled ? 'disabled' : ''}">
+                        <a class="page-link" href="#" ${isDisabled ? 'tabindex="-1" aria-disabled="true"' : ''} aria-label="Página anterior">
+                            ${navContent}
+                        </a>
+                    </li>`;
+                }
+
+                // Páginas numéricas
+                for (let i = 1; i <= totalPages; i++) {
+                    const isActive = i === activePage;
+                    paginationHTML += `<li class="page-item ${isActive ? 'active' : ''}" ${isActive ? 'aria-current="page"' : ''}>
+                        <a class="page-link" href="#">${i}</a>
+                    </li>`;
+                }
+
+                // Siguiente
+                if (showPrevNext) {
+                    const isDisabled = disabledState && activePage === totalPages;
+                    let navContent = '';
+                    
+                    switch(navType) {
+                        case 'icons':
+                            navContent = '<span aria-hidden="true">&raquo;</span>';
+                            break;
+                        case 'arrows':
+                            navContent = '<span aria-hidden="true">→</span>';
+                            break;
+                        default:
+                            navContent = 'Siguiente';
+                    }
+                    
+                    paginationHTML += `<li class="page-item ${isDisabled ? 'disabled' : ''}">
+                        <a class="page-link" href="#" ${isDisabled ? 'tabindex="-1" aria-disabled="true"' : ''} aria-label="Página siguiente">
+                            ${navContent}
+                        </a>
+                    </li>`;
+                }
+
+                // Última página
+                if (showFirstLast) {
+                    const isDisabled = disabledState && activePage === totalPages;
+                    paginationHTML += `<li class="page-item ${isDisabled ? 'disabled' : ''}">
+                        <a class="page-link" href="#" ${isDisabled ? 'tabindex="-1" aria-disabled="true"' : ''} aria-label="Última página">
+                            <span aria-hidden="true">&raquo;&raquo;</span>
+                        </a>
+                    </li>`;
+                }
+
+                paginationHTML += '</ul></nav>';
+
+                // Actualizar vista previa
+                paginationPreview.innerHTML = paginationHTML;
+
+                // Generar código
+                generatePaginationCode(totalPages, activePage, size, alignment, showPrevNext, showFirstLast, disabledState, navType);
+                
+                // Actualizar explicación
+                updatePaginationExplanation(totalPages, activePage, size, alignment, showPrevNext, showFirstLast, disabledState, navType);
+            }
+
+            // Generar código HTML
+            function generatePaginationCode(totalPages, activePage, size, alignment, showPrevNext, showFirstLast, disabledState, navType) {
+                let code = '&lt;nav aria-label="Paginación personalizada"&gt;\n';
+                code += '  &lt;ul class="pagination';
+                
+                if (size) {
+                    code += ' ' + size;
+                }
+                
+                if (alignment) {
+                    code += ' ' + alignment;
+                }
+                
+                code += '"&gt;\n';
+
+                // Primera página
+                if (showFirstLast) {
+                    const isDisabled = disabledState && activePage === 1;
+                    code += `    &lt;li class="page-item ${isDisabled ? 'disabled' : ''}"&gt;\n`;
+                    code += `      &lt;a class="page-link" href="#" ${isDisabled ? 'tabindex="-1" aria-disabled="true"' : ''} aria-label="Primera página"&gt;\n`;
+                    code += '        &lt;span aria-hidden="true"&gt;&amp;laquo;&amp;laquo;&lt;/span&gt;\n';
+                    code += '      &lt;/a&gt;\n';
+                    code += '    &lt;/li&gt;\n';
+                }
+
+                // Anterior
+                if (showPrevNext) {
+                    const isDisabled = disabledState && activePage === 1;
+                    let navContent = '';
+                    
+                    switch(navType) {
+                        case 'icons':
+                            navContent = '&lt;span aria-hidden="true"&gt;&amp;laquo;&lt;/span&gt;';
+                            break;
+                        case 'arrows':
+                            navContent = '&lt;span aria-hidden="true"&gt;&amp;larr;&lt;/span&gt;';
+                            break;
+                        default:
+                            navContent = 'Anterior';
+                    }
+                    
+                    code += `    &lt;li class="page-item ${isDisabled ? 'disabled' : ''}"&gt;\n`;
+                    code += `      &lt;a class="page-link" href="#" ${isDisabled ? 'tabindex="-1" aria-disabled="true"' : ''} aria-label="Página anterior"&gt;\n`;
+                    code += `        ${navContent}\n`;
+                    code += '      &lt;/a&gt;\n';
+                    code += '    &lt;/li&gt;\n';
+                }
+
+                // Páginas numéricas
+                for (let i = 1; i <= totalPages; i++) {
+                    const isActive = i === activePage;
+                    code += `    &lt;li class="page-item ${isActive ? 'active' : ''}" ${isActive ? 'aria-current="page"' : ''}&gt;\n`;
+                    code += `      &lt;a class="page-link" href="#"&gt;${i}&lt;/a&gt;\n`;
+                    code += '    &lt;/li&gt;\n';
+                }
+
+                // Siguiente
+                if (showPrevNext) {
+                    const isDisabled = disabledState && activePage === totalPages;
+                    let navContent = '';
+                    
+                    switch(navType) {
+                        case 'icons':
+                            navContent = '&lt;span aria-hidden="true"&gt;&amp;raquo;&lt;/span&gt;';
+                            break;
+                        case 'arrows':
+                            navContent = '&lt;span aria-hidden="true"&gt;&amp;rarr;&lt;/span&gt;';
+                            break;
+                        default:
+                            navContent = 'Siguiente';
+                    }
+                    
+                    code += `    &lt;li class="page-item ${isDisabled ? 'disabled' : ''}"&gt;\n`;
+                    code += `      &lt;a class="page-link" href="#" ${isDisabled ? 'tabindex="-1" aria-disabled="true"' : ''} aria-label="Página siguiente"&gt;\n`;
+                    code += `        ${navContent}\n`;
+                    code += '      &lt;/a&gt;\n';
+                    code += '    &lt;/li&gt;\n';
+                }
+
+                // Última página
+                if (showFirstLast) {
+                    const isDisabled = disabledState && activePage === totalPages;
+                    code += `    &lt;li class="page-item ${isDisabled ? 'disabled' : ''}"&gt;\n`;
+                    code += `      &lt;a class="page-link" href="#" ${isDisabled ? 'tabindex="-1" aria-disabled="true"' : ''} aria-label="Última página"&gt;\n`;
+                    code += '        &lt;span aria-hidden="true"&gt;&amp;raquo;&amp;raquo;&lt;/span&gt;\n';
+                    code += '      &lt;/a&gt;\n';
+                    code += '    &lt;/li&gt;\n';
+                }
+
+                code += '  &lt;/ul&gt;\n';
+                code += '&lt;/nav&gt;';
+
+                generatedPaginationCode.textContent = code;
+            }
+
+            // Actualizar texto explicativo
+            function updatePaginationExplanation(totalPages, activePage, size, alignment, showPrevNext, showFirstLast, disabledState, navType) {
+                let explanation = 'Esta paginación ';
+                
+                // Tamaño
+                if (size === 'pagination-sm') {
+                    explanation += 'compacta ';
+                } else if (size === 'pagination-lg') {
+                    explanation += 'grande ';
+                } else {
+                    explanation += 'de tamaño normal ';
+                }
+                
+                // Páginas
+                explanation += `con ${totalPages} páginas totales y página activa ${activePage} `;
+                
+                // Alineación
+                if (alignment === 'justify-content-center') {
+                    explanation += 'está centrada ';
+                } else if (alignment === 'justify-content-end') {
+                    explanation += 'está alineada a la derecha ';
+                } else {
+                    explanation += 'está alineada a la izquierda ';
+                }
+                
+                // Navegación
+                if (showPrevNext) {
+                    explanation += 'e incluye navegación anterior/siguiente ';
+                    
+                    if (navType === 'icons') {
+                        explanation += 'con iconos ';
+                    } else if (navType === 'arrows') {
+                        explanation += 'con flechas ';
+                    } else {
+                        explanation += 'con texto ';
+                    }
+                }
+                
+                // Navegación extrema
+                if (showFirstLast) {
+                    explanation += 'más navegación a primera/última página ';
+                }
+                
+                // Estado deshabilitado
+                if (disabledState) {
+                    explanation += 'con estados deshabilitados en extremos ';
+                }
+                
+                // Contexto
+                explanation += 'es ideal para ';
+                
+                if (totalPages <= 5) {
+                    explanation += 'conjuntos de datos pequeños o medianos';
+                } else if (totalPages <= 10) {
+                    explanation += 'la mayoría de aplicaciones web estándar';
+                } else {
+                    explanation += 'aplicaciones empresariales con grandes volúmenes de datos';
+                }
+                
+                paginationExplanation.textContent = explanation + '.';
+            }
+
+            // Reiniciar laboratorio
+            window.resetPaginationLab = function() {
+                totalPagesRange.value = 7;
+                activePageRange.value = 3;
+                sizeSelect.value = '';
+                alignmentSelect.value = 'justify-content-start';
+                showPrevNextCheck.checked = true;
+                showFirstLastCheck.checked = false;
+                disabledStateCheck.checked = false;
+                navTypeSelect.value = 'text';
+                updatePaginationPreview();
+            }
+
+            // Copiar código generado
+            window.copyPaginationCode = function() {
+                const code = generatedPaginationCode.textContent;
+                navigator.clipboard.writeText(code).then(function() {
+                    const btn = document.querySelector('#laboratorio-pagination .btn-success');
+                    const originalText = btn.textContent;
+                    btn.textContent = '✓ Código Copiado!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                });
+            }
+
+            // Event listeners
+            totalPagesRange.addEventListener('input', function() {
+                activePageRange.max = this.value;
+                if (parseInt(activePageRange.value) > parseInt(this.value)) {
+                    activePageRange.value = this.value;
+                }
+                updatePaginationPreview();
+            });
+
+            activePageRange.addEventListener('input', updatePaginationPreview);
+            sizeSelect.addEventListener('change', updatePaginationPreview);
+            alignmentSelect.addEventListener('change', updatePaginationPreview);
+            showPrevNextCheck.addEventListener('change', updatePaginationPreview);
+            showFirstLastCheck.addEventListener('change', updatePaginationPreview);
+            disabledStateCheck.addEventListener('change', updatePaginationPreview);
+            navTypeSelect.addEventListener('change', updatePaginationPreview);
+
+            // Inicializar
+            updatePaginationPreview();
+        });
+    </script>
+
+    <style>
+        .bg-purple {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Estilos para placeholders */
+        .placeholder-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e9ecef;
+            border-radius: 0.375rem;
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+
+        /* Mejorar la apariencia de los ejemplos */
+        .card .border {
+            border-style: dashed !important;
+            border-color: #dee2e6 !important;
+        }
+
+        .py-6 {
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+        }
+
+        .py-7 {
+            padding-top: 6rem !important;
+            padding-bottom: 6rem !important;
+        }
+
+        /* Estilos para el laboratorio */
+        #paginationPreview {
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .display-md-3 {
+                font-size: calc(1.525rem + 3.3vw) !important;
+            }
+
+            /* Ajustes responsive para paginación */
+            .pagination {
+                flex-wrap: wrap;
+                justify-content: center !important;
+            }
+        }
+    </style>
+</body>
+
+</html>

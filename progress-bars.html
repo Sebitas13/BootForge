@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bars - Bootstrap 5 Tutorial Completo</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary" id="mainNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../ProyectoFinal.html">
+                        <img src="../Imagenes/logo-32.png" alt="logo" width="36" height="36" class="rounded">
+                        <span>
+                            <span class="fs-5">Bootstrap 5</span>
+                            <small class="d-block text-white-50" style="font-size:.68rem;">Tutorial Completo</small>
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../ProyectoFinal.html"> Inicio</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📐 Layout
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../containers.html">Containers</a></li>
+                                    <li><a class="dropdown-item" href="../grid.html">Grid System</a></li>
+                                    <li><a class="dropdown-item" href="../typography.html">Typography</a></li>
+                                    <li><a class="dropdown-item" href="../colors.html">Colors</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Resto del menú igual que en ProyectoFinal.html -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    🧩 Componentes
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="tables.html">Tables</a></li>
+                                    <li><a class="dropdown-item" href="images.html">Images</a></li>
+                                    <li><a class="dropdown-item" href="jumbotron.html">Jumbotron</a></li>
+                                    <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+                                    <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                                    <li><a class="dropdown-item" href="button-groups.html">Button Groups</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item active" href="progress-bars.html">Progress Bars</a></li>
+                                    <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+                                    <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+                                    <li><a class="dropdown-item" href="list-groups.html">List Groups</a></li>
+                                    <li><a class="dropdown-item" href="cards.html">Cards</a></li>
+                                    <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+                                    <li><a class="dropdown-item" href="collapse.html">Collapse</a></li>
+                                    <li><a class="dropdown-item" href="navs.html">Navs</a></li>
+                                    <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+                                    <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+                                    <li><a class="dropdown-item" href="tooltip.html">Tooltip</a></li>
+                                    <li><a class="dropdown-item" href="popover.html">Popover</a></li>
+                                    <li><a class="dropdown-item" href="toast.html">Toast</a></li>
+                                    <li><a class="dropdown-item" href="scrollspy.html">Scrollspy</a></li>
+                                    <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📝 Forms
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../forms/basic-forms.html">Formularios
+                                            Básicos</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/select.html">Select Menus</a></li>
+                                    <li><a class="dropdown-item" href="../forms/checks-radios.html">Checks & Radios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/range.html">Range</a></li>
+                                    <li><a class="dropdown-item" href="../forms/input-groups.html">Input Groups</a></li>
+                                    <li><a class="dropdown-item" href="../forms/floating-labels.html">Floating
+                                            Labels</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/validation.html">Form Validation</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🛠️ Utilidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../utilities/spacing.html">Spacing</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/flex.html">Flexbox</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/dark-mode.html">Dark Mode</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🚀 Recursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../templates/basic.html">Template Básico</a></li>
+                                    <li><a class="dropdown-item" href="../templates/medium.html">Template Medio</a></li>
+                                    <li><a class="dropdown-item" href="../templates/advanced.html">Template Avanzado</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../exercises.html">Ejercicios</a></li>
+                                    <li><a class="dropdown-item" href="../quiz.html">Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../syllabus.html">Plan de Estudio</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+                                    href="../github-tutorial.html" title="Tutorial GitHub"
+                                    style="padding: 0.25rem 0.5rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    <span class="d-none d-md-inline" style="font-size: 0.8rem;"> GitHub Tutorial</span>
+                                </a></li>
+
+                        </ul>
+
+                        <!-- Buscador -->
+                        <form class="d-flex me-2" role="search" onsubmit="return performSearch(event)">
+                            <input id="globalSearchInput" name="query" class="form-control form-control-sm me-2"
+                                type="search" placeholder="Buscar (ej. cards, modal)" aria-label="Buscar">
+                            <button class="btn btn-sm btn-outline-light" type="submit" title="Buscar">🔍</button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <button id="themeToggle" class="btn btn-sm btn-outline-light"
+                                title="Alternar tema (claro/oscuro)" aria-pressed="false">
+                                <span class="theme-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <a class="btn btn-sm btn-light d-flex align-items-center gap-1"
+                                href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                title="Repositorio GitHub" style="padding: 0.25rem 0.5rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="d-none d-md-inline" style="font-size: 0.8rem;">Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <div class="site-hero" style="background-image:url('../Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center fade-in-up visible">
+                            <h1 class="display-5 fw-bold">📊 <span class="text-warning">Progress Bars</span> en Bootstrap 5
+                            </h1>
+                            <p class="lead">Domina las barras de progreso para mostrar avances, cargas, métricas y estados de procesos de manera visual y profesional.</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                                <a href="#progress-basica" class="btn btn-outline-light btn-lg">Ver Ejemplos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR PROGRESS BARS MEJORADO -->
+            <aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end mobile-sidebar"
+                id="sidebar" aria-label="Tabla de contenido">
+                <div class="position-sticky" style="top:20px">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header text-center text-white"
+                            style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                            <h5 class="mb-0">📊 ÍNDICE - PROGRESS BARS</h5>
+                        </div>
+                        <div class="card-body p-2">
+                            <nav class="nav flex-column small">
+                                <a class="nav-link" href="#introduccion">📋 Introducción</a>
+                                <a class="nav-link" href="#progress-basica">🔰 Progress Bar Básica</a>
+                                <a class="nav-link" href="#progress-altura">📏 Control de Altura</a>
+                                <a class="nav-link" href="#progress-etiquetas">🏷️ Barras con Etiquetas</a>
+                                <a class="nav-link" href="#progress-colores">🎨 Barras de Colores</a>
+                                <a class="nav-link" href="#progress-rayadas">🌈 Barras Rayadas</a>
+                                <a class="nav-link" href="#progress-animadas">⚡ Barras Animadas</a>
+                                <a class="nav-link" href="#progress-multiples">🔄 Múltiples Barras</a>
+                                <a class="nav-link" href="#demo-interactiva">🎮 Demo Interactiva</a>
+                                <a class="nav-link" href="#ejemplo-avanzado">🚀 Ejemplo Avanzado</a>
+                                <a class="nav-link" href="#mejores-practicas">💡 Mejores Prácticas</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="small mb-2 fw-bold">📊 Tu Progreso</h6>
+                            <div class="progress" style="height:1.2rem">
+                                <div id="courseProgress"
+                                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                    style="width:0%">0%</div>
+                            </div>
+                            <p class="mt-2 mb-0 small text-muted">Completa las secciones para avanzar</p>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="#mainContent" class="btn btn-outline-primary btn-sm">🏠 Inicio</a>
+                        <a href="spinners.html" class="btn btn-outline-success btn-sm">➡️ Siguiente: Spinners</a>
+                        <a href="#" class="btn btn-outline-info btn-sm" onclick="resetProgress(); return false;">🔄
+                            Reset Progreso</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">📋 Introducción a las Progress Bars</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Las Progress Bars en Bootstrap 5 son componentes visuales poderosos que muestran el progreso de una tarea, el estado de un proceso o la finalización de una operación.</p>
+
+                            <div class="alert alert-info">
+                                <strong>💡 ¿Qué son las Progress Bars?</strong><br>
+                                Las barras de progreso son elementos de interfaz que representan visualmente el avance de una operación. Proporcionan retroalimentación inmediata al usuario sobre el estado de procesos largos, cargas, instalaciones o cualquier tarea que requiera tiempo para completarse.
+                            </div>
+
+                            <h3 class="h5 mt-4">Casos de Uso Comunes</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🎯 Aplicaciones Prácticas</h5>
+                                            <ul class="small mb-0">
+                                                <li><strong>Subida de archivos:</strong> Progreso de carga</li>
+                                                <li><strong>Instalación de software:</strong> Porcentaje completado</li>
+                                                <li><strong>Formularios multi-paso:</strong> Progreso del usuario</li>
+                                                <li><strong>Métricas de sistema:</strong> Uso de CPU, memoria, disco</li>
+                                                <li><strong>Proyectos y tareas:</strong> Estado de completitud</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🚀 Beneficios Clave</h5>
+                                            <ul class="small mb-0">
+                                                <li>Feedback visual inmediato</li>
+                                                <li>Reducción de ansiedad del usuario</li>
+                                                <li>Indicación clara del tiempo restante</li>
+                                                <li>Mejora de la experiencia de usuario</li>
+                                                <li>Profesionalismo en interfaces</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mini demostración introductoria -->
+                            <div class="mt-4 p-4 bg-light rounded border">
+                                <h6 class="mb-3">🎮 Vista Previa Rápida - Lo que Aprenderás</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <small class="text-muted">Básica</small>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar" style="width: 65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <small class="text-muted">Con Etiqueta</small>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar bg-success" style="width: 80%">80%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <small class="text-muted">Animada</small>
+                                            <div class="progress mb-2">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 45%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN PROGRESS BAR BÁSICA -->
+                <section id="progress-basica" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🔰 Progress Bar Básica</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea una progress bar básica usando un contenedor con la clase <code>.progress</code> y un elemento hijo con <code>.progress-bar</code>.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📤 Proceso de Subida de Archivos</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="fw-bold">documento.pdf</span>
+                                            <small class="text-muted">65% completado</small>
+                                        </div>
+                                        <div class="progress" style="height: 8px;">
+                                            <div class="progress-bar" style="width: 65%"></div>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-between">
+                                            <small class="text-muted">Subiendo...</small>
+                                            <small class="text-muted">3.2 MB de 4.9 MB</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">📊 Completitud de Perfil de Usuario</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="fw-bold">Completitud de tu perfil</span>
+                                            <span class="badge bg-primary">40%</span>
+                                        </div>
+                                        <div class="progress" style="height: 12px;">
+                                            <div class="progress-bar bg-primary" style="width: 40%"></div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <small class="text-muted">Completa tu información personal para desbloquear todas las funciones</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Progress Bar Básica --&gt;
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 70%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Ejemplo de Subida de Archivos --&gt;
+&lt;div class="card"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;div class="d-flex justify-content-between align-items-center mb-2"&gt;
+      &lt;span class="fw-bold"&gt;documento.pdf&lt;/span&gt;
+      &lt;small class="text-muted"&gt;65% completado&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;div class="progress" style="height: 8px;"&gt;
+      &lt;div class="progress-bar" style="width: 65%"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mt-2 d-flex justify-content-between"&gt;
+      &lt;small class="text-muted"&gt;Subiendo...&lt;/small&gt;
+      &lt;small class="text-muted"&gt;3.2 MB de 4.9 MB&lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🔧 Elementos Clave</h6>
+                                            <ul class="small mb-0">
+                                                <li><code>.progress</code> - Contenedor principal</li>
+                                                <li><code>.progress-bar</code> - Barra de progreso interna</li>
+                                                <li><code>width: X%</code> - Controla el progreso visual</li>
+                                                <li>Altura por defecto: 1rem (16px)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎯 Buenas Prácticas</h6>
+                                            <ul class="small mb-0">
+                                                <li>Usa alturas consistentes en tu aplicación</li>
+                                                <li>Proporciona contexto con texto adicional</li>
+                                                <li>Considera la accesibilidad con ARIA labels</li>
+                                                <li>Actualiza el progreso en tiempo real cuando sea posible</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN CONTROL DE ALTURA -->
+                <section id="progress-altura" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">📏 Control de Altura de Progress Bars</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Personaliza la altura de tus progress bars usando la propiedad CSS <code>height</code> en el contenedor <code>.progress</code>.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📱 Diferentes Alturas para Diferentes Contextos</h6>
+                                
+                                <div class="mb-4">
+                                    <small class="text-muted">Delgada (4px) - Ideal para interfaces compactas:</small>
+                                    <div class="progress mt-1" style="height: 4px;">
+                                        <div class="progress-bar bg-info" style="width: 30%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <small class="text-muted">Estándar (8px) - Uso general:</small>
+                                    <div class="progress mt-1" style="height: 8px;">
+                                        <div class="progress-bar bg-success" style="width: 60%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <small class="text-muted">Prominente (16px) - Para elementos destacados:</small>
+                                    <div class="progress mt-1" style="height: 16px;">
+                                        <div class="progress-bar bg-primary" style="width: 45%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <small class="text-muted">Extra Grande (24px) - Para dashboards importantes:</small>
+                                    <div class="progress mt-1" style="height: 24px;">
+                                        <div class="progress-bar bg-warning" style="width: 75%"></div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mt-4 mb-3">📊 Dashboard de Métricas con Alturas Variadas</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Uso de CPU</h6>
+                                                <div class="progress mb-2" style="height: 6px;">
+                                                    <div class="progress-bar bg-danger" style="width: 85%"></div>
+                                                </div>
+                                                <small class="text-muted">85% - Alto uso</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Espacio en Disco</h6>
+                                                <div class="progress mb-2" style="height: 12px;">
+                                                    <div class="progress-bar bg-warning" style="width: 65%"></div>
+                                                </div>
+                                                <small class="text-muted">65% - 325GB de 500GB</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Progress Bar con Altura Personalizada --&gt;
+&lt;div class="progress" style="height: 4px;"&gt;
+  &lt;div class="progress-bar bg-info" style="width: 30%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress" style="height: 8px;"&gt;
+  &lt;div class="progress-bar bg-success" style="width: 60%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress" style="height: 16px;"&gt;
+  &lt;div class="progress-bar bg-primary" style="width: 45%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress" style="height: 24px;"&gt;
+  &lt;div class="progress-bar bg-warning" style="width: 75%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Psicología de la Altura:</strong> Las barras más delgadas (4-8px) son ideales para interfaces donde el espacio es limitado o cuando el progreso es información secundaria. Las barras más prominentes (16px+) son perfectas para dashboards principales donde el progreso es información crítica que necesita destacar visualmente.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN BARRAS CON ETIQUETAS -->
+                <section id="progress-etiquetas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">🏷️ Progress Bars con Etiquetas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Añade texto dentro de la barra de progreso para mostrar el porcentaje completado o información adicional de manera clara y visible.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📝 Sistema de Completitud de Formularios</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Proceso de Registro</h6>
+                                        <div class="progress mb-3" style="height: 20px;">
+                                            <div class="progress-bar bg-success" style="width: 25%">25% - Información Básica</div>
+                                        </div>
+                                        <small class="text-muted">Paso 1 de 4 completado</small>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🎯 Objetivos de Ventas del Equipo</h6>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Meta Trimestral de Ventas</h6>
+                                        <div class="progress mb-2" style="height: 25px;">
+                                            <div class="progress-bar bg-success" style="width: 75%">
+                                                <strong>$75,000 / $100,000</strong>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <small class="text-muted">75% de la meta alcanzada</small>
+                                            <small class="text-muted">15 días restantes</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">📊 Métricas de Proyecto</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <h6 class="card-title">Tareas Completadas</h6>
+                                                <div class="progress mb-2" style="height: 30px;">
+                                                    <div class="progress-bar bg-info" style="width: 60%">
+                                                        <span class="fw-bold">12/20 Tareas</span>
+                                                    </div>
+                                                </div>
+                                                <small class="text-muted">60% completado</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <h6 class="card-title">Presupuesto Utilizado</h6>
+                                                <div class="progress mb-2" style="height: 30px;">
+                                                    <div class="progress-bar bg-warning" style="width: 45%">
+                                                        <span class="fw-bold">$4,500 / $10,000</span>
+                                                    </div>
+                                                </div>
+                                                <small class="text-muted">45% del presupuesto</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Progress Bar con Etiqueta Básica --&gt;
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 70%"&gt;70%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Progress Bar con Texto Descriptivo --&gt;
+&lt;div class="progress" style="height: 20px;"&gt;
+  &lt;div class="progress-bar bg-success" style="width: 25%"&gt;25% - Información Básica&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Progress Bar con Datos Específicos --&gt;
+&lt;div class="progress" style="height: 25px;"&gt;
+  &lt;div class="progress-bar bg-success" style="width: 75%"&gt;
+    &lt;strong&gt;$75,000 / $100,000&lt;/strong&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6>🎯 Casos de Uso Ideales</h6>
+                                    <ul class="small">
+                                        <li><strong>Formularios multi-paso:</strong> Indicar progreso por etapas</li>
+                                        <li><strong>Métricas financieras:</strong> Mostrar valores específicos</li>
+                                        <li><strong>Gestíón de proyectos:</strong> Tareas completadas vs totales</li>
+                                        <li><strong>Objetivos de ventas:</strong> Montos alcanzados y metas</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>🔧 Consideraciones Técnicas</h6>
+                                    <ul class="small">
+                                        <li>Aumenta la altura para mejor legibilidad</li>
+                                        <li>Usa <code>font-weight</code> para texto importante</li>
+                                        <li>Considera el contraste texto/fondo</li>
+                                        <li>Texto corto para barras estrechas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN BARRAS DE COLORES -->
+                <section id="progress-colores" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-purple text-white">
+                            <h2 class="h3 mb-0">🎨 Progress Bars de Colores</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Utiliza las clases contextuales de color de Bootstrap (<code>.bg-*</code>) para comunicar diferentes estados y significados a través del color.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📈 Sistema de Estados por Color</h6>
+                                
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Estado de Servidores</h6>
+                                                <div class="mb-3">
+                                                    <small>Servidor Web - <span class="text-success">Óptimo</span></small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar bg-success" style="width: 95%">95%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <small>Base de Datos - <span class="text-warning">Advertencia</span></small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar bg-warning" style="width: 75%">75%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <small>Servicio de Email - <span class="text-danger">Crítico</span></small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar bg-danger" style="width: 30%">30%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Niveles de Prioridad</h6>
+                                                <div class="mb-3">
+                                                    <small>Baja Prioridad</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar bg-secondary" style="width: 20%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <small>Prioridad Normal</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar bg-info" style="width: 50%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <small>Alta Prioridad</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar bg-warning" style="width: 80%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <small>Urgente</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar bg-danger" style="width: 95%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🎨 Paleta Completa de Colores Bootstrap</h6>
+                                <div class="mb-2">
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-primary" style="width: 10%"></div>
+                                    </div>
+                                    <small class="text-muted">Primary - Acciones principales</small>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-secondary" style="width: 20%"></div>
+                                    </div>
+                                    <small class="text-muted">Secondary - Elementos secundarios</small>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-success" style="width: 30%"></div>
+                                    </div>
+                                    <small class="text-muted">Success - Estados positivos, éxito</small>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-danger" style="width: 40%"></div>
+                                    </div>
+                                    <small class="text-muted">Danger - Estados de error, críticos</small>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                    </div>
+                                    <small class="text-muted">Warning - Estados de advertencia</small>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-info" style="width: 60%"></div>
+                                    </div>
+                                    <small class="text-muted">Info - Estados informativos</small>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="progress mb-2 border">
+                                        <div class="progress-bar bg-light text-dark" style="width: 70%"></div>
+                                    </div>
+                                    <small class="text-muted">Light - Fondos claros</small>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="progress mb-2">
+                                        <div class="progress-bar bg-dark" style="width: 80%"></div>
+                                    </div>
+                                    <small class="text-muted">Dark - Fondos oscuros</small>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Progress Bars con Diferentes Colores --&gt;
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar bg-primary" style="width: 10%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar bg-success" style="width: 30%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar bg-warning" style="width: 50%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar bg-danger" style="width: 70%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress border"&gt;
+  &lt;div class="progress-bar bg-light text-dark" style="width: 90%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-warning">
+                                <strong>⚠️ Psicología del Color en UX:</strong> Los colores transmiten significados específicos. Usa <code>bg-success</code> para progresos positivos, <code>bg-warning</code> para advertencias, y <code>bg-danger</code> para estados críticos. Esta consistencia ayuda a los usuarios a entender rápidamente el estado del sistema sin necesidad de leer texto adicional.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN BARRAS RAYADAS -->
+                <section id="progress-rayadas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger text-white">
+                            <h2 class="h3 mb-0">🌈 Progress Bars Rayadas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Añade un patrón de rayas a tus progress bars usando la clase <code>.progress-bar-striped</code> para crear un efecto visual más dinámico y atractivo.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">🔄 Procesos en Segundo Plano</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Procesamiento de Datos</h6>
+                                        <div class="progress mb-3" style="height: 20px;">
+                                            <div class="progress-bar progress-bar-striped bg-info" style="width: 65%">
+                                                Procesando datos...
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">Este proceso puede tomar varios minutos. Las rayas indican actividad en curso.</small>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🎨 Diferentes Colores con Rayas</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <small>Primary Rayado</small>
+                                            <div class="progress mt-1">
+                                                <div class="progress-bar progress-bar-striped bg-primary" style="width: 25%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <small>Success Rayado</small>
+                                            <div class="progress mt-1">
+                                                <div class="progress-bar progress-bar-striped bg-success" style="width: 50%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <small>Warning Rayado</small>
+                                            <div class="progress mt-1">
+                                                <div class="progress-bar progress-bar-striped bg-warning" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <small>Danger Rayado</small>
+                                            <div class="progress mt-1">
+                                                <div class="progress-bar progress-bar-striped bg-danger" style="width: 40%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <small>Info Rayado</small>
+                                            <div class="progress mt-1">
+                                                <div class="progress-bar progress-bar-striped bg-info" style="width: 60%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <small>Dark Rayado</small>
+                                            <div class="progress mt-1">
+                                                <div class="progress-bar progress-bar-striped bg-dark" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mt-4 mb-3">📊 Sistema de Sincronización</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Sincronizando con Servidor Cloud</h6>
+                                        <div class="progress mb-2" style="height: 15px;">
+                                            <div class="progress-bar progress-bar-striped bg-primary" style="width: 45%"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <small class="text-muted">Subiendo 245 archivos...</small>
+                                            <small class="text-muted">45% completado</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Progress Bar Rayada Básica --&gt;
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-striped" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Progress Bar Rayada con Color --&gt;
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-striped bg-info" style="width: 65%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Progress Bar Rayada con Texto --&gt;
+&lt;div class="progress" style="height: 20px;"&gt;
+  &lt;div class="progress-bar progress-bar-striped bg-info" style="width: 65%"&gt;
+    Procesando datos...
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6>🎯 Casos de Uso Ideales</h6>
+                                    <ul class="small">
+                                        <li><strong>Procesos en segundo plano:</strong> Indicar actividad continua</li>
+                                        <li><strong>Sincronización de datos:</strong> Transferencia activa</li>
+                                        <li><strong>Procesamiento batch:</strong> Tareas de larga duración</li>
+                                        <li><strong>Descargas/uploads:</strong> Operaciones de red en curso</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>🔧 Consideraciones de Diseño</h6>
+                                    <ul class="small">
+                                        <li>Las rayas añaden dinamismo visual</li>
+                                        <li>Ideal para procesos que toman tiempo</li>
+                                        <li>Combina bien con la animación</li>
+                                        <li>No uses en progress bars completadas (100%)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN BARRAS ANIMADAS -->
+                <section id="progress-animadas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">⚡ Progress Bars Animadas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea progress bars con animación de rayas en movimiento usando la clase <code>.progress-bar-animated</code> para indicar actividad en tiempo real.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">🔄 Procesos Activos en Tiempo Real</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Análisis de Datos en Tiempo Real</h6>
+                                        <div class="progress mb-3" style="height: 20px;">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 75%">
+                                                Analizando datos...
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">La animación indica que el proceso está activo y procesando información.</small>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🎮 Diferentes Estados con Animación</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Procesando</h6>
+                                                <div class="progress mb-2">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 45%"></div>
+                                                </div>
+                                                <small class="text-muted">Animación lenta</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Sincronizando</h6>
+                                                <div class="progress mb-2">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 70%"></div>
+                                                </div>
+                                                <small class="text-muted">Animación media</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Crítico</h6>
+                                                <div class="progress mb-2">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 90%"></div>
+                                                </div>
+                                                <small class="text-muted">Animación rápida</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mt-4 mb-3">📊 Sistema de Monitoreo en Vivo</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Monitoreo de Recursos del Sistema</h6>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <small>Uso de CPU</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 65%">65%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <small>Memoria RAM</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 40%">40%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <small>Almacenamiento</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 75%">75%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <small>Red</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 30%">30%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Progress Bar Animada Básica --&gt;
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Progress Bar Animada con Color y Texto --&gt;
+&lt;div class="progress" style="height: 20px;"&gt;
+  &lt;div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 75%"&gt;
+    Analizando datos...
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Múltiples Progress Bars Animadas --&gt;
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 65%"&gt;65%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Psicología de la Animación:</strong> Las progress bars animadas capturan la atención del usuario y comunican claramente que un proceso está activo. Esto reduce la ansiedad del usuario al proporcionar una señal visual de que el sistema está trabajando. Úsalas para procesos que toman más de 2-3 segundos para mantener al usuario informado.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MÚLTIPLES BARRAS -->
+                <section id="progress-multiples" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🔄 Múltiples Progress Bars</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Incluye múltiples progress bars dentro de un mismo contenedor para mostrar diferentes categorías o componentes de un mismo proceso.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">💾 Análisis de Uso de Disco</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Uso de Almacenamiento por Tipo de Archivo</h6>
+                                        <div class="progress" style="height: 25px;">
+                                            <div class="progress-bar bg-success" style="width: 40%">
+                                                Documentos (40%)
+                                            </div>
+                                            <div class="progress-bar bg-info" style="width: 25%">
+                                                Imágenes (25%)
+                                            </div>
+                                            <div class="progress-bar bg-warning" style="width: 20%">
+                                                Vídeos (20%)
+                                            </div>
+                                            <div class="progress-bar bg-secondary" style="width: 15%">
+                                                Otros (15%)
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 row text-center">
+                                            <div class="col-3">
+                                                <small class="text-success">● Documentos: 160GB</small>
+                                            </div>
+                                            <div class="col-3">
+                                                <small class="text-info">● Imágenes: 100GB</small>
+                                            </div>
+                                            <div class="col-3">
+                                                <small class="text-warning">● Vídeos: 80GB</small>
+                                            </div>
+                                            <div class="col-3">
+                                                <small class="text-secondary">● Otros: 60GB</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">📊 Estado de Proyecto Multi-fase</h6>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Progreso del Proyecto "Nexus"</h6>
+                                        <div class="progress" style="height: 30px;">
+                                            <div class="progress-bar bg-primary" style="width: 25%">
+                                                <strong>Planificación</strong>
+                                            </div>
+                                            <div class="progress-bar bg-success" style="width: 35%">
+                                                <strong>Desarrollo</strong>
+                                            </div>
+                                            <div class="progress-bar bg-info" style="width: 20%">
+                                                <strong>Pruebas</strong>
+                                            </div>
+                                            <div class="progress-bar bg-warning" style="width: 15%">
+                                                <strong>Despliegue</strong>
+                                            </div>
+                                            <div class="progress-bar bg-secondary" style="width: 5%">
+                                                <strong>Post-Lanzamiento</strong>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <div class="row text-center">
+                                                <div class="col">
+                                                    <span class="badge bg-primary">25%</span>
+                                                    <small class="d-block">Planificación</small>
+                                                </div>
+                                                <div class="col">
+                                                    <span class="badge bg-success">35%</span>
+                                                    <small class="d-block">Desarrollo</small>
+                                                </div>
+                                                <div class="col">
+                                                    <span class="badge bg-info">20%</span>
+                                                    <small class="d-block">Pruebas</small>
+                                                </div>
+                                                <div class="col">
+                                                    <span class="badge bg-warning">15%</span>
+                                                    <small class="d-block">Despliegue</small>
+                                                </div>
+                                                <div class="col">
+                                                    <span class="badge bg-secondary">5%</span>
+                                                    <small class="d-block">Post-Lanzamiento</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🎯 Sistema de Prioridades de Tareas</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Distribución de Tareas por Prioridad</h6>
+                                        <div class="progress" style="height: 20px;">
+                                            <div class="progress-bar bg-danger" style="width: 15%"></div>
+                                            <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                            <div class="progress-bar bg-info" style="width: 40%"></div>
+                                            <div class="progress-bar bg-success" style="width: 20%"></div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="badge bg-danger me-2"></span>
+                                                        <small>Urgente: 15%</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="badge bg-warning me-2"></span>
+                                                        <small>Alta: 25%</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="badge bg-info me-2"></span>
+                                                        <small>Media: 40%</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="badge bg-success me-2"></span>
+                                                        <small>Baja: 20%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Múltiples Progress Bars Básicas --&gt;
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar bg-success" style="width: 40%"&gt;&lt;/div&gt;
+  &lt;div class="progress-bar bg-warning" style="width: 10%"&gt;&lt;/div&gt;
+  &lt;div class="progress-bar bg-danger" style="width: 20%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Múltiples Progress Bars con Etiquetas --&gt;
+&lt;div class="progress" style="height: 25px;"&gt;
+  &lt;div class="progress-bar bg-success" style="width: 40%"&gt;
+    Documentos (40%)
+  &lt;/div&gt;
+  &lt;div class="progress-bar bg-info" style="width: 25%"&gt;
+    Imágenes (25%)
+  &lt;/div&gt;
+  &lt;div class="progress-bar bg-warning" style="width: 20%"&gt;
+    Vídeos (20%)
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Múltiples Progress Bars para Proyectos --&gt;
+&lt;div class="progress" style="height: 30px;"&gt;
+  &lt;div class="progress-bar bg-primary" style="width: 25%"&gt;
+    &lt;strong&gt;Planificación&lt;/strong&gt;
+  &lt;/div&gt;
+  &lt;div class="progress-bar bg-success" style="width: 35%"&gt;
+    &lt;strong&gt;Desarrollo&lt;/strong&gt;
+  &lt;/div&gt;
+  &lt;div class="progress-bar bg-info" style="width: 20%"&gt;
+    &lt;strong&gt;Pruebas&lt;/strong&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-warning">
+                                <strong>⚠️ Consideraciones de UX para Múltiples Barras:</strong> Cuando uses múltiples progress bars, asegúrate de que cada segmento tenga un propósito claro y esté visualmente diferenciado. Usa una leyenda o tooltips para explicar cada segmento. Evita usar demasiados colores (máximo 5-6) para mantener la claridad visual y no confundir al usuario.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DEMO INTERACTIVA -->
+                <section id="demo-interactiva" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">🎮 Demo Interactiva - Progress Bars</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Experimenta con diferentes configuraciones de progress bars en tiempo real. Modifica los parámetros y observa los cambios inmediatamente.</p>
+
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="mb-3">⚙️ Configuración de Progress Bar</h6>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Progreso: <span id="progressValue">50</span>%</label>
+                                            <input type="range" class="form-range" id="progressRange" min="0" max="100" value="50">
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Altura: <span id="heightValue">16</span>px</label>
+                                            <input type="range" class="form-range" id="heightRange" min="4" max="40" value="16">
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Color:</label>
+                                            <select class="form-select" id="colorSelect">
+                                                <option value="bg-primary" selected>Primary (Azul)</option>
+                                                <option value="bg-success">Success (Verde)</option>
+                                                <option value="bg-warning">Warning (Amarillo)</option>
+                                                <option value="bg-danger">Danger (Rojo)</option>
+                                                <option value="bg-info">Info (Turquesa)</option>
+                                                <option value="bg-dark">Dark (Oscuro)</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="stripedCheck">
+                                                <label class="form-check-label" for="stripedCheck">
+                                                    Rayado
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="animatedCheck">
+                                                <label class="form-check-label" for="animatedCheck">
+                                                    Animado
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="labelCheck" checked>
+                                                <label class="form-check-label" for="labelCheck">
+                                                    Mostrar etiqueta
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="btn btn-primary" onclick="resetDemo()">🔄 Reiniciar Demo</button>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h6 class="mb-3">👁️ Vista Previa en Tiempo Real</h6>
+                                        
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div id="interactiveProgress" class="progress mb-3" style="height: 16px;">
+                                                    <div id="interactiveProgressBar" class="progress-bar bg-primary" style="width: 50%">50%</div>
+                                                </div>
+                                                
+                                                <div id="codePreview" class="mt-3">
+                                                    <h6>📋 Código Generado:</h6>
+                                                    <pre class="bg-dark text-light p-3 rounded small" id="generatedCode"></pre>
+                                                    <button class="btn btn-sm btn-outline-primary" onclick="copyGeneratedCode()">📋 Copiar Código</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <h6>💡 Explicación:</h6>
+                                            <p class="small text-muted" id="explanationText">
+                                                Esta progress bar básica muestra un progreso del 50% con color primary. Es ideal para mostrar el avance de tareas simples.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">🎯 Casos de Uso con la Configuración Actual</h3>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">📤</div>
+                                            <h6>Subida de Archivos</h6>
+                                            <p class="small">Perfecta para mostrar progreso de carga con feedback visual claro</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">📊</div>
+                                            <h6>Dashboard Métricas</h6>
+                                            <p class="small">Ideal para mostrar porcentajes de uso o completitud en dashboards</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🔄</div>
+                                            <h6>Procesos en Tiempo Real</h6>
+                                            <p class="small">Excelente para procesos largos que necesitan feedback continuo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EJEMPLO AVANZADO -->
+                <section id="ejemplo-avanzado" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">🚀 Ejemplo Avanzado: Dashboard de Proyecto Empresarial</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea un dashboard completo que combine todos los tipos de progress bars en una interfaz empresarial real y funcional.</p>
+
+                            <h3 class="h5">🛠️ Dashboard de Gestión de Proyecto "Nexus"</h3>
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <!-- Header del Dashboard -->
+                                <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-white rounded shadow-sm">
+                                    <div>
+                                        <h5 class="mb-0 text-dark">📊 Dashboard - Proyecto Nexus</h5>
+                                        <p class="mb-0 text-muted">Estado general y métricas del proyecto</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-outline-primary btn-sm active">Vista General</button>
+                                        <button class="btn btn-outline-primary btn-sm">Detalles</button>
+                                        <button class="btn btn-outline-primary btn-sm">Informes</button>
+                                    </div>
+                                </div>
+
+                                <!-- Progreso General del Proyecto -->
+                                <div class="card mb-4">
+                                    <div class="card-header bg-primary text-white">
+                                        <h6 class="mb-0">🎯 Progreso General del Proyecto</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <div class="progress" style="height: 25px;">
+                                                    <div class="progress-bar bg-success" style="width: 30%">
+                                                        <strong>Completado: 30%</strong>
+                                                    </div>
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 45%">
+                                                        <strong>En Progreso: 45%</strong>
+                                                    </div>
+                                                    <div class="progress-bar bg-secondary" style="width: 25%">
+                                                        <strong>Pendiente: 25%</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 text-end">
+                                                <h4 class="text-primary mb-0">30%</h4>
+                                                <small class="text-muted">Completado General</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Métricas de Equipo -->
+                                <div class="row mb-4">
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Frontend</h6>
+                                                <div class="progress mb-2">
+                                                    <div class="progress-bar bg-primary" style="width: 65%">65%</div>
+                                                </div>
+                                                <small class="text-muted">15/23 tareas completadas</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Backend</h6>
+                                                <div class="progress mb-2">
+                                                    <div class="progress-bar bg-success" style="width: 40%">40%</div>
+                                                </div>
+                                                <small class="text-muted">8/20 tareas completadas</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h6 class="card-title">QA</h6>
+                                                <div class="progress mb-2">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 25%">25%</div>
+                                                </div>
+                                                <small class="text-muted">5/20 tareas completadas</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Diseño</h6>
+                                                <div class="progress mb-2">
+                                                    <div class="progress-bar bg-info" style="width: 80%">80%</div>
+                                                </div>
+                                                <small class="text-muted">16/20 tareas completadas</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Uso de Recursos -->
+                                <div class="row mb-4">
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header bg-light">
+                                                <h6 class="mb-0">💾 Uso de Recursos del Proyecto</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <div class="d-flex justify-content-between mb-1">
+                                                        <span>Presupuesto</span>
+                                                        <span>$45,000 / $75,000</span>
+                                                    </div>
+                                                    <div class="progress" style="height: 12px;">
+                                                        <div class="progress-bar bg-success" style="width: 60%"></div>
+                                                    </div>
+                                                    <small class="text-muted">60% del presupuesto utilizado</small>
+                                                </div>
+                                                
+                                                <div class="mb-3">
+                                                    <div class="d-flex justify-content-between mb-1">
+                                                        <span>Horas de Trabajo</span>
+                                                        <span>1,250 / 2,000 hrs</span>
+                                                    </div>
+                                                    <div class="progress" style="height: 12px;">
+                                                        <div class="progress-bar bg-warning" style="width: 62.5%"></div>
+                                                    </div>
+                                                    <small class="text-muted">62.5% de horas utilizadas</small>
+                                                </div>
+                                                
+                                                <div class="mb-3">
+                                                    <div class="d-flex justify-content-between mb-1">
+                                                        <span>Recursos Humanos</span>
+                                                        <span>8 / 12 personas</span>
+                                                    </div>
+                                                    <div class="progress" style="height: 12px;">
+                                                        <div class="progress-bar bg-info" style="width: 66.7%"></div>
+                                                    </div>
+                                                    <small class="text-muted">66.7% de capacidad del equipo</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <div class="card-header bg-light">
+                                                <h6 class="mb-0">📅 Línea de Tiempo</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <small>Tiempo Transcurrido</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar bg-primary" style="width: 40%"></div>
+                                                    </div>
+                                                    <small class="text-muted">40% - 2 de 5 meses</small>
+                                                </div>
+                                                
+                                                <div class="mb-3">
+                                                    <small>Hitos Completados</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar bg-success" style="width: 60%"></div>
+                                                    </div>
+                                                    <small class="text-muted">3 de 5 hitos principales</small>
+                                                </div>
+                                                
+                                                <div class="mb-3">
+                                                    <small>Entregables</small>
+                                                    <div class="progress mt-1">
+                                                        <div class="progress-bar progress-bar-striped bg-info" style="width: 75%"></div>
+                                                    </div>
+                                                    <small class="text-muted">15 de 20 entregables completados</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sistema de Alertas y Estados -->
+                                <div class="card">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">🚨 Sistema de Alertas y Estados</h6>
+                                        <span class="badge bg-danger">3 Alertas</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="badge bg-danger me-2">!</span>
+                                                    <div class="flex-grow-1">
+                                                        <small class="fw-bold">Riesgo de Presupuesto</small>
+                                                        <div class="progress mt-1" style="height: 6px;">
+                                                            <div class="progress-bar bg-danger" style="width: 85%"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="badge bg-warning me-2">!</span>
+                                                    <div class="flex-grow-1">
+                                                        <small class="fw-bold">Retraso en Cronograma</small>
+                                                        <div class="progress mt-1" style="height: 6px;">
+                                                            <div class="progress-bar bg-warning" style="width: 70%"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="badge bg-success me-2">✓</span>
+                                                    <div class="flex-grow-1">
+                                                        <small class="fw-bold">Calidad del Código</small>
+                                                        <div class="progress mt-1" style="height: 6px;">
+                                                            <div class="progress-bar bg-success" style="width: 90%"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">💡 Lo que Aprendemos de Este Ejemplo</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎨 Patrones de Diseño Empresarial</h6>
+                                            <ul class="small mb-0">
+                                                <li><strong>Jerarquía visual:</strong> Uso de diferentes alturas para importancia</li>
+                                                <strong>Codificación por color:</strong> Estados claros mediante colores</li>
+                                                <li><strong>Agrupación lógica:</strong> Información relacionada junta</li>
+                                                <li><strong>Consistencia:</strong> Mismos patrones en todo el dashboard</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>⚡ Técnicas Avanzadas Implementadas</h6>
+                                            <ul class="small mb-0">
+                                                <li><strong>Progress bars múltiples:</strong> Para desglose de categorías</li>
+                                                <li><strong>Animaciones estratégicas:</strong> Para procesos activos</li>
+                                                <li><strong>Sistema de alertas visual:</strong> Combinación con badges</li>
+                                                <li><strong>Responsive design:</strong> Adaptación a diferentes pantallas</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MEJORES PRÁCTICAS -->
+                <section id="mejores-practicas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">💡 Mejores Prácticas y Consejos Avanzados</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Optimiza el uso de Progress Bars para crear interfaces intuitivas, accesibles y que proporcionen una excelente experiencia de usuario.</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🎯 UX/UI</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Feedback inmediato:</strong> Muestra progreso desde el inicio</li>
+                                                <li><strong>Tiempos realistas:</strong> Estima correctamente la duración</li>
+                                                <li><strong>Estados claros:</strong> Usa colores que transmitan significado</li>
+                                                <li><strong>Texto complementario:</strong> Proporciona contexto adicional</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">♿ Accesibilidad</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>ARIA labels:</strong> Describe el propósito del progreso</li>
+                                                <li><strong>Contraste de color:</strong> Texto legible en todos los estados</li>
+                                                <li><strong>Información textual:</strong> No dependas solo del color</li>
+                                                <li><strong>Screen readers:</strong> Proporciona updates periódicos</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="h5 mt-4">🚀 Patrones Avanzados</h4>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">📱</div>
+                                            <h6>Progress Bars Responsive</h6>
+                                            <p class="small">Que se adaptan perfectamente a móviles y desktop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🎮</div>
+                                            <h6>Progress Bars Interactivas</h6>
+                                            <p class="small">Con actualizaciones en tiempo real y animaciones</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🔧</div>
+                                            <h6>Progress Bars Modulares</h6>
+                                            <p class="small">Componentes reutilizables y mantenibles</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4">
+                                <strong>💡 Conclusión Final:</strong> Las Progress Bars son una herramienta poderosa para comunicar el estado de procesos y proporcionar feedback visual a los usuarios. Cuando se implementan correctamente, mejoran significativamente la experiencia de usuario, reducen la ansiedad durante procesos largos y crean interfaces más profesionales y confiables.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="site-footer mt-5 py-5">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-4">
+                                <h5>Bootstrap 5 Tutorial</h5>
+                                <p class="small mb-2">Tutorial interactivo y open-source. Aprende con ejemplos, ejercicios y despliega en GitHub Pages.</p>
+                                <p class="small mb-0">© 2025 Sebastián — Hecho para la comunidad.</p>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Guía rápida</h6>
+                                <ul class="list-unstyled small">
+                                    <li><a href="../index.html#grid">Grid System</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a href="../forms.html">Forms</a></li>
+                                    <li><a href="../github-tutorial.html">Subir a GitHub</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Comunidad</h6>
+                                <div class="d-flex gap-2">
+                                    <!-- Redes sociales -->
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://twitter.com/tu_usuario" target="_blank" rel="noopener"
+                                        aria-label="Twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                        aria-label="GitHub">
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <h6>Newsletter</h6>
+                                <form id="footerSubscribe" class="d-flex flex-column">
+                                    <input type="email" class="form-control form-control-sm mb-2"
+                                        placeholder="tu@email.com">
+                                    <button class="btn btn-sm btn-primary">Suscribirme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <div class="list-group" id="searchResultsList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Live preview modal para cualquier seccion.html -->
+    <div class="modal fade" id="livePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Vista Previa - Progress Bars</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe id="livePreviewIframe" style="width:100%;height:70vh;border:0;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-outline-secondary" id="openInNew">Abrir en nueva pestaña</button>
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante para TOC móvil -->
+    <button class="mobile-toc-toggle d-md-none" id="mobileTocToggle" aria-label="Abrir índice de contenido">
+        <span class="toc-icon">📚</span>
+        <span class="toc-text">Índice</span>
+    </button>
+
+    <!-- Overlay para móvil -->
+    <div class="mobile-sidebar-overlay d-md-none" id="mobileSidebarOverlay"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="../JS/buscar.js"></script>
+    <script src="../JS/main.js"></script>
+
+    <script>
+        // ===== TOC MÓVIL MEJORADO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileTocToggle = document.getElementById('mobileTocToggle');
+            const mobileSidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobileSidebarOverlay');
+
+            if (mobileTocToggle && mobileSidebar && mobileOverlay) {
+                function toggleMobileTOC() {
+                    const isOpening = !mobileSidebar.classList.contains('mobile-open');
+
+                    if (isOpening) {
+                        mobileSidebar.classList.add('mobile-open');
+                        mobileOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                }
+
+                mobileTocToggle.addEventListener('click', toggleMobileTOC);
+                mobileOverlay.addEventListener('click', toggleMobileTOC);
+
+                const tocLinks = mobileSidebar.querySelectorAll('a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth < 768) {
+                            toggleMobileTOC();
+                        }
+                    });
+                });
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 768) {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileSidebar.classList.contains('mobile-open')) {
+                        toggleMobileTOC();
+                    }
+                });
+            }
+        });
+
+        // Función global para reset del progreso
+        function resetProgress() {
+            localStorage.setItem('tutorialProgress', '{}');
+            const progressBar = document.getElementById('courseProgress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+            }
+            alert('Progreso reiniciado correctamente ✅');
+        }
+
+        // ===== DEMO INTERACTIVA DE PROGRESS BARS =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos de la demo interactiva
+            const progressRange = document.getElementById('progressRange');
+            const heightRange = document.getElementById('heightRange');
+            const colorSelect = document.getElementById('colorSelect');
+            const stripedCheck = document.getElementById('stripedCheck');
+            const animatedCheck = document.getElementById('animatedCheck');
+            const labelCheck = document.getElementById('labelCheck');
+            const interactiveProgress = document.getElementById('interactiveProgress');
+            const interactiveProgressBar = document.getElementById('interactiveProgressBar');
+            const progressValue = document.getElementById('progressValue');
+            const heightValue = document.getElementById('heightValue');
+            const generatedCode = document.getElementById('generatedCode');
+            const explanationText = document.getElementById('explanationText');
+
+            // Actualizar la vista previa
+            function updatePreview() {
+                const progress = progressRange.value;
+                const height = heightRange.value;
+                const color = colorSelect.value;
+                const isStriped = stripedCheck.checked;
+                const isAnimated = animatedCheck.checked;
+                const showLabel = labelCheck.checked;
+
+                // Actualizar valores mostrados
+                progressValue.textContent = progress;
+                heightValue.textContent = height;
+
+                // Aplicar cambios a la progress bar
+                interactiveProgress.style.height = height + 'px';
+                interactiveProgressBar.style.width = progress + '%';
+                
+                // Limpiar clases existentes
+                interactiveProgressBar.className = 'progress-bar';
+                
+                // Aplicar nuevas clases
+                interactiveProgressBar.classList.add(color);
+                if (isStriped) {
+                    interactiveProgressBar.classList.add('progress-bar-striped');
+                }
+                if (isAnimated) {
+                    interactiveProgressBar.classList.add('progress-bar-animated');
+                }
+
+                // Actualizar etiqueta
+                if (showLabel) {
+                    interactiveProgressBar.textContent = progress + '%';
+                } else {
+                    interactiveProgressBar.textContent = '';
+                }
+
+                // Generar código
+                generateCode(progress, height, color, isStriped, isAnimated, showLabel);
+                
+                // Actualizar explicación
+                updateExplanation(progress, height, color, isStriped, isAnimated, showLabel);
+            }
+
+            // Generar código HTML
+            function generateCode(progress, height, color, isStriped, isAnimated, showLabel) {
+                let code = '&lt;div class="progress" style="height: ' + height + 'px;"&gt;\n';
+                code += '  &lt;div class="progress-bar';
+                
+                // Añadir clases
+                code += ' ' + color;
+                if (isStriped) code += ' progress-bar-striped';
+                if (isAnimated) code += ' progress-bar-animated';
+                
+                code += '" style="width: ' + progress + '%"';
+                code += '&gt;';
+                
+                // Añadir etiqueta si está activada
+                if (showLabel) {
+                    code += progress + '%';
+                }
+                
+                code += '&lt;/div&gt;\n';
+                code += '&lt;/div&gt;';
+                
+                generatedCode.textContent = code;
+            }
+
+            // Actualizar texto explicativo
+            function updateExplanation(progress, height, color, isStriped, isAnimated, showLabel) {
+                let explanation = 'Esta progress bar ';
+                
+                // Progreso
+                if (progress < 25) {
+                    explanation += 'está en etapas iniciales (' + progress + '%)';
+                } else if (progress < 50) {
+                    explanation += 'avanza consistentemente (' + progress + '%)';
+                } else if (progress < 75) {
+                    explanation += 'está a mitad de camino (' + progress + '%)';
+                } else {
+                    explanation += 'está cerca de completarse (' + progress + '%)';
+                }
+                
+                // Altura
+                if (height < 10) {
+                    explanation += ' con altura compacta ideal para espacios limitados';
+                } else if (height < 20) {
+                    explanation += ' con altura estándar para uso general';
+                } else {
+                    explanation += ' con altura prominente para elementos destacados';
+                }
+                
+                // Efectos
+                if (isStriped && isAnimated) {
+                    explanation += '. El efecto rayado animado indica actividad en curso';
+                } else if (isStriped) {
+                    explanation += '. El patrón rayado añade dinamismo visual';
+                }
+                
+                explanationText.textContent = explanation + '.';
+            }
+
+            // Reiniciar demo
+            window.resetDemo = function() {
+                progressRange.value = 50;
+                heightRange.value = 16;
+                colorSelect.value = 'bg-primary';
+                stripedCheck.checked = false;
+                animatedCheck.checked = false;
+                labelCheck.checked = true;
+                updatePreview();
+            }
+
+            // Copiar código generado
+            window.copyGeneratedCode = function() {
+                const code = generatedCode.textContent;
+                navigator.clipboard.writeText(code).then(function() {
+                    const btn = document.querySelector('#codePreview button');
+                    const originalText = btn.textContent;
+                    btn.textContent = '✓ Código Copiado!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                });
+            }
+
+            // Event listeners
+            progressRange.addEventListener('input', updatePreview);
+            heightRange.addEventListener('input', updatePreview);
+            colorSelect.addEventListener('change', updatePreview);
+            stripedCheck.addEventListener('change', updatePreview);
+            animatedCheck.addEventListener('change', updatePreview);
+            labelCheck.addEventListener('change', updatePreview);
+
+            // Inicializar
+            updatePreview();
+        });
+    </script>
+
+    <style>
+        .bg-purple {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Estilos para mejorar la visualización de progress bars */
+        .progress {
+            margin: 0.5rem 0;
+        }
+
+        .border .progress {
+            margin-bottom: 1rem;
+        }
+
+        /* Mejorar la apariencia de los ejemplos */
+        .card .border {
+            border-style: dashed !important;
+            border-color: #dee2e6 !important;
+        }
+
+        .py-6 {
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+        }
+
+        .py-7 {
+            padding-top: 6rem !important;
+            padding-bottom: 6rem !important;
+        }
+
+        /* Estilos para la demo interactiva */
+        #interactiveProgress {
+            transition: height 0.3s ease;
+        }
+
+        #interactiveProgressBar {
+            transition: width 0.5s ease, background-color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .display-md-3 {
+                font-size: calc(1.525rem + 3.3vw) !important;
+            }
+
+            /* Ajustes responsive para progress bars */
+            .progress {
+                margin: 0.25rem 0;
+            }
+        }
+    </style>
+</body>
+
+</html>

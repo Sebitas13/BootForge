@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Groups - Bootstrap 5 Tutorial Completo</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary" id="mainNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../ProyectoFinal.html">
+                        <img src="../Imagenes/logo-32.png" alt="logo" width="36" height="36" class="rounded">
+                        <span>
+                            <span class="fs-5">Bootstrap 5</span>
+                            <small class="d-block text-white-50" style="font-size:.68rem;">Tutorial Completo</small>
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../ProyectoFinal.html"> Inicio</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📐 Layout
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../containers.html">Containers</a></li>
+                                    <li><a class="dropdown-item" href="../grid.html">Grid System</a></li>
+                                    <li><a class="dropdown-item" href="../typography.html">Typography</a></li>
+                                    <li><a class="dropdown-item" href="../colors.html">Colors</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Resto del menú igual que en ProyectoFinal.html -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    🧩 Componentes
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="tables.html">Tables</a></li>
+                                    <li><a class="dropdown-item" href="images.html">Images</a></li>
+                                    <li><a class="dropdown-item" href="jumbotron.html">Jumbotron</a></li>
+                                    <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+                                    <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                                    <li><a class="dropdown-item" href="button-groups.html">Button Groups</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item" href="progress-bars.html">Progress Bars</a></li>
+                                    <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+                                    <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+                                    <li><a class="dropdown-item active" href="list-groups.html">List Groups</a></li>
+                                    <li><a class="dropdown-item" href="cards.html">Cards</a></li>
+                                    <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+                                    <li><a class="dropdown-item" href="collapse.html">Collapse</a></li>
+                                    <li><a class="dropdown-item" href="navs.html">Navs</a></li>
+                                    <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+                                    <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+                                    <li><a class="dropdown-item" href="tooltip.html">Tooltip</a></li>
+                                    <li><a class="dropdown-item" href="popover.html">Popover</a></li>
+                                    <li><a class="dropdown-item" href="toast.html">Toast</a></li>
+                                    <li><a class="dropdown-item" href="scrollspy.html">Scrollspy</a></li>
+                                    <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📝 Forms
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../forms/basic-forms.html">Formularios
+                                            Básicos</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/select.html">Select Menus</a></li>
+                                    <li><a class="dropdown-item" href="../forms/checks-radios.html">Checks & Radios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/range.html">Range</a></li>
+                                    <li><a class="dropdown-item" href="../forms/input-groups.html">Input Groups</a></li>
+                                    <li><a class="dropdown-item" href="../forms/floating-labels.html">Floating
+                                            Labels</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/validation.html">Form Validation</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🛠️ Utilidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../utilities/spacing.html">Spacing</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/flex.html">Flexbox</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/dark-mode.html">Dark Mode</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🚀 Recursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../templates/basic.html">Template Básico</a></li>
+                                    <li><a class="dropdown-item" href="../templates/medium.html">Template Medio</a></li>
+                                    <li><a class="dropdown-item" href="../templates/advanced.html">Template Avanzado</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../exercises.html">Ejercicios</a></li>
+                                    <li><a class="dropdown-item" href="../quiz.html">Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../syllabus.html">Plan de Estudio</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+                                    href="../github-tutorial.html" title="Tutorial GitHub"
+                                    style="padding: 0.25rem 0.5rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    <span class="d-none d-md-inline" style="font-size: 0.8rem;"> GitHub Tutorial</span>
+                                </a></li>
+
+                        </ul>
+
+                        <!-- Buscador -->
+                        <form class="d-flex me-2" role="search" onsubmit="return performSearch(event)">
+                            <input id="globalSearchInput" name="query" class="form-control form-control-sm me-2"
+                                type="search" placeholder="Buscar (ej. cards, modal)" aria-label="Buscar">
+                            <button class="btn btn-sm btn-outline-light" type="submit" title="Buscar">🔍</button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <button id="themeToggle" class="btn btn-sm btn-outline-light"
+                                title="Alternar tema (claro/oscuro)" aria-pressed="false">
+                                <span class="theme-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <a class="btn btn-sm btn-light d-flex align-items-center gap-1"
+                                href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                title="Repositorio GitHub" style="padding: 0.25rem 0.5rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="d-none d-md-inline" style="font-size: 0.8rem;">Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <div class="site-hero" style="background-image:url('../Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center fade-in-up visible">
+                            <h1 class="display-5 fw-bold">📋 <span class="text-warning">List Groups</span> en Bootstrap
+                                5
+                            </h1>
+                            <p class="lead">Domina los grupos de listas para organizar y presentar información de manera
+                                estructurada, accesible y visualmente atractiva en tus aplicaciones web.</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                                <a href="#list-group-basica" class="btn btn-outline-light btn-lg">Ver Ejemplos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR LIST GROUPS MEJORADO -->
+            <aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end mobile-sidebar"
+                id="sidebar" aria-label="Tabla de contenido">
+                <div class="position-sticky" style="top:20px">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header text-center text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h5 class="mb-0">📋 ÍNDICE - LIST GROUPS</h5>
+                        </div>
+                        <div class="card-body p-2">
+                            <nav class="nav flex-column small">
+                                <a class="nav-link" href="#introduccion">📋 Introducción</a>
+                                <a class="nav-link" href="#list-group-basica">🔰 List Group Básica</a>
+                                <a class="nav-link" href="#estados-activo">🎯 Estados Activo/Deshabilitado</a>
+                                <a class="nav-link" href="#list-group-enlaces">🔗 List Group con Enlaces</a>
+                                <a class="nav-link" href="#list-group-flush">🍃 List Group Flush (Sin Bordes)</a>
+                                <a class="nav-link" href="#list-group-numerada">🔢 List Group Numerada</a>
+                                <a class="nav-link" href="#list-group-horizontal">➡️ List Group Horizontal</a>
+                                <a class="nav-link" href="#clases-contextuales">🎨 Clases Contextuales</a>
+                                <a class="nav-link" href="#list-group-badges">🏷️ List Group con Badges</a>
+                                <a class="nav-link" href="#laboratorio-list-groups">🔬 Laboratorio de List Groups</a>
+                                <a class="nav-link" href="#list-groups-avanzados">🚀 List Groups Avanzados</a>
+                                <a class="nav-link" href="#ejemplo-avanzado">💼 Ejemplo Avanzado</a>
+                                <a class="nav-link" href="#mejores-practicas">💡 Mejores Prácticas</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="small mb-2 fw-bold">📊 Tu Progreso</h6>
+                            <div class="progress" style="height:1.2rem">
+                                <div id="courseProgress"
+                                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                    style="width:0%">0%</div>
+                            </div>
+                            <p class="mt-2 mb-0 small text-muted">Completa las secciones para avanzar</p>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="#mainContent" class="btn btn-outline-primary btn-sm">🏠 Inicio</a>
+                        <a href="cards.html" class="btn btn-outline-success btn-sm">➡️ Siguiente: Cards</a>
+                        <a href="#" class="btn btn-outline-info btn-sm" onclick="resetProgress(); return false;">🔄
+                            Reset Progreso</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">📋 Introducción a los List Groups</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Los List Groups en Bootstrap 5 son componentes versátiles para mostrar
+                                series de contenido en formato de lista, con soporte para estados personalizados,
+                                acciones y contenido complejo.</p>
+
+                            <div class="alert alert-info">
+                                <strong>💡 ¿Qué son los List Groups?</strong><br>
+                                Los List Groups son contenedores flexibles que organizan elementos relacionados en
+                                formato de lista. Proporcionan una estructura clara para mostrar información secuencial,
+                                opciones de menú, notificaciones y más, con excelente soporte para accesibilidad y
+                                personalización visual.
+                            </div>
+
+                            <h3 class="h5 mt-4">Anatomía de un List Group</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🎯 Estructura Básica</h5>
+                                            <div class="border p-3 rounded bg-light mb-3">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">Elemento 1</li>
+                                                    <li class="list-group-item">Elemento 2</li>
+                                                    <li class="list-group-item">Elemento 3</li>
+                                                </ul>
+                                            </div>
+                                            <ul class="small mb-0">
+                                                <li><code>&lt;ul&gt;</code> - Contenedor de lista no ordenada</li>
+                                                <li><code>.list-group</code> - Clase principal del componente</li>
+                                                <li><code>&lt;li&gt;</code> - Elemento individual de lista</li>
+                                                <li><code>.list-group-item</code> - Estilo para cada elemento</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🚀 Casos de Uso Comunes</h5>
+                                            <ul class="small mb-0">
+                                                <li><strong>Menús de navegación:</strong> Sidebars y paneles laterales
+                                                </li>
+                                                <li><strong>Listas de resultados:</strong> Búsquedas y filtros</li>
+                                                <li><strong>Paneles de configuración:</strong> Opciones y preferencias
+                                                </li>
+                                                <li><strong>Notificaciones:</strong> Alertas y mensajes del sistema</li>
+                                                <li><strong>Contenido social:</strong> Comentarios y actividades</li>
+                                                <li><strong>Dashboards:</strong> Métricas y estadísticas</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mini demostración introductoria -->
+                            <div class="mt-4 p-4 bg-light rounded border">
+                                <h6 class="mb-3">🎮 Vista Previa Rápida - Lo que Aprenderás</h6>
+                                <div class="row text-center">
+                                    <div class="col-md-4">
+                                        <ul class="list-group">
+                                            <li class="list-group-item active">Elemento activo</li>
+                                            <li class="list-group-item">Elemento normal</li>
+                                            <li class="list-group-item disabled">Elemento deshabilitado</li>
+                                        </ul>
+                                        <small>Estados Básicos</small>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action">Enlace activo</a>
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action list-group-item-primary">Enlace
+                                                con color</a>
+                                            <a href="#" class="list-group-item list-group-item-action disabled">Enlace
+                                                deshabilitado</a>
+                                        </div>
+                                        <small>List Group con Enlaces</small>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="list-group">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                Elemento con badge
+                                                <span class="badge bg-primary rounded-pill">14</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                Otro elemento
+                                                <span class="badge bg-success rounded-pill">2</span>
+                                            </li>
+                                        </ul>
+                                        <small>List Group con Badges</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN LIST GROUP BÁSICA -->
+                <section id="list-group-basica" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🔰 List Group Básica</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea una List Group básica usando un elemento <code>&lt;ul&gt;</code> con la
+                                clase <code>.list-group</code> y elementos <code>&lt;li&gt;</code> con
+                                <code>.list-group-item</code>.
+                            </p>
+
+                            <h3 class="h5">Análisis Técnico Detallado</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🔍 Desglose de Elementos</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small mb-0">
+                                                <li><strong><code>&lt;ul&gt;</code></strong>: Elemento HTML para lista
+                                                    no ordenada</li>
+                                                <li><strong><code>.list-group</code></strong>: Clase Bootstrap que
+                                                    aplica estilos base</li>
+                                                <li><strong><code>&lt;li&gt;</code></strong>: Elemento individual de
+                                                    lista</li>
+                                                <li><strong><code>.list-group-item</code></strong>: Estilo visual para
+                                                    cada ítem</li>
+                                                <li><strong>Padding y bordes</strong>: Definidos por Bootstrap CSS</li>
+                                                <li><strong>Tipografía</strong>: Heredada del sistema base</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🎨 Propiedades CSS Aplicadas</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small mb-0">
+                                                <li><code>display: flex</code>: Layout flexible</li>
+                                                <li><code>flex-direction: column</code>: Dirección vertical</li>
+                                                <li><code>padding-left: 0</code>: Elimina padding por defecto</li>
+                                                <li><code>margin-bottom: 0</code>: Sin margen inferior</li>
+                                                <li><code>border-radius: 0.375rem</code>: Esquinas redondeadas</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📚 Sistema de Gestión de Tareas</h6>
+
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">📋 Lista de Tareas Pendientes</h6>
+                                        <span class="badge bg-primary">3 tareas</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h6 class="mb-1">Revisar documentación técnica</h6>
+                                                    <small class="text-muted">Hoy</small>
+                                                </div>
+                                                <p class="mb-1">Revisar los nuevos requerimientos del cliente para el
+                                                    proyecto X.</p>
+                                                <small class="text-muted">Proyecto: Sistema de Gestión</small>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h6 class="mb-1">Preparar presentación ejecutiva</h6>
+                                                    <small class="text-muted">Mañana</small>
+                                                </div>
+                                                <p class="mb-1">Crear slides para la reunión con stakeholders.</p>
+                                                <small class="text-muted">Proyecto: Dashboard Analytics</small>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h6 class="mb-1">Actualizar dependencias del proyecto</h6>
+                                                    <small class="text-muted">Esta semana</small>
+                                                </div>
+                                                <p class="mb-1">Verificar y actualizar las librerías a sus últimas
+                                                    versiones.</p>
+                                                <small class="text-muted">Proyecto: Todos</small>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🛒 Lista de Productos en Carrito</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-3">🛍️ Mi Carrito de Compras</h6>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">Laptop Gaming Pro X1</h6>
+                                                        <small class="text-muted">Cantidad: 1</small>
+                                                    </div>
+                                                    <span class="text-success fw-bold">$1,299.99</span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">Mouse Inalámbrico RGB</h6>
+                                                        <small class="text-muted">Cantidad: 2</small>
+                                                    </div>
+                                                    <span class="text-success fw-bold">$49.99</span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">Teclado Mecánico</h6>
+                                                        <small class="text-muted">Cantidad: 1</small>
+                                                    </div>
+                                                    <span class="text-success fw-bold">$129.99</span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-success">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <strong>Total</strong>
+                                                    <strong>$1,529.96</strong>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código con Explicación Detallada</h3>
+                            <pre class="code-block"><code>&lt;!-- 
+  ESTRUCTURA BÁSICA DE LIST GROUP:
+  - &lt;ul&gt;: Contenedor principal de lista no ordenada
+  - class="list-group": Aplica estilos base de Bootstrap
+  - &lt;li&gt;: Cada elemento individual de la lista
+  - class="list-group-item": Estilo visual para cada ítem
+--&gt;
+
+&lt;ul class="list-group"&gt;
+  &lt;!-- 
+    Primer elemento de lista:
+    - Contiene contenido estructurado con flexbox
+    - d-flex: Activa display flex
+    - w-100: Ancho completo del contenedor
+    - justify-content-between: Distribuye espacio entre elementos
+  --&gt;
+  &lt;li class="list-group-item"&gt;
+    &lt;div class="d-flex w-100 justify-content-between"&gt;
+      &lt;h6 class="mb-1"&gt;Revisar documentación técnica&lt;/h6&gt;
+      &lt;small class="text-muted"&gt;Hoy&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;p class="mb-1"&gt;Revisar los nuevos requerimientos...&lt;/p&gt;
+    &lt;small class="text-muted"&gt;Proyecto: Sistema de Gestión&lt;/small&gt;
+  &lt;/li&gt;
+  
+  &lt;!-- Segundo elemento con estructura similar --&gt;
+  &lt;li class="list-group-item"&gt;
+    &lt;div class="d-flex w-100 justify-content-between"&gt;
+      &lt;h6 class="mb-1"&gt;Preparar presentación ejecutiva&lt;/h6&gt;
+      &lt;small class="text-muted"&gt;Mañana&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;p class="mb-1"&gt;Crear slides para la reunión...&lt;/p&gt;
+    &lt;small class="text-muted"&gt;Proyecto: Dashboard Analytics&lt;/small&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🔧 Elementos Clave Explicados</h6>
+                                            <ul class="small mb-0">
+                                                <li><strong><code>&lt;ul&gt;</code></strong>: Define lista no ordenada
+                                                    (puntos)</li>
+                                                <li><strong><code>.list-group</code></strong>: Contenedor principal con
+                                                    estilos</li>
+                                                <li><strong><code>&lt;li&gt;</code></strong>: Elemento individual de
+                                                    lista</li>
+                                                <li><strong><code>.list-group-item</code></strong>: Estilo visual de
+                                                    cada ítem</li>
+                                                <li><strong><code>d-flex</code></strong>: Sistema de layout flexible
+                                                </li>
+                                                <li><strong><code>w-100</code></strong>: Ancho completo (width: 100%)
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎯 Buenas Prácticas</h6>
+                                            <ul class="small mb-0">
+                                                <li>Usa <code>&lt;ul&gt;</code> para listas de elementos relacionados
+                                                </li>
+                                                <li>Mantén la consistencia visual en todos los items</li>
+                                                <li>Usa utilidades de flexbox para alineación compleja</li>
+                                                <li>Considera la jerarquía de información en cada item</li>
+                                                <li>Proporciona suficiente contraste para legibilidad</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ESTADOS ACTIVO/DESHABILITADO -->
+                <section id="estados-activo" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">🎯 Estados Activo y Deshabilitado</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Utiliza las clases <code>.active</code> y <code>.disabled</code> para
+                                indicar visualmente el estado actual de los elementos y deshabilitar interacción cuando
+                                sea necesario.</p>
+
+                            <h3 class="h5">Análisis Técnico Detallado</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🔍 Estado Activo (<code>.active</code>)</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small mb-0">
+                                                <li><strong>Propósito:</strong> Indicar selección o estado actual</li>
+                                                <li><strong>CSS aplicado:</strong> <code>background-color</code>,
+                                                    <code>border-color</code>, <code>color</code>
+                                                </li>
+                                                <li><strong>Accesibilidad:</strong> Mejora el contraste visual</li>
+                                                <li><strong>Comportamiento:</strong> Mantiene todas las interacciones
+                                                </li>
+                                                <li><strong>Uso típico:</strong> Navegación, selección múltiple</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🔍 Estado Deshabilitado (<code>.disabled</code>)</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small mb-0">
+                                                <li><strong>Propósito:</strong> Prevenir interacción con el elemento
+                                                </li>
+                                                <li><strong>CSS aplicado:</strong> <code>pointer-events: none</code>
+                                                </li>
+                                                <li><strong>Efecto visual:</strong> Color más claro, cursor no permitido
+                                                </li>
+                                                <li><strong>Accesibilidad:</strong> <code>aria-disabled="true"</code>
+                                                </li>
+                                                <li><strong>Uso típico:</strong> Permisos, estados no disponibles</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">🎵 Reproductor de Música con Lista de Reproducción</h6>
+
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">🎶 Lista de Reproducción - "Rock Clásico"</h6>
+                                        <div>
+                                            <span class="badge bg-success me-2">▶ Reproduciendo</span>
+                                            <span class="badge bg-primary">8 canciones</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item active" aria-current="true">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">🎸 Bohemian Rhapsody - Queen</h6>
+                                                        <small class="text-white-50">5:55 • Álbum: A Night at the
+                                                            Opera</small>
+                                                    </div>
+                                                    <div class="text-white-50">
+                                                        <i class="bi bi-volume-up-fill"></i>
+                                                        <small>0:45 / 5:55</small>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">🎸 Stairway to Heaven - Led Zeppelin</h6>
+                                                        <small class="text-muted">8:02 • Álbum: Led Zeppelin IV</small>
+                                                    </div>
+                                                    <small class="text-muted">Siguiente</small>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">🎸 Hotel California - Eagles</h6>
+                                                        <small class="text-muted">6:30 • Álbum: Hotel California</small>
+                                                    </div>
+                                                    <small class="text-muted">En cola</small>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item disabled" aria-disabled="true">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1 text-muted">🎸 Sweet Child O' Mine - Guns N'
+                                                            Roses</h6>
+                                                        <small class="text-muted">5:56 • Álbum: Appetite for
+                                                            Destruction</small>
+                                                    </div>
+                                                    <small class="text-muted">No disponible</small>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">⚙️ Panel de Configuración del Sistema</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-3">🔧 Configuración de Usuario</h6>
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active"
+                                                aria-current="true">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h6 class="mb-1">👤 Perfil de Usuario</h6>
+                                                    <small>Configurado</small>
+                                                </div>
+                                                <p class="mb-1">Gestiona tu información personal y preferencias.</p>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h6 class="mb-1">🔐 Seguridad y Privacidad</h6>
+                                                    <small>Disponible</small>
+                                                </div>
+                                                <p class="mb-1">Configura contraseñas y opciones de privacidad.</p>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action disabled"
+                                                aria-disabled="true" tabindex="-1">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h6 class="mb-1 text-muted">💳 Suscripción Premium</h6>
+                                                    <small class="text-muted">No disponible</small>
+                                                </div>
+                                                <p class="mb-1 text-muted">Actualiza a una cuenta premium para acceder a
+                                                    estas funciones.</p>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h6 class="mb-1">🔔 Notificaciones</h6>
+                                                    <small>Disponible</small>
+                                                </div>
+                                                <p class="mb-1">Configura cómo recibir notificaciones del sistema.</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código con Explicación Detallada</h3>
+                            <pre class="code-block"><code>&lt;!-- 
+  ESTADOS EN LIST GROUPS:
+  - .active: Indica elemento activo/seleccionado
+  - .disabled: Deshabilita interacción y aplica estilo visual
+  - aria-current="true": Accesibilidad para elemento actual
+  - aria-disabled="true": Accesibilidad para elemento deshabilitado
+  - tabindex="-1": Elimina de secuencia de tabulación
+--&gt;
+
+&lt;!-- Elemento Activo --&gt;
+&lt;li class="list-group-item active" aria-current="true"&gt;
+  &lt;!-- 
+    aria-current="true": Indica a tecnologías asistivas que este es el elemento actual
+    El color de fondo y texto se ajustan automáticamente
+  --&gt;
+  &lt;div class="d-flex justify-content-between align-items-center"&gt;
+    &lt;h6 class="mb-1"&gt;🎸 Bohemian Rhapsody - Queen&lt;/h6&gt;
+    &lt;div class="text-white-50"&gt;
+      &lt;i class="bi bi-volume-up-fill"&gt;&lt;/i&gt;
+      &lt;small&gt;0:45 / 5:55&lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;!-- Elemento Deshabilitado --&gt;
+&lt;li class="list-group-item disabled" aria-disabled="true" tabindex="-1"&gt;
+  &lt;!-- 
+    .disabled: Aplica estilo visual y deshabilita interacciones
+    aria-disabled="true": Informa a screen readers
+    tabindex="-1": Elimina de navegación por teclado
+  --&gt;
+  &lt;div class="d-flex justify-content-between align-items-center"&gt;
+    &lt;h6 class="mb-1 text-muted"&gt;🎸 Sweet Child O' Mine - Guns N' Roses&lt;/h6&gt;
+    &lt;small class="text-muted"&gt;No disponible&lt;/small&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+
+&lt;!-- Enlace Deshabilitado --&gt;
+&lt;a href="#" class="list-group-item list-group-item-action disabled" 
+   aria-disabled="true" tabindex="-1"&gt;
+  &lt;!-- 
+    En combinación con .list-group-item-action:
+    - Elimina efectos hover y focus
+    - Mantiene estilo visual deshabilitado
+  --&gt;
+  &lt;div class="d-flex w-100 justify-content-between"&gt;
+    &lt;h6 class="mb-1 text-muted"&gt;💳 Suscripción Premium&lt;/h6&gt;
+    &lt;small class="text-muted"&gt;No disponible&lt;/small&gt;
+  &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 UX de Estados en List Groups:</strong> Los estados visuales claros son
+                                cruciales para una buena experiencia de usuario. El estado <code>.active</code> debe
+                                destacar claramente el elemento actual usando colores de alto contraste, mientras que
+                                <code>.disabled</code> debe indicar visualmente que la interacción no está disponible.
+                                Esto ayuda a los usuarios a entender inmediatamente qué opciones están disponibles y
+                                cuál es su posición actual en la interfaz.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN LIST GROUP CON ENLACES -->
+                <section id="list-group-enlaces" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">🔗 List Group con Enlaces</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea List Groups interactivas usando elementos <code>&lt;a&gt;</code> con la
+                                clase <code>.list-group-item-action</code> para habilitar efectos hover y focus.</p>
+
+                            <h3 class="h5">Análisis Técnico Detallado</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🔍 Elemento <code>&lt;a&gt;</code> vs
+                                                <code>&lt;li&gt;</code>
+                                            </h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small mb-0">
+                                                <li><strong><code>&lt;a&gt;</code></strong>: Elemento de enlace nativo
+                                                </li>
+                                                <li><strong>Semántica:</strong> Indica navegación o acción</li>
+                                                <li><strong>Accesibilidad:</strong> Navegación por teclado nativa</li>
+                                                <li><strong>Interacción:</strong> Hover, focus y click naturales</li>
+                                                <li><strong>SEO:</strong> Mejor para enlaces de navegación</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🔍 Clase <code>.list-group-item-action</code></h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small mb-0">
+                                                <li><strong>Propósito:</strong> Habilitar estados interactivos</li>
+                                                <li><strong>Hover:</strong> Cambio de color de fondo</li>
+                                                <li><strong>Focus:</strong> Outline para accesibilidad</li>
+                                                <li><strong>Active:</strong> Feedback al hacer click</li>
+                                                <li><strong>Cursor:</strong> pointer por defecto</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📱 Panel de Navegación de Aplicación Móvil</h6>
+
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">🧭 Navegación Principal</h6>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="list-group list-group-flush">
+                                            <a href="#" class="list-group-item list-group-item-action active"
+                                                aria-current="true">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-house-fill me-3 text-primary"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Inicio</h6>
+                                                        <small class="text-white-50">Página principal del
+                                                            dashboard</small>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-bar-chart-fill me-3 text-success"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Analíticas</h6>
+                                                        <small class="text-muted">Métricas y estadísticas</small>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-people-fill me-3 text-info"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Clientes</h6>
+                                                        <small class="text-muted">Gestión de clientes</small>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-receipt me-3 text-warning"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Facturación</h6>
+                                                        <small class="text-muted">Facturas y pagos</small>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-gear-fill me-3 text-secondary"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Configuración</h6>
+                                                        <small class="text-muted">Ajustes del sistema</small>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">📚 Sistema de Gestión de Documentos</h6>
+                                <div class="card">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">📄 Documentos Recientes</h6>
+                                        <button class="btn btn-sm btn-outline-primary">Ver todos</button>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="list-group list-group-flush">
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex justify-content-between align-items-start">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-file-earmark-text me-3 text-primary fs-4"></i>
+                                                        <div>
+                                                            <h6 class="mb-1">Propuesta_Cliente_ABC_v3.docx</h6>
+                                                            <small class="text-muted">Modificado hace 2 horas • Tamaño:
+                                                                2.4 MB</small>
+                                                        </div>
+                                                    </div>
+                                                    <span class="badge bg-success rounded-pill">Nuevo</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex justify-content-between align-items-start">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-file-spreadsheet me-3 text-success fs-4"></i>
+                                                        <div>
+                                                            <h6 class="mb-1">Reporte_Ventas_Q1_2024.xlsx</h6>
+                                                            <small class="text-muted">Modificado ayer • Tamaño: 1.8
+                                                                MB</small>
+                                                        </div>
+                                                    </div>
+                                                    <span class="badge bg-warning rounded-pill">Revisar</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex justify-content-between align-items-start">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-file-presentation me-3 text-info fs-4"></i>
+                                                        <div>
+                                                            <h6 class="mb-1">Presentacion_Equipo_Ventas.pptx</h6>
+                                                            <small class="text-muted">Modificado hace 3 días • Tamaño:
+                                                                4.2 MB</small>
+                                                        </div>
+                                                    </div>
+                                                    <span class="badge bg-secondary rounded-pill">Compartido</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código con Explicación Detallada</h3>
+                            <pre class="code-block"><code>&lt;!-- 
+  LIST GROUP CON ENLACES:
+  - &lt;div&gt; como contenedor principal (no &lt;ul&gt;)
+  - &lt;a&gt; para cada elemento interactivo
+  - .list-group-item-action para estados hover/focus
+  - Estructura semántica correcta para navegación
+--&gt;
+
+&lt;div class="list-group list-group-flush"&gt;
+  &lt;!-- 
+    Enlace activo con icono y descripción:
+    - aria-current="true": Indica página actual
+    - Estructura flex para alineación de icono y texto
+    - Iconos de Bootstrap Icons (bi)
+  --&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action active" aria-current="true"&gt;
+    &lt;div class="d-flex align-items-center"&gt;
+      &lt;!-- Icono con margen derecho --&gt;
+      &lt;i class="bi bi-house-fill me-3 text-primary"&gt;&lt;/i&gt;
+      &lt;div&gt;
+        &lt;h6 class="mb-1"&gt;Inicio&lt;/h6&gt;
+        &lt;small class="text-white-50"&gt;Página principal del dashboard&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+
+  &lt;!-- Enlace normal con badge --&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action"&gt;
+    &lt;div class="d-flex justify-content-between align-items-start"&gt;
+      &lt;div class="d-flex align-items-center"&gt;
+        &lt;i class="bi bi-file-earmark-text me-3 text-primary fs-4"&gt;&lt;/i&gt;
+        &lt;div&gt;
+          &lt;h6 class="mb-1"&gt;Propuesta_Cliente_ABC_v3.docx&lt;/h6&gt;
+          &lt;small class="text-muted"&gt;Modificado hace 2 horas • Tamaño: 2.4 MB&lt;/small&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- Badge para estado --&gt;
+      &lt;span class="badge bg-success rounded-pill"&gt;Nuevo&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🔧 Semántica HTML</h6>
+                                            <ul class="small mb-0">
+                                                <li><strong><code>&lt;div&gt;</code></strong>: Contenedor cuando no es
+                                                    lista semántica</li>
+                                                <li><strong><code>&lt;a&gt;</code></strong>: Para navegación y acciones
+                                                </li>
+                                                <li><strong><code>href</code></strong>: Atributo obligatorio para
+                                                    enlaces</li>
+                                                <li><strong>ARIA labels</strong>: Para accesibilidad en navegación</li>
+                                                <li><strong>Iconos</strong>: Mejoran la usabilidad visual</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎯 Consideraciones de UX</h6>
+                                            <ul class="small mb-0">
+                                                <li>Usa enlaces para navegación entre páginas</li>
+                                                <li>Incluye estados hover y focus claros</li>
+                                                <li>Considera iconos para reconocimiento rápido</li>
+                                                <li>Mantén consistencia en el estilo de enlaces</li>
+                                                <li>Proporciona feedback visual en interacciones</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN LIST GROUP FLUSH -->
+                <section id="list-group-flush" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🍃 List Group Flush (Sin Bordes)</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Usa la clase <code>.list-group-flush</code> para eliminar bordes externos y
+                                esquinas redondeadas, creando un diseño más limpio y minimalista.</p>
+
+                            <h3 class="h5">Análisis Técnico Detallado</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🔍 Clase <code>.list-group-flush</code></h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small mb-0">
+                                                <li><strong>Propósito:</strong> Eliminar bordes y esquinas redondeadas
+                                                </li>
+                                                <li><strong>CSS aplicado:</strong> <code>border-radius: 0</code>,
+                                                    <code>border: 0</code>
+                                                </li>
+                                                <li><strong>Efecto visual:</strong> Aspecto más limpio y moderno</li>
+                                                <li><strong>Uso ideal:</strong> Dentro de contenedores con bordes
+                                                    propios</li>
+                                                <li><strong>Compatibilidad:</strong> Funciona con todos los estados y
+                                                    variantes</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🎨 Propiedades CSS Modificadas</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small mb-0">
+                                                <li><code>border-radius: 0</code> - Elimina esquinas redondeadas</li>
+                                                <li><code>border-right: 0</code> - Sin borde derecho</li>
+                                                <li><code>border-left: 0</code> - Sin borde izquierdo</li>
+                                                <li><code>border-top: 0</code> - Sin borde superior (en algunos casos)
+                                                </li>
+                                                <li><code>border-bottom: 0</code> - Sin borde inferior (en algunos
+                                                    casos)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📱 Panel Lateral de Configuración</h6>
+
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">⚙️ Configuración de la Cuenta</h6>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">👤 Información Personal</h6>
+                                                        <small class="text-muted">Nombre, email, teléfono</small>
+                                                    </div>
+                                                    <i class="bi bi-chevron-right text-muted"></i>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">🔐 Seguridad</h6>
+                                                        <small class="text-muted">Contraseña, verificación en dos
+                                                            pasos</small>
+                                                    </div>
+                                                    <i class="bi bi-chevron-right text-muted"></i>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">🔔 Notificaciones</h6>
+                                                        <small class="text-muted">Email, push, SMS</small>
+                                                    </div>
+                                                    <i class="bi bi-chevron-right text-muted"></i>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">🌐 Privacidad</h6>
+                                                        <small class="text-muted">Datos, cookies, seguimiento</small>
+                                                    </div>
+                                                    <i class="bi bi-chevron-right text-muted"></i>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">💳 Suscripción</h6>
+                                                        <small class="text-muted">Plan actual, facturación</small>
+                                                    </div>
+                                                    <i class="bi bi-chevron-right text-muted"></i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código con Explicación Detallada</h3>
+                            <pre class="code-block"><code>&lt;!-- 
+  LIST GROUP FLUSH:
+  - .list-group-flush: Elimina bordes externos y esquinas redondeadas
+  - Ideal para integrar dentro de contenedores con bordes propios
+  - Mantiene la separación visual entre items
+--&gt;
+
+&lt;div class="card"&gt;
+  &lt;div class="card-header bg-light"&gt;
+    &lt;h6 class="mb-0"&gt;⚙️ Configuración de la Cuenta&lt;/h6&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body p-0"&gt;
+    &lt;!-- 
+      list-group-flush: 
+      - Se integra perfectamente con el card
+      - Sin bordes duplicados
+      - Aspecto limpio y cohesivo
+    --&gt;
+    &lt;ul class="list-group list-group-flush"&gt;
+      &lt;li class="list-group-item"&gt;
+        &lt;div class="d-flex justify-content-between align-items-center"&gt;
+          &lt;div&gt;
+            &lt;h6 class="mb-1"&gt;👤 Información Personal&lt;/h6&gt;
+            &lt;small class="text-muted"&gt;Nombre, email, teléfono&lt;/small&gt;
+          &lt;/div&gt;
+          &lt;i class="bi bi-chevron-right text-muted"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;!-- Más items... --&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN LIST GROUP NUMERADA -->
+                <section id="list-group-numerada" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">🔢 List Group Numerada</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Usa <code>&lt;ol&gt;</code> con <code>.list-group</code> y
+                                <code>.list-group-numbered</code> para crear listas con numeración automática.
+                            </p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📋 Lista de Verificación de Proyecto</h6>
+
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">🚀 Fases del Proyecto "Nova"</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <ol class="list-group list-group-numbered">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Análisis de Requerimientos</div>
+                                                    Reuniones con stakeholders y documentación inicial
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">✓ Completado</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Diseño de Arquitectura</div>
+                                                    Diagramas de sistema y planificación técnica
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">✓ Completado</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Desarrollo Frontend</div>
+                                                    Implementación de interfaces de usuario
+                                                </div>
+                                                <span class="badge bg-warning rounded-pill">⌛ En Progreso</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Desarrollo Backend</div>
+                                                    APIs y lógica de negocio
+                                                </div>
+                                                <span class="badge bg-secondary rounded-pill">⏳ Pendiente</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Pruebas y Calidad</div>
+                                                    Testing integral y control de calidad
+                                                </div>
+                                                <span class="badge bg-secondary rounded-pill">⏳ Pendiente</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-start">
+                                                <div class="ms-2 me-auto">
+                                                    <div class="fw-bold">Despliegue en Producción</div>
+                                                    Lanzamiento y monitoreo inicial
+                                                </div>
+                                                <span class="badge bg-secondary rounded-pill">⏳ Pendiente</span>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código con Explicación Detallada</h3>
+                            <pre class="code-block"><code>&lt;!-- 
+  LIST GROUP NUMERADA:
+  - &lt;ol&gt;: Elemento HTML para lista ordenada (numerada)
+  - .list-group-numbered: Aplica estilos de numeración de Bootstrap
+  - Numeración automática y estilizada
+--&gt;
+
+&lt;ol class="list-group list-group-numbered"&gt;
+  &lt;!-- 
+    Primer elemento numerado automáticamente como "1."
+    - ms-2: margen izquierdo para separar número del contenido
+    - me-auto: margen derecho automático
+  --&gt;
+  &lt;li class="list-group-item d-flex justify-content-between align-items-start"&gt;
+    &lt;div class="ms-2 me-auto"&gt;
+      &lt;div class="fw-bold"&gt;Análisis de Requerimientos&lt;/div&gt;
+      Reuniones con stakeholders y documentación inicial
+    &lt;/div&gt;
+    &lt;span class="badge bg-success rounded-pill"&gt;✓ Completado&lt;/span&gt;
+  &lt;/li&gt;
+  
+  &lt;!-- Los números se generan automáticamente --&gt;
+  &lt;li class="list-group-item d-flex justify-content-between align-items-start"&gt;
+    &lt;div class="ms-2 me-auto"&gt;
+      &lt;div class="fw-bold"&gt;Diseño de Arquitectura&lt;/div&gt;
+      Diagramas de sistema y planificación técnica
+    &lt;/div&gt;
+    &lt;span class="badge bg-success rounded-pill"&gt;✓ Completado&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN LIST GROUP HORIZONTAL -->
+                <section id="list-group-horizontal" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">➡️ List Group Horizontal</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Usa <code>.list-group-horizontal</code> para mostrar items uno al lado del
+                                otro en lugar de apilados verticalmente.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📊 Filtros de Dashboard</h6>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Filtrar por Período</h6>
+                                        <ul class="list-group list-group-horizontal-md mb-3">
+                                            <li class="list-group-item list-group-item-action text-center">
+                                                <small>Hoy</small>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action active text-center">
+                                                <small>Últimos 7 días</small>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action text-center">
+                                                <small>Este mes</small>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action text-center">
+                                                <small>Trimestre actual</small>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action text-center">
+                                                <small>Este año</small>
+                                            </li>
+                                        </ul>
+
+                                        <h6 class="card-title mt-4">Filtrar por Categoría</h6>
+                                        <ul class="list-group list-group-horizontal-sm flex-wrap">
+                                            <li class="list-group-item list-group-item-action">
+                                                <small>📈 Ventas</small>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action active">
+                                                <small>👥 Usuarios</small>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action">
+                                                <small>💰 Ingresos</small>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action">
+                                                <small>📱 Tráfico</small>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action">
+                                                <small>🎯 Conversiones</small>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código con Explicación Detallada</h3>
+                            <pre class="code-block"><code>&lt;!-- 
+  LIST GROUP HORIZONTAL:
+  - .list-group-horizontal: Dirección horizontal por defecto
+  - .list-group-horizontal-[breakpoint]: Responsive por breakpoint
+  - flex-wrap: Permite que los items se envuelvan en múltiples líneas
+--&gt;
+
+&lt;!-- Horizontal en dispositivos medianos y superiores --&gt;
+&lt;ul class="list-group list-group-horizontal-md mb-3"&gt;
+  &lt;li class="list-group-item list-group-item-action text-center"&gt;
+    &lt;small&gt;Hoy&lt;/small&gt;
+  &lt;/li&gt;
+  &lt;li class="list-group-item list-group-item-action active text-center"&gt;
+    &lt;small&gt;Últimos 7 días&lt;/small&gt;
+  &lt;/li&gt;
+  &lt;!-- Más items... --&gt;
+&lt;/ul&gt;
+
+&lt;!-- Horizontal pequeño con wrap --&gt;
+&lt;ul class="list-group list-group-horizontal-sm flex-wrap"&gt;
+  &lt;li class="list-group-item list-group-item-action"&gt;
+    &lt;small&gt;📈 Ventas&lt;/small&gt;
+  &lt;/li&gt;
+  &lt;li class="list-group-item list-group-item-action active"&gt;
+    &lt;small&gt;👥 Usuarios&lt;/small&gt;
+  &lt;/li&gt;
+  &lt;!-- Más items... --&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN CLASES CONTEXTUALES -->
+                <section id="clases-contextuales" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger text-white">
+                            <h2 class="h3 mb-0">🎨 Clases Contextuales</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Usa clases contextuales como <code>.list-group-item-success</code>,
+                                <code>.list-group-item-danger</code>, etc., para comunicar estados y significados
+                                mediante colores.
+                            </p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📊 Panel de Estado del Sistema</h6>
+
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">🖥️ Estado de los Servicios</h6>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item list-group-item-success">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">🌐 Servidor Web</h6>
+                                                        <small>Respondiendo correctamente</small>
+                                                    </div>
+                                                    <span class="badge bg-success">Operacional</span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-warning">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">🗄️ Base de Datos</h6>
+                                                        <small>Latencia elevada - monitoreando</small>
+                                                    </div>
+                                                    <span class="badge bg-warning">Degradado</span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-danger">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">📧 Servicio de Email</h6>
+                                                        <small>Intermitencias reportadas</small>
+                                                    </div>
+                                                    <span class="badge bg-danger">Crítico</span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-info">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">🔒 Servicio de Autenticación</h6>
+                                                        <small>Mantenimiento programado</small>
+                                                    </div>
+                                                    <span class="badge bg-info">Mantenimiento</span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-secondary">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">📊 Servicio de Analytics</h6>
+                                                        <small>Procesando datos en lote</small>
+                                                    </div>
+                                                    <span class="badge bg-secondary">Procesando</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código con Explicación Detallada</h3>
+                            <pre class="code-block"><code>&lt;!-- 
+  CLASES CONTEXTUALES:
+  - .list-group-item-[color]: Aplica color semántico
+  - Colores disponibles: primary, secondary, success, danger, warning, info, light, dark
+  - Comunican estados y prioridades visualmente
+--&gt;
+
+&lt;ul class="list-group list-group-flush"&gt;
+  &lt;!-- Success - Estado positivo/operacional --&gt;
+  &lt;li class="list-group-item list-group-item-success"&gt;
+    &lt;div class="d-flex justify-content-between align-items-center"&gt;
+      &lt;div&gt;
+        &lt;h6 class="mb-1"&gt;🌐 Servidor Web&lt;/h6&gt;
+        &lt;small&gt;Respondiendo correctamente&lt;/small&gt;
+      &lt;/div&gt;
+      &lt;span class="badge bg-success"&gt;Operacional&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  
+  &lt;!-- Warning - Estado de advertencia --&gt;
+  &lt;li class="list-group-item list-group-item-warning"&gt;
+    &lt;div class="d-flex justify-content-between align-items-center"&gt;
+      &lt;div&gt;
+        &lt;h6 class="mb-1"&gt;🗄️ Base de Datos&lt;/h6&gt;
+        &lt;small&gt;Latencia elevada - monitoreando&lt;/small&gt;
+      &lt;/div&gt;
+      &lt;span class="badge bg-warning"&gt;Degradado&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  
+  &lt;!-- Danger - Estado crítico/error --&gt;
+  &lt;li class="list-group-item list-group-item-danger"&gt;
+    &lt;div class="d-flex justify-content-between align-items-center"&gt;
+      &lt;div&gt;
+        &lt;h6 class="mb-1"&gt;📧 Servicio de Email&lt;/h6&gt;
+        &lt;small&gt;Intermitencias reportadas&lt;/small&gt;
+      &lt;/div&gt;
+      &lt;span class="badge bg-danger"&gt;Crítico&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN LIST GROUP CON BADGES -->
+                <section id="list-group-badges" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">🏷️ List Group con Badges</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Combina List Groups con Badges para mostrar información adicional como
+                                contadores, estados o etiquetas.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📧 Sistema de Gestión de Correos</h6>
+
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">📬 Bandeja de Entrada</h6>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-inbox-fill me-3 text-primary"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Bandeja de Entrada</h6>
+                                                        <small class="text-muted">Correos no leídos y recibidos</small>
+                                                    </div>
+                                                </div>
+                                                <span class="badge bg-primary rounded-pill">24</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-star-fill me-3 text-warning"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Destacados</h6>
+                                                        <small class="text-muted">Correos marcados como
+                                                            importantes</small>
+                                                    </div>
+                                                </div>
+                                                <span class="badge bg-warning rounded-pill">8</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-send-fill me-3 text-success"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Enviados</h6>
+                                                        <small class="text-muted">Correos que has enviado</small>
+                                                    </div>
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">47</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-file-earmark-text me-3 text-info"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Borradores</h6>
+                                                        <small class="text-muted">Correos guardados como
+                                                            borrador</small>
+                                                    </div>
+                                                </div>
+                                                <span class="badge bg-info rounded-pill">3</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-trash-fill me-3 text-danger"></i>
+                                                    <div>
+                                                        <h6 class="mb-1">Papelera</h6>
+                                                        <small class="text-muted">Correos eliminados</small>
+                                                    </div>
+                                                </div>
+                                                <span class="badge bg-danger rounded-pill">12</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código con Explicación Detallada</h3>
+                            <pre class="code-block"><code>&lt;!-- 
+  LIST GROUP CON BADGES:
+  - d-flex + justify-content-between: Alinea contenido y badge
+  - align-items-center: Centra verticalmente
+  - badge rounded-pill: Badge con forma de píldora
+  - Combinación con iconos para mejor usabilidad
+--&gt;
+
+&lt;ul class="list-group list-group-flush"&gt;
+  &lt;li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"&gt;
+    &lt;!-- Contenido principal con icono --&gt;
+    &lt;div class="d-flex align-items-center"&gt;
+      &lt;i class="bi bi-inbox-fill me-3 text-primary"&gt;&lt;/i&gt;
+      &lt;div&gt;
+        &lt;h6 class="mb-1"&gt;Bandeja de Entrada&lt;/h6&gt;
+        &lt;small class="text-muted"&gt;Correos no leídos y recibidos&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Badge con contador --&gt;
+    &lt;span class="badge bg-primary rounded-pill"&gt;24&lt;/span&gt;
+  &lt;/li&gt;
+  
+  &lt;!-- Más items con diferentes colores de badges --&gt;
+  &lt;li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"&gt;
+    &lt;div class="d-flex align-items-center"&gt;
+      &lt;i class="bi bi-star-fill me-3 text-warning"&gt;&lt;/i&gt;
+      &lt;div&gt;
+        &lt;h6 class="mb-1"&gt;Destacados&lt;/h6&gt;
+        &lt;small class="text-muted"&gt;Correos marcados como importantes&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class="badge bg-warning rounded-pill"&gt;8&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN LABORATORIO LIST GROUPS -->
+                <section id="laboratorio-list-groups" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">🔬 Laboratorio de List Groups</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Experimenta con diferentes configuraciones de List Groups en tiempo real y
+                                genera el código perfecto para tu aplicación.</p>
+
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="mb-3">⚙️ Configuración del List Group</h6>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Tipo de List Group:</label>
+                                            <select class="form-select" id="listGroupType">
+                                                <option value="ul" selected>Lista no ordenada (&lt;ul&gt;)</option>
+                                                <option value="ol">Lista numerada (&lt;ol&gt;)</option>
+                                                <option value="div">Contenedor con enlaces (&lt;div&gt; + &lt;a&gt;)
+                                                </option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Estilo:</label>
+                                            <select class="form-select" id="listGroupStyle">
+                                                <option value="" selected>Normal</option>
+                                                <option value="list-group-flush">Flush (sin bordes)</option>
+                                                <option value="list-group-horizontal">Horizontal</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Número de Items: <span
+                                                    id="itemsCountValue">3</span></label>
+                                            <input type="range" class="form-range" id="itemsCountRange" min="1" max="6"
+                                                value="3">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="showIconsCheck"
+                                                    checked>
+                                                <label class="form-check-label" for="showIconsCheck">
+                                                    Mostrar iconos
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="showBadgesCheck">
+                                                <label class="form-check-label" for="showBadgesCheck">
+                                                    Mostrar badges
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="interactiveCheck">
+                                                <label class="form-check-label" for="interactiveCheck">
+                                                    Hacer interactivo
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn-primary" onclick="resetListGroupLab()">🔄 Reiniciar
+                                            Laboratorio</button>
+                                        <button class="btn btn-success" onclick="copyListGroupCode()">📋 Copiar
+                                            Código</button>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h6 class="mb-3">👁️ Vista Previa en Tiempo Real</h6>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div id="listGroupPreview">
+                                                    <!-- La list group se generará aquí dinámicamente -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-3">
+                                            <h6>📋 Código Generado:</h6>
+                                            <pre class="bg-dark text-light p-3 rounded small"
+                                                id="generatedListGroupCode"></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN LIST GROUPS AVANZADOS -->
+                <section id="list-groups-avanzados" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🚀 List Groups Avanzados</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Explora técnicas avanzadas y patrones creativos con List Groups para crear
+                                experiencias de usuario excepcionales.</p>
+
+                            <h3 class="h5">Técnicas Avanzadas en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <!-- List Group con Checkboxes -->
+                                <h6 class="mb-3">✅ List Group con Selección Múltiple</h6>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Selecciona tus intereses</h6>
+                                        <div class="list-group">
+                                            <label class="list-group-item">
+                                                <input class="form-check-input me-2" type="checkbox" value="">
+                                                <span class="fw-bold">🎨 Diseño Gráfico</span>
+                                                <small class="d-block text-muted">Photoshop, Illustrator, diseño
+                                                    UI/UX</small>
+                                            </label>
+                                            <label class="list-group-item">
+                                                <input class="form-check-input me-2" type="checkbox" value="" checked>
+                                                <span class="fw-bold">💻 Desarrollo Web</span>
+                                                <small class="d-block text-muted">HTML, CSS, JavaScript,
+                                                    frameworks</small>
+                                            </label>
+                                            <label class="list-group-item">
+                                                <input class="form-check-input me-2" type="checkbox" value="">
+                                                <span class="fw-bold">📱 Desarrollo Móvil</span>
+                                                <small class="d-block text-muted">iOS, Android, React Native</small>
+                                            </label>
+                                            <label class="list-group-item">
+                                                <input class="form-check-input me-2" type="checkbox" value="">
+                                                <span class="fw-bold">📊 Ciencia de Datos</span>
+                                                <small class="d-block text-muted">Python, machine learning,
+                                                    análisis</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- List Group con Custom Content -->
+                                <h6 class="mb-3">🎭 List Group con Contenido Personalizado</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Actividad Reciente</h6>
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../Imagenes/avatar2mujer.jpg"
+                                                            class="rounded-circle me-3" alt="Usuario" width="10%">
+                                                        <div>
+                                                            <h6 class="mb-1">María González</h6>
+                                                            <p class="mb-1">Comentó en el proyecto "Dashboard Analytics"
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <small class="text-muted">Hace 15 min</small>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../Imagenes/avatarhombrew.jpg"
+                                                            class="rounded-circle me-3" alt="Usuario" width="10%">
+                                                        <div>
+                                                            <h6 class="mb-1">Carlos Rodríguez</h6>
+                                                            <p class="mb-1">Subió nuevos archivos al repositorio</p>
+                                                        </div>
+                                                    </div>
+                                                    <small class="text-muted">Hace 2 horas</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código Avanzado</h3>
+                            <pre class="code-block"><code>&lt;!-- List Group con Checkboxes --&gt;
+&lt;div class="list-group"&gt;
+  &lt;label class="list-group-item"&gt;
+    &lt;input class="form-check-input me-2" type="checkbox" value=""&gt;
+    &lt;span class="fw-bold"&gt;🎨 Diseño Gráfico&lt;/span&gt;
+    &lt;small class="d-block text-muted"&gt;Photoshop, Illustrator, diseño UI/UX&lt;/small&gt;
+  &lt;/label&gt;
+  &lt;!-- Más items... --&gt;
+&lt;/div&gt;
+
+&lt;!-- List Group con Contenido Personalizado --&gt;
+&lt;div class="list-group"&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action"&gt;
+    &lt;div class="d-flex w-100 justify-content-between"&gt;
+      &lt;div class="d-flex align-items-center"&gt;
+        &lt;img src="../Imagenes/avatar2mujer.jpg" class="rounded-circle me-3" alt="Usuario" width="10%"&gt;
+        &lt;div&gt;
+          &lt;h6 class="mb-1"&gt;María González&lt;/h6&gt;
+          &lt;p class="mb-1"&gt;Comentó en el proyecto "Dashboard Analytics"&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;small class="text-muted"&gt;Hace 15 min&lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN EJEMPLO AVANZADO -->
+                <section id="ejemplo-avanzado" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">💼 Ejemplo Avanzado: Dashboard de Gestión</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea un dashboard empresarial completo que utilice List Groups de manera
+                                avanzada para mostrar información compleja de forma organizada.</p>
+
+                            <h3 class="h5">Dashboard "ManagerPro"</h3>
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-header bg-light">
+                                                <h6 class="mb-0">👥 Mi Equipo</h6>
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <div class="list-group list-group-flush">
+                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="../Imagenes/Flor.jpg"
+                                                                class="rounded-circle me-3" alt="Avatar" width="10%">
+                                                            <div class="flex-grow-1">
+                                                                <h6 class="mb-0">Ana Martínez</h6>
+                                                                <small class="text-muted">Desarrolladora
+                                                                    Frontend</small>
+                                                            </div>
+                                                            <span class="badge bg-success">En línea</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="../Imagenes/Art.jpg"
+                                                                class="rounded-circle me-3" alt="Avatar" width="10%">
+                                                            <div class="flex-grow-1">
+                                                                <h6 class="mb-0">Carlos López</h6>
+                                                                <small class="text-muted">Diseñador UI/UX</small>
+                                                            </div>
+                                                            <span class="badge bg-warning">Ausente</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div
+                                                class="card-header bg-light d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-0">📋 Tareas del Proyecto</h6>
+                                                <span class="badge bg-primary">5 pendientes</span>
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <div class="list-group list-group-flush">
+                                                    <div class="list-group-item">
+                                                        <div class="d-flex justify-content-between align-items-start">
+                                                            <div class="flex-grow-1">
+                                                                <h6 class="mb-1">Implementar sistema de autenticación
+                                                                </h6>
+                                                                <small class="text-muted">Asignado a: Ana Martínez •
+                                                                    Vence: Hoy</small>
+                                                            </div>
+                                                            <div class="btn-group">
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-success">Completar</button>
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-secondary">Posponer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-group-item">
+                                                        <div class="d-flex justify-content-between align-items-start">
+                                                            <div class="flex-grow-1">
+                                                                <h6 class="mb-1">Diseñar wireframes del dashboard</h6>
+                                                                <small class="text-muted">Asignado a: Carlos López •
+                                                                    Vence: Mañana</small>
+                                                            </div>
+                                                            <div class="btn-group">
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-success">Completar</button>
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-secondary">Posponer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MEJORES PRÁCTICAS -->
+                <section id="mejores-practicas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">💡 Mejores Prácticas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Optimiza el uso de List Groups siguiendo estas mejores prácticas para crear
+                                experiencias de usuario excepcionales.</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🎯 UX/UI</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Jerarquía clara:</strong> Usa tamaños de texto consistentes
+                                                </li>
+                                                <li><strong>Espaciado adecuado:</strong> Mantén proporciones visuales
+                                                </li>
+                                                <li><strong>Estados visibles:</strong> Active, hover y focus bien
+                                                    definidos</li>
+                                                <li><strong>Contenido escaneable:</strong> Información fácil de leer
+                                                    rápidamente</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">♿ Accesibilidad</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Semántica correcta:</strong> Usa <code>&lt;ul&gt;</code>,
+                                                    <code>&lt;ol&gt;</code> o <code>&lt;div&gt;</code> apropiadamente
+                                                </li>
+                                                <li><strong>ARIA labels:</strong> Describe el propósito de la lista</li>
+                                                <li><strong>Navegación por teclado:</strong> Asegura que todos los items
+                                                    sean accesibles</li>
+                                                <li><strong>Contraste suficiente:</strong> Texto legible en todos los
+                                                    estados</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4">
+                                <strong>💡 Conclusión Final:</strong> Los List Groups son componentes versátiles que,
+                                cuando se usan correctamente, pueden organizar y presentar información compleja de
+                                manera clara y accesible. Domina estas técnicas para crear interfaces que sean tanto
+                                funcionales como visualmente atractivas.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- FOOTER -->
+                <footer class="site-footer mt-5 py-5">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-4">
+                                <h5>Bootstrap 5 Tutorial</h5>
+                                <p class="small mb-2">Tutorial interactivo y open-source. Aprende con ejemplos,
+                                    ejercicios y despliega en GitHub Pages.</p>
+                                <p class="small mb-0">© 2025 Sebastián — Hecho para la comunidad.</p>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Guía rápida</h6>
+                                <ul class="list-unstyled small">
+                                    <li><a href="../index.html#grid">Grid System</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a href="../forms.html">Forms</a></li>
+                                    <li><a href="../github-tutorial.html">Subir a GitHub</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Comunidad</h6>
+                                <div class="d-flex gap-2">
+                                    <!-- Redes sociales -->
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://twitter.com/tu_usuario" target="_blank" rel="noopener"
+                                        aria-label="Twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                        aria-label="GitHub">
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <h6>Newsletter</h6>
+                                <form id="footerSubscribe" class="d-flex flex-column">
+                                    <input type="email" class="form-control form-control-sm mb-2"
+                                        placeholder="tu@email.com">
+                                    <button class="btn btn-sm btn-primary">Suscribirme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <div class="list-group" id="searchResultsList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Live preview modal para cualquier seccion.html -->
+    <div class="modal fade" id="livePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Vista Previa - List Groups</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe id="livePreviewIframe" style="width:100%;height:70vh;border:0;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-outline-secondary" id="openInNew">Abrir en nueva pestaña</button>
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante para TOC móvil -->
+    <button class="mobile-toc-toggle d-md-none" id="mobileTocToggle" aria-label="Abrir índice de contenido">
+        <span class="toc-icon">📚</span>
+        <span class="toc-text">Índice</span>
+    </button>
+
+    <!-- Overlay para móvil -->
+    <div class="mobile-sidebar-overlay d-md-none" id="mobileSidebarOverlay"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="../JS/buscar.js"></script>
+    <script src="../JS/main.js"></script>
+
+    <script>
+        // ===== TOC MÓVIL MEJORADO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileTocToggle = document.getElementById('mobileTocToggle');
+            const mobileSidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobileSidebarOverlay');
+
+            if (mobileTocToggle && mobileSidebar && mobileOverlay) {
+                function toggleMobileTOC() {
+                    const isOpening = !mobileSidebar.classList.contains('mobile-open');
+
+                    if (isOpening) {
+                        mobileSidebar.classList.add('mobile-open');
+                        mobileOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                }
+
+                mobileTocToggle.addEventListener('click', toggleMobileTOC);
+                mobileOverlay.addEventListener('click', toggleMobileTOC);
+
+                const tocLinks = mobileSidebar.querySelectorAll('a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth < 768) {
+                            toggleMobileTOC();
+                        }
+                    });
+                });
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 768) {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileSidebar.classList.contains('mobile-open')) {
+                        toggleMobileTOC();
+                    }
+                });
+            }
+        });
+
+        // Función global para reset del progreso
+        function resetProgress() {
+            localStorage.setItem('tutorialProgress', '{}');
+            const progressBar = document.getElementById('courseProgress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+            }
+            alert('Progreso reiniciado correctamente ✅');
+        }
+    </script>
+
+    <script>
+        // ===== LABORATORIO DE LIST GROUPS INTERACTIVO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const listGroupType = document.getElementById('listGroupType');
+            const listGroupStyle = document.getElementById('listGroupStyle');
+            const itemsCountRange = document.getElementById('itemsCountRange');
+            const showIconsCheck = document.getElementById('showIconsCheck');
+            const showBadgesCheck = document.getElementById('showBadgesCheck');
+            const interactiveCheck = document.getElementById('interactiveCheck');
+            const listGroupPreview = document.getElementById('listGroupPreview');
+            const itemsCountValue = document.getElementById('itemsCountValue');
+            const generatedListGroupCode = document.getElementById('generatedListGroupCode');
+
+            // Actualizar la vista previa
+            function updateListGroupPreview() {
+                const type = listGroupType.value;
+                const style = listGroupStyle.value;
+                const itemsCount = parseInt(itemsCountRange.value);
+                const showIcons = showIconsCheck.checked;
+                const showBadges = showBadgesCheck.checked;
+                const interactive = interactiveCheck.checked;
+
+                // Actualizar valores mostrados
+                itemsCountValue.textContent = itemsCount;
+
+                // Generar HTML de list group
+                let listGroupHTML = '';
+                const isHorizontal = style === 'list-group-horizontal';
+
+                if (type === 'ul' || type === 'ol') {
+                    const tag = type === 'ul' ? 'ul' : 'ol';
+                    listGroupHTML = `<${tag} class="list-group ${style}">`;
+
+                    for (let i = 1; i <= itemsCount; i++) {
+                        const isActive = i === 1 && interactive;
+                        const itemClass = interactive ? 'list-group-item list-group-item-action' + (isActive ? ' active' : '') : 'list-group-item';
+
+                        listGroupHTML += `<li class="${itemClass}">`;
+                        if (showIcons) {
+                            listGroupHTML += `<i class="bi bi-star${isActive ? '-fill' : ''} me-2"></i>`;
+                        }
+                        listGroupHTML += `Elemento ${i}`;
+                        if (showBadges) {
+                            listGroupHTML += `<span class="badge bg-primary rounded-pill ms-2">${i * 5}</span>`;
+                        }
+                        listGroupHTML += '</li>';
+                    }
+
+                    listGroupHTML += `</${tag}>`;
+                } else {
+                    // Tipo div con enlaces
+                    listGroupHTML = `<div class="list-group ${style}">`;
+
+                    for (let i = 1; i <= itemsCount; i++) {
+                        const isActive = i === 1 && interactive;
+                        const itemClass = 'list-group-item list-group-item-action' + (isActive ? ' active' : '');
+
+                        listGroupHTML += `<a href="#" class="${itemClass}">`;
+                        if (showIcons) {
+                            listGroupHTML += `<i class="bi bi-link-45deg me-2"></i>`;
+                        }
+                        listGroupHTML += `Enlace ${i}`;
+                        if (showBadges) {
+                            listGroupHTML += `<span class="badge bg-success rounded-pill ms-2">Nuevo</span>`;
+                        }
+                        listGroupHTML += '</a>';
+                    }
+
+                    listGroupHTML += '</div>';
+                }
+
+                // Actualizar vista previa
+                listGroupPreview.innerHTML = listGroupHTML;
+
+                // Generar código
+                generateListGroupCode(type, style, itemsCount, showIcons, showBadges, interactive);
+            }
+
+            // Generar código HTML
+            function generateListGroupCode(type, style, itemsCount, showIcons, showBadges, interactive) {
+                let code = '';
+                const isHorizontal = style === 'list-group-horizontal';
+
+                if (type === 'ul' || type === 'ol') {
+                    const tag = type === 'ul' ? 'ul' : 'ol';
+                    code += `&lt;${tag} class="list-group ${style}"&gt;\n`;
+
+                    for (let i = 1; i <= itemsCount; i++) {
+                        const isActive = i === 1 && interactive;
+                        const itemClass = interactive ? 'list-group-item list-group-item-action' + (isActive ? ' active' : '') : 'list-group-item';
+
+                        code += `  &lt;li class="${itemClass}"&gt;\n`;
+                        if (showIcons) {
+                            code += `    &lt;i class="bi bi-star${isActive ? '-fill' : ''} me-2"&gt;&lt;/i&gt;\n`;
+                        }
+                        code += `    Elemento ${i}`;
+                        if (showBadges) {
+                            code += `\n    &lt;span class="badge bg-primary rounded-pill ms-2"&gt;${i * 5}&lt;/span&gt;`;
+                        }
+                        code += `\n  &lt;/li&gt;\n`;
+                    }
+
+                    code += `&lt;/${tag}&gt;`;
+                } else {
+                    // Tipo div con enlaces
+                    code += '&lt;div class="list-group ' + style + '"&gt;\n';
+
+                    for (let i = 1; i <= itemsCount; i++) {
+                        const isActive = i === 1 && interactive;
+                        const itemClass = 'list-group-item list-group-item-action' + (isActive ? ' active' : '');
+
+                        code += `  &lt;a href="#" class="${itemClass}"&gt;\n`;
+                        if (showIcons) {
+                            code += '    &lt;i class="bi bi-link-45deg me-2"&gt;&lt;/i&gt;\n';
+                        }
+                        code += `    Enlace ${i}`;
+                        if (showBadges) {
+                            code += '\n    &lt;span class="badge bg-success rounded-pill ms-2"&gt;Nuevo&lt;/span&gt;';
+                        }
+                        code += '\n  &lt;/a&gt;\n';
+                    }
+
+                    code += '&lt;/div&gt;';
+                }
+
+                generatedListGroupCode.textContent = code;
+            }
+
+            // Reiniciar laboratorio
+            window.resetListGroupLab = function () {
+                listGroupType.value = 'ul';
+                listGroupStyle.value = '';
+                itemsCountRange.value = 3;
+                showIconsCheck.checked = true;
+                showBadgesCheck.checked = false;
+                interactiveCheck.checked = false;
+                updateListGroupPreview();
+            }
+
+            // Copiar código generado
+            window.copyListGroupCode = function () {
+                const code = generatedListGroupCode.textContent;
+                navigator.clipboard.writeText(code).then(function () {
+                    const btn = document.querySelector('#laboratorio-list-groups .btn-success');
+                    const originalText = btn.textContent;
+                    btn.textContent = '✓ Código Copiado!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                });
+            }
+
+            // Event listeners
+            listGroupType.addEventListener('change', updateListGroupPreview);
+            listGroupStyle.addEventListener('change', updateListGroupPreview);
+            itemsCountRange.addEventListener('input', updateListGroupPreview);
+            showIconsCheck.addEventListener('change', updateListGroupPreview);
+            showBadgesCheck.addEventListener('change', updateListGroupPreview);
+            interactiveCheck.addEventListener('change', updateListGroupPreview);
+
+            // Inicializar
+            updateListGroupPreview();
+        });
+    </script>
+
+    <style>
+        .bg-purple {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Estilos para placeholders */
+        .placeholder-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e9ecef;
+            border-radius: 0.375rem;
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+
+        /* Mejorar la apariencia de los ejemplos */
+        .card .border {
+            border-style: dashed !important;
+            border-color: #dee2e6 !important;
+        }
+
+        .py-6 {
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+        }
+
+        .py-7 {
+            padding-top: 6rem !important;
+            padding-bottom: 6rem !important;
+        }
+
+        /* Estilos para el laboratorio */
+        #listGroupPreview {
+            transition: all 0.3s ease;
+        }
+
+        /* Estilos para ejemplos de list groups */
+        .list-group-item .bi {
+            width: 1.5em;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .display-md-3 {
+                font-size: calc(1.525rem + 3.3vw) !important;
+            }
+
+            /* Ajustes responsive para list groups */
+            .list-group-horizontal {
+                flex-direction: column !important;
+            }
+        }
+    </style>
+</body>
+
+</html>
