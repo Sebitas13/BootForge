@@ -1,0 +1,1284 @@
+ /* Forzar vertical centering en todas las celdas de tablas con la clase .table */
+ .table th,
+ .table td {
+     vertical-align: middle !important;
+ }
+
+ /* cursor pointer para elementos que abren collapse */
+ .clickable {
+     cursor: pointer;
+ }
+
+ /* Suavizar la animación del collapse (más lento y easing) */
+ .collapsing {
+     transition: height 500ms cubic-bezier(.22, .9, .29, 1) !important;
+ }
+
+ /* Fade interno para el contenido del collapse */
+ .collapse .card-body {
+     opacity: 0;
+     transition: opacity 350ms ease;
+ }
+
+ .collapse.show .card-body {
+     opacity: 1;
+     transition-delay: 80ms;
+ }
+
+ /* Animación del avatar en la fila (cuando el collapse está abierto) */
+ .clickable {
+     transition: transform 400ms cubic-bezier(.22, .9, .29, 1);
+     will-change: transform;
+ }
+
+ .clickable.expanded {
+     transform: scale(1.12);
+ }
+
+ /* Ajustes opcionales para evitar que el escalar rompa el layout */
+ .table .clickable {
+     display: inline-block;
+ }
+
+ /* estilos para bloques de código del tutorial */
+ pre.code-block {
+     position: relative;
+     padding: 1rem;
+     border-radius: .5rem;
+     background: #0b1221;
+     color: #e6eef6;
+     overflow: auto;
+ }
+
+ pre.code-block code {
+     white-space: pre;
+     display: block;
+     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace;
+     font-size: .9rem;
+ }
+
+ /* botones en la esquina del bloque */
+ .pre-copy-btn {
+     position: absolute;
+     right: .6rem;
+     top: .6rem;
+     z-index: 15;
+ }
+
+
+
+ /* Hero overlay */
+ .site-hero {
+     position: relative;
+     background-size: cover;
+     background-position: center;
+     color: white;
+ }
+
+ .site-hero::after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: linear-gradient(180deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.55));
+     pointer-events: none;
+ }
+
+ .site-hero .hero-inner {
+     position: relative;
+     z-index: 2;
+     padding: 3.5rem 1rem;
+ }
+
+ /* Ajustes cards claros en modo oscuro (mejor contraste para .bg-light y paneles) */
+ :root {
+     --card-bg-light: #f8f9fa;
+     --card-text-dark: #222;
+ }
+
+ [data-bs-theme="dark"] .bg-light,
+ [data-bs-theme="dark"] .card.bg-light {
+     background-color: #1f2937 !important;
+     /* oscuro pero neutro */
+     color: #e6eef6 !important;
+ }
+
+ [data-bs-theme="dark"] .text-white-50,
+ [data-bs-theme="dark"] .text-muted {
+     color: #cbd5e1 !important;
+ }
+
+ /* Ajuste para badges en dark */
+ [data-bs-theme="dark"] .badge.bg-warning {
+     color: #111 !important;
+ }
+
+ /* Popovers en dark (si usas popovers contextual) */
+ [data-bs-theme="dark"] .popover {
+     background: #0b1221;
+     color: #e6eef6;
+     border-color: #233047;
+ }
+
+ /* Código: mantener legible en ambos temas */
+ pre.code-block {
+     background: #0b1221;
+     color: #e6eef6;
+ }
+
+ [data-bs-theme="dark"] pre.code-block {
+     box-shadow: 0 6px 18px rgba(0, 0, 0, .45);
+ }
+
+ /* botones Try / Copy: pequeños ajustes */
+ .pre-copy-btn {
+     opacity: .95;
+     transition: transform .12s ease, opacity .12s ease;
+ }
+
+ .pre-copy-btn:active {
+     transform: translateY(1px) scale(.995);
+ }
+
+ /* Footer pequeño y elegante */
+ .site-footer {
+     background: linear-gradient(0deg, #0b1221, #0a0f1a);
+     color: #cbd5e1;
+ }
+
+ .site-footer a {
+     color: #a5b4fc;
+     text-decoration: none;
+ }
+
+ .site-footer a:hover {
+     text-decoration: underline;
+ }
+
+ /* small animation */
+ .fade-in-up {
+     transform: translateY(6px);
+     opacity: 0;
+     transition: all .48s cubic-bezier(.22, .9, .29, 1);
+ }
+
+ .fade-in-up.visible {
+     transform: none;
+     opacity: 1;
+ }
+
+ /* ensure progress bar has aria */
+ #courseProgress[role="progressbar"] {
+     transition: width .6s cubic-bezier(.22, .9, .29, 1);
+ }
+
+
+ /* En tu sección de estilos, agrega: */
+ [data-bs-theme="light"] .navbar-dark {
+     background: linear-gradient(135deg, #0d6efd, #0a58ca) !important;
+ }
+
+ [data-bs-theme="light"] .navbar-dark .navbar-nav .nav-link {
+     color: rgba(255, 255, 255, 0.9) !important;
+ }
+
+ [data-bs-theme="light"] .navbar-dark .navbar-nav .nav-link:hover {
+     color: white !important;
+ }
+
+ /* ===== ESTILOS PARA MODO CLARO/OSCURO MEJORADO ===== */
+
+ /* Navbar en modo claro */
+ /* Navbar en modo claro */
+ .navbar-light-custom .navbar-brand,
+ .navbar-light-custom .navbar-nav .nav-link,
+ .navbar-light-custom .navbar-text {
+     color: rgba(255, 255, 255, 0.9) !important;
+ }
+
+ .navbar-light-custom .navbar-brand small {
+     color: rgba(255, 255, 255, 0.7) !important;
+ }
+
+ .navbar-light-custom .navbar-toggler {
+     border-color: rgba(255, 255, 255, 0.5);
+ }
+
+ .navbar-light-custom .navbar-toggler-icon {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+ }
+
+ /* Asegurar que el navbar primario se vea bien en modo claro */
+ .bg-primary.navbar-light-custom {
+     background-color: var(--bs-primary) !important;
+ }
+
+ /* Animaciones para el icono de tema */
+ .theme-icon {
+     display: inline-block;
+     transition: all 0.3s ease;
+ }
+
+ .sun-icon {
+     animation: sunRise 0.3s ease;
+ }
+
+ .moon-icon {
+     animation: moonRise 0.3s ease;
+ }
+
+ @keyframes sunRise {
+     0% {
+         transform: scale(0.8) rotate(-90deg);
+         opacity: 0;
+     }
+
+     100% {
+         transform: scale(1) rotate(0deg);
+         opacity: 1;
+     }
+ }
+
+ @keyframes moonRise {
+     0% {
+         transform: scale(0.8) rotate(90deg);
+         opacity: 0;
+     }
+
+     100% {
+         transform: scale(1) rotate(0deg);
+         opacity: 1;
+     }
+ }
+
+ /* Efecto hover para el botón de tema */
+ #themeToggle:hover .theme-icon {
+     transform: scale(1.1);
+ }
+
+ /* Colores específicos para los iconos */
+ .sun-icon svg {
+     stroke: #ffc107 !important;
+     /* Amarillo Bootstrap */
+ }
+
+ .moon-icon svg {
+     stroke: #0dcaf0 !important;
+     /* Azul claro Bootstrap */
+ }
+
+ /* Transiciones suaves para cambios de tema */
+ html {
+     transition: background-color 0.3s ease, color 0.3s ease;
+ }
+
+ /* Asegurar que los textos sean legibles en modo claro */
+ [data-bs-theme="light"] {
+     color: #212529;
+ }
+
+ [data-bs-theme="light"] .card {
+     background-color: #fff;
+     border-color: #dee2e6;
+ }
+
+ [data-bs-theme="light"] .bg-light {
+     background-color: #f8f9fa !important;
+ }
+
+ /* Mejorar contraste en modo claro */
+ [data-bs-theme="light"] .text-muted {
+     color: #6c757d !important;
+ }
+
+ [data-bs-theme="light"] .btn-outline-dark {
+     border-color: #6c757d;
+     color: #6c757d;
+ }
+
+ [data-bs-theme="light"] .btn-outline-dark:hover {
+     background-color: #6c757d;
+     color: #fff;
+ }
+
+ /* Asegurar que el navbar se vea bien en ambos modos */
+ #mainNavbar {
+     transition: all 0.3s ease;
+ }
+
+ /* Ajustes específicos para el navbar en modo claro */
+ [data-bs-theme="light"] #mainNavbar.navbar-light {
+     background-color: var(--bs-primary) !important;
+ }
+
+ [data-bs-theme="light"] #mainNavbar .navbar-brand,
+ [data-bs-theme="light"] #mainNavbar .navbar-nav .nav-link {
+     color: rgba(255, 255, 255, 0.9) !important;
+ }
+
+ [data-bs-theme="light"] #mainNavbar .navbar-brand:hover,
+ [data-bs-theme="light"] #mainNavbar .navbar-nav .nav-link:hover {
+     color: rgba(255, 255, 255, 1) !important;
+ }
+
+ /* ===== TOC MOBILE CORREGIDO ===== */
+ @media (max-width: 767.98px) {
+     .mobile-sidebar {
+         position: fixed;
+         top: 0;
+         left: -100%;
+         width: 85%;
+         max-width: 300px;
+         height: 100vh;
+         background: white;
+         z-index: 1080;
+         transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+         overflow-y: auto;
+         box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+         padding: 1rem;
+         display: block !important;
+         /* Forzar display */
+     }
+
+     .mobile-sidebar.mobile-open {
+         left: 0;
+     }
+
+     /* Botón flotante del TOC */
+     .mobile-toc-toggle {
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         z-index: 1070;
+         width: auto;
+         height: auto;
+         padding: 12px 16px;
+         border-radius: 25px;
+         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+         color: white;
+         border: none;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+         display: flex !important;
+         align-items: center;
+         justify-content: center;
+         gap: 8px;
+         font-size: 0.9rem;
+         font-weight: 600;
+         transition: all 0.3s ease;
+     }
+
+     .mobile-toc-toggle:hover {
+         transform: translateY(-2px);
+         box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+     }
+
+     .mobile-toc-toggle .toc-icon {
+         font-size: 1.2rem;
+     }
+
+     .mobile-toc-toggle .toc-text {
+         display: inline;
+     }
+
+     /* Overlay */
+     .mobile-sidebar-overlay {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.5);
+         z-index: 1075;
+         opacity: 0;
+         visibility: hidden;
+         transition: all 0.3s ease;
+     }
+
+     .mobile-sidebar-overlay.active {
+         opacity: 1;
+         visibility: visible;
+     }
+
+     /* Asegurar que el contenido principal se desplace */
+     main.col-md-9 {
+         margin-left: 0 !important;
+         width: 100%;
+     }
+
+     /* Ajustes específicos para el contenido del sidebar en móvil */
+     .mobile-sidebar .card {
+         margin-bottom: 1rem;
+     }
+
+     .mobile-sidebar .position-sticky {
+         position: relative !important;
+         top: 0 !important;
+     }
+ }
+
+ /* Animaciones mejoradas */
+ @keyframes slideInFromLeft {
+     0% {
+         transform: translateX(-100%);
+         opacity: 0;
+     }
+
+     100% {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
+
+ @keyframes slideOutToLeft {
+     0% {
+         transform: translateX(0);
+         opacity: 1;
+     }
+
+     100% {
+         transform: translateX(-100%);
+         opacity: 0;
+     }
+ }
+
+ /* Para pantallas muy pequeñas */
+ @media (max-width: 380px) {
+     .mobile-sidebar {
+         width: 90%;
+     }
+
+     .mobile-toc-toggle {
+         padding: 10px 14px;
+         font-size: 0.8rem;
+     }
+
+     .mobile-toc-toggle .toc-text {
+         display: none;
+     }
+ }
+
+ /* ===== ICONOS GITHUB MEJORADOS ===== */
+ .github-icon {
+     transition: all 0.3s ease;
+     filter: brightness(0.9);
+ }
+
+ .btn:hover .github-icon {
+     transform: scale(1.1) rotate(5deg);
+     filter: brightness(1.1);
+ }
+
+ /* Efectos específicos para botones GitHub */
+ .btn-light .github-icon,
+ .btn-outline-light .github-icon {
+     filter: brightness(0.8);
+ }
+
+ .btn-light:hover .github-icon,
+ .btn-outline-light:hover .github-icon {
+     filter: brightness(1);
+ }
+
+ /* En modo claro */
+ [data-bs-theme="light"] .btn-dark .github-icon {
+     filter: brightness(2);
+ }
+
+ [data-bs-theme="light"] .btn-outline-dark .github-icon {
+     filter: brightness(1.5);
+ }
+
+ /* ===== BOTONES NAVBAR ARMONIZADOS ===== */
+
+ /* Asegurar altura consistente para todos los botones del navbar */
+ .navbar .btn-sm {
+     height: 32px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 0.875rem;
+     line-height: 1;
+ }
+
+ /* Iconos GitHub en botones */
+ .navbar .btn svg {
+     width: 14px;
+     height: 14px;
+     transition: all 0.2s ease;
+ }
+
+ /* Efectos hover para botones GitHub */
+ .navbar .btn:hover svg {
+     transform: scale(1.1) rotate(5deg);
+ }
+
+ /* Ajustes específicos para el botón de tema */
+ #themeToggle {
+     width: 32px;
+     padding: 0.25rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ /* Ajustes para el campo de búsqueda */
+ .navbar .form-control-sm {
+     height: 32px;
+     font-size: 0.875rem;
+ }
+
+ /* Asegurar que todos los elementos del navbar tengan la misma altura base */
+ .navbar .d-flex.align-items-center {
+     min-height: 40px;
+     /* Altura mínima del navbar */
+ }
+
+ /* Responsive: ocultar texto en pantallas muy pequeñas */
+ @media (max-width: 400px) {
+     .navbar .btn .d-none.d-md-inline {
+         display: none !important;
+     }
+
+     .navbar .btn {
+         padding: 0.25rem !important;
+     }
+ }
+
+ /* Ajustes para modo claro */
+ [data-bs-theme="light"] .navbar .btn-outline-dark {
+     border-color: rgba(255, 255, 255, 0.5);
+     color: rgba(255, 255, 255, 0.9);
+ }
+
+ [data-bs-theme="light"] .navbar .btn-outline-dark:hover {
+     background-color: rgba(255, 255, 255, 0.1);
+     color: rgba(255, 255, 255, 1);
+ }
+
+ [data-bs-theme="light"] .navbar .btn-dark {
+     background-color: rgba(255, 255, 255, 0.9);
+     color: var(--bs-primary);
+     border-color: rgba(255, 255, 255, 0.9);
+ }
+
+ [data-bs-theme="light"] .navbar .btn-dark:hover {
+     background-color: rgba(255, 255, 255, 1);
+     color: var(--bs-primary);
+ }
+
+
+
+
+ /* ===== CORRECCIÓN BOTONES NAVBAR MODO CLARO ===== */
+
+ /* En modo claro, el navbar tiene fondo primario, los botones deben ser visibles */
+ [data-bs-theme="light"] #mainNavbar.navbar-light {
+     background-color: var(--bs-primary) !important;
+ }
+
+ /* Asegurar que los botones sean visibles en modo claro con fondo primario */
+ [data-bs-theme="light"] #mainNavbar .btn-outline-light {
+     border-color: rgba(255, 255, 255, 0.8) !important;
+     color: rgba(255, 255, 255, 0.9) !important;
+     background: transparent !important;
+ }
+
+ [data-bs-theme="light"] #mainNavbar .btn-outline-light:hover {
+     border-color: rgba(255, 255, 255, 1) !important;
+     color: rgba(255, 255, 255, 1) !important;
+     background-color: rgba(255, 255, 255, 0.1) !important;
+ }
+
+ [data-bs-theme="light"] #mainNavbar .btn-light {
+     border-color: rgba(255, 255, 255, 0.9) !important;
+     color: var(--bs-primary) !important;
+     background-color: rgba(255, 255, 255, 0.95) !important;
+ }
+
+ [data-bs-themenu="light"] #mainNavbar .btn-light:hover {
+     border-color: rgba(255, 255, 255, 1) !important;
+     color: var(--bs-primary) !important;
+     background-color: rgba(255, 255, 255, 1) !important;
+ }
+
+ /* Texto del navbar en modo claro debe ser blanco */
+ [data-bs-theme="light"] #mainNavbar .navbar-brand,
+ [data-bs-theme="light"] #mainNavbar .navbar-nav .nav-link,
+ [data-bs-theme="light"] #mainNavbar .navbar-text {
+     color: rgba(255, 255, 255, 0.9) !important;
+ }
+
+ [data-bs-theme="light"] #mainNavbar .navbar-brand:hover,
+ [data-bs-theme="light"] #mainNavbar .navbar-nav .nav-link:hover {
+     color: rgba(255, 255, 255, 1) !important;
+ }
+
+ /* Iconos SVG en modo claro */
+ [data-bs-theme="light"] #mainNavbar .btn-outline-light svg {
+     fill: rgba(255, 255, 255, 0.9) !important;
+ }
+
+ [data-bs-theme="light"] #mainNavbar .btn-outline-light:hover svg {
+     fill: rgba(255, 255, 255, 1) !important;
+ }
+
+ [data-bs-theme="light"] #mainNavbar .btn-light svg {
+     fill: var(--bs-primary) !important;
+ }
+
+ /* ===== QUITAR BORDE DEL BOTÓN TUTORIAL GITHUB ===== */
+
+ /* Quitar borde del botón del tutorial GitHub en ambos modos */
+ #mainNavbar .btn-outline-light[href*="github-tutorial"] {
+     border: none !important;
+ }
+
+ /* Asegurar que no tenga borde en hover tampoco */
+ #mainNavbar .btn-outline-light[href*="github-tutorial"]:hover {
+     border: none !important;
+ }
+
+ /* Para modo claro específicamente */
+ [data-bs-theme="light"] #mainNavbar .btn-outline-light[href*="github-tutorial"] {
+     border: none !important;
+ }
+
+ [data-bs-theme="light"] #mainNavbar .btn-outline-light[href*="github-tutorial"]:hover {
+     border: none !important;
+ }
+
+ /* EDITOR INTERACTIVO MEJORADO */
+ .code-textarea {
+     font-family: 'Courier New', Monaco, 'Cascadia Code', monospace;
+     font-size: 14px;
+     line-height: 1.5;
+     tab-size: 4;
+     background: #1e1e1e;
+     color: #d4d4d4;
+     padding: 1rem;
+     border: none !important;
+     resize: none;
+ }
+
+ .code-textarea:focus {
+     box-shadow: none;
+     background: #1e1e1e;
+     color: #d4d4d4;
+ }
+
+ .preview-frame {
+     background: white;
+     transition: all 0.3s ease;
+ }
+
+ .resize-handle {
+     background: linear-gradient(90deg, transparent 48%, #dee2e6 48%, #dee2e6 52%, transparent 52%);
+     transition: background 0.3s ease;
+ }
+
+ .resize-handle:hover {
+     background: linear-gradient(90deg, transparent 48%, #0d6efd 48%, #0d6efd 52%, transparent 52%);
+ }
+
+ #liveBadge {
+     animation: pulse 2s infinite;
+     font-size: 0.7rem;
+ }
+
+ @keyframes pulse {
+     0% {
+         opacity: 1;
+     }
+
+     50% {
+         opacity: 0.6;
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }
+
+ /* Mejoras para la consola */
+ #editorConsole {
+     font-family: 'Courier New', monospace;
+     font-size: 12px;
+     min-height: 20px;
+ }
+
+ /* Efectos de hover para elementos interactivos */
+ .btn-outline-light:hover {
+     transform: translateY(-1px);
+     transition: all 0.2s ease;
+ }
+
+ /* Scrollbar personalizado */
+ .code-textarea::-webkit-scrollbar {
+     width: 8px;
+ }
+
+ .code-textarea::-webkit-scrollbar-track {
+     background: #2d2d2d;
+ }
+
+ .code-textarea::-webkit-scrollbar-thumb {
+     background: #555;
+     border-radius: 4px;
+ }
+
+ .code-textarea::-webkit-scrollbar-thumb:hover {
+     background: #777;
+ }
+
+ /* Responsive mejorado */
+ @media (max-width: 768px) {
+     #editorLayout {
+         flex-direction: column;
+     }
+
+     .resize-handle {
+         cursor: row-resize;
+         max-width: none;
+         max-height: 8px;
+         background: linear-gradient(180deg, transparent 48%, #dee2e6 48%, #dee2e6 52%, transparent 52%);
+     }
+ }
+
+ /* Efectos de transición para el modal */
+ .modal-fullscreen {
+     transition: all 0.3s ease;
+ }
+
+ /* Mejoras visuales para pestañas */
+ .nav-tabs .nav-link {
+     border: none;
+     font-size: 0.8rem;
+     padding: 0.5rem 1rem;
+ }
+
+ .nav-tabs .nav-link.active {
+     border-bottom: 2px solid #0d6efd;
+     background: transparent;
+ }
+
+ /* ESTILOS PARA BLOQUES DE CÓDIGO - CORRECCIÓN */
+ pre.code-block {
+     background: #0b1221 !important;
+     color: #d4d4d4 !important;
+     border: 1px solid #444 !important;
+     border-radius: 0.375rem;
+     padding: 1rem;
+     overflow-x: auto;
+     position: relative;
+     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace;
+     font-size: 0.850rem;
+     line-height: 1.5;
+ }
+
+ pre.code-block code {
+     color: #d4d4d4 !important;
+     background: transparent !important;
+     font-family: inherit;
+ }
+
+ /* Colores de sintaxis para el código */
+ pre.code-block .tag {
+     color: #569cd6;
+ }
+
+ pre.code-block .attr {
+     color: #9cdcfe;
+ }
+
+ pre.code-block .val {
+     color: #ce9178;
+ }
+
+ pre.code-block .com {
+     color: #6a9955;
+ }
+
+ /* BOTONES SOBRE CÓDIGO - MEJORADO */
+ .pre-copy-btn {
+     position: absolute;
+     top: 0.6rem;
+     right: 0.6rem;
+     z-index: 100;
+     opacity: 0.9;
+     transition: all 0.2s ease;
+     font-size: 0.75rem;
+     padding: 0.25rem 0.5rem;
+ }
+
+ .pre-copy-btn[data-action="copy"] {
+     right: 0.6rem;
+ }
+
+ .pre-copy-btn[data-action="try"] {
+     right: 5rem;
+ }
+
+ .pre-copy-btn[data-action="edit"] {
+     right: 9rem;
+ }
+
+ .pre-copy-btn:hover {
+     opacity: 1;
+     transform: translateY(-1px);
+ }
+
+ /* RESPONSIVE PARA BOTONES DE CÓDIGO - CORREGIDO */
+ @media (max-width: 768px) {
+     pre.code-block {
+         padding-top: 4rem !important;
+         padding-bottom: 1rem !important;
+     }
+
+     .pre-copy-btn {
+         top: 0.75rem !important;
+         transform: scale(0.9);
+     }
+
+     .pre-copy-btn[data-action="copy"] {
+         right: 0.6rem !important;
+     }
+
+     .pre-copy-btn[data-action="try"] {
+         right: 4rem !important;
+     }
+
+     .pre-copy-btn[data-action="edit"] {
+         right: 7.5rem !important;
+     }
+ }
+
+ /* Asegurar que el código sea legible y los botones no molesten */
+ pre.code-block {
+     min-height: 80px;
+ }
+
+ /* TOOLTIPS Y POPOVERS GLOBALES - MEJORADOS */
+ .tooltip {
+     --bs-tooltip-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     --bs-tooltip-color: white;
+ }
+
+ .tooltip .tooltip-inner {
+     background: var(--bs-tooltip-bg);
+     color: var(--bs-tooltip-color);
+     font-weight: 500;
+     font-size: 0.8rem;
+     padding: 0.5rem 0.75rem;
+     border-radius: 0.5rem;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     border: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ .tooltip.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+     border-top-color: #667eea;
+ }
+
+ .tooltip.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+     border-bottom-color: #667eea;
+ }
+
+ .tooltip.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+     border-left-color: #667eea;
+ }
+
+ .tooltip.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+     border-right-color: #667eea;
+ }
+
+ /* POPOVERS MEJORADOS */
+ .popover {
+     --bs-popover-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+     --bs-popover-border-color: rgba(255, 255, 255, 0.2);
+     --bs-popover-header-bg: transparent;
+     --bs-popover-header-color: white;
+     --bs-popover-body-color: white;
+     border: none;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+     backdrop-filter: blur(10px);
+ }
+
+ .popover .popover-header {
+     background: transparent;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+     font-weight: 600;
+     font-size: 0.9rem;
+     padding: 0.75rem 1rem 0.5rem;
+ }
+
+ .popover .popover-body {
+     font-size: 0.85rem;
+     line-height: 1.4;
+     padding: 0.5rem 1rem 0.75rem;
+ }
+
+ .popover .popover-arrow::before {
+     border-color: transparent;
+ }
+
+ .popover.bs-popover-auto[data-popper-placement^="top"]>.popover-arrow::after {
+     border-top-color: #f093fb;
+ }
+
+ .popover.bs-popover-auto[data-popper-placement^="bottom"]>.popover-arrow::after {
+     border-bottom-color: #f093fb;
+ }
+
+ .popover.bs-popover-auto[data-popper-placement^="left"]>.popover-arrow::after {
+     border-left-color: #f093fb;
+ }
+
+ .popover.bs-popover-auto[data-popper-placement^="right"]>.popover-arrow::after {
+     border-right-color: #f093fb;
+ }
+
+ /* EFECTOS DE HOVER MEJORADOS */
+ [data-bs-toggle="tooltip"]:hover,
+ [data-bs-toggle="popover"]:hover {
+     transform: translateY(-1px);
+     transition: all 0.2s ease;
+ }
+
+ /* TOOLTIPS ESPECIALES PARA BOTONES DE CÓDIGO */
+ .pre-copy-btn[data-bs-toggle="tooltip"]:hover {
+     transform: translateY(-2px) scale(1.05);
+ }
+
+ /* RESPONSIVE PARA TOOLTIPS */
+ @media (max-width: 768px) {
+     .tooltip {
+         font-size: 0.75rem;
+     }
+
+     .popover {
+         max-width: 280px;
+     }
+ }
+
+ /* ANIMACIONES SUAVES */
+ .tooltip.fade {
+     transition: opacity 0.15s ease, transform 0.15s ease;
+ }
+
+ .popover.fade {
+     transition: opacity 0.2s ease, transform 0.2s ease;
+ }
+
+ /* TOOLTIPS Y POPOVERS - ESTILOS MEJORADOS Y CONFIABLES */
+ .tooltip {
+     --bs-tooltip-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     --bs-tooltip-color: white;
+ }
+
+ .tooltip .tooltip-inner {
+     background: var(--bs-tooltip-bg) !important;
+     color: var(--bs-tooltip-color) !important;
+     font-weight: 500;
+     font-size: 0.8rem;
+     padding: 0.5rem 0.75rem;
+     border-radius: 0.5rem;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     max-width: 300px;
+ }
+
+ /* Flechas de tooltip */
+ .tooltip .tooltip-arrow::before {
+     border-color: transparent !important;
+ }
+
+ .tooltip.bs-tooltip-top .tooltip-arrow::before {
+     border-top-color: #667eea !important;
+ }
+
+ .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+     border-bottom-color: #667eea !important;
+ }
+
+ .tooltip.bs-tooltip-left .tooltip-arrow::before {
+     border-left-color: #667eea !important;
+ }
+
+ .tooltip.bs-tooltip-right .tooltip-arrow::before {
+     border-right-color: #667eea !important;
+ }
+
+ /* POPOVERS MEJORADOS */
+ .popover {
+     --bs-popover-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+     --bs-popover-border-color: rgba(255, 255, 255, 0.2);
+     --bs-popover-header-bg: transparent;
+     --bs-popover-header-color: white;
+     --bs-popover-body-color: white;
+     border: none;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+     backdrop-filter: blur(10px);
+     max-width: 350px;
+ }
+
+ .popover .popover-header {
+     background: transparent !important;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+     font-weight: 600;
+     font-size: 0.9rem;
+     padding: 0.75rem 1rem 0.5rem;
+     color: white !important;
+ }
+
+ .popover .popover-body {
+     font-size: 0.85rem;
+     line-height: 1.4;
+     padding: 0.5rem 1rem 0.75rem;
+     color: white !important;
+ }
+
+ .popover .popover-arrow::before {
+     border-color: transparent !important;
+ }
+
+ .popover.bs-popover-top>.popover-arrow::after {
+     border-top-color: #f093fb !important;
+ }
+
+ .popover.bs-popover-bottom>.popover-arrow::after {
+     border-bottom-color: #f093fb !important;
+ }
+
+ .popover.bs-popover-left>.popover-arrow::after {
+     border-left-color: #f093fb !important;
+ }
+
+ .popover.bs-popover-right>.popover-arrow::after {
+     border-right-color: #f093fb !important;
+ }
+
+ /* EFECTOS DE HOVER MEJORADOS */
+ [data-bs-toggle="tooltip"]:hover,
+ [data-bs-toggle="popover"]:hover {
+     transform: translateY(-1px);
+     transition: all 0.2s ease;
+ }
+
+ /* TOOLTIPS ESPECIALES PARA BOTONES DE CÓDIGO */
+ .pre-copy-btn[data-bs-toggle="tooltip"]:hover {
+     transform: translateY(-2px) scale(1.05);
+ }
+
+ /* ANIMACIONES SUAVES */
+ .tooltip.fade {
+     transition: opacity 0.15s ease, transform 0.15s ease;
+ }
+
+ .popover.fade {
+     transition: opacity 0.2s ease, transform 0.2s ease;
+ }
+
+ /* RESPONSIVE MEJORADO */
+ @media (max-width: 768px) {
+     .tooltip .tooltip-inner {
+         font-size: 0.75rem;
+         max-width: 250px;
+     }
+
+     .popover {
+         max-width: 280px;
+     }
+ }
+
+ /* ESTILOS PARA ELEMENTOS CON TOOLTIPS */
+ [data-bs-toggle="tooltip"] {
+     cursor: help !important;
+ }
+
+ [data-bs-toggle="popover"] {
+     cursor: help !important;
+ }
+
+ /* ======= Fix: alertas personalizadas (contraste seguro) ======= */
+ /* Asegura color legible para alert-custom-2 (amarillo pálido) */
+ .alert-custom-2 {
+     background-color: #fff3cd;
+     /* tu base */
+     color: #6b3f00;
+     /* texto oscuro legible */
+     border-color: #ffc107;
+     /* mantiene borde visual */
+ }
+
+ /* Y versión legible para modo oscuro */
+ [data-bs-theme="dark"] .alert-custom-2 {
+     background-color: #5a4200;
+     /* tono oscuro análogo */
+     color: #fff;
+     /* texto claro encima */
+     border-color: rgba(255, 193, 7, 0.18);
+ }
+
+ /* Asegura color legible para alert-custom-3 (fondo claro) */
+ .alert-custom-3 {
+     background-color: #f8f9fa;
+     /* tu base */
+     color: #0b1221;
+     /* texto oscuro legible */
+     border-color: rgba(13, 110, 253, 0.08);
+ }
+
+ /* Y versión legible para modo oscuro (si el tutorial está en dark) */
+ [data-bs-theme="dark"] .alert-custom-3 {
+     background-color: #0f1724;
+     /* oscuro neutro */
+     color: #e6eef6;
+     /* texto claro legible */
+     border-color: rgba(59, 130, 246, 0.25);
+ }
+
+ /* Ajuste para el ícono (si lo usas): que mantenga contraste */
+ .alert-icon {
+     color: inherit;
+ }
+
+ /* ======= Fix: popovers & tooltips - garantía de contraste para light/dark ======= */
+ /* Tooltip (interior) - modo claro */
+ .tooltip .tooltip-inner,
+ .tooltip-inner {
+     background: #ffffff;
+     color: #0b1221;
+     border: 1px solid rgba(11, 18, 33, 0.06);
+     box-shadow: 0 6px 18px rgba(11, 18, 33, 0.06);
+ }
+
+ /* Popover - modo claro */
+ .popover {
+     background: #ffffff;
+     color: #0b1221;
+     border: 1px solid rgba(11, 18, 33, 0.08);
+     box-shadow: 0 10px 30px rgba(11, 18, 33, 0.08);
+ }
+
+ .popover .popover-header {
+     font-weight: 600;
+ }
+
+ /* Dark theme overrides (si aplicas data-bs-theme="dark" en <html>) */
+ [data-bs-theme="dark"] .tooltip .tooltip-inner,
+ [data-bs-theme="dark"] .tooltip-inner,
+ [data-bs-theme="dark"] .popover,
+ [data-bs-theme="dark"] .popover .popover-body,
+ [data-bs-theme="dark"] .popover .popover-header {
+     background: #0b1221 !important;
+     color: #e6eef6 !important;
+     border-color: #233047 !important;
+     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+ }
+
+ /* Asegura que la flecha del popover tenga el mismo color de fondo en ambos modos */
+ .popover .popover-arrow::before,
+ .popover .popover-arrow::after {
+     background: inherit !important;
+ }
+
+ /* Si usas tooltips con 'white-space' o texto largo, permitir wrapping y padding */
+ .tooltip .tooltip-inner,
+ .popover .popover-body {
+     white-space: normal;
+     padding: .45rem .6rem;
+     max-width: 18rem;
+     line-height: 1.25;
+ }
+
+ /* ---------- FIX: evitar tooltips "pegados" y controlar popovers ---------- */
+/* Tooltips nunca deben captar pointer-events: así no "atrapan" el cursor */
+.tooltip,
+.tooltip .tooltip-inner {
+  pointer-events: none !important;
+}
+
+/* Popovers sí deben aceptar pointer events (interactivos) */
+.popover,
+.popover .popover-body,
+.popover .popover-header {
+  pointer-events: auto !important;
+  z-index: 10850; /* por encima de alertas, modals, etc. */
+}
+
+/* Asegurar que la flecha no "coma" el área interactiva */
+.popover .popover-arrow { pointer-events: none !important; }
+
+/* Evitar reglas :hover que provoquen "repintado" perpetuo del elemento */
+[data-bs-toggle="tooltip"]:hover,
+[data-bs-toggle="popover"]:hover {
+  /* mantén la micro-animación, pero sin cambiar el flujo que impida hiding */
+  transform: translateY(-1px);
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+/* Hacer la ocultación más suave (coincide con los delays JS) */
+.tooltip.fade,
+.popover.fade { transition: opacity .18s ease, transform .18s ease !important; }
+
+/* Safety: si hay tooltips "huérfanos", tienen que aparecer arriba */
+.tooltip { z-index: 10840 !important; }
+
+/* Si quieres desactivar pointer-events en elementos internos que causen problema, añade aquí selectores concretos */
+/* .mi-codigo-interactivo * { pointer-events: none; }  <-- sólo si realmente hace falta */
+/* ============================
+   FIX: Popovers y tooltips - modo claro (overrides)
+   Pegar AL FINAL del CSS para que sobreescriba reglas anteriores
+   ============================ */
+
+/* --- Popovers (modo claro) --- */
+:not([data-bs-theme="dark"]) .popover,
+:not([data-bs-theme="dark"]) .popover .popover-body,
+:not([data-bs-theme="dark"]) .popover .popover-header {
+  background: #ffffff !important;                 /* fondo claro */
+  color: #0b1221 !important;                      /* texto oscuro legible */
+  border: 1px solid rgba(11, 18, 33, 0.08) !important;
+  box-shadow: 0 10px 28px rgba(11,18,33,0.06) !important;
+  backdrop-filter: none !important;               /* evita efectos que oculten texto */
+  max-width: 360px !important;
+}
+
+/* Header/body colors */
+:not([data-bs-theme="dark"]) .popover .popover-header {
+  color: #071027 !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(11,18,33,0.04) !important;
+}
+
+/* flecha: que tome el color del fondo claro */
+:not([data-bs-theme="dark"]) .popover .popover-arrow::after,
+:not([data-bs-theme="dark"]) .popover .popover-arrow::before {
+  background: transparent !important;
+}
+:not([data-bs-theme="dark"]) .popover.bs-popover-auto[data-popper-placement^="top"]>.popover-arrow::after { 
+  border-top-color: #ffffff !important;
+}
+:not([data-bs-theme="dark"]) .popover.bs-popover-auto[data-popper-placement^="bottom"]>.popover-arrow::after {
+  border-bottom-color: #ffffff !important;
+}
+:not([data-bs-theme="dark"]) .popover.bs-popover-auto[data-popper-placement^="left"]>.popover-arrow::after {
+  border-left-color: #ffffff !important;
+}
+:not([data-bs-theme="dark"]) .popover.bs-popover-auto[data-popper-placement^="right"]>.popover-arrow::after {
+  border-right-color: #ffffff !important;
+}
+
+/* Asegurar que *todo* el texto dentro del popover sea legible */
+:not([data-bs-theme="dark"]) .popover,
+:not([data-bs-theme="dark"]) .popover * {
+  color: #0b1221 !important;
+}
+/* --- Prevengo conflictos por reglas previas */
+
+  :not([data-bs-theme="dark"]) .popover{
+  /* aseguro z-index ordenado */
+  z-index: 10850 !important;
+}
+/* Si por alguna regla previa tus popovers estaban con background-image o gradient,
+   este selector los neutraliza */
+:not([data-bs-theme="dark"]) .popover {
+  background-image: none !important;
+}
