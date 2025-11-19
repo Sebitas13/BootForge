@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes - Bootstrap 5 Tutorial Completo</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <style>
+        .image-demo {
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .image-demo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary" id="mainNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../ProyectoFinal.html">
+                        <img src="../Imagenes/logo-32.png" alt="logo" width="36" height="36" class="rounded">
+                        <span>
+                            <span class="fs-5">Bootstrap 5</span>
+                            <small class="d-block text-white-50" style="font-size:.68rem;">Tutorial Completo</small>
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../ProyectoFinal.html"> Inicio</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📐 Layout
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../containers.html">Containers</a></li>
+                                    <li><a class="dropdown-item" href="../grid.html">Grid System</a></li>
+                                    <li><a class="dropdown-item" href="../typography.html">Typography</a></li>
+                                    <li><a class="dropdown-item" href="../colors.html">Colors</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    🧩 Componentes
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="tables.html">Tables</a></li>
+                                    <li><a class="dropdown-item active" href="images.html">Images</a></li>
+                                    <li><a class="dropdown-item" href="jumbotron.html">Jumbotron</a></li>
+                                    <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+                                    <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                                    <li><a class="dropdown-item" href="button-groups.html">Button Groups</a></li>
+                                    <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+                                    <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item" href="progress-bars.html">Progress Bars</a></li>
+                                    <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+                                    <li><a class="dropdown-item" href="list-groups.html">List Groups</a></li>
+                                    <li><a class="dropdown-item" href="cards.html">Cards</a></li>
+                                    <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+                                    <li><a class="dropdown-item" href="collapse.html">Collapse</a></li>
+                                    <li><a class="dropdown-item" href="navs.html">Navs</a></li>
+                                    <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+                                    <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+                                    <li><a class="dropdown-item" href="tooltip.html">Tooltip</a></li>
+                                    <li><a class="dropdown-item" href="popover.html">Popover</a></li>
+                                    <li><a class="dropdown-item" href="toast.html">Toast</a></li>
+                                    <li><a class="dropdown-item" href="scrollspy.html">Scrollspy</a></li>
+                                    <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Resto del menú -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📝 Forms
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../forms/basic-forms.html">Formularios
+                                            Básicos</a></li>
+                                    <li><a class="dropdown-item" href="../forms/select.html">Select Menus</a></li>
+                                    <li><a class="dropdown-item" href="../forms/checks-radios.html">Checks & Radios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/range.html">Range</a></li>
+                                    <li><a class="dropdown-item" href="../forms/input-groups.html">Input Groups</a></li>
+                                    <li><a class="dropdown-item" href="../forms/floating-labels.html">Floating
+                                            Labels</a></li>
+                                    <li><a class="dropdown-item" href="../forms/validation.html">Form Validation</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🛠️ Utilidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../utilities/spacing.html">Spacing</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/flex.html">Flexbox</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/dark-mode.html">Dark Mode</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🚀 Recursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../templates/basic.html">Template Básico</a></li>
+                                    <li><a class="dropdown-item" href="../templates/medium.html">Template Medio</a></li>
+                                    <li><a class="dropdown-item" href="../templates/advanced.html">Template Avanzado</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../exercises.html">Ejercicios</a></li>
+                                    <li><a class="dropdown-item" href="../quiz.html">Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../syllabus.html">Plan de Estudio</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+                                    href="../github-tutorial.html" title="Tutorial GitHub"
+                                    style="padding: 0.25rem 0.5rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    <span class="d-none d-md-inline" style="font-size: 0.8rem;"> GitHub Tutorial</span>
+                                </a></li>
+                        </ul>
+
+                        <!-- Buscador -->
+                        <form class="d-flex me-2" role="search" onsubmit="return performSearch(event)">
+                            <input id="globalSearchInput" name="query" class="form-control form-control-sm me-2"
+                                type="search" placeholder="Buscar (ej. cards, modal)" aria-label="Buscar">
+                            <button class="btn btn-sm btn-outline-light" type="submit" title="Buscar">🔍</button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <button id="themeToggle" class="btn btn-sm btn-outline-light"
+                                title="Alternar tema (claro/oscuro)" aria-pressed="false">
+                                <span class="theme-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <a class="btn btn-sm btn-light d-flex align-items-center gap-1"
+                                href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                title="Repositorio GitHub" style="padding: 0.25rem 0.5rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="d-none d-md-inline" style="font-size: 0.8rem;">Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <div class="site-hero" style="background-image:url('../Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center fade-in-up visible">
+                            <h1 class="display-5 fw-bold">🖼️ <span class="text-warning">Imágenes</span> en Bootstrap 5
+                            </h1>
+                            <p class="lead">Domina el manejo de imágenes responsivas, formas, alineación y efectos con
+                                las clases utilitarias de Bootstrap.</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                                <a href="#imagenes-responsivas" class="btn btn-outline-light btn-lg">Imágenes
+                                    Responsivas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR MEJORADO -->
+            <aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end mobile-sidebar"
+                id="sidebar" aria-label="Tabla de contenido">
+                <div class="position-sticky" style="top:20px">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header text-center text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h5 class="mb-0">🖼️ ÍNDICE - IMÁGENES</h5>
+                        </div>
+                        <div class="card-body p-2">
+                            <nav class="nav flex-column small">
+                                <a class="nav-link" href="#introduccion">📋 Introducción</a>
+                                <a class="nav-link" href="#imagenes-basicas">🔰 Imágenes Básicas</a>
+                                <a class="nav-link" href="#formas-imagenes">🟦 Formas de Imágenes</a>
+                                <a class="nav-link" href="#esquinas-redondeadas">🔲 Esquinas Redondeadas</a>
+                                <a class="nav-link" href="#imagen-circular">⭕ Imagen Circular</a>
+                                <a class="nav-link" href="#miniaturas">🖼️ Miniaturas</a>
+                                <a class="nav-link" href="#alineacion-imagenes">↔️ Alineación de Imágenes</a>
+                                <a class="nav-link" href="#imagenes-centradas">🎯 Imágenes Centradas</a>
+                                <a class="nav-link" href="#imagenes-responsivas">📱 Imágenes Responsivas</a>
+                                <a class="nav-link" href="#imagenes-con-texto">📝 Imágenes con Texto</a>
+                                <a class="nav-link" href="#galeria-avanzada">🚀 Galería Avanzada</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="small mb-2 fw-bold">📊 Tu Progreso</h6>
+                            <div class="progress" style="height:1.2rem">
+                                <div id="courseProgress"
+                                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                    style="width:0%">0%</div>
+                            </div>
+                            <p class="mt-2 mb-0 small text-muted">Completa las secciones para avanzar</p>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="#mainContent" class="btn btn-outline-primary btn-sm">🏠 Inicio</a>
+                        <a href="jumbotron.html" class="btn btn-outline-success btn-sm">➡️ Siguiente: Jumbotron</a>
+                        <a href="#" class="btn btn-outline-info btn-sm" onclick="resetProgress(); return false;">🔄
+                            Reset Progreso</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h2 class="h3 mb-0">📋 Introducción a las Imágenes</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Bootstrap 5 proporciona un sistema completo para trabajar con
+                                <strong>imágenes responsivas y estilizadas</strong> con clases utilitarias que se
+                                adaptan a cualquier dispositivo.
+                            </p>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="alert alert-info">
+                                        <strong>🎯 Características Principales:</strong>
+                                        <ul class="mb-0 mt-2">
+                                            <li>Imágenes responsivas automáticas</li>
+                                            <li>Múltiples formas y bordes</li>
+                                            <li>Fácil alineación y posicionamiento</li>
+                                            <li>Compatibilidad con modo oscuro</li>
+                                            <li>Optimización para rendimiento</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="alert alert-warning">
+                                        <strong>💡 Mejoras en Bootstrap 5:</strong>
+                                        <ul class="mb-0 mt-2">
+                                            <li>Mejor soporte para imágenes responsivas</li>
+                                            <li>Nuevas clases utilitarias</li>
+                                            <li>Compatibilidad mejorada con navegadores</li>
+                                            <li>Optimización para dispositivos móviles</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5 mt-4">Clases Utilitarias para Imágenes</h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Clase</th>
+                                            <th>Descripción</th>
+                                            <th>Ejemplo Visual</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>.img-fluid</code></td>
+                                            <td>Hace la imagen responsiva</td>
+                                            <td><span class="badge bg-success">Responsive</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>.rounded</code></td>
+                                            <td>Añade bordes redondeados</td>
+                                            <td><span class="badge bg-primary">Redondeado</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>.rounded-circle</code></td>
+                                            <td>Convierte la imagen en circular</td>
+                                            <td><span class="badge bg-info">Circular</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>.img-thumbnail</code></td>
+                                            <td>Crea una miniatura con borde</td>
+                                            <td><span class="badge bg-warning text-dark">Miniatura</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>.float-start</code></td>
+                                            <td>Flota la imagen a la izquierda</td>
+                                            <td><span class="badge bg-secondary">Izquierda</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>.float-end</code></td>
+                                            <td>Flota la imagen a la derecha</td>
+                                            <td><span class="badge bg-secondary">Derecha</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>.mx-auto .d-block</code></td>
+                                            <td>Centra la imagen horizontalmente</td>
+                                            <td><span class="badge bg-dark">Centrado</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN IMÁGENES BÁSICAS -->
+                <section id="imagenes-basicas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">🔰 Imágenes Básicas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Comencemos con las imágenes básicas en HTML y cómo Bootstrap mejora su
+                                presentación por defecto.</p>
+
+                            <h3 class="h5">Imagen HTML Básica</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Imagen sin estilos</h5>
+                                            <img src="https://www.w3schools.com/bootstrap5/paris.jpg"
+                                                alt="Imagen normal" class="image-demo">
+                                            <p class="mt-2 small text-muted">Imagen HTML estándar sin clases de
+                                                Bootstrap</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Imagen con Bootstrap</h5>
+                                            <img src="https://www.w3schools.com/bootstrap5/paris.jpg"
+                                                alt="Imagen Bootstrap" class="img-fluid image-demo">
+                                            <p class="mt-2 small text-muted">Misma imagen con clase
+                                                <code>.img-fluid</code>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Imagen HTML básica --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/paris.jpg" alt="Descripción"&gt;
+
+&lt;!-- Imagen con clase Bootstrap --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/paris.jpg" alt="Descripción" class="img-fluid"&gt;</code></pre>
+
+                            <div class="alert alert-primary">
+                                <strong>💡 Nota:</strong> La clase <code>.img-fluid</code> aplica
+                                <code>max-width: 100%</code> y <code>height: auto</code> para que la imagen se escale
+                                correctamente con el elemento padre.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN FORMAS DE IMÁGENES -->
+                <section id="formas-imagenes" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🟦 Formas de Imágenes</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Bootstrap ofrece varias clases para modificar la forma de las imágenes y
+                                crear diseños más atractivos.</p>
+
+                            <h3 class="h5">Comparación de Formas</h3>
+                            <div class="comparison-grid">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Normal</h5>
+                                        <div class="image-container">
+                                            <img src="https://www.w3schools.com/bootstrap5/newyork.jpg"
+                                                alt="Imagen normal" class="image-demo">
+                                            <div class="image-overlay">Sin estilos</div>
+                                        </div>
+                                        <p class="small text-muted">Imagen sin clases de forma</p>
+                                    </div>
+                                </div>
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Redondeada</h5>
+                                        <div class="image-container">
+                                            <img src="https://www.w3schools.com/bootstrap5/newyork.jpg"
+                                                alt="Imagen redondeada" class="rounded image-demo">
+                                            <div class="image-overlay">.rounded</div>
+                                        </div>
+                                        <p class="small text-muted">Clase: <code>.rounded</code></p>
+                                    </div>
+                                </div>
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Circular</h5>
+                                        <div class="image-container">
+                                            <img src="https://www.w3schools.com/bootstrap5/newyork.jpg"
+                                                alt="Imagen circular" class="rounded-circle image-demo">
+                                            <div class="image-overlay">.rounded-circle</div>
+                                        </div>
+                                        <p class="small text-muted">Clase: <code>.rounded-circle</code></p>
+                                    </div>
+                                </div>
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Miniatura</h5>
+                                        <div class="image-container">
+                                            <img src="https://www.w3schools.com/bootstrap5/newyork.jpg"
+                                                alt="Imagen miniatura" class="img-thumbnail image-demo">
+                                            <div class="image-overlay">.img-thumbnail</div>
+                                        </div>
+                                        <p class="small text-muted">Clase: <code>.img-thumbnail</code></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Imagen normal --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/newyork.jpg" alt="Normal"&gt;
+
+&lt;!-- Imagen redondeada --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/newyork.jpg" alt="Redondeada" class="rounded"&gt;
+
+&lt;!-- Imagen circular --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/newyork.jpg" alt="Circular" class="rounded-circle"&gt;
+
+&lt;!-- Miniatura --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/newyork.jpg" alt="Miniatura" class="img-thumbnail"&gt;</code></pre>
+
+                            <div class="alert alert-success">
+                                <strong>🎨 Diseño:</strong> Las diferentes formas de imágenes permiten crear diseños más
+                                dinámicos y atractivos. Las imágenes circulares son ideales para avatares de usuario,
+                                mientras que las miniaturas funcionan bien en galerías.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ESQUINAS REDONDEADAS -->
+                <section id="esquinas-redondeadas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">🔲 Esquinas Redondeadas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Bootstrap permite controlar el grado de redondeo de las esquinas con
+                                diferentes clases utilitarias.</p>
+
+                            <h3 class="h5">Niveles de Redondeo</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Redondeo pequeño</h5>
+                                            <img src="../Imagenes/Colibri.jpg" alt="Redondeo pequeño"
+                                                class="rounded-1 image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clase: <code>.rounded-1</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Redondeo medio</h5>
+                                            <img src="../Imagenes/Colibri.jpg" alt="Redondeo medio"
+                                                class="rounded-3 image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clase: <code>.rounded-3</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Redondeo grande</h5>
+                                            <img src="../Imagenes/Colibri.jpg" alt="Redondeo grande"
+                                                class="rounded-5 image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clase: <code>.rounded-5</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Redondeo por lados específicos</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-3 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Superior</h5>
+                                            <img src="https://www.w3schools.com/bootstrap5/sanfran.jpg"
+                                                alt="Redondeo superior" class="rounded-top image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clase: <code>.rounded-top</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Derecha</h5>
+                                            <img src="https://www.w3schools.com/bootstrap5/sanfran.jpg"
+                                                alt="Redondeo derecha" class="rounded-end image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clase: <code>.rounded-end</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Inferior</h5>
+                                            <img src="https://www.w3schools.com/bootstrap5/sanfran.jpg"
+                                                alt="Redondeo inferior" class="rounded-bottom image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clase: <code>.rounded-bottom</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Izquierda</h5>
+                                            <img src="https://www.w3schools.com/bootstrap5/sanfran.jpg"
+                                                alt="Redondeo izquierda" class="rounded-start image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clase: <code>.rounded-start</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre
+                                class="code-block"><code>&lt;!-- Diferentes niveles de redondeo --&gt;
+&lt;img src="../Imagenes/Colibri.jpg" class="rounded-1" width="100%"&gt; &lt;!-- Redondeo pequeño --&gt;
+&lt;img src="../Imagenes/Colibri.jpg"class="rounded-3" width="100%"&gt; &lt;!-- Redondeo medio --&gt;
+&lt;img src="../Imagenes/Colibri.jpg" class="rounded-5" width="100%"&gt; &lt;!-- Redondeo grande --&gt;
+
+&lt;!-- Redondeo por lados específicos --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/sanfran.jpg" class="rounded-top" width="100%"&gt;   &lt;!-- Solo superior --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/sanfran.jpg" class="rounded-end" width="100%"&gt;   &lt;!-- Solo derecha --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/sanfran.jpg" class="rounded-bottom" width="100%"&gt; &lt;!-- Solo inferior --&gt;
+&lt;img src="https://www.w3schools.com/bootstrap5/sanfran.jpg" class="rounded-start" width="100%"&gt;  &lt;!-- Solo izquierda --&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>🎯 Uso Práctico:</strong> Los diferentes niveles de redondeo permiten crear
+                                diseños más sutiles y personalizados. El redondeo por lados específicos es útil para
+                                crear efectos visuales interesantes en interfaces modernas.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN IMAGEN CIRCULAR -->
+                <section id="imagen-circular" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">⭕ Imagen Circular</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Las imágenes circulares son ideales para avatares de usuario, iconos de
+                                perfil y elementos de diseño modernos.</p>
+
+                            <h3 class="h5">Ejemplos de Imágenes Circulares</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Avatar pequeño</h5>
+                                            <img src="../Imagenes/Canicas.jpg" alt="Avatar pequeño"
+                                                class="rounded-circle image-demo" width="100">
+                                            <p class="mt-2 small text-muted">Tamaño: 100x100px</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Avatar medio</h5>
+                                            <img src="../Imagenes/Canicas.jpg" alt="Avatar medio"
+                                                class="rounded-circle image-demo" width="150">
+                                            <p class="mt-2 small text-muted">Tamaño: 150x150px</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Avatar grande</h5>
+                                            <img src="../Imagenes/Canicas.jpg" alt="Avatar grande"
+                                                class="rounded-circle image-demo" width="200">
+                                            <p class="mt-2 small text-muted">Tamaño: 200x200px</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Imágenes Circulares con Bordes</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Borde primario</h5>
+                                            <img src="../Imagenes/Flor.jpg" alt="Borde primario"
+                                                class="rounded-circle border border-primary border-3 image-demo"
+                                                width="100%">
+                                            <p class="mt-2 small text-muted">Clases: <code>.rounded-circle .border
+                                                    .border-primary .border-3</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Borde success</h5>
+                                            <img src="../Imagenes/Flor.jpg" alt="Borde success"
+                                                class="rounded-circle border border-success border-4 image-demo"
+                                                width="100%">
+                                            <p class="mt-2 small text-muted">Clases: <code>.rounded-circle .border
+                                                    .border-success .border-4</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre
+                                class="code-block"><code>&lt;!-- Imagen circular básica --&gt;
+&lt;img src="../Imagenes/Ojo.jpg" class="rounded-circle" alt="Avatar" width="100%"&gt;
+
+&lt;!-- Imagen circular con borde --&gt;
+&lt;img src="../Imagenes/Ojo.jpg"  class="rounded-circle border border-primary" alt="Avatar con borde" width="100%"&gt;
+
+&lt;!-- Imagen circular con borde grueso --&gt;
+&lt;img src="../Imagenes/Ojo.jpg"  class="rounded-circle border border-success border-4" alt="Avatar con borde grueso" width="100%"&gt;</code></pre>
+
+                            <div class="alert alert-warning">
+                                <strong>👤 Uso Común:</strong> Las imágenes circulares son estándar en interfaces
+                                modernas para representar usuarios, equipos o elementos de perfil. Combinadas con
+                                bordes de colores, pueden indicar estados como "en línea", "ocupado" o "ausente".
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MINIATURAS -->
+                <section id="miniaturas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger text-white">
+                            <h2 class="h3 mb-0">🖼️ Miniaturas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Las miniaturas son imágenes con un borde ligero y padding, ideales para
+                                galerías, productos y listas de elementos visuales.</p>
+
+                            <h3 class="h5">Ejemplos de Miniaturas</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Miniatura básica</h5>
+                                            <img src="../Imagenes/Hot Dog.jpg" alt="Producto 1"
+                                                class="img-thumbnail image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clase: <code>.img-thumbnail</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Miniatura redondeada</h5>
+                                            <img src="../Imagenes/Hot Dog.jpg" alt="Producto 2"
+                                                class="img-thumbnail rounded image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clases: <code>.img-thumbnail
+                                                    .rounded</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Miniatura circular</h5>
+                                            <img src="../Imagenes/Hot Dog.jpg" alt="Producto 3"
+                                                class="img-thumbnail rounded-circle image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Clases: <code>.img-thumbnail
+                                                    .rounded-circle</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Galería de Miniaturas</h3>
+                            <div class="row mb-4">
+                                <div class="col-6 col-md-3 mb-3">
+                                    <img src="../Imagenes/Mini.jpg" alt="Miniatura 1"
+                                        class="img-thumbnail image-demo w-100">
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <img src="../Imagenes/Mini2.jpg" alt="Miniatura 2"
+                                        class="img-thumbnail image-demo w-100">
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <img src="../Imagenes/Mini3.jpg" alt="Miniatura 3"
+                                        class="img-thumbnail image-demo w-100">
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <img src="../Imagenes/Mini4.jpg" alt="Miniatura 4"
+                                        class="img-thumbnail image-demo w-100">
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Miniatura básica --&gt;
+&lt;img src="../Imagenes/Mini2.jpg" class="img-thumbnail" alt="Miniatura" width="100%"&gt;
+
+&lt;!-- Miniatura redondeada --&gt;
+&lt;img src="../Imagenes/Mini.jpg" class="img-thumbnail rounded" alt="Miniatura redondeada" width="100%&gt;
+
+&lt;!-- Miniatura circular --&gt;
+&lt;img src="../Imagenes/Mini4.jpg" class="img-thumbnail rounded-circle" alt="Miniatura circular" width="100%&gt;
+
+&lt;!-- Galería de miniaturas --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-6 col-md-3"&gt;
+    &lt;img src="../Imagenes/Mini.jpg" class="img-thumbnail w-100" alt="1"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-6 col-md-3"&gt;
+    &lt;img src="../Imagenes/Mini3.jpg" class="img-thumbnail w-100" alt="2"&gt;
+  &lt;/div&gt;
+  &lt;!-- Más miniaturas --&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-danger">
+                                <strong>🖼️ Galerías:</strong> Las miniaturas son perfectas para crear galerías de
+                                productos, portafolios o cualquier colección de imágenes. El borde y padding
+                                proporcionan una separación visual clara entre elementos.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ALINEACIÓN DE IMÁGENES -->
+                <section id="alineacion-imagenes" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h2 class="h3 mb-0">↔️ Alineación de Imágenes</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Controla la posición de las imágenes en relación con el texto y otros
+                                elementos usando las clases de flotación de Bootstrap.</p>
+
+                            <h3 class="h5">Imágenes Flotantes</h3>
+                            <div class="mb-4">
+                                <div class="clearfix mb-4">
+                                    <img src="../Imagenes/Art.jpg" class="rounded float-start me-3 image-demo"
+                                        alt="Imagen izquierda" width="200">
+                                    <p class="lead">Imagen flotando a la izquierda</p>
+                                    <p>Este es un ejemplo de texto que fluye alrededor de una imagen que está flotando a
+                                        la izquierda. La clase <code>.float-start</code> coloca la imagen a la izquierda
+                                        y permite que el texto la rodee.</p>
+                                    <p>Puedes usar esta técnica para crear diseños de revista o periódico donde las
+                                        imágenes se integran naturalmente con el contenido textual.</p>
+                                </div>
+
+                                <div class="clearfix mb-4">
+                                    <img src="../Imagenes/Art.jpg" class="rounded float-end ms-3 image-demo"
+                                        alt="Imagen derecha" width="200">
+                                    <p class="lead">Imagen flotando a la derecha</p>
+                                    <p>Este es un ejemplo de texto que fluye alrededor de una imagen que está flotando a
+                                        la derecha. La clase <code>.float-end</code> coloca la imagen a la derecha y
+                                        permite que el texto la rodee.</p>
+                                    <p>Esta técnica es útil para destacar imágenes relacionadas con el contenido sin
+                                        interrumpir el flujo de lectura.</p>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Imagen flotando a la izquierda --&gt;
+&lt;div class="clearfix"&gt;
+  &lt;img src="../Imagenes/Art.jpg" class="float-start me-3" alt="Izquierda" width=200&gt;
+  &lt;p&gt;Texto que fluye alrededor de la imagen...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Imagen flotando a la derecha --&gt;
+&lt;div class="clearfix"&gt;
+  &lt;img src="../Imagenes/Art.jpg" class="float-end ms-3" alt="Derecha" width=200&gt;
+  &lt;p&gt;Texto que fluye alrededor de la imagen...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-primary">
+                                <strong>📝 Nota:</strong> La clase <code>.clearfix</code> es necesaria para contener
+                                elementos flotantes y evitar que el contenido se desborde. Los márgenes
+                                <code>.me-3</code> (margin-end) y <code>.ms-3</code> (margin-start) añaden espacio entre
+                                la imagen y el texto.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN IMÁGENES CENTRADAS -->
+                <section id="imagenes-centradas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">🎯 Imágenes Centradas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Centrar imágenes horizontalmente es una tarea común en diseño web. Bootstrap
+                                ofrece varias formas de lograrlo fácilmente.</p>
+
+                            <h3 class="h5">Métodos para Centrar Imágenes</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-4">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Centrado con utilidades</h5>
+                                            <img src="../Imagenes/20250430_1424_image.png" alt="Imagen centrada"
+                                                class="img-fluid mx-auto d-block image-demo" width="100%">
+                                            <p class="mt-2">Clases: <code>.mx-auto .d-block</code></p>
+                                            <p class="small text-muted">Este método funciona con cualquier elemento
+                                                block.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Centrado con flexbox</h5>
+                                            <div class="d-flex justify-content-center">
+                                                <img src="../Imagenes/20250618_1642_image.png" alt="Imagen flex"
+                                                    class="img-fluid image-demo" width="100%">
+                                            </div>
+                                            <p class="mt-2">Clases: <code>.d-flex .justify-content-center</code></p>
+                                            <p class="small text-muted">Ideal cuando la imagen está dentro de un
+                                                contenedor flex.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Centrado con Texto</h3>
+                            <div class="card mb-4">
+                                <div class="card-body text-center">
+                                    <img src="../Imagenes/20250618_1658_image.png" alt="Imagen hero"
+                                        class="img-fluid rounded mb-3 image-demo" width="100%">
+                                    <h4>Título Centrado con Imagen</h4>
+                                    <p>Este es un ejemplo de contenido completamente centrado, incluyendo la imagen y el
+                                        texto. Perfecto para secciones hero o llamadas a la acción.</p>
+                                    <button class="btn btn-primary">Botón Ejemplo</button>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Centrado con utilidades --&gt;
+&lt;img src="../Imagenes/20250430_1424_image.png" class="mx-auto d-block" alt="Centrada"&gt;
+
+&lt;!-- Centrado con flexbox --&gt;
+&lt;div class="d-flex justify-content-center" width="100%"&gt;
+  &lt;img src="../Imagenes/20250618_1658_image.png"alt="Flex" width="100%"&gt;
+&lt;/div&gt;
+
+&lt;!-- Contenido completamente centrado --&gt;
+&lt;div class="text-center"&gt;
+  &lt;img src="../Imagenes/20250618_1642_image.png" class="img-fluid rounded mb-3" alt="Hero" width="100%"&gt;
+  &lt;h4&gt;Título Centrado&lt;/h4&gt;
+  &lt;p&gt;Texto centrado...&lt;/p&gt;
+  &lt;button class="btn btn-primary"&gt;Botón&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-dark">
+                                <strong>🎯 Centrado Perfecto:</strong> El método <code>.mx-auto .d-block</code> es el
+                                más común para centrar imágenes. Para contenido más complejo, flexbox ofrece un control
+                                más granular sobre la alineación.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN IMÁGENES RESPONSIVAS -->
+                <section id="imagenes-responsivas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">📱 Imágenes Responsivas</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Las imágenes responsivas se adaptan automáticamente al tamaño de la
+                                pantalla,
+                                esencial para el diseño web moderno.</p>
+
+                            <h3 class="h5">Comparación: Responsiva vs No Responsiva</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">No responsiva</h5>
+                                            <img src="../Imagenes/20250618_1703_image.png" alt="No responsiva"
+                                                class="image-demo" width="100%">
+                                            <p class="mt-2 small text-muted">Esta imagen mantiene su tamaño original y
+                                                puede desbordar en pantallas pequeñas, pero se controla con
+                                                <code>width="100%"</code>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Responsiva</h5>
+                                            <img src="../Imagenes/20250618_1703_image.png" alt="Responsiva"
+                                                class="img-fluid image-demo">
+                                            <p class="mt-2 small text-muted">Esta imagen se ajusta al ancho de su
+                                                contenedor. Clase: <code>.img-fluid</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Imágenes Responsivas en Grid</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-8 mb-3">
+                                    <img src="../Imagenes/20250618_1703_image.png" alt="Imagen grande"
+                                        class="img-fluid rounded image-demo">
+                                    <p class="small text-muted mt-2">Imagen en columna ancha - se adapta al contenedor
+                                    </p>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <img src="../Imagenes/20250618_1703_image.png" alt="Imagen pequeña"
+                                        class="img-fluid rounded image-demo">
+                                    <p class="small text-muted mt-2">Imagen en columna estrecha - también se adapta</p>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Imagen responsiva básica --&gt;
+&lt;img src="../Imagenes/20250618_1703_image.png" class="img-fluid" alt="Responsiva"&gt;
+
+&lt;!-- Imágenes responsivas en grid --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-8"&gt;
+    &lt;img src="../Imagenes/20250618_1703_image.png" class="img-fluid rounded" alt="Grande"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;img src="../Imagenes/20250618_1703_image.png" class="img-fluid rounded" alt="Pequeña"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-success">
+                                <strong>📱 Mobile First:</strong> La clase <code>.img-fluid</code> aplica
+                                <code>max-width: 100%</code> y <code>height: auto</code>, asegurando que las imágenes
+                                nunca excedan el ancho de su contenedor. Esto es esencial para el diseño responsive y
+                                mejora la experiencia en dispositivos móviles.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN IMÁGENES CON TEXTO -->
+                <section id="imagenes-con-texto" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">📝 Imágenes con Texto</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Combina imágenes y texto de manera efectiva usando las utilidades de
+                                Bootstrap para crear diseños atractivos y legibles.</p>
+
+                            <h3 class="h5">Card con Imagen y Texto</h3>
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <img src="../Imagenes/LOGO.png" class="card-img-top" alt="Card image">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card con Imagen</h5>
+                                            <p class="card-text">Ejemplo de card con imagen en la parte superior y
+                                                contenido textual debajo.</p>
+                                            <a class="btn btn-primary">Ver más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card con Imagen Lateral</h5>
+                                            <div class="row g-0">
+                                                <div class="col-md-4">
+                                                    <img src="../Imagenes/LOGO.png" class="img-fluid rounded-start"
+                                                        alt="Miniatura">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <p class="card-text">Card con imagen a un lado y texto al otro,
+                                                            ideal para listas.</p>
+                                                        <a class="btn btn-outline-primary">Detalles</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Media Object</h3>
+                            <div class="d-flex mb-4">
+                                <img src="../Imagenes/avatar2mujer.jpg" class="flex-shrink-0 me-3 rounded" alt="Avatar"
+                                    width="40%">
+                                <div>
+                                    <h5 class="mt-0">Media heading</h5>
+                                    <p>Este es un ejemplo del patrón "media object" usando flexbox. Es perfecto para
+                                        comentarios, publicaciones o cualquier contenido que combine una imagen con
+                                        texto.</p>
+                                    <div class="d-flex mt-3">
+                                        <img src="../Imagenes/avatarhombrew.jpg" class="flex-shrink-0 me-3 rounded"
+                                            alt="Avatar anidado" width="50%">
+                                        <div>
+                                            <h5 class="mt-0">Media anidada</h5>
+                                            <p>Y este es un media object anidado. Las utilidades de flexbox hacen que
+                                                este patrón sea fácil de implementar.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Card con imagen --&gt;
+&lt;div class="card"&gt;
+  &lt;img src="../Imagenes/avatar2mujer.jpg" class="card-img-top" alt="..."&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Título&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Contenido...&lt;/p&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;Botón&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Media object --&gt;
+&lt;div class="d-flex"&gt;
+  &lt;img src="../Imagenes/avatarhombrew.jpg" class="flex-shrink-0 me-3 rounded" alt="..."&gt;
+  &lt;div&gt;
+    &lt;h5 class="mt-0"&gt;Título&lt;/h5&gt;
+    &lt;p&gt;Contenido...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>📄 Patrones de Diseño:</strong> Los cards y media objects son patrones comunes
+                                en interfaces modernas. Bootstrap facilita su implementación con utilidades de flexbox y
+                                componentes predefinidos.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN GALERÍA AVANZADA -->
+                <section id="galeria-avanzada" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h2 class="h3 mb-0">🚀 Galería Avanzada</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Combina todas las técnicas aprendidas para crear galerías de imágenes
+                                profesionales y completamente responsivas.</p>
+
+                            <h3 class="h5">Galería con Lightbox</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-bs-image="https://via.placeholder.com/800x600/0d6efd/ffffff?text=Imagen+1">
+                                        <img src="../Imagenes/Ojo.jpg" alt="Imagen 1"
+                                            class="img-thumbnail image-demo w-100">
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-bs-image="https://via.placeholder.com/800x600/198754/ffffff?text=Imagen+2">
+                                        <img src="../Imagenes/Flor.jpg" alt="Imagen 2"
+                                            class="img-thumbnail image-demo w-100">
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-bs-image="https://via.placeholder.com/800x600/dc3545/ffffff?text=Imagen+3">
+                                        <img src="../Imagenes/Art.jpg" alt="Imagen 3"
+                                            class="img-thumbnail image-demo w-100">
+                                    </a>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-bs-image="https://via.placeholder.com/800x600/6f42c1/ffffff?text=Imagen+4">
+                                        <img src="../Imagenes/Colibri.jpg" alt="Imagen 4"
+                                            class="img-thumbnail image-demo w-100">
+                                    </a>
+                                </div>
+                            </div>
+                            <br> <br>
+                            <h3 class="h5">Galería con Efectos</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card bg-dark text-white">
+                                        <img src="../Imagenes/20250618_1642_image.png" class="card-img" alt="Overlay">
+                                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                            <h5 class="card-title">Título de la Imagen</h5>
+                                            <p class="card-text">Descripción breve de la imagen con overlay.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card border-0 shadow">
+                                        <div class="position-relative">
+                                            <img src="../Imagenes/20250618_1658_image.png"
+                                                class="card-img-top image-demo" alt="Hover">
+                                            <div class="position-absolute top-0 end-0 m-2">
+                                                <span class="badge bg-primary">Nuevo</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Imagen con Badge</h5>
+                                            <p class="card-text">Imagen con badge superpuesto.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card text-center">
+                                        <img src="../Imagenes/20250618_1703_image.png"
+                                            class="rounded-circle mx-auto mt-3 image-demo" alt="Avatar" width="100%">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Avatar Circular</h5>
+                                            <p class="card-text">Perfil de usuario con avatar circular centrado.</p>
+                                            <div class="d-flex justify-content-center gap-2">
+                                                <button class="btn btn-sm btn-outline-primary">Seguir</button>
+                                                <button class="btn btn-sm btn-primary">Mensaje</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Galería con miniaturas --&gt;
+&lt;div class="row g-3"&gt;
+  &lt;div class="col-6 col-md-4 col-lg-3"&gt;
+    &lt;img src="../Imagenes/Canicas.jpg" class="img-thumbnail w-100" alt="1"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-6 col-md-4 col-lg-3"&gt;
+    &lt;img src="../Imagenes/Mini2.jpg" class="img-thumbnail w-100" alt="2"&gt;
+  &lt;/div&gt;
+  &lt;!-- Más imágenes --&gt;
+&lt;/div&gt;
+
+&lt;!-- Card con overlay --&gt;
+&lt;div class="card bg-dark text-white"&gt;
+  &lt;img src="../Imagenes/Mini4.jpg" class="card-img" alt="..."&gt;
+  &lt;div class="card-img-overlay"&gt;
+    &lt;h5 class="card-title"&gt;Título&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Descripción&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Avatar circular --&gt;
+&lt;div class="card text-center"&gt;
+  &lt;img src="../Imagenes/avatarhombrew.jpg" class="rounded-circle mx-auto mt-3" alt="Avatar"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Nombre&lt;/h5&gt;
+    &lt;div class="d-flex justify-content-center gap-2"&gt;
+      &lt;button class="btn btn-sm btn-outline-primary"&gt;Acción 1&lt;/button&gt;
+      &lt;button class="btn btn-sm btn-primary"&gt;Acción 2&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <!-- Modal para lightbox -->
+                            <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Vista de Imagen</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            <img id="modalImage" src="" alt="Imagen ampliada" class="img-fluid rounded">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-primary">
+                                <strong>🚀 Combinación Profesional:</strong> Esta galería demuestra cómo combinar
+                                múltiples características de Bootstrap para crear interfaces visuales profesionales y
+                                completamente funcionales. Perfecta para portafolios, galerías de productos y
+                                aplicaciones web modernas.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="site-footer mt-5 py-5">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-4">
+                                <h5>Bootstrap 5 Tutorial</h5>
+                                <p class="small mb-2">Tutorial interactivo y open-source. Aprende con ejemplos,
+                                    ejercicios y despliega en GitHub Pages.</p>
+                                <p class="small mb-0">© 2025 Sebastián — Hecho para la comunidad.</p>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Guía rápida</h6>
+                                <ul class="list-unstyled small">
+                                    <li><a href="../grid.html">Grid System</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a href="../forms.html">Forms</a></li>
+                                    <li><a href="../github-tutorial.html">Subir a GitHub</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Comunidad</h6>
+                                <div class="d-flex gap-2">
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://twitter.com/tu_usuario" target="_blank" rel="noopener"
+                                        aria-label="Twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                        aria-label="GitHub">
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <h6>Newsletter</h6>
+                                <form id="footerSubscribe" class="d-flex flex-column">
+                                    <input type="email" class="form-control form-control-sm mb-2"
+                                        placeholder="tu@email.com">
+                                    <button class="btn btn-sm btn-primary">Suscribirme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <div class="list-group" id="searchResultsList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live preview modal -->
+    <div class="modal fade" id="livePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Vista Previa - Imágenes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe id="livePreviewIframe" style="width:100%;height:70vh;border:0;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-outline-secondary" id="openInNew">Abrir en nueva pestaña</button>
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botón flotante para TOC móvil -->
+    <button class="mobile-toc-toggle d-md-none" id="mobileTocToggle" aria-label="Abrir índice de contenido">
+        <span class="toc-icon">📚</span>
+        <span class="toc-text">Índice</span>
+    </button>
+
+    <!-- Overlay para móvil -->
+    <div class="mobile-sidebar-overlay d-md-none" id="mobileSidebarOverlay"></div>
+
+    <!-- Overlay para cerrar TOC -->
+    <div class="sidebar-overlay d-md-none" onclick="toggleMobileTOC()"></div>
+    <!-- SCRIPTS -->
+    <script src="../bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script1.js"></script>
+    <script src="../JS/buscar.js"></script>
+    <script src="../JS/main.js"></script>
+
+    <!-- Script para lightbox -->
+    <script>
+        // Lightbox para galería de imágenes
+        document.addEventListener('DOMContentLoaded', function () {
+            var imageModal = document.getElementById('imageModal');
+            if (imageModal) {
+                imageModal.addEventListener('show.bs.modal', function (event) {
+                    var button = event.relatedTarget;
+                    var imageUrl = button.getAttribute('data-bs-image');
+                    var modalImage = imageModal.querySelector('#modalImage');
+                    modalImage.src = imageUrl;
+                });
+            }
+        });
+    </script>
+    <!-- Script para TOC móvil -->
+    <script>
+        function toggleMobileTOC() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+
+            if (sidebar.classList.contains('mobile-open')) {
+                sidebar.classList.remove('mobile-open');
+                overlay.classList.remove('active');
+            } else {
+                sidebar.classList.add('mobile-open');
+                overlay.classList.remove('active');
+                setTimeout(() => overlay.classList.add('active'), 10);
+            }
+        }
+
+        // Cerrar TOC al hacer clic en un enlace (en móviles)
+        document.addEventListener('click', function (e) {
+            if (window.innerWidth < 768) {
+                if (e.target.closest('#sidebar a')) {
+                    toggleMobileTOC();
+                }
+            }
+        });
+    </script>
+    <script>
+        // ===== TOC MÓVIL MEJORADO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileTocToggle = document.getElementById('mobileTocToggle');
+            const mobileSidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobileSidebarOverlay');
+
+            if (mobileTocToggle && mobileSidebar && mobileOverlay) {
+                // Función para abrir/cerrar el TOC
+                function toggleMobileTOC() {
+                    const isOpening = !mobileSidebar.classList.contains('mobile-open');
+
+                    if (isOpening) {
+                        // Abrir
+                        mobileSidebar.classList.add('mobile-open');
+                        mobileOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+                    } else {
+                        // Cerrar
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = ''; // Restaurar scroll
+                    }
+                }
+
+                // Eventos
+                mobileTocToggle.addEventListener('click', toggleMobileTOC);
+                mobileOverlay.addEventListener('click', toggleMobileTOC);
+
+                // Cerrar al hacer clic en un enlace del TOC (solo en móviles)
+                const tocLinks = mobileSidebar.querySelectorAll('a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth < 768) {
+                            toggleMobileTOC();
+                        }
+                    });
+                });
+
+                // Cerrar al cambiar el tamaño de la ventana a desktop
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 768) {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                // Cerrar con tecla ESC
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileSidebar.classList.contains('mobile-open')) {
+                        toggleMobileTOC();
+                    }
+                });
+            }
+        });
+
+        // Función global para reset del progreso
+        function resetProgress() {
+            localStorage.setItem('tutorialProgress', '{}');
+            const progressBar = document.getElementById('courseProgress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+            }
+            alert('Progreso reiniciado correctamente ✅');
+        }
+    </script>
+</body>
+
+</html>

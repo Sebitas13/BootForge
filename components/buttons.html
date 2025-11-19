@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons - Bootstrap 5 Tutorial Completo</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary" id="mainNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../ProyectoFinal.html">
+                        <img src="../Imagenes/logo-32.png" alt="logo" width="36" height="36" class="rounded">
+                        <span>
+                            <span class="fs-5">Bootstrap 5</span>
+                            <small class="d-block text-white-50" style="font-size:.68rem;">Tutorial Completo</small>
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../ProyectoFinal.html"> Inicio</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    📐 Layout
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../containers.html">Containers</a></li>
+                                    <li><a class="dropdown-item" href="../grid.html">Grid System</a></li>
+                                    <li><a class="dropdown-item" href="../typography.html">Typography</a></li>
+                                    <li><a class="dropdown-item" href="../colors.html">Colors</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Resto del menú igual que en ProyectoFinal.html -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    🧩 Componentes
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="tables.html">Tables</a></li>
+                                    <li><a class="dropdown-item" href="images.html">Images</a></li>
+                                    <li><a class="dropdown-item" href="jumbotron.html">Jumbotron</a></li>
+                                    <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+                                    <li><a class="dropdown-item active" href="buttons.html">Buttons</a></li>
+                                    <li><a class="dropdown-item" href="button-groups.html">Button Groups</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="components/badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item" href="components/progress-bars.html">Progress Bars</a></li>
+                                    <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+                                    <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+                                    <li><a class="dropdown-item" href="list-groups.html">List Groups</a></li>
+                                    <li><a class="dropdown-item" href="cards.html">Cards</a></li>
+                                    <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+                                    <li><a class="dropdown-item" href="collapse.html">Collapse</a></li>
+                                    <li><a class="dropdown-item" href="navs.html">Navs</a></li>
+                                    <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+                                    <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+                                    <li><a class="dropdown-item" href="tooltip.html">Tooltip</a></li>
+                                    <li><a class="dropdown-item" href="popover.html">Popover</a></li>
+                                    <li><a class="dropdown-item" href="toast.html">Toast</a></li>
+                                    <li><a class="dropdown-item" href="scrollspy.html">Scrollspy</a></li>
+                                    <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📝 Forms
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../forms/basic-forms.html">Formularios
+                                            Básicos</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/select.html">Select Menus</a></li>
+                                    <li><a class="dropdown-item" href="../forms/checks-radios.html">Checks & Radios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/range.html">Range</a></li>
+                                    <li><a class="dropdown-item" href="../forms/input-groups.html">Input Groups</a></li>
+                                    <li><a class="dropdown-item" href="../forms/floating-labels.html">Floating
+                                            Labels</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/validation.html">Form Validation</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🛠️ Utilidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../utilities/spacing.html">Spacing</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/flex.html">Flexbox</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/dark-mode.html">Dark Mode</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🚀 Recursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../templates/basic.html">Template Básico</a></li>
+                                    <li><a class="dropdown-item" href="../templates/medium.html">Template Medio</a></li>
+                                    <li><a class="dropdown-item" href="../templates/advanced.html">Template Avanzado</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../exercises.html">Ejercicios</a></li>
+                                    <li><a class="dropdown-item" href="../quiz.html">Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../syllabus.html">Plan de Estudio</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+                                    href="../github-tutorial.html" title="Tutorial GitHub"
+                                    style="padding: 0.25rem 0.5rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    <span class="d-none d-md-inline" style="font-size: 0.8rem;"> GitHub Tutorial</span>
+                                </a></li>
+                        </ul>
+
+                        <!-- Buscador -->
+                        <form class="d-flex me-2" role="search" onsubmit="return performSearch(event)">
+                            <input id="globalSearchInput" name="query" class="form-control form-control-sm me-2"
+                                type="search" placeholder="Buscar (ej. cards, modal)" aria-label="Buscar">
+                            <button class="btn btn-sm btn-outline-light" type="submit" title="Buscar">🔍</button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <button id="themeToggle" class="btn btn-sm btn-outline-light"
+                                title="Alternar tema (claro/oscuro)" aria-pressed="false">
+                                <span class="theme-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <a class="btn btn-sm btn-light d-flex align-items-center gap-1"
+                                href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                title="Repositorio GitHub" style="padding: 0.25rem 0.5rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="d-none d-md-inline" style="font-size: 0.8rem;">Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <div class="site-hero" style="background-image:url('../Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center fade-in-up visible">
+                            <h1 class="display-5 fw-bold">🔄 <span class="text-warning">Buttons</span> en Bootstrap 5
+                            </h1>
+                            <p class="lead">Domina la creación de botones modernos, accesibles y completamente
+                                personalizables con el sistema de componentes de Bootstrap 5.</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                                <a href="#estilos-botones" class="btn btn-outline-light btn-lg">Ver Ejemplos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR BUTTONS MEJORADO -->
+            <aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end mobile-sidebar"
+                id="sidebar" aria-label="Tabla de contenido">
+                <div class="position-sticky" style="top:20px">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header text-center text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h5 class="mb-0">🔄 ÍNDICE - BUTTONS</h5>
+                        </div>
+                        <div class="card-body p-2">
+                            <nav class="nav flex-column small">
+                                <a class="nav-link" href="#introduccion">📋 Introducción</a>
+                                <a class="nav-link" href="#estilos-botones">🎨 Estilos de Botones</a>
+                                <a class="nav-link" href="#elementos-botones">🔧 Elementos de Botón</a>
+                                <a class="nav-link" href="#botones-outline">📝 Botones Outline</a>
+                                <a class="nav-link" href="#tamanos-botones">📏 Tamaños de Botones</a>
+                                <a class="nav-link" href="#botones-bloque">🧱 Botones de Bloque</a>
+                                <a class="nav-link" href="#estados-botones">⚡ Estados de Botones</a>
+                                <a class="nav-link" href="#botones-spinner">🌀 Botones con Spinner</a>
+                                <a class="nav-link" href="#botones-iconos">🦄 Botones con Iconos</a>
+                                <a class="nav-link" href="#mejores-practicas">💡 Mejores Prácticas</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="small mb-2 fw-bold">📊 Tu Progreso</h6>
+                            <div class="progress" style="height:1.2rem">
+                                <div id="courseProgress"
+                                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                    style="width:0%">0%</div>
+                            </div>
+                            <p class="mt-2 mb-0 small text-muted">Completa las secciones para avanzar</p>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="#mainContent" class="btn btn-outline-primary btn-sm">🏠 Inicio</a>
+                        <a href="button-groups.html" class="btn btn-outline-success btn-sm">➡️ Siguiente: Button Groups</a>
+                        <a href="#" class="btn btn-outline-info btn-sm" onclick="resetProgress(); return false;">🔄
+                            Reset Progreso</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">📋 Introducción a los Botones</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Los botones en Bootstrap 5 son componentes versátiles que permiten acciones
+                                del usuario y se pueden personalizar completamente con el sistema de utilidades.</p>
+
+                            <div class="alert alert-info">
+                                <strong>💡 ¿Qué son los Botones en Bootstrap?</strong><br>
+                                Los botones son elementos interactivos fundamentales en cualquier interfaz. Bootstrap 5
+                                proporciona una amplia gama de estilos, tamaños y estados para crear botones modernos y
+                                accesibles.
+                            </div>
+
+                            <h3 class="h5 mt-4">Características Principales</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🎯 Propósito</h5>
+                                            <ul class="small mb-0">
+                                                <li>Ejecutar acciones principales</li>
+                                                <li>Navegar entre páginas</li>
+                                                <li>Confirmar operaciones</li>
+                                                <li>Guiar al usuario en flujos</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🚀 Elementos Clave</h5>
+                                            <ul class="small mb-0">
+                                                <li>Estilos contextuales semánticos</li>
+                                                <li>Variantes outline y sólidas</li>
+                                                <li>Múltiples tamaños responsivos</li>
+                                                <li>Estados activos y deshabilitados</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ESTILOS DE BOTONES -->
+                <section id="estilos-botones" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🎨 Estilos de Botones</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Bootstrap 5 proporciona diferentes estilos de botones usando clases
+                                contextuales semánticas.</p>
+
+                            <h3 class="h5">Todos los Estilos Disponibles</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Ejemplos de Estilos de Botones -->
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <button type="button" class="btn">Basic</button>
+                                    <button type="button" class="btn btn-primary">Primary</button>
+                                    <button type="button" class="btn btn-secondary">Secondary</button>
+                                    <button type="button" class="btn btn-success">Success</button>
+                                    <button type="button" class="btn btn-info">Info</button>
+                                    <button type="button" class="btn btn-warning">Warning</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
+                                    <button type="button" class="btn btn-dark">Dark</button>
+                                    <button type="button" class="btn btn-light">Light</button>
+                                    <button type="button" class="btn btn-link">Link</button>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Estilos de Botones Bootstrap 5 --&gt;
+&lt;button type="button" class="btn"&gt;Basic&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎨 Clases de Color</h6>
+                                            <ul class="small mb-0">
+                                                <li><code>.btn-primary</code> - Acción principal</li>
+                                                <li><code>.btn-secondary</code> - Acción secundaria</li>
+                                                <li><code>.btn-success</code> - Éxito/confirmación</li>
+                                                <li><code>.btn-danger</code> - Eliminar/peligro</li>
+                                                <li><code>.btn-warning</code> - Advertencia</li>
+                                                <li><code>.btn-info</code> - Informativo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎯 Buenas Prácticas</h6>
+                                            <ul class="small mb-0">
+                                                <li>Usa colores semánticamente apropiados</li>
+                                                <li>Mantén consistencia en toda la aplicación</li>
+                                                <li>Prioriza la accesibilidad visual</li>
+                                                <li>Considera el contexto de uso</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ELEMENTOS DE BOTÓN -->
+                <section id="elementos-botones" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">🔧 Elementos de Botón</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Las clases de botón se pueden usar en diferentes elementos HTML:
+                                <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, o <code>&lt;input&gt;</code>.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Elementos de Botón -->
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <a href="#" class="btn btn-success">Link Button</a>
+                                    <button type="button" class="btn btn-success">Button</button>
+                                    <input type="button" class="btn btn-success" value="Input Button">
+                                    <input type="submit" class="btn btn-success" value="Submit Button">
+                                    <input type="reset" class="btn btn-success" value="Reset Button">
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Elementos de Botón --&gt;
+&lt;a href="#" class="btn btn-success"&gt;Link Button&lt;/a&gt;
+&lt;button type="button" class="btn btn-success"&gt;Button&lt;/button&gt;
+&lt;input type="button" class="btn btn-success" value="Input Button"&gt;
+&lt;input type="submit" class="btn btn-success" value="Submit Button"&gt;
+&lt;input type="reset" class="btn btn-success" value="Reset Button"&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 ¿Por qué usamos # en el atributo href del enlace?</strong><br>
+                                Como no tenemos una página específica para enlazar y no queremos recibir un error "404",
+                                usamos # como enlace temporal. En una aplicación real, debería ser una URL válida.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN BOTONES OUTLINE -->
+                <section id="botones-outline" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">📝 Botones Outline</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Bootstrap 5 también proporciona ocho variantes de botones outline/borde.
+                                Pasa el mouse sobre ellos para ver el efecto "hover".</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Botones Outline -->
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                                    <button type="button" class="btn btn-outline-success">Success</button>
+                                    <button type="button" class="btn btn-outline-info">Info</button>
+                                    <button type="button" class="btn btn-outline-warning">Warning</button>
+                                    <button type="button" class="btn btn-outline-danger">Danger</button>
+                                    <button type="button" class="btn btn-outline-dark">Dark</button>
+                                    <button type="button" class="btn btn-outline-light text-dark">Light</button>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Botones Outline --&gt;
+&lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-dark"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-light text-dark"&gt;Light&lt;/button&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6>🎨 Casos de Uso Outline</h6>
+                                    <ul class="small">
+                                        <li><strong>Acciones secundarias</strong> - Menos prominentes</li>
+                                        <li><strong>Diseños minimalistas</strong> - Estilo limpio</li>
+                                        <li><strong>Fondos oscuros</strong> - Mejor contraste</li>
+                                        <li><strong>Grupos de botones</strong> - Variedad visual</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>🎯 Ventajas</h6>
+                                    <ul class="small">
+                                        <li>Menos visualmente intrusivos</li>
+                                        <li>Excelente para fondos de color</li>
+                                        <li>Modernos y elegantes</li>
+                                        <li>Conservan la semántica de color</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN TAMAÑOS DE BOTONES -->
+                <section id="tamanos-botones" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-purple text-white">
+                            <h2 class="h3 mb-0">📏 Tamaños de Botones</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Usa las clases <code>.btn-lg</code> para botones grandes o
+                                <code>.btn-sm</code> para botones pequeños.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Tamaños de Botones -->
+                                <div class="d-flex flex-wrap gap-2 align-items-center mb-4">
+                                    <button type="button" class="btn btn-primary btn-lg">Large</button>
+                                    <button type="button" class="btn btn-primary">Default</button>
+                                    <button type="button" class="btn btn-primary btn-sm">Small</button>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Tamaños de Botones --&gt;
+&lt;button type="button" class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Default&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;</code></pre>
+
+                            <h4 class="h5 mt-4">🎯 Guía de Tamaños</h4>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Tamaño</th>
+                                            <th>Clase</th>
+                                            <th>Uso Recomendado</th>
+                                            <th>Ejemplo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Grande</strong></td>
+                                            <td><code>.btn-lg</code></td>
+                                            <td>Acciones principales, CTA importantes</td>
+                                            <td><button class="btn btn-primary btn-sm">Large</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Normal</strong></td>
+                                            <td><code>(sin clase)</code></td>
+                                            <td>Acciones estándar, uso general</td>
+                                            <td><button class="btn btn-primary btn-sm">Default</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Pequeño</strong></td>
+                                            <td><code>.btn-sm</code></td>
+                                            <td>Acciones secundarias, espacios reducidos</td>
+                                            <td><button class="btn btn-primary btn-sm">Small</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN BOTONES DE BLOQUE -->
+                <section id="botones-bloque" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger text-white">
+                            <h2 class="h3 mb-0">🧱 Botones de Bloque</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Para crear un botón de nivel bloque que ocupe todo el ancho del elemento
+                                padre, usa la clase <code>.d-grid</code> en el elemento padre.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Botones de Bloque -->
+                                <div class="d-grid mb-3">
+                                    <button type="button" class="btn btn-primary">Full-Width Button</button>
+                                </div>
+
+                                <p class="small text-muted mb-3">Si tienes muchos botones de nivel bloque, puedes
+                                    controlar el espacio entre ellos con la clase <code>.gap-*</code>:</p>
+
+                                <div class="d-grid gap-3">
+                                    <button type="button" class="btn btn-primary">Full-Width Button</button>
+                                    <button type="button" class="btn btn-secondary">Full-Width Button</button>
+                                    <button type="button" class="btn btn-success">Full-Width Button</button>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Botón de Bloque Simple --&gt;
+&lt;div class="d-grid"&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Full-Width Button&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Múltiples Botones de Bloque con Espaciado --&gt;
+&lt;div class="d-grid gap-3"&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Full-Width Button&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Full-Width Button&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Full-Width Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Tip de Diseño Responsive:</strong> Los botones de bloque son especialmente
+                                útiles en dispositivos móviles donde el espacio vertical es limitado y los botones
+                                necesitan ser fácilmente accesibles.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN ESTADOS DE BOTONES -->
+                <section id="estados-botones" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">⚡ Estados de Botones</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Un botón puede configurarse en estado activo (aparece presionado) o
+                                deshabilitado (no se puede hacer clic).</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Estados de Botones -->
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <button type="button" class="btn btn-primary active">Active Primary</button>
+                                    <button type="button" class="btn btn-primary" disabled>Disabled Primary</button>
+                                    <a href="#" class="btn btn-primary disabled">Disabled Link</a>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Estados de Botones --&gt;
+&lt;button type="button" class="btn btn-primary active"&gt;Active Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary" disabled&gt;Disabled Primary&lt;/button&gt;
+&lt;a href="#" class="btn btn-primary disabled"&gt;Disabled Link&lt;/a&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6>🔧 Estados Disponibles</h6>
+                                    <ul class="small">
+                                        <li><strong>Activo:</strong> <code>.active</code> - Aparece presionado</li>
+                                        <li><strong>Deshabilitado:</strong> <code>disabled</code> - No clickeable</li>
+                                        <li><strong>Enlace deshabilitado:</strong> <code>.disabled</code> - Solo
+                                            apariencia</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>🎯 Casos de Uso</h6>
+                                    <ul class="small">
+                                        <li><strong>Formularios:</strong> Validación paso a paso</li>
+                                        <li><strong>Wizards:</strong> Navegación entre pasos</li>
+                                        <li><strong>Procesos:</strong> Evitar acciones duplicadas</li>
+                                        <li><strong>Permisos:</strong> Restricción de acceso</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-warning">
+                                <strong>⚠️ Nota importante:</strong> Los elementos <code>&lt;a&gt;</code> no admiten el
+                                atributo <code>disabled</code> y, por lo tanto, deben usar la clase
+                                <code>.disabled</code> para aparecer visualmente deshabilitados.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN BOTONES CON SPINNER -->
+                <section id="botones-spinner" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-secondary text-white">
+                            <h2 class="h3 mb-0">🌀 Botones con Spinner</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">También puedes agregar "spinners" a un botón para indicar procesos de
+                                carga.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Botones con Spinner -->
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <button class="btn btn-primary">
+                                        <span class="spinner-border spinner-border-sm"></span>
+                                    </button>
+
+                                    <button class="btn btn-primary">
+                                        <span class="spinner-border spinner-border-sm"></span>
+                                        Loading..
+                                    </button>
+
+                                    <button class="btn btn-primary" disabled>
+                                        <span class="spinner-border spinner-border-sm"></span>
+                                        Loading..
+                                    </button>
+
+                                    <button class="btn btn-primary" disabled>
+                                        <span class="spinner-grow spinner-grow-sm"></span>
+                                        Loading..
+                                    </button>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Botones con Spinner --&gt;
+&lt;button class="btn btn-primary"&gt;
+  &lt;span class="spinner-border spinner-border-sm"&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="btn btn-primary"&gt;
+  &lt;span class="spinner-border spinner-border-sm"&gt;&lt;/span&gt;
+  Loading..
+&lt;/button&gt;
+
+&lt;button class="btn btn-primary" disabled&gt;
+  &lt;span class="spinner-border spinner-border-sm"&gt;&lt;/span&gt;
+  Loading..
+&lt;/button&gt;
+
+&lt;button class="btn btn-primary" disabled&gt;
+  &lt;span class="spinner-grow spinner-grow-sm"&gt;&lt;/span&gt;
+  Loading..
+&lt;/button&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6>🎨 Tipos de Spinner</h6>
+                                    <ul class="small">
+                                        <li><strong>Spinner Border:</strong> <code>.spinner-border</code> - Estilo
+                                            circular</li>
+                                        <li><strong>Spinner Grow:</strong> <code>.spinner-grow</code> - Estilo de
+                                            pulso</li>
+                                        <li><strong>Tamaños:</strong> <code>-sm</code>, <code>-lg</code> - Pequeño,
+                                            grande</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>🎯 Mejores Prácticas</h6>
+                                    <ul class="small">
+                                        <li>Usa para operaciones asíncronas</li>
+                                        <li>Combina con estado deshabilitado</li>
+                                        <li>Mantén textos descriptivos</li>
+                                        <li>Considera tiempos de carga realistas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN BOTONES CON ICONOS -->
+                <section id="botones-iconos" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🦄 Botones con Iconos</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Mejora la usabilidad y estética de tus botones añadiendo iconos relevantes
+                                que refuercen la acción.</p>
+
+                            <h3 class="h5">Ejemplo Visual</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <!-- Botones con Iconos -->
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-download me-2"></i>Descargar
+                                    </button>
+                                    <button class="btn btn-success">
+                                        <i class="bi bi-check-lg me-2"></i>Guardar
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        <i class="bi bi-trash me-2"></i>Eliminar
+                                    </button>
+                                    <button class="btn btn-warning">
+                                        <i class="bi bi-exclamation-triangle me-2"></i>Advertencia
+                                    </button>
+                                    <button class="btn btn-info">
+                                        <i class="bi bi-info-circle me-2"></i>Más Información
+                                    </button>
+                                </div>
+
+                                <!-- Botones solo con iconos -->
+                                <h6 class="mt-4 mb-2">Botones Solo Icono</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button class="btn btn-outline-primary" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-outline-success" title="Confirmar">
+                                        <i class="bi bi-check"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger" title="Eliminar">
+                                        <i class="bi bi-x"></i>
+                                    </button>
+                                    <button class="btn btn-outline-info" title="Información">
+                                        <i class="bi bi-question"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Botones con Iconos --&gt;
+&lt;button class="btn btn-primary"&gt;
+  &lt;i class="bi bi-download me-2"&gt;&lt;/i&gt;Descargar
+&lt;/button&gt;
+
+&lt;button class="btn btn-success"&gt;
+  &lt;i class="bi bi-check-lg me-2"&gt;&lt;/i&gt;Guardar
+&lt;/button&gt;
+
+&lt;button class="btn btn-danger"&gt;
+  &lt;i class="bi bi-trash me-2"&gt;&lt;/i&gt;Eliminar
+&lt;/button&gt;
+
+&lt;!-- Botones Solo Icono --&gt;
+&lt;button class="btn btn-outline-primary" title="Editar"&gt;
+  &lt;i class="bi bi-pencil"&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Tip de Accesibilidad:</strong> Para botones que solo contienen iconos,
+                                siempre incluye el atributo <code>title</code> para describir la acción a usuarios de
+                                lectores de pantalla.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MEJORES PRÁCTICAS -->
+                <section id="mejores-practicas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">💡 Mejores Prácticas y Consejos Avanzados</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Optimiza el uso de botones para máxima efectividad y mejor experiencia de
+                                usuario.</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🎯 UX/UI</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Jerarquía visual:</strong> Usa colores y tamaños para
+                                                    establecer prioridades</li>
+                                                <li><strong>Texto descriptivo:</strong> Botones con acciones claras</li>
+                                                <li><strong>Consistencia:</strong> Mantén patrones en toda la aplicación
+                                                </li>
+                                                <li><strong>Espaciado adecuado:</strong> Botones fácilmente clickeables
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">♿ Accesibilidad</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Contraste adecuado:</strong> Texto legible sobre fondos</li>
+                                                <li><strong>Focus states:</strong> Indicadores claros de foco</li>
+                                                <li><strong>ARIA labels:</strong> Para botones con solo iconos</li>
+                                                <li><strong>Keyboard navigation:</strong> Navegación por teclado fluida
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="h5 mt-4">🚀 Patrones Avanzados</h4>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🎨</div>
+                                            <h6>Botones Personalizados</h6>
+                                            <p class="small">Crea botones únicos con CSS personalizado y variables</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">⚡</div>
+                                            <h6>Botones Dinámicos</h6>
+                                            <p class="small">Estados que cambian según interacciones del usuario</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">📱</div>
+                                            <h6>Botones Responsive</h6>
+                                            <p class="small">Que se adaptan perfectamente a todos los dispositivos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success mt-4">
+                                <strong>✅ Resumen de Buenas Prácticas:</strong>
+                                <ul class="mb-0 mt-2">
+                                    <li>Usa <code>.btn-primary</code> para la acción principal</li>
+                                    <li>Mantén textos cortos y descriptivos</li>
+                                    <li>Considera estados de carga para acciones asíncronas</li>
+                                    <li>Prueba siempre en diferentes dispositivos</li>
+                                    <li>Documenta tus patrones de botones</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="site-footer mt-5 py-5">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-4">
+                                <h5>Bootstrap 5 Tutorial</h5>
+                                <p class="small mb-2">Tutorial interactivo y open-source. Aprende con ejemplos,
+                                    ejercicios y despliega en GitHub Pages.</p>
+                                <p class="small mb-0">© 2025 Sebastián — Hecho para la comunidad.</p>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Guía rápida</h6>
+                                <ul class="list-unstyled small">
+                                    <li><a href="../index.html#grid">Grid System</a></li>
+                                    <li><a href="alerts.html">Alerts</a></li>
+                                    <li><a href="../forms.html">Forms</a></li>
+                                    <li><a href="../github-tutorial.html">Subir a GitHub</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Comunidad</h6>
+                                <div class="d-flex gap-2">
+                                    <!-- Redes sociales -->
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://twitter.com/tu_usuario" target="_blank" rel="noopener"
+                                        aria-label="Twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                        aria-label="GitHub">
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <h6>Newsletter</h6>
+                                <form id="footerSubscribe" class="d-flex flex-column">
+                                    <input type="email" class="form-control form-control-sm mb-2"
+                                        placeholder="tu@email.com">
+                                    <button class="btn btn-sm btn-primary">Suscribirme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <div class="list-group" id="searchResultsList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Live preview modal para cualquier seccion.html -->
+    <div class="modal fade" id="livePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Vista Previa - Alerts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe id="livePreviewIframe" style="width:100%;height:70vh;border:0;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-outline-secondary" id="openInNew">Abrir en nueva pestaña</button>
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botón flotante para TOC móvil -->
+    <button class="mobile-toc-toggle d-md-none" id="mobileTocToggle" aria-label="Abrir índice de contenido">
+        <span class="toc-icon">📚</span>
+        <span class="toc-text">Índice</span>
+    </button>
+
+    <!-- Overlay para móvil -->
+    <div class="mobile-sidebar-overlay d-md-none" id="mobileSidebarOverlay"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="../JS/buscar.js"></script>
+    <script src="../JS/main.js"></script>
+
+    <script>
+        // ===== TOC MÓVIL MEJORADO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileTocToggle = document.getElementById('mobileTocToggle');
+            const mobileSidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobileSidebarOverlay');
+
+            if (mobileTocToggle && mobileSidebar && mobileOverlay) {
+                function toggleMobileTOC() {
+                    const isOpening = !mobileSidebar.classList.contains('mobile-open');
+
+                    if (isOpening) {
+                        mobileSidebar.classList.add('mobile-open');
+                        mobileOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                }
+
+                mobileTocToggle.addEventListener('click', toggleMobileTOC);
+                mobileOverlay.addEventListener('click', toggleMobileTOC);
+
+                const tocLinks = mobileSidebar.querySelectorAll('a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth < 768) {
+                            toggleMobileTOC();
+                        }
+                    });
+                });
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 768) {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileSidebar.classList.contains('mobile-open')) {
+                        toggleMobileTOC();
+                    }
+                });
+            }
+        });
+
+        // Función global para reset del progreso
+        function resetProgress() {
+            localStorage.setItem('tutorialProgress', '{}');
+            const progressBar = document.getElementById('courseProgress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+            }
+            alert('Progreso reiniciado correctamente ✅');
+        }
+    </script>
+
+    <style>
+        .bg-purple {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Estilos para mejorar la visualización de botones */
+        .btn {
+            margin: 0.125rem;
+        }
+
+        .d-grid .btn {
+            margin: 0;
+        }
+
+        /* Mejorar la visualización de botones en ejemplos */
+        .border .btn {
+            margin-bottom: 0.5rem;
+        }
+
+        .py-6 {
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+        }
+
+        .py-7 {
+            padding-top: 6rem !important;
+            padding-bottom: 6rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .display-md-3 {
+                font-size: calc(1.525rem + 3.3vw) !important;
+            }
+            
+            /* Ajustes responsive para botones */
+            .btn {
+                font-size: 0.875rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            .btn-sm {
+                font-size: 0.75rem;
+                padding: 0.375rem 0.75rem;
+            }
+            
+            .btn-lg {
+                font-size: 1rem;
+                padding: 0.75rem 1.5rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

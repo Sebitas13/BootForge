@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinners - Bootstrap 5 Tutorial Completo</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.8-dist/css1/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- SKIP LINK -->
+    <a href="#mainContent" class="skip-link"
+        style="position:fixed;left:50%;transform:translateX(-50%);top:8px;z-index:1080;padding:.35rem .6rem;border-radius:.35rem;background:#0d6efd;color:#fff;display:none;">
+        Saltar al contenido
+    </a>
+
+    <div class="container-fluid">
+        <!-- NAVBAR -->
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary" id="mainNavbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../ProyectoFinal.html">
+                        <img src="../Imagenes/logo-32.png" alt="logo" width="36" height="36" class="rounded">
+                        <span>
+                            <span class="fs-5">Bootstrap 5</span>
+                            <small class="d-block text-white-50" style="font-size:.68rem;">Tutorial Completo</small>
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../ProyectoFinal.html"> Inicio</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📐 Layout
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../containers.html">Containers</a></li>
+                                    <li><a class="dropdown-item" href="../grid.html">Grid System</a></li>
+                                    <li><a class="dropdown-item" href="../typography.html">Typography</a></li>
+                                    <li><a class="dropdown-item" href="../colors.html">Colors</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Resto del menú igual que en ProyectoFinal.html -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    🧩 Componentes
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="tables.html">Tables</a></li>
+                                    <li><a class="dropdown-item" href="images.html">Images</a></li>
+                                    <li><a class="dropdown-item" href="jumbotron.html">Jumbotron</a></li>
+                                    <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+                                    <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                                    <li><a class="dropdown-item" href="button-groups.html">Button Groups</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item" href="progress-bars.html">Progress Bars</a></li>
+                                    <li><a class="dropdown-item active" href="spinners.html">Spinners</a></li>
+                                    <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+                                    <li><a class="dropdown-item" href="list-groups.html">List Groups</a></li>
+                                    <li><a class="dropdown-item" href="cards.html">Cards</a></li>
+                                    <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+                                    <li><a class="dropdown-item" href="collapse.html">Collapse</a></li>
+                                    <li><a class="dropdown-item" href="navs.html">Navs</a></li>
+                                    <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+                                    <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+                                    <li><a class="dropdown-item" href="tooltip.html">Tooltip</a></li>
+                                    <li><a class="dropdown-item" href="popover.html">Popover</a></li>
+                                    <li><a class="dropdown-item" href="toast.html">Toast</a></li>
+                                    <li><a class="dropdown-item" href="scrollspy.html">Scrollspy</a></li>
+                                    <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    📝 Forms
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../forms/basic-forms.html">Formularios
+                                            Básicos</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/select.html">Select Menus</a></li>
+                                    <li><a class="dropdown-item" href="../forms/checks-radios.html">Checks & Radios</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/range.html">Range</a></li>
+                                    <li><a class="dropdown-item" href="../forms/input-groups.html">Input Groups</a></li>
+                                    <li><a class="dropdown-item" href="../forms/floating-labels.html">Floating
+                                            Labels</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../forms/validation.html">Form Validation</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🛠️ Utilidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../utilities/spacing.html">Spacing</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/flex.html">Flexbox</a></li>
+                                    <li><a class="dropdown-item" href="../utilities/dark-mode.html">Dark Mode</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    🚀 Recursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../templates/basic.html">Template Básico</a></li>
+                                    <li><a class="dropdown-item" href="../templates/medium.html">Template Medio</a></li>
+                                    <li><a class="dropdown-item" href="../templates/advanced.html">Template Avanzado</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../exercises.html">Ejercicios</a></li>
+                                    <li><a class="dropdown-item" href="../quiz.html">Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../syllabus.html">Plan de Estudio</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+                                    href="../github-tutorial.html" title="Tutorial GitHub"
+                                    style="padding: 0.25rem 0.5rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    <span class="d-none d-md-inline" style="font-size: 0.8rem;"> GitHub Tutorial</span>
+                                </a></li>
+
+                        </ul>
+
+                        <!-- Buscador -->
+                        <form class="d-flex me-2" role="search" onsubmit="return performSearch(event)">
+                            <input id="globalSearchInput" name="query" class="form-control form-control-sm me-2"
+                                type="search" placeholder="Buscar (ej. cards, modal)" aria-label="Buscar">
+                            <button class="btn btn-sm btn-outline-light" type="submit" title="Buscar">🔍</button>
+                        </form>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <button id="themeToggle" class="btn btn-sm btn-outline-light"
+                                title="Alternar tema (claro/oscuro)" aria-pressed="false">
+                                <span class="theme-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <a class="btn btn-sm btn-light d-flex align-items-center gap-1"
+                                href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                title="Repositorio GitHub" style="padding: 0.25rem 0.5rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="d-none d-md-inline" style="font-size: 0.8rem;">Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <div class="site-hero" style="background-image:url('../Imagenes/BANNER2.jpg');">
+                <div class="container hero-inner text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 text-center fade-in-up visible">
+                            <h1 class="display-5 fw-bold">🌀 <span class="text-warning">Spinners</span> en Bootstrap 5
+                            </h1>
+                            <p class="lead">Domina los indicadores de carga para crear experiencias de usuario fluidas, informativas y visualmente atractivas.</p>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#introduccion" class="btn btn-primary btn-lg">Comenzar Tutorial</a>
+                                <a href="#spinner-basico" class="btn btn-outline-light btn-lg">Ver Ejemplos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <!-- SIDEBAR SPINNERS MEJORADO -->
+            <aside class="col-md-3 col-lg-2 order-md-1 d-none d-md-block bg-light border-end mobile-sidebar"
+                id="sidebar" aria-label="Tabla de contenido">
+                <div class="position-sticky" style="top:20px">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header text-center text-white"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <h5 class="mb-0">🌀 ÍNDICE - SPINNERS</h5>
+                        </div>
+                        <div class="card-body p-2">
+                            <nav class="nav flex-column small">
+                                <a class="nav-link" href="#introduccion">📋 Introducción</a>
+                                <a class="nav-link" href="#spinner-basico">🌀 Spinner Básico</a>
+                                <a class="nav-link" href="#spinner-colores">🎨 Spinners de Colores</a>
+                                <a class="nav-link" href="#spinner-growing">🌱 Spinners de Crecimiento</a>
+                                <a class="nav-link" href="#spinner-tamanos">📏 Tamaños de Spinners</a>
+                                <a class="nav-link" href="#spinner-botones">🔄 Spinners en Botones</a>
+                                <a class="nav-link" href="#laboratorio-spinners">🔬 Laboratorio de Spinners</a>
+                                <a class="nav-link" href="#spinner-avanzados">🚀 Spinners Avanzados</a>
+                                <a class="nav-link" href="#ejemplo-avanzado">💼 Ejemplo Avanzado</a>
+                                <a class="nav-link" href="#mejores-practicas">💡 Mejores Prácticas</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body p-3">
+                            <h6 class="small mb-2 fw-bold">📊 Tu Progreso</h6>
+                            <div class="progress" style="height:1.2rem">
+                                <div id="courseProgress"
+                                    class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                    style="width:0%">0%</div>
+                            </div>
+                            <p class="mt-2 mb-0 small text-muted">Completa las secciones para avanzar</p>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="#mainContent" class="btn btn-outline-primary btn-sm">🏠 Inicio</a>
+                        <a href="pagination.html" class="btn btn-outline-success btn-sm">➡️ Siguiente: Pagination</a>
+                        <a href="#" class="btn btn-outline-info btn-sm" onclick="resetProgress(); return false;">🔄
+                            Reset Progreso</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="col-md-9 col-lg-10" id="mainContent">
+
+                <!-- SECCIÓN INTRODUCCIÓN -->
+                <section id="introduccion" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">📋 Introducción a los Spinners</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Los Spinners en Bootstrap 5 son indicadores visuales que muestran el estado de carga o procesamiento, mejorando la experiencia de usuario durante operaciones asíncronas.</p>
+
+                            <div class="alert alert-info">
+                                <strong>💡 ¿Qué son los Spinners?</strong><br>
+                                Los spinners son componentes animados que indican visualmente que una operación está en progreso. Proporcionan retroalimentación inmediata al usuario, reduciendo la ansiedad durante tiempos de espera y mejorando la percepción de rendimiento de la aplicación.
+                            </div>
+
+                            <h3 class="h5 mt-4">Casos de Uso Comunes</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🎯 Aplicaciones Prácticas</h5>
+                                            <ul class="small mb-0">
+                                                <li><strong>Carga de datos:</strong> Fetching de APIs, bases de datos</li>
+                                                <li><strong>Procesamiento:</strong> Subida de archivos, cálculos</li>
+                                                <li><strong>Autenticación:</strong> Login, verificación de credenciales</li>
+                                                <li><strong>Navegación:</strong> Transiciones entre páginas</li>
+                                                <li><strong>Formularios:</strong> Envío y validación de datos</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">🚀 Beneficios Clave</h5>
+                                            <ul class="small mb-0">
+                                                <li>Feedback visual inmediato</li>
+                                                <li>Reducción de la ansiedad del usuario</li>
+                                                <li>Indicación clara de actividad del sistema</li>
+                                                <li>Mejora de la percepción de velocidad</li>
+                                                <li>Experiencia de usuario profesional</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mini demostración introductoria -->
+                            <div class="mt-4 p-4 bg-light rounded border">
+                                <h6 class="mb-3">🎮 Vista Previa Rápida - Lo que Aprenderás</h6>
+                                <div class="row text-center">
+                                    <div class="col-md-3">
+                                        <div class="spinner-border text-primary mb-2"></div>
+                                        <small>Spinner Básico</small>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="spinner-grow text-success mb-2"></div>
+                                        <small>Spinner de Crecimiento</small>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button class="btn btn-primary" disabled>
+                                            <span class="spinner-border spinner-border-sm"></span>
+                                            Cargando...
+                                        </button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="spinner-border text-danger spinner-border-sm mb-2"></div>
+                                        <small>Spinner Pequeño</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN SPINNER BÁSICO -->
+                <section id="spinner-basico" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🌀 Spinner Básico</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea un spinner básico usando la clase <code>.spinner-border</code> para mostrar un indicador de carga giratorio.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📊 Dashboard Cargando Datos</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-body text-center">
+                                        <div class="spinner-border text-primary mb-3" style="width: 3rem; height: 3rem;"></div>
+                                        <h5 class="card-title">Cargando Dashboard</h5>
+                                        <p class="card-text">Estamos obteniendo los últimos datos de tus métricas...</p>
+                                        <small class="text-muted">Esto puede tomar unos segundos</small>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🔄 Procesamiento en Tiempo Real</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h6 class="mb-1">Procesando transacciones</h6>
+                                                <p class="mb-0 text-muted">Analizando 1,247 registros financieros</p>
+                                            </div>
+                                            <div class="spinner-border text-success"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Spinner Básico --&gt;
+&lt;div class="spinner-border"&gt;&lt;/div&gt;
+
+&lt;!-- Spinner con Tamaño Personalizado --&gt;
+&lt;div class="spinner-border text-primary" style="width: 3rem; height: 3rem;"&gt;&lt;/div&gt;
+
+&lt;!-- Spinner en Contexto de Carga --&gt;
+&lt;div class="card"&gt;
+  &lt;div class="card-body text-center"&gt;
+    &lt;div class="spinner-border text-primary mb-3"&gt;&lt;/div&gt;
+    &lt;h5 class="card-title"&gt;Cargando Dashboard&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Estamos obteniendo los últimos datos...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🔧 Elementos Clave</h6>
+                                            <ul class="small mb-0">
+                                                <li><code>.spinner-border</code> - Clase base para spinners giratorios</li>
+                                                <li>Animación CSS incorporada</li>
+                                                <li>Tamaño responsive por defecto</li>
+                                                <li>Centrado automático con flexbox</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎯 Buenas Prácticas</h6>
+                                            <ul class="small mb-0">
+                                                <li>Usa spinners para operaciones que tomen más de 0.5 segundos</li>
+                                                <li>Proporciona texto descriptivo junto al spinner</li>
+                                                <li>Considera el contexto visual de tu aplicación</li>
+                                                <li>Usa tamaños apropiados para el espacio disponible</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN SPINNERS DE COLORES -->
+                <section id="spinner-colores" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning text-dark">
+                            <h2 class="h3 mb-0">🎨 Spinners de Colores</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Utiliza las clases de utilidad de texto de Bootstrap para aplicar diferentes colores a tus spinners y comunicar distintos estados o significados.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">🎯 Sistema de Estados por Color</h6>
+                                
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <div class="spinner-border text-primary mb-3"></div>
+                                                <h6>Carga Normal</h6>
+                                                <small class="text-muted">Operaciones estándar del sistema</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <div class="spinner-border text-success mb-3"></div>
+                                                <h6>Proceso Exitoso</h6>
+                                                <small class="text-muted">Operaciones que finalizarán correctamente</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <div class="spinner-border text-warning mb-3"></div>
+                                                <h6>Advertencia</h6>
+                                                <small class="text-muted">Procesos que requieren atención</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🌈 Paleta Completa de Colores</h6>
+                                <div class="row text-center">
+                                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                                        <div class="spinner-border text-muted"></div>
+                                        <small class="d-block mt-1">Muted</small>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                                        <div class="spinner-border text-primary"></div>
+                                        <small class="d-block mt-1">Primary</small>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                                        <div class="spinner-border text-success"></div>
+                                        <small class="d-block mt-1">Success</small>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                                        <div class="spinner-border text-info"></div>
+                                        <small class="d-block mt-1">Info</small>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                                        <div class="spinner-border text-warning"></div>
+                                        <small class="d-block mt-1">Warning</small>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                                        <div class="spinner-border text-danger"></div>
+                                        <small class="d-block mt-1">Danger</small>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                                        <div class="spinner-border text-secondary"></div>
+                                        <small class="d-block mt-1">Secondary</small>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                                        <div class="spinner-border text-dark"></div>
+                                        <small class="d-block mt-1">Dark</small>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-2 mb-3">
+                                        <div class="spinner-border text-light bg-dark rounded"></div>
+                                        <small class="d-block mt-1">Light</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Spinners de Diferentes Colores --&gt;
+&lt;div class="spinner-border text-muted"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-primary"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-success"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-info"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-warning"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-danger"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-secondary"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-dark"&gt;&lt;/div&gt;
+&lt;div class="spinner-border text-light"&gt;&lt;/div&gt;
+
+&lt;!-- Spinner con Contexto Semántico --&gt;
+&lt;div class="card text-center"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;div class="spinner-border text-success mb-3"&gt;&lt;/div&gt;
+    &lt;h6&gt;Proceso Exitoso&lt;/h6&gt;
+    &lt;small class="text-muted"&gt;Operaciones que finalizarán correctamente&lt;/small&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Psicología del Color en Spinners:</strong> Los colores transmiten significados específicos a los usuarios. Usa <code>text-primary</code> para cargas normales, <code>text-success</code> para procesos que terminarán exitosamente, y <code>text-warning</code> para operaciones que requieren atención especial. Esta codificación por color ayuda a los usuarios a anticipar el resultado del proceso.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN SPINNERS DE CRECIMIENTO -->
+                <section id="spinner-growing" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-info text-white">
+                            <h2 class="h3 mb-0">🌱 Spinners de Crecimiento</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Usa la clase <code>.spinner-grow</code> para crear spinners con efecto de pulso o crecimiento, ideal para interfaces modernas y atractivas.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📱 Interfaz Moderna con Spinners de Crecimiento</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-body text-center">
+                                        <div class="spinner-grow text-primary mb-3" style="width: 3rem; height: 3rem;"></div>
+                                        <h5 class="card-title">Preparando tu Experiencia</h5>
+                                        <p class="card-text">Estamos personalizando la interfaz según tus preferencias...</p>
+                                        <div class="mt-3">
+                                            <div class="spinner-grow text-success me-2"></div>
+                                            <div class="spinner-grow text-info me-2"></div>
+                                            <div class="spinner-grow text-warning"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🎨 Diferentes Estados con Spinners de Crecimiento</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="spinner-grow text-success me-3"></div>
+                                                    <div>
+                                                        <h6 class="mb-1">Sincronizando Datos</h6>
+                                                        <p class="mb-0 text-muted">Actualizando información en la nube</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="spinner-grow text-warning me-3"></div>
+                                                    <div>
+                                                        <h6 class="mb-1">Procesando Pago</h6>
+                                                        <p class="mb-0 text-muted">Verificando información de tarjeta</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Spinner de Crecimiento Básico --&gt;
+&lt;div class="spinner-grow"&gt;&lt;/div&gt;
+
+&lt;!-- Spinner de Crecimiento con Color --&gt;
+&lt;div class="spinner-grow text-primary"&gt;&lt;/div&gt;
+
+&lt;!-- Múltiples Spinners de Crecimiento --&gt;
+&lt;div class="spinner-grow text-success"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow text-info"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow text-warning"&gt;&lt;/div&gt;
+
+&lt;!-- Spinner de Crecimiento en Contexto --&gt;
+&lt;div class="card"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;div class="d-flex align-items-center"&gt;
+      &lt;div class="spinner-grow text-success me-3"&gt;&lt;/div&gt;
+      &lt;div&gt;
+        &lt;h6 class="mb-1"&gt;Sincronizando Datos&lt;/h6&gt;
+        &lt;p class="mb-0 text-muted"&gt;Actualizando información en la nube&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h6>🎯 Casos de Uso Ideales</h6>
+                                    <ul class="small">
+                                        <li><strong>Interfaces modernas:</strong> Apps con diseño contemporáneo</li>
+                                        <li><strong>Procesos creativos:</strong> Edición, diseño, renderizado</li>
+                                        <li><strong>Experiencias inmersivas:</strong> Realidad aumentada/virtual</li>
+                                        <li><strong>Branding distintivo:</strong> Cuando quieres destacar visualmente</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>🔧 Consideraciones de Diseño</h6>
+                                    <ul class="small">
+                                        <li>Efecto más suave y menos intrusivo</li>
+                                        <li>Ideal para tiempos de carga más largos</li>
+                                        <li>Combina bien con fondos oscuros</li>
+                                        <li>Excelente para estados de "preparación"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN TAMAÑOS DE SPINNERS -->
+                <section id="spinner-tamanos" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-purple text-white">
+                            <h2 class="h3 mb-0">📏 Tamaños de Spinners</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Personaliza el tamaño de tus spinners usando las clases de tamaño o estilos CSS personalizados para adaptarlos perfectamente a cualquier contexto.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📐 Sistema de Tamaños para Diferentes Contextos</h6>
+                                
+                                <div class="row mb-4 text-center">
+                                    <div class="col-md-3">
+                                        <div class="spinner-border spinner-border-sm text-primary mb-2"></div>
+                                        <small>Extra Pequeño<br>8x8px</small>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="spinner-border text-primary mb-2" style="width: 1.5rem; height: 1.5rem;"></div>
+                                        <small>Pequeño<br>24x24px</small>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="spinner-border text-primary mb-2"></div>
+                                        <small>Mediano<br>36x36px</small>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="spinner-border text-primary mb-2" style="width: 4rem; height: 4rem;"></div>
+                                        <small>Grande<br>64x64px</small>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🎯 Aplicación de Tamaños en Contexto</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <h6 class="mb-1">Actualizando lista...</h6>
+                                                        <small class="text-muted">Cargando 15 nuevos elementos</small>
+                                                    </div>
+                                                    <div class="spinner-border spinner-border-sm text-secondary"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <div class="spinner-border text-primary mb-3" style="width: 3rem; height: 3rem;"></div>
+                                                <h6>Procesando Solicitud</h6>
+                                                <small class="text-muted">Esto puede tomar unos momentos</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mt-4 mb-3">🌱 Tamaños para Spinners de Crecimiento</h6>
+                                <div class="row text-center">
+                                    <div class="col-md-3">
+                                        <div class="spinner-grow spinner-grow-sm text-success mb-2"></div>
+                                        <small>Extra Pequeño</small>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="spinner-grow text-success mb-2" style="width: 1.5rem; height: 1.5rem;"></div>
+                                        <small>Pequeño</small>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="spinner-grow text-success mb-2"></div>
+                                        <small>Mediano</small>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="spinner-grow text-success mb-2" style="width: 4rem; height: 4rem;"></div>
+                                        <small>Grande</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Spinners con Diferentes Tamaños --&gt;
+&lt;!-- Tamaño Extra Pequeño --&gt;
+&lt;div class="spinner-border spinner-border-sm"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow spinner-grow-sm"&gt;&lt;/div&gt;
+
+&lt;!-- Tamaño Personalizado con CSS --&gt;
+&lt;div class="spinner-border" style="width: 1.5rem; height: 1.5rem;"&gt;&lt;/div&gt;
+&lt;div class="spinner-grow" style="width: 3rem; height: 3rem;"&gt;&lt;/div&gt;
+
+&lt;!-- Spinner Pequeño en Contexto --&gt;
+&lt;div class="d-flex justify-content-between align-items-center"&gt;
+  &lt;div&gt;
+    &lt;h6 class="mb-1"&gt;Actualizando lista...&lt;/h6&gt;
+    &lt;small class="text-muted"&gt;Cargando 15 nuevos elementos&lt;/small&gt;
+  &lt;/div&gt;
+  &lt;div class="spinner-border spinner-border-sm text-secondary"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-warning">
+                                <strong>⚠️ Psicología de los Tamaños en UX:</strong> Los tamaños de spinners comunican diferentes niveles de importancia y duración. Los spinners pequeños indican procesos rápidos o de fondo, mientras que los spinners grandes sugieren procesos importantes o de mayor duración. Usa esta escala visual para establecer expectativas realistas en tus usuarios.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN SPINNERS EN BOTONES -->
+                <section id="spinner-botones" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger text-white">
+                            <h2 class="h3 mb-0">🔄 Spinners en Botones</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Incorpora spinners dentro de botones para indicar estados de carga durante acciones del usuario, mejorando la retroalimentación visual.</p>
+
+                            <h3 class="h5">Ejemplo en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light">
+                                <h6 class="mb-3">📝 Sistema de Formularios con Estados de Carga</h6>
+                                
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Envío de Formulario</h6>
+                                        <div class="mb-3">
+                                            <label class="form-label">Nombre completo</label>
+                                            <input type="text" class="form-control" value="Ana García López" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Correo electrónico</label>
+                                            <input type="email" class="form-control" value="ana.garcia@email.com" readonly>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-primary" disabled>
+                                                <span class="spinner-border spinner-border-sm me-2"></span>
+                                                Procesando envío...
+                                            </button>
+                                            <button class="btn btn-outline-secondary" disabled>Cancelar</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">🎯 Diferentes Configuraciones de Botones</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" disabled>
+                                                <span class="spinner-border spinner-border-sm me-2"></span>
+                                                Cargando...
+                                            </button>
+                                            <button class="btn btn-success" disabled>
+                                                <span class="spinner-grow spinner-grow-sm me-2"></span>
+                                                Procesando...
+                                            </button>
+                                            <button class="btn btn-warning" disabled>
+                                                <span class="spinner-border spinner-border-sm me-2"></span>
+                                                Verificando...
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-outline-primary" disabled>
+                                                <span class="spinner-border spinner-border-sm me-2"></span>
+                                                Solo spinner
+                                            </button>
+                                            <button class="btn btn-outline-success" disabled>
+                                                <span class="spinner-grow spinner-grow-sm me-2"></span>
+                                                Crecimiento
+                                            </button>
+                                            <button class="btn btn-outline-danger" disabled>
+                                                <span class="spinner-border spinner-border-sm me-2"></span>
+                                                Con texto
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="mt-4 mb-3">🚀 Sistema de Acciones con Feedback</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Panel de Acciones Rápidas</h6>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <button class="btn btn-primary w-100 mb-2" disabled>
+                                                    <span class="spinner-border spinner-border-sm me-2"></span>
+                                                    Exportar
+                                                </button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button class="btn btn-success w-100 mb-2" disabled>
+                                                    <span class="spinner-grow spinner-grow-sm me-2"></span>
+                                                    Guardar
+                                                </button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button class="btn btn-info w-100 mb-2" disabled>
+                                                    <span class="spinner-border spinner-border-sm me-2"></span>
+                                                    Sincronizar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Spinner en Botón Básico --&gt;
+&lt;button class="btn btn-primary" disabled&gt;
+  &lt;span class="spinner-border spinner-border-sm"&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Spinner en Botón con Texto --&gt;
+&lt;button class="btn btn-primary" disabled&gt;
+  &lt;span class="spinner-border spinner-border-sm me-2"&gt;&lt;/span&gt;
+  Cargando...
+&lt;/button&gt;
+
+&lt;!-- Spinner de Crecimiento en Botón --&gt;
+&lt;button class="btn btn-success" disabled&gt;
+  &lt;span class="spinner-grow spinner-grow-sm me-2"&gt;&lt;/span&gt;
+  Procesando...
+&lt;/button&gt;
+
+&lt;!-- Múltiples Botones con Spinners --&gt;
+&lt;button class="btn btn-primary" disabled&gt;
+  &lt;span class="spinner-border spinner-border-sm me-2"&gt;&lt;/span&gt;
+  Exportar
+&lt;/button&gt;
+&lt;button class="btn btn-success" disabled&gt;
+  &lt;span class="spinner-grow spinner-grow-sm me-2"&gt;&lt;/span&gt;
+  Guardar
+&lt;/button&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 UX de Botones con Estados de Carga:</strong> Cuando uses spinners en botones, asegúrate de deshabilitar el botón (<code>disabled</code>) para prevenir múltiples clics. Proporciona texto descriptivo que indique claramente qué acción se está procesando. Esta práctica mejora la experiencia del usuario al eliminar la incertidumbre sobre el estado del sistema.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LABORATORIO DE SPINNERS -->
+                <section id="laboratorio-spinners" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-dark text-white">
+                            <h2 class="h3 mb-0">🔬 Laboratorio de Spinners - Personalización Avanzada</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Experimenta con spinners personalizados en tiempo real. Modifica todos los parámetros y crea el spinner perfecto para tu aplicación.</p>
+
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="mb-3">⚙️ Configuración del Spinner</h6>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Tipo de Spinner</label>
+                                            <select class="form-select" id="spinnerType">
+                                                <option value="border" selected>Spinner Border (Giratorio)</option>
+                                                <option value="grow">Spinner Grow (Crecimiento)</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Color:</label>
+                                            <select class="form-select" id="spinnerColor">
+                                                <option value="text-primary" selected>Primary (Azul)</option>
+                                                <option value="text-success">Success (Verde)</option>
+                                                <option value="text-warning">Warning (Amarillo)</option>
+                                                <option value="text-danger">Danger (Rojo)</option>
+                                                <option value="text-info">Info (Turquesa)</option>
+                                                <option value="text-dark">Dark (Oscuro)</option>
+                                                <option value="text-muted">Muted (Gris)</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Tamaño: <span id="sizeValue">Mediano</span></label>
+                                            <input type="range" class="form-range" id="sizeRange" min="1" max="5" value="3">
+                                            <div class="form-text">
+                                                <small>1: Extra Pequeño • 2: Pequeño • 3: Mediano • 4: Grande • 5: Extra Grande</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label class="form-label">Velocidad: <span id="speedValue">Normal</span></label>
+                                            <input type="range" class="form-range" id="speedRange" min="1" max="5" value="3">
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="addTextCheck">
+                                                <label class="form-check-label" for="addTextCheck">
+                                                    Añadir texto descriptivo
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="centerCheck" checked>
+                                                <label class="form-check-label" for="centerCheck">
+                                                    Centrar horizontalmente
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="btn btn-primary" onclick="resetSpinnerLab()">🔄 Reiniciar Laboratorio</button>
+                                        <button class="btn btn-success" onclick="copySpinnerCode()">📋 Copiar Código</button>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h6 class="mb-3">👁️ Vista Previa en Tiempo Real</h6>
+                                        
+                                        <div class="card">
+                                            <div class="card-body text-center" id="spinnerPreviewContainer">
+                                                <div id="spinnerPreview" class="spinner-border text-primary"></div>
+                                                <div id="spinnerText" class="mt-2">
+                                                    <h6 id="spinnerTitle" class="mb-1">Cargando contenido</h6>
+                                                    <small id="spinnerDescription" class="text-muted">Por favor espera mientras procesamos tu solicitud</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <h6>📋 Código Generado:</h6>
+                                            <pre class="bg-dark text-light p-3 rounded small" id="generatedSpinnerCode"></pre>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <h6>💡 Explicación:</h6>
+                                            <p class="small text-muted" id="spinnerExplanation">
+                                                Este spinner border de tamaño mediano con color primary es ideal para la mayoría de situaciones de carga. Su velocidad normal es apropiada para procesos que toman 2-5 segundos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">🎯 Casos de Uso con la Configuración Actual</h3>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">📱</div>
+                                            <h6>Interfaz Móvil</h6>
+                                            <p class="small">Perfecto para apps móviles donde el espacio es limitado</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">💻</div>
+                                            <h6>Dashboard Web</h6>
+                                            <p class="small">Ideal para aplicaciones web empresariales y dashboards</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🎮</div>
+                                            <h6>App Interactiva</h6>
+                                            <p class="small">Excelente para aplicaciones que requieren feedback inmediato</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN SPINNERS AVANZADOS -->
+                <section id="spinner-avanzados" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">🚀 Spinners Avanzados</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Explora técnicas avanzadas y patrones creativos con spinners para crear experiencias de usuario excepcionales.</p>
+
+                            <h3 class="h5">🛠️ Técnicas Avanzadas en Contexto Real</h3>
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <!-- Spinners con Gradientes -->
+                                <h6 class="mb-3">🌈 Spinners con Gradientes Personalizados</h6>
+                                <div class="row mb-4">
+                                    <div class="col-md-4 text-center">
+                                        <div class="spinner-border text-primary mb-2 custom-spinner-gradient-1"></div>
+                                        <small>Gradiente Arcoíris</small>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="spinner-grow text-success mb-2 custom-spinner-gradient-2"></div>
+                                        <small>Gradiente Sunset</small>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="spinner-border text-info mb-2 custom-spinner-gradient-3"></div>
+                                        <small>Gradiente Ocean</small>
+                                    </div>
+                                </div>
+
+                                <!-- Spinners Múltiples Coordinados -->
+                                <h6 class="mb-3">🎵 Spinners Múltiples con Patrones</h6>
+                                <div class="card mb-4">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title">Procesamiento Multi-etapa</h6>
+                                        <div class="d-flex justify-content-center mb-3">
+                                            <div class="spinner-border text-primary me-3 stage-active"></div>
+                                            <div class="spinner-border text-secondary me-3"></div>
+                                            <div class="spinner-border text-secondary me-3"></div>
+                                            <div class="spinner-border text-secondary"></div>
+                                        </div>
+                                        <p class="mb-0 text-muted">Etapa 1 de 4: Validando datos de entrada</p>
+                                    </div>
+                                </div>
+
+                                <!-- Spinners con Efectos de Texto -->
+                                <h6 class="mb-3">✨ Spinners con Efectos de Texto Animado</h6>
+                                <div class="card mb-4">
+                                    <div class="card-body text-center">
+                                        <div class="spinner-border text-primary mb-3"></div>
+                                        <h6 class="mb-1">
+                                            <span class="typing-animation">Analizando datos de usuario</span>
+                                            <span class="typing-dots">...</span>
+                                        </h6>
+                                        <small class="text-muted">Este proceso puede tomar varios segundos</small>
+                                    </div>
+                                </div>
+
+                                <!-- Spinners con Overlay -->
+                                <h6 class="mb-3">🛡️ Spinners con Overlay de Carga</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="position-relative">
+                                            <div class="loading-overlay">
+                                                <div class="spinner-border text-primary overlay-spinner"></div>
+                                                <p class="mt-2">Cargando contenido seguro...</p>
+                                            </div>
+                                            <h6 class="card-title">Contenido Protegido</h6>
+                                            <p class="card-text">Este contenido requiere verificación de seguridad antes de mostrarse.</p>
+                                            <div class="bg-light p-3 rounded">
+                                                <small class="text-muted">Contenido seguro que se cargará aquí...</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">Código</h3>
+                            <pre class="code-block"><code>&lt;!-- Spinners con Gradientes Personalizados --&gt;
+&lt;style&gt;
+.custom-spinner-gradient-1 {
+  background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+&lt;/style&gt;
+&lt;div class="spinner-border text-primary custom-spinner-gradient-1"&gt;&lt;/div&gt;
+
+&lt;!-- Spinners Múltiples Coordinados --&gt;
+&lt;div class="d-flex justify-content-center"&gt;
+  &lt;div class="spinner-border text-primary me-3 stage-active"&gt;&lt;/div&gt;
+  &lt;div class="spinner-border text-secondary me-3"&gt;&lt;/div&gt;
+  &lt;div class="spinner-border text-secondary"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Spinners con Overlay --&gt;
+&lt;style&gt;
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+&lt;/style&gt;
+&lt;div class="position-relative"&gt;
+  &lt;div class="loading-overlay"&gt;
+    &lt;div class="spinner-border text-primary"&gt;&lt;/div&gt;
+    &lt;p class="mt-2"&gt;Cargando contenido seguro...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;!-- Tu contenido aquí --&gt;
+&lt;/div&gt;</code></pre>
+
+                            <div class="alert alert-info">
+                                <strong>💡 Creatividad con Spinners Avanzados:</strong> Los spinners no tienen que ser aburridos. Experimenta con gradientes, múltiples spinners coordinados, y efectos de texto para crear experiencias de carga memorables. Estos patrones avanzados pueden transformar un simple indicador de carga en una característica distintiva de tu marca.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EJEMPLO AVANZADO -->
+                <section id="ejemplo-avanzado" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h3 mb-0">💼 Ejemplo Avanzado: Dashboard de Analítica con Spinners Inteligentes</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Crea un dashboard empresarial completo que utilice spinners de manera inteligente para mostrar estados de carga, procesamiento y actualización en tiempo real.</p>
+
+                            <h3 class="h5">🛠️ Dashboard de Analítica "DataVision Pro"</h3>
+                            <div class="border p-4 mb-4 bg-light rounded">
+                                <!-- Header del Dashboard -->
+                                <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-white rounded shadow-sm">
+                                    <div>
+                                        <h5 class="mb-0 text-dark">📊 Dashboard - DataVision Pro</h5>
+                                        <p class="mb-0 text-muted">Analítica en tiempo real con indicadores visuales</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-success me-2">En Vivo</span>
+                                        <div class="spinner-grow spinner-grow-sm text-success"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Sistema de Carga de Métricas -->
+                                <div class="row mb-4">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <div class="spinner-border text-primary mb-2"></div>
+                                                <h6 class="card-title">Usuarios Activos</h6>
+                                                <div class="placeholder-wave">
+                                                    <span class="placeholder col-8"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <div class="spinner-grow text-success mb-2"></div>
+                                                <h6 class="card-title">Tasa de Conversión</h6>
+                                                <div class="placeholder-wave">
+                                                    <span class="placeholder col-6"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <div class="spinner-border text-warning mb-2"></div>
+                                                <h6 class="card-title">Ingresos</h6>
+                                                <div class="placeholder-wave">
+                                                    <span class="placeholder col-7"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <div class="spinner-grow text-info mb-2"></div>
+                                                <h6 class="card-title">Sesiones</h6>
+                                                <div class="placeholder-wave">
+                                                    <span class="placeholder col-5"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Gráfico con Estado de Carga -->
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">📈 Rendimiento por Canal</h6>
+                                        <button class="btn btn-sm btn-outline-primary" disabled>
+                                            <span class="spinner-border spinner-border-sm me-2"></span>
+                                            Actualizando...
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-center py-5">
+                                            <div class="spinner-border text-primary mb-3" style="width: 3rem; height: 3rem;"></div>
+                                            <h5>Generando Visualización</h5>
+                                            <p class="text-muted">Procesando 15,428 puntos de datos...</p>
+                                            <div class="progress mt-3">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 65%">65%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tabla con Spinners de Fila -->
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">📋 Fuentes de Tráfico en Tiempo Real</h6>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Fuente</th>
+                                                        <th>Visitas</th>
+                                                        <th>Conversiones</th>
+                                                        <th>Tasa</th>
+                                                        <th>Estado</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Google Organic</td>
+                                                        <td>1,247</td>
+                                                        <td>89</td>
+                                                        <td>7.1%</td>
+                                                        <td><span class="badge bg-success">Activo</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Facebook Ads</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-2">892</span>
+                                                                <div class="spinner-border spinner-border-sm text-warning"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>67</td>
+                                                        <td>7.5%</td>
+                                                        <td><span class="badge bg-warning">Actualizando</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Email Marketing</td>
+                                                        <td>543</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="me-2">42</span>
+                                                                <div class="spinner-grow spinner-grow-sm text-info"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>7.7%</td>
+                                                        <td><span class="badge bg-info">Procesando</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Instagram</td>
+                                                        <td>328</td>
+                                                        <td>19</td>
+                                                        <td>5.8%</td>
+                                                        <td><span class="badge bg-success">Activo</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h5">💡 Lo que Aprendemos de Este Ejemplo</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>🎨 Patrones de Spinners Inteligentes</h6>
+                                            <ul class="small mb-0">
+                                                <li><strong>Spinners contextuales:</strong> Diferentes tipos para diferentes datos</li>
+                                                <li><strong>Estados granulares:</strong> Spinners por fila/columna específica</li>
+                                                <li><strong>Combinación con placeholders:</strong> Mejor experiencia durante carga</li>
+                                                <li><strong>Jerarquía visual:</strong> Tamaños apropiados para importancia</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>⚡ Técnicas Avanzadas Implementadas</h6>
+                                            <ul class="small mb-0">
+                                                <li><strong>Spinners en tablas:</strong> Indicación precisa de carga</li>
+                                                <li><strong>Combinación con badges:</strong> Estados semánticos claros</li>
+                                                <li><strong>Sincronización visual:</strong> Spinners + progress bars</li>
+                                                <li><strong>Feedback en tiempo real:</strong> Indicadores de actividad continua</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN MEJORES PRÁCTICAS -->
+                <section id="mejores-practicas" class="mb-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white">
+                            <h2 class="h3 mb-0">💡 Mejores Prácticas y Consejos Avanzados</h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Optimiza el uso de spinners para crear experiencias de usuario excepcionales que sean tanto funcionales como visualmente atractivas.</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">🎯 UX/UI</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>Tiempos apropiados:</strong> Usa spinners para operaciones >0.5s</li>
+                                                <li><strong>Texto descriptivo:</strong> Explica qué se está cargando</li>
+                                                <li><strong>Consistencia visual:</strong> Mantén patrones en toda la app</li>
+                                                <li><strong>Jerarquía clara:</strong> Usa tamaños que comuniquen importancia</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light">
+                                            <h6 class="mb-0">♿ Accesibilidad</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="small">
+                                                <li><strong>ARIA labels:</strong> Describe el propósito del spinner</li>
+                                                <li><strong>Contraste adecuado:</strong> Visible en todos los fondos</li>
+                                                <li><strong>Alternativas textuales:</strong> Para screen readers</li>
+                                                <li><strong>Estados claros:</strong> Indica cuando comienza y termina</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="h5 mt-4">🚀 Patrones Avanzados</h4>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">📱</div>
+                                            <h6>Spinners Adaptativos</h6>
+                                            <p class="small">Que se ajustan automáticamente al contexto y dispositivo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🎮</div>
+                                            <h6>Spinners Inteligentes</h6>
+                                            <p class="small">Con comportamiento dinámico según el tipo de operación</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <div class="fs-2">🔧</div>
+                                            <h6>Spinners de Marca</h6>
+                                            <p class="small">Personalizados para reflejar la identidad de tu producto</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4">
+                                <strong>💡 Conclusión Final:</strong> Los spinners son mucho más que simples indicadores de carga. Cuando se implementan correctamente, se convierten en herramientas poderosas para comunicar el estado del sistema, establecer expectativas realistas y crear experiencias de usuario fluidas y profesionales. Domina estos patrones para transformar momentos de espera en experiencias positivas.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="site-footer mt-5 py-5">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-4">
+                                <h5>Bootstrap 5 Tutorial</h5>
+                                <p class="small mb-2">Tutorial interactivo y open-source. Aprende con ejemplos, ejercicios y despliega en GitHub Pages.</p>
+                                <p class="small mb-0">© 2025 Sebastián — Hecho para la comunidad.</p>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Guía rápida</h6>
+                                <ul class="list-unstyled small">
+                                    <li><a href="../index.html#grid">Grid System</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a href="../forms.html">Forms</a></li>
+                                    <li><a href="../github-tutorial.html">Subir a GitHub</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-lg-3">
+                                <h6>Comunidad</h6>
+                                <div class="d-flex gap-2">
+                                    <!-- Redes sociales -->
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://twitter.com/tu_usuario" target="_blank" rel="noopener"
+                                        aria-label="Twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                    <a class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+                                        href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noopener"
+                                        aria-label="GitHub">
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <h6>Newsletter</h6>
+                                <form id="footerSubscribe" class="d-flex flex-column">
+                                    <input type="email" class="form-control form-control-sm mb-2"
+                                        placeholder="tu@email.com">
+                                    <button class="btn btn-sm btn-primary">Suscribirme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <div class="list-group" id="searchResultsList"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Live preview modal para cualquier seccion.html -->
+    <div class="modal fade" id="livePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Vista Previa - Spinners</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe id="livePreviewIframe" style="width:100%;height:70vh;border:0;"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-outline-secondary" id="openInNew">Abrir en nueva pestaña</button>
+                    <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante para TOC móvil -->
+    <button class="mobile-toc-toggle d-md-none" id="mobileTocToggle" aria-label="Abrir índice de contenido">
+        <span class="toc-icon">📚</span>
+        <span class="toc-text">Índice</span>
+    </button>
+
+    <!-- Overlay para móvil -->
+    <div class="mobile-sidebar-overlay d-md-none" id="mobileSidebarOverlay"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../bootstrap-5.3.8-dist/js1/bootstrap.bundle.min.js"></script>
+    <script src="../JS/buscar.js"></script>
+    <script src="../JS/main.js"></script>
+
+    <script>
+        // ===== TOC MÓVIL MEJORADO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileTocToggle = document.getElementById('mobileTocToggle');
+            const mobileSidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobileSidebarOverlay');
+
+            if (mobileTocToggle && mobileSidebar && mobileOverlay) {
+                function toggleMobileTOC() {
+                    const isOpening = !mobileSidebar.classList.contains('mobile-open');
+
+                    if (isOpening) {
+                        mobileSidebar.classList.add('mobile-open');
+                        mobileOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                }
+
+                mobileTocToggle.addEventListener('click', toggleMobileTOC);
+                mobileOverlay.addEventListener('click', toggleMobileTOC);
+
+                const tocLinks = mobileSidebar.querySelectorAll('a');
+                tocLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        if (window.innerWidth < 768) {
+                            toggleMobileTOC();
+                        }
+                    });
+                });
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 768) {
+                        mobileSidebar.classList.remove('mobile-open');
+                        mobileOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileSidebar.classList.contains('mobile-open')) {
+                        toggleMobileTOC();
+                    }
+                });
+            }
+        });
+
+        // Función global para reset del progreso
+        function resetProgress() {
+            localStorage.setItem('tutorialProgress', '{}');
+            const progressBar = document.getElementById('courseProgress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+            }
+            alert('Progreso reiniciado correctamente ✅');
+        }
+
+        // ===== LABORATORIO DE SPINNERS INTERACTIVO =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos del laboratorio
+            const spinnerType = document.getElementById('spinnerType');
+            const spinnerColor = document.getElementById('spinnerColor');
+            const sizeRange = document.getElementById('sizeRange');
+            const speedRange = document.getElementById('speedRange');
+            const addTextCheck = document.getElementById('addTextCheck');
+            const centerCheck = document.getElementById('centerCheck');
+            const spinnerPreview = document.getElementById('spinnerPreview');
+            const spinnerPreviewContainer = document.getElementById('spinnerPreviewContainer');
+            const spinnerText = document.getElementById('spinnerText');
+            const sizeValue = document.getElementById('sizeValue');
+            const speedValue = document.getElementById('speedValue');
+            const generatedSpinnerCode = document.getElementById('generatedSpinnerCode');
+            const spinnerExplanation = document.getElementById('spinnerExplanation');
+
+            // Tamaños predefinidos
+            const sizes = {
+                1: { class: 'spinner-border-sm', value: 'Extra Pequeño', size: '0.5rem' },
+                2: { class: '', value: 'Pequeño', size: '1.5rem' },
+                3: { class: '', value: 'Mediano', size: '2rem' },
+                4: { class: '', value: 'Grande', size: '3rem' },
+                5: { class: '', value: 'Extra Grande', size: '4rem' }
+            };
+
+            // Velocidades predefinidas
+            const speeds = {
+                1: { value: 'Muy Lenta', speed: '3s' },
+                2: { value: 'Lenta', speed: '2s' },
+                3: { value: 'Normal', speed: '0.75s' },
+                4: { value: 'Rápida', speed: '0.5s' },
+                5: { value: 'Muy Rápida', speed: '0.25s' }
+            };
+
+            // Actualizar la vista previa
+            function updateSpinnerPreview() {
+                const type = spinnerType.value;
+                const color = spinnerColor.value;
+                const size = parseInt(sizeRange.value);
+                const speed = parseInt(speedRange.value);
+                const showText = addTextCheck.checked;
+                const center = centerCheck.checked;
+
+                // Actualizar valores mostrados
+                sizeValue.textContent = sizes[size].value;
+                speedValue.textContent = speeds[speed].value;
+
+                // Determinar clase base según tipo
+                const baseClass = type === 'border' ? 'spinner-border' : 'spinner-grow';
+                
+                // Limpiar clases existentes
+                spinnerPreview.className = baseClass;
+                
+                // Aplicar nuevas clases
+                spinnerPreview.classList.add(color);
+                if (sizes[size].class) {
+                    spinnerPreview.classList.add(sizes[size].class);
+                }
+
+                // Aplicar tamaño personalizado si es necesario
+                if (size >= 3) {
+                    spinnerPreview.style.width = sizes[size].size;
+                    spinnerPreview.style.height = sizes[size].size;
+                } else {
+                    spinnerPreview.style.width = '';
+                    spinnerPreview.style.height = '';
+                }
+
+                // Aplicar velocidad personalizada
+                spinnerPreview.style.animationDuration = speeds[speed].speed;
+
+                // Aplicar centrado
+                if (center) {
+                    spinnerPreviewContainer.classList.add('text-center');
+                } else {
+                    spinnerPreviewContainer.classList.remove('text-center');
+                }
+
+                // Mostrar/ocultar texto
+                if (showText) {
+                    spinnerText.style.display = 'block';
+                } else {
+                    spinnerText.style.display = 'none';
+                }
+
+                // Generar código
+                generateSpinnerCode(type, color, size, speed, showText, center);
+                
+                // Actualizar explicación
+                updateSpinnerExplanation(type, color, size, speed, showText, center);
+            }
+
+            // Generar código HTML
+            function generateSpinnerCode(type, color, size, speed, showText, center) {
+                const baseClass = type === 'border' ? 'spinner-border' : 'spinner-grow';
+                let code = '';
+                
+                if (center) {
+                    code += '&lt;div class="text-center"&gt;\n';
+                }
+                
+                code += '&lt;div class="' + baseClass + ' ' + color + '"';
+                
+                // Añadir clases de tamaño
+                if (sizes[size].class) {
+                    code += ' ' + sizes[size].class;
+                }
+                
+                // Añadir estilos personalizados
+                let styles = '';
+                if (size >= 3) {
+                    styles += 'width: ' + sizes[size].size + '; height: ' + sizes[size].size + ';';
+                }
+                if (speed !== 3) {
+                    styles += 'animation-duration: ' + speeds[speed].speed + ';';
+                }
+                
+                if (styles) {
+                    code += ' style="' + styles + '"';
+                }
+                
+                code += '&gt;&lt;/div&gt;\n';
+                
+                // Añadir texto si está activado
+                if (showText) {
+                    code += '&lt;div class="mt-2"&gt;\n';
+                    code += '  &lt;h6 class="mb-1"&gt;Cargando contenido&lt;/h6&gt;\n';
+                    code += '  &lt;small class="text-muted"&gt;Por favor espera mientras procesamos tu solicitud&lt;/small&gt;\n';
+                    code += '&lt;/div&gt;\n';
+                }
+                
+                if (center) {
+                    code += '&lt;/div&gt;';
+                }
+                
+                generatedSpinnerCode.textContent = code;
+            }
+
+            // Actualizar texto explicativo
+            function updateSpinnerExplanation(type, color, size, speed, showText, center) {
+                let explanation = 'Este spinner ';
+                
+                // Tipo
+                if (type === 'border') {
+                    explanation += 'giratorio ';
+                } else {
+                    explanation += 'de crecimiento ';
+                }
+                
+                // Color
+                const colorName = spinnerColor.options[spinnerColor.selectedIndex].text;
+                explanation += 'con color ' + colorName.toLowerCase() + ' ';
+                
+                // Tamaño
+                explanation += 'y tamaño ' + sizes[size].value.toLowerCase() + ' ';
+                
+                // Velocidad
+                explanation += 'a velocidad ' + speeds[speed].value.toLowerCase() + ' ';
+                
+                // Contexto
+                explanation += 'es ideal para ';
+                
+                if (size <= 2) {
+                    explanation += 'interfaces compactas o procesos rápidos';
+                } else if (size <= 4) {
+                    explanation += 'la mayoría de situaciones de carga estándar';
+                } else {
+                    explanation += 'momentos de carga importantes o pantallas completas';
+                }
+                
+                if (showText) {
+                    explanation += '. El texto descriptivo ayuda a los usuarios a entender el contexto de la carga';
+                }
+                
+                spinnerExplanation.textContent = explanation + '.';
+            }
+
+            // Reiniciar laboratorio
+            window.resetSpinnerLab = function() {
+                spinnerType.value = 'border';
+                spinnerColor.value = 'text-primary';
+                sizeRange.value = 3;
+                speedRange.value = 3;
+                addTextCheck.checked = true;
+                centerCheck.checked = true;
+                updateSpinnerPreview();
+            }
+
+            // Copiar código generado
+            window.copySpinnerCode = function() {
+                const code = generatedSpinnerCode.textContent;
+                navigator.clipboard.writeText(code).then(function() {
+                    const btn = document.querySelector('#laboratorio-spinners .btn-success');
+                    const originalText = btn.textContent;
+                    btn.textContent = '✓ Código Copiado!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                });
+            }
+
+            // Event listeners
+            spinnerType.addEventListener('change', updateSpinnerPreview);
+            spinnerColor.addEventListener('change', updateSpinnerPreview);
+            sizeRange.addEventListener('input', updateSpinnerPreview);
+            speedRange.addEventListener('input', updateSpinnerPreview);
+            addTextCheck.addEventListener('change', updateSpinnerPreview);
+            centerCheck.addEventListener('change', updateSpinnerPreview);
+
+            // Inicializar
+            updateSpinnerPreview();
+        });
+    </script>
+
+    <style>
+        .bg-purple {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Estilos para spinners con gradientes personalizados */
+        .custom-spinner-gradient-1 {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        .custom-spinner-gradient-2 {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        .custom-spinner-gradient-3 {
+            background: linear-gradient(45deg, #a1c4fd, #c2e9fb) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        /* Efectos de spinners avanzados */
+        .stage-active {
+            animation-duration: 0.8s !important;
+        }
+
+        .typing-animation {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 2px solid;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        .typing-dots {
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #0d6efd }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1 }
+            50% { opacity: 0 }
+        }
+
+        /* Overlay de carga */
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            border-radius: 0.375rem;
+        }
+
+        .overlay-spinner {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        /* Mejorar la apariencia de los ejemplos */
+        .card .border {
+            border-style: dashed !important;
+            border-color: #dee2e6 !important;
+        }
+
+        .py-6 {
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+        }
+
+        .py-7 {
+            padding-top: 6rem !important;
+            padding-bottom: 6rem !important;
+        }
+
+        /* Estilos para el laboratorio */
+        #spinnerPreview {
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .display-md-3 {
+                font-size: calc(1.525rem + 3.3vw) !important;
+            }
+
+            /* Ajustes responsive para spinners */
+            .spinner-border, .spinner-grow {
+                margin: 0.25rem;
+            }
+        }
+    </style>
+</body>
+
+</html>
