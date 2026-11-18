@@ -138,7 +138,8 @@ El workflow [`.github/workflows/ci.yml`](.github/workflows/ci.yml) ejecuta en ca
 - Instalación reproducible con `npm ci`.
 - `npm run build` y verificación de que los archivos generados no cambian.
 - `html-validate` sobre las 31 páginas HTML.
-- Chequeo de enlaces internos, anclas, ids duplicados, labels, `alt`, `title` de iframes y metadatos.
+- Chequeo de enlaces internos, anclas, ids duplicados, labels, `alt`, `title` de iframes, metadatos y sitemap.
+- `check:claims`: verifica que las cifras del README (9/24/134/38/69/12/31) coincidan con el contenido real.
 - Empaquetado de `dist/` para detectar archivos faltantes.
 
 ### Resultados de Lighthouse
