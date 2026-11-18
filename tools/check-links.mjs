@@ -176,7 +176,8 @@ const notFoundFile = path.join(root, '404.html');
 if (fs.existsSync(notFoundFile)) {
   const html = fs.readFileSync(notFoundFile, 'utf8');
   const baseMatch = html.match(/<base\s+href="([^"]+)"/i);
-  const baseUrl = baseMatch ? new URL(decode(baseMatch[1]), site.url) : new URL('404.html', site.url);
+  const deepUrl = new URL('a/b/c', site.url);
+  const baseUrl = baseMatch ? new URL(decode(baseMatch[1]), deepUrl) : deepUrl;
   for (const tag of html.matchAll(/<[a-z][^>]*>/gi)) {
     const raw = tag[0];
     if (/^<script\b/i.test(raw) || /^<style\b/i.test(raw)) continue;
