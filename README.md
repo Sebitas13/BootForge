@@ -3,6 +3,7 @@
 **Curso interactivo de Bootstrap 5 en español.** 24 lecciones, ejemplos editables en vivo, playground, cheatsheet, quiz final y una guía para publicar tu proyecto en GitHub Pages.
 
 [![Demo](https://img.shields.io/badge/demo-sebitas13.github.io%2FBootForge-4f46e5?style=flat-square)](https://sebitas13.github.io/BootForge/)
+[![Release](https://img.shields.io/github/v/release/Sebitas13/BootForge?style=flat-square&label=release)](https://github.com/Sebitas13/BootForge/releases)
 [![QA](https://github.com/Sebitas13/BootForge/actions/workflows/ci.yml/badge.svg)](https://github.com/Sebitas13/BootForge/actions/workflows/ci.yml)
 [![Deploy](https://github.com/Sebitas13/BootForge/actions/workflows/pages.yml/badge.svg)](https://github.com/Sebitas13/BootForge/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
