@@ -1,43 +1,37 @@
-# Node / JS
+# Dependencias y build
 node_modules/
-npm-debug.log*
-yarn-error.log*
-pnpm-lock.yaml
-
-# Build output
 dist/
 build/
+coverage/
 .cache/
-.parcel-cache/
 .vite/
+.parcel-cache/
 
-# Environment variables
+# Variables de entorno
 .env
 .env.local
 .env.*.local
 
-# System files
+# Sistema
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-# Editor / IDE
+# Editores
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
-
-# Logs & coverage
-logs/
-*.log
-coverage/
-
-# OS generated
 *.swp
 *.swo
 
-# Misc
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# Artefactos locales
 *.zip
 *.tar.gz
-
-# local images / temp used for dev (optional)
 tmp_images/

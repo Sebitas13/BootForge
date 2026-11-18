@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sebitas13.github.io/BootForge/sitemap.xml

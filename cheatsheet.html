@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light" data-base="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheatsheet de Bootstrap 5 — BootForge</title>
+  <meta name="description" content="Referencia rápida de Bootstrap 5: 69 clases de layout, componentes, formularios, utilidades y más, con búsqueda y copia.">
+  <link rel="canonical" href="https://sebitas13.github.io/BootForge/cheatsheet.html">
+  <meta name="robots" content="index, follow">
+  <meta name="bf-version" content="2026-11-18">
+  <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f8fc" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BootForge">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Cheatsheet de Bootstrap 5 — BootForge">
+  <meta property="og:description" content="Referencia rápida de Bootstrap 5: 69 clases de layout, componentes, formularios, utilidades y más, con búsqueda y copia.">
+  <meta property="og:url" content="https://sebitas13.github.io/BootForge/cheatsheet.html">
+  <meta property="og:image" content="https://sebitas13.github.io/BootForge/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cheatsheet de Bootstrap 5 — BootForge">
+  <meta name="twitter:description" content="Referencia rápida de Bootstrap 5: 69 clases de layout, componentes, formularios, utilidades y más, con búsqueda y copia.">
+  <meta name="twitter:image" content="https://sebitas13.github.io/BootForge/assets/img/og-cover.png">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script src="assets/js/theme-init.js?v=20261118"></script>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css?v=20261118">
+  <link rel="stylesheet" href="assets/css/main.css?v=20261118">
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <noscript>
+    <div class="noscript-banner" role="status">El contenido y los ejemplos funcionan sin JavaScript, pero el editor, el progreso y el quiz necesitan que lo actives.</div>
+  </noscript>
+  <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-glass" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="BootForge, inicio">
+        <img src="assets/img/logo.svg" alt="" width="34" height="34">
+        <span class="brand-word">Boot<span>Forge</span></span>
+      </a>
+      <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="tutorial.html">Curso</a></li>
+          <li class="nav-item"><a class="nav-link" href="playground.html">Playground</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cheatsheet.html" aria-current="page">Cheatsheet</a></li>
+          <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="github-pages.html">Guía</a></li>
+        </ul>
+        <div class="nav-actions">
+
+          <a class="btn btn-icon" href="https://github.com/Sebitas13/BootForge" target="_blank" rel="noopener noreferrer" aria-label="Repositorio en GitHub" title="GitHub"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+          <button class="btn btn-icon" id="themeToggle" type="button" aria-label="Cambiar a tema oscuro" aria-pressed="false" title="Cambiar tema">
+            <span class="theme-icon theme-icon-moon"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg></span>
+            <span class="theme-icon theme-icon-sun"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></span>
+          </button>
+          <a class="btn btn-brand btn-sm nav-cta" href="tutorial.html">Empezar curso</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+  <main id="main" class="cheatsheet-page" tabindex="-1">
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg> Referencia rápida</p>
+    <h1>Cheatsheet de Bootstrap 5</h1>
+    <p class="page-lead">69 clases y patrones que usarás una y otra vez. Busca, filtra por categoría y copia con un clic.</p>
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container">
+    <div class="cheatsheet-toolbar">
+      <div class="search-input-wrap">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <label class="visually-hidden" for="cheatSearch">Buscar en la cheatsheet</label>
+        <input type="search" class="form-control" id="cheatSearch" placeholder="Busca una clase o concepto..." autocomplete="off" spellcheck="false">
+      </div>
+      <div class="filter-chips" role="group" aria-label="Filtrar por categoría">
+        <button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">Todas</button>
+    <button class="filter-chip" type="button" data-filter="Layout" aria-pressed="false">Layout</button>
+    <button class="filter-chip" type="button" data-filter="Contenido" aria-pressed="false">Contenido</button>
+    <button class="filter-chip" type="button" data-filter="Componentes" aria-pressed="false">Componentes</button>
+    <button class="filter-chip" type="button" data-filter="Formularios" aria-pressed="false">Formularios</button>
+    <button class="filter-chip" type="button" data-filter="Datos" aria-pressed="false">Datos</button>
+    <button class="filter-chip" type="button" data-filter="Navegación" aria-pressed="false">Navegación</button>
+    <button class="filter-chip" type="button" data-filter="Interacción" aria-pressed="false">Interacción</button>
+    <button class="filter-chip" type="button" data-filter="Utilidades" aria-pressed="false">Utilidades</button>
+      </div>
+    </div>
+    <p class="cheat-status" id="cheatStatus" aria-live="polite">69 clases disponibles.</p>
+    <div class="cheat-grid" id="cheatGrid">
+      <article class="cheat-card" data-category="Layout" data-search="layout .container contenedor centrado con ancho máximo por breakpoint.">
+      <span class="cheat-category">Layout</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.container</code>
+        <button class="cheat-copy" type="button" data-copy=".container" aria-label="Copiar .container" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Contenedor centrado con ancho máximo por breakpoint.</p>
+    </article>
+<article class="cheat-card" data-category="Layout" data-search="layout .container-fluid contenedor a todo el ancho disponible.">
+      <span class="cheat-category">Layout</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.container-fluid</code>
+        <button class="cheat-copy" type="button" data-copy=".container-fluid" aria-label="Copiar .container-fluid" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Contenedor a todo el ancho disponible.</p>
+    </article>
+<article class="cheat-card" data-category="Layout" data-search="layout .row fila del grid; activa flexbox y compensa gutters.">
+      <span class="cheat-category">Layout</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.row</code>
+        <button class="cheat-copy" type="button" data-copy=".row" aria-label="Copiar .row" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Fila del grid; activa flexbox y compensa gutters.</p>
+    </article>
+<article class="cheat-card" data-category="Layout" data-search="layout .col-12 .col-md-6 .col-lg-4 columna que ocupa 12, 6 o 4 unidades según el ancho.">
+      <span class="cheat-category">Layout</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.col-12 .col-md-6 .col-lg-4</code>
+        <button class="cheat-copy" type="button" data-copy=".col-12 .col-md-6 .col-lg-4" aria-label="Copiar .col-12 .col-md-6 .col-lg-4" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Columna que ocupa 12, 6 o 4 unidades según el ancho.</p>
+    </article>
+<article class="cheat-card" data-category="Layout" data-search="layout .g-3 gutter de nivel 3 entre columnas de una fila.">
+      <span class="cheat-category">Layout</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.g-3</code>
+        <button class="cheat-copy" type="button" data-copy=".g-3" aria-label="Copiar .g-3" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Gutter de nivel 3 entre columnas de una fila.</p>
+    </article>
+<article class="cheat-card" data-category="Layout" data-search="layout .justify-content-center centra las columnas o elementos a lo largo del eje principal.">
+      <span class="cheat-category">Layout</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.justify-content-center</code>
+        <button class="cheat-copy" type="button" data-copy=".justify-content-center" aria-label="Copiar .justify-content-center" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Centra las columnas o elementos a lo largo del eje principal.</p>
+    </article>
+<article class="cheat-card" data-category="Layout" data-search="layout .align-items-center centra verticalmente los elementos de una fila flex.">
+      <span class="cheat-category">Layout</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.align-items-center</code>
+        <button class="cheat-copy" type="button" data-copy=".align-items-center" aria-label="Copiar .align-items-center" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Centra verticalmente los elementos de una fila flex.</p>
+    </article>
+<article class="cheat-card" data-category="Layout" data-search="layout .order-md-2 cambia el orden visual de un elemento desde md.">
+      <span class="cheat-category">Layout</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.order-md-2</code>
+        <button class="cheat-copy" type="button" data-copy=".order-md-2" aria-label="Copiar .order-md-2" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Cambia el orden visual de un elemento desde md.</p>
+    </article>
+<article class="cheat-card" data-category="Contenido" data-search="contenido .display-5 titular de gran tamaño para un hero o portada.">
+      <span class="cheat-category">Contenido</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.display-5</code>
+        <button class="cheat-copy" type="button" data-copy=".display-5" aria-label="Copiar .display-5" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Titular de gran tamaño para un hero o portada.</p>
+    </article>
+<article class="cheat-card" data-category="Contenido" data-search="contenido .lead párrafo introductorio con más tamaño y peso.">
+      <span class="cheat-category">Contenido</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.lead</code>
+        <button class="cheat-copy" type="button" data-copy=".lead" aria-label="Copiar .lead" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Párrafo introductorio con más tamaño y peso.</p>
+    </article>
+<article class="cheat-card" data-category="Contenido" data-search="contenido .text-body-secondary texto secundario con contraste reducido.">
+      <span class="cheat-category">Contenido</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.text-body-secondary</code>
+        <button class="cheat-copy" type="button" data-copy=".text-body-secondary" aria-label="Copiar .text-body-secondary" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Texto secundario con contraste reducido.</p>
+    </article>
+<article class="cheat-card" data-category="Contenido" data-search="contenido .fw-bold peso de fuente en negrita.">
+      <span class="cheat-category">Contenido</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.fw-bold</code>
+        <button class="cheat-copy" type="button" data-copy=".fw-bold" aria-label="Copiar .fw-bold" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Peso de fuente en negrita.</p>
+    </article>
+<article class="cheat-card" data-category="Contenido" data-search="contenido .text-center centra el texto.">
+      <span class="cheat-category">Contenido</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.text-center</code>
+        <button class="cheat-copy" type="button" data-copy=".text-center" aria-label="Copiar .text-center" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Centra el texto.</p>
+    </article>
+<article class="cheat-card" data-category="Contenido" data-search="contenido .blockquote estilo de cita con atribución.">
+      <span class="cheat-category">Contenido</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.blockquote</code>
+        <button class="cheat-copy" type="button" data-copy=".blockquote" aria-label="Copiar .blockquote" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Estilo de cita con atribución.</p>
+    </article>
+<article class="cheat-card" data-category="Contenido" data-search="contenido .img-fluid imagen responsive: max-width 100% y altura automática.">
+      <span class="cheat-category">Contenido</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.img-fluid</code>
+        <button class="cheat-copy" type="button" data-copy=".img-fluid" aria-label="Copiar .img-fluid" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Imagen responsive: max-width 100% y altura automática.</p>
+    </article>
+<article class="cheat-card" data-category="Contenido" data-search="contenido .ratio.ratio-16x9 reserva una proporción 16:9 y evita saltos de layout.">
+      <span class="cheat-category">Contenido</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.ratio.ratio-16x9</code>
+        <button class="cheat-copy" type="button" data-copy=".ratio.ratio-16x9" aria-label="Copiar .ratio.ratio-16x9" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Reserva una proporción 16:9 y evita saltos de layout.</p>
+    </article>
+<article class="cheat-card" data-category="Contenido" data-search="contenido .object-fit-cover recorta una imagen para llenar su contenedor sin deformarla.">
+      <span class="cheat-category">Contenido</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.object-fit-cover</code>
+        <button class="cheat-copy" type="button" data-copy=".object-fit-cover" aria-label="Copiar .object-fit-cover" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Recorta una imagen para llenar su contenedor sin deformarla.</p>
+    </article>
+<article class="cheat-card" data-category="Componentes" data-search="componentes .btn.btn-primary botón sólido para la acción principal.">
+      <span class="cheat-category">Componentes</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.btn.btn-primary</code>
+        <button class="cheat-copy" type="button" data-copy=".btn.btn-primary" aria-label="Copiar .btn.btn-primary" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Botón sólido para la acción principal.</p>
+    </article>
+<article class="cheat-card" data-category="Componentes" data-search="componentes .btn.btn-outline-secondary botón secundario con borde y fondo transparente.">
+      <span class="cheat-category">Componentes</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.btn.btn-outline-secondary</code>
+        <button class="cheat-copy" type="button" data-copy=".btn.btn-outline-secondary" aria-label="Copiar .btn.btn-outline-secondary" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Botón secundario con borde y fondo transparente.</p>
+    </article>
+<article class="cheat-card" data-category="Componentes" data-search="componentes .btn-sm / .btn-lg tamaños de botón pequeño y grande.">
+      <span class="cheat-category">Componentes</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.btn-sm / .btn-lg</code>
+        <button class="cheat-copy" type="button" data-copy=".btn-sm / .btn-lg" aria-label="Copiar .btn-sm / .btn-lg" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Tamaños de botón pequeño y grande.</p>
+    </article>
+<article class="cheat-card" data-category="Componentes" data-search="componentes .badge.text-bg-success etiqueta compacta con fondo y texto de contraste.">
+      <span class="cheat-category">Componentes</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.badge.text-bg-success</code>
+        <button class="cheat-copy" type="button" data-copy=".badge.text-bg-success" aria-label="Copiar .badge.text-bg-success" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Etiqueta compacta con fondo y texto de contraste.</p>
+    </article>
+<article class="cheat-card" data-category="Componentes" data-search="componentes .alert.alert-warning mensaje de advertencia con color y padding.">
+      <span class="cheat-category">Componentes</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.alert.alert-warning</code>
+        <button class="cheat-copy" type="button" data-copy=".alert.alert-warning" aria-label="Copiar .alert.alert-warning" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Mensaje de advertencia con color y padding.</p>
+    </article>
+<article class="cheat-card" data-category="Componentes" data-search="componentes .alert-dismissible alert con botón de cierre y animación de salida.">
+      <span class="cheat-category">Componentes</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.alert-dismissible</code>
+        <button class="cheat-copy" type="button" data-copy=".alert-dismissible" aria-label="Copiar .alert-dismissible" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Alert con botón de cierre y animación de salida.</p>
+    </article>
+<article class="cheat-card" data-category="Componentes" data-search="componentes .card &gt; .card-body contenedor flexible para contenido relacionado.">
+      <span class="cheat-category">Componentes</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.card &gt; .card-body</code>
+        <button class="cheat-copy" type="button" data-copy=".card &gt; .card-body" aria-label="Copiar .card &gt; .card-body" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Contenedor flexible para contenido relacionado.</p>
+    </article>
+<article class="cheat-card" data-category="Componentes" data-search="componentes .card.h-100 iguala la altura de varias cards en una fila.">
+      <span class="cheat-category">Componentes</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.card.h-100</code>
+        <button class="cheat-copy" type="button" data-copy=".card.h-100" aria-label="Copiar .card.h-100" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Iguala la altura de varias cards en una fila.</p>
+    </article>
+<article class="cheat-card" data-category="Componentes" data-search="componentes .list-group-item.active elemento seleccionado de una lista agrupada.">
+      <span class="cheat-category">Componentes</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.list-group-item.active</code>
+        <button class="cheat-copy" type="button" data-copy=".list-group-item.active" aria-label="Copiar .list-group-item.active" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Elemento seleccionado de una lista agrupada.</p>
+    </article>
+<article class="cheat-card" data-category="Formularios" data-search="formularios .form-label etiqueta visible para un control de formulario.">
+      <span class="cheat-category">Formularios</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.form-label</code>
+        <button class="cheat-copy" type="button" data-copy=".form-label" aria-label="Copiar .form-label" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Etiqueta visible para un control de formulario.</p>
+    </article>
+<article class="cheat-card" data-category="Formularios" data-search="formularios .form-control estilo base para inputs y textareas.">
+      <span class="cheat-category">Formularios</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.form-control</code>
+        <button class="cheat-copy" type="button" data-copy=".form-control" aria-label="Copiar .form-control" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Estilo base para inputs y textareas.</p>
+    </article>
+<article class="cheat-card" data-category="Formularios" data-search="formularios .form-select estilo para elementos select.">
+      <span class="cheat-category">Formularios</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.form-select</code>
+        <button class="cheat-copy" type="button" data-copy=".form-select" aria-label="Copiar .form-select" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Estilo para elementos select.</p>
+    </article>
+<article class="cheat-card" data-category="Formularios" data-search="formularios .form-check-input checkbox o radio con estilos de bootstrap.">
+      <span class="cheat-category">Formularios</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.form-check-input</code>
+        <button class="cheat-copy" type="button" data-copy=".form-check-input" aria-label="Copiar .form-check-input" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Checkbox o radio con estilos de Bootstrap.</p>
+    </article>
+<article class="cheat-card" data-category="Formularios" data-search="formularios .form-switch convierte un checkbox en un interruptor.">
+      <span class="cheat-category">Formularios</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.form-switch</code>
+        <button class="cheat-copy" type="button" data-copy=".form-switch" aria-label="Copiar .form-switch" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Convierte un checkbox en un interruptor.</p>
+    </article>
+<article class="cheat-card" data-category="Formularios" data-search="formularios .form-text texto de ayuda debajo de un control.">
+      <span class="cheat-category">Formularios</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.form-text</code>
+        <button class="cheat-copy" type="button" data-copy=".form-text" aria-label="Copiar .form-text" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Texto de ayuda debajo de un control.</p>
+    </article>
+<article class="cheat-card" data-category="Formularios" data-search="formularios .input-group agrupa un control con prefijos, sufijos o botones.">
+      <span class="cheat-category">Formularios</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.input-group</code>
+        <button class="cheat-copy" type="button" data-copy=".input-group" aria-label="Copiar .input-group" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Agrupa un control con prefijos, sufijos o botones.</p>
+    </article>
+<article class="cheat-card" data-category="Formularios" data-search="formularios .form-floating etiqueta flotante dentro del campo.">
+      <span class="cheat-category">Formularios</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.form-floating</code>
+        <button class="cheat-copy" type="button" data-copy=".form-floating" aria-label="Copiar .form-floating" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Etiqueta flotante dentro del campo.</p>
+    </article>
+<article class="cheat-card" data-category="Formularios" data-search="formularios .was-validated muestra los estados de validación tras intentar enviar.">
+      <span class="cheat-category">Formularios</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.was-validated</code>
+        <button class="cheat-copy" type="button" data-copy=".was-validated" aria-label="Copiar .was-validated" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Muestra los estados de validación tras intentar enviar.</p>
+    </article>
+<article class="cheat-card" data-category="Datos" data-search="datos .table estilo base para tablas de datos.">
+      <span class="cheat-category">Datos</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.table</code>
+        <button class="cheat-copy" type="button" data-copy=".table" aria-label="Copiar .table" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Estilo base para tablas de datos.</p>
+    </article>
+<article class="cheat-card" data-category="Datos" data-search="datos .table-striped filas alternas para facilitar la lectura.">
+      <span class="cheat-category">Datos</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.table-striped</code>
+        <button class="cheat-copy" type="button" data-copy=".table-striped" aria-label="Copiar .table-striped" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Filas alternas para facilitar la lectura.</p>
+    </article>
+<article class="cheat-card" data-category="Datos" data-search="datos .table-hover resalta la fila bajo el cursor.">
+      <span class="cheat-category">Datos</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.table-hover</code>
+        <button class="cheat-copy" type="button" data-copy=".table-hover" aria-label="Copiar .table-hover" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Resalta la fila bajo el cursor.</p>
+    </article>
+<article class="cheat-card" data-category="Datos" data-search="datos .table-responsive permite scroll horizontal en pantallas pequeñas.">
+      <span class="cheat-category">Datos</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.table-responsive</code>
+        <button class="cheat-copy" type="button" data-copy=".table-responsive" aria-label="Copiar .table-responsive" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Permite scroll horizontal en pantallas pequeñas.</p>
+    </article>
+<article class="cheat-card" data-category="Datos" data-search="datos .table-sm reduce el padding de las celdas.">
+      <span class="cheat-category">Datos</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.table-sm</code>
+        <button class="cheat-copy" type="button" data-copy=".table-sm" aria-label="Copiar .table-sm" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Reduce el padding de las celdas.</p>
+    </article>
+<article class="cheat-card" data-category="Datos" data-search="datos .pagination contenedor de navegación entre páginas.">
+      <span class="cheat-category">Datos</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.pagination</code>
+        <button class="cheat-copy" type="button" data-copy=".pagination" aria-label="Copiar .pagination" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Contenedor de navegación entre páginas.</p>
+    </article>
+<article class="cheat-card" data-category="Datos" data-search="datos .page-item.active página actual de la paginación.">
+      <span class="cheat-category">Datos</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.page-item.active</code>
+        <button class="cheat-copy" type="button" data-copy=".page-item.active" aria-label="Copiar .page-item.active" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Página actual de la paginación.</p>
+    </article>
+<article class="cheat-card" data-category="Datos" data-search="datos .list-group lista de elementos relacionados con estilos.">
+      <span class="cheat-category">Datos</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.list-group</code>
+        <button class="cheat-copy" type="button" data-copy=".list-group" aria-label="Copiar .list-group" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Lista de elementos relacionados con estilos.</p>
+    </article>
+<article class="cheat-card" data-category="Navegación" data-search="navegación .navbar.navbar-expand-lg barra que colapsa por debajo de lg.">
+      <span class="cheat-category">Navegación</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.navbar.navbar-expand-lg</code>
+        <button class="cheat-copy" type="button" data-copy=".navbar.navbar-expand-lg" aria-label="Copiar .navbar.navbar-expand-lg" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Barra que colapsa por debajo de lg.</p>
+    </article>
+<article class="cheat-card" data-category="Navegación" data-search="navegación .navbar-toggler botón hamburguesa para abrir el menú.">
+      <span class="cheat-category">Navegación</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.navbar-toggler</code>
+        <button class="cheat-copy" type="button" data-copy=".navbar-toggler" aria-label="Copiar .navbar-toggler" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Botón hamburguesa para abrir el menú.</p>
+    </article>
+<article class="cheat-card" data-category="Navegación" data-search="navegación data-bs-toggle=&quot;collapse&quot; activa el colapso de un menú o bloque.">
+      <span class="cheat-category">Navegación</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">data-bs-toggle=&quot;collapse&quot;</code>
+        <button class="cheat-copy" type="button" data-copy="data-bs-toggle=&quot;collapse&quot;" aria-label="Copiar data-bs-toggle=&quot;collapse&quot;" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Activa el colapso de un menú o bloque.</p>
+    </article>
+<article class="cheat-card" data-category="Navegación" data-search="navegación data-bs-target=&quot;#menu&quot; selector del elemento que se abre o cierra.">
+      <span class="cheat-category">Navegación</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">data-bs-target=&quot;#menu&quot;</code>
+        <button class="cheat-copy" type="button" data-copy="data-bs-target=&quot;#menu&quot;" aria-label="Copiar data-bs-target=&quot;#menu&quot;" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Selector del elemento que se abre o cierra.</p>
+    </article>
+<article class="cheat-card" data-category="Navegación" data-search="navegación .nav.nav-tabs pestañas con borde inferior.">
+      <span class="cheat-category">Navegación</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.nav.nav-tabs</code>
+        <button class="cheat-copy" type="button" data-copy=".nav.nav-tabs" aria-label="Copiar .nav.nav-tabs" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Pestañas con borde inferior.</p>
+    </article>
+<article class="cheat-card" data-category="Navegación" data-search="navegación .nav.nav-pills navegación con forma de pastillas.">
+      <span class="cheat-category">Navegación</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.nav.nav-pills</code>
+        <button class="cheat-copy" type="button" data-copy=".nav.nav-pills" aria-label="Copiar .nav.nav-pills" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Navegación con forma de pastillas.</p>
+    </article>
+<article class="cheat-card" data-category="Navegación" data-search="navegación .dropdown-menu menú desplegable de acciones secundarias.">
+      <span class="cheat-category">Navegación</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.dropdown-menu</code>
+        <button class="cheat-copy" type="button" data-copy=".dropdown-menu" aria-label="Copiar .dropdown-menu" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Menú desplegable de acciones secundarias.</p>
+    </article>
+<article class="cheat-card" data-category="Navegación" data-search="navegación .breadcrumb ruta de navegación jerárquica.">
+      <span class="cheat-category">Navegación</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.breadcrumb</code>
+        <button class="cheat-copy" type="button" data-copy=".breadcrumb" aria-label="Copiar .breadcrumb" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Ruta de navegación jerárquica.</p>
+    </article>
+<article class="cheat-card" data-category="Interacción" data-search="interacción data-bs-toggle=&quot;modal&quot; abre un modal al pulsar el elemento.">
+      <span class="cheat-category">Interacción</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">data-bs-toggle=&quot;modal&quot;</code>
+        <button class="cheat-copy" type="button" data-copy="data-bs-toggle=&quot;modal&quot;" aria-label="Copiar data-bs-toggle=&quot;modal&quot;" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Abre un modal al pulsar el elemento.</p>
+    </article>
+<article class="cheat-card" data-category="Interacción" data-search="interacción data-bs-target=&quot;#modal&quot; id del modal que se abre.">
+      <span class="cheat-category">Interacción</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">data-bs-target=&quot;#modal&quot;</code>
+        <button class="cheat-copy" type="button" data-copy="data-bs-target=&quot;#modal&quot;" aria-label="Copiar data-bs-target=&quot;#modal&quot;" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">ID del modal que se abre.</p>
+    </article>
+<article class="cheat-card" data-category="Interacción" data-search="interacción data-bs-dismiss=&quot;modal&quot; cierra el modal actual.">
+      <span class="cheat-category">Interacción</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">data-bs-dismiss=&quot;modal&quot;</code>
+        <button class="cheat-copy" type="button" data-copy="data-bs-dismiss=&quot;modal&quot;" aria-label="Copiar data-bs-dismiss=&quot;modal&quot;" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Cierra el modal actual.</p>
+    </article>
+<article class="cheat-card" data-category="Interacción" data-search="interacción .offcanvas.offcanvas-start panel lateral que entra desde la izquierda.">
+      <span class="cheat-category">Interacción</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.offcanvas.offcanvas-start</code>
+        <button class="cheat-copy" type="button" data-copy=".offcanvas.offcanvas-start" aria-label="Copiar .offcanvas.offcanvas-start" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Panel lateral que entra desde la izquierda.</p>
+    </article>
+<article class="cheat-card" data-category="Interacción" data-search="interacción .toast notificación breve que no bloquea la interfaz.">
+      <span class="cheat-category">Interacción</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.toast</code>
+        <button class="cheat-copy" type="button" data-copy=".toast" aria-label="Copiar .toast" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Notificación breve que no bloquea la interfaz.</p>
+    </article>
+<article class="cheat-card" data-category="Interacción" data-search="interacción .modal-dialog-centered centra verticalmente el diálogo.">
+      <span class="cheat-category">Interacción</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.modal-dialog-centered</code>
+        <button class="cheat-copy" type="button" data-copy=".modal-dialog-centered" aria-label="Copiar .modal-dialog-centered" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Centra verticalmente el diálogo.</p>
+    </article>
+<article class="cheat-card" data-category="Interacción" data-search="interacción .fade añade una transición suave al mostrar u ocultar.">
+      <span class="cheat-category">Interacción</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.fade</code>
+        <button class="cheat-copy" type="button" data-copy=".fade" aria-label="Copiar .fade" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Añade una transición suave al mostrar u ocultar.</p>
+    </article>
+<article class="cheat-card" data-category="Interacción" data-search="interacción data-bs-toggle=&quot;tooltip&quot; activa un tooltip (requiere inicialización js).">
+      <span class="cheat-category">Interacción</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">data-bs-toggle=&quot;tooltip&quot;</code>
+        <button class="cheat-copy" type="button" data-copy="data-bs-toggle=&quot;tooltip&quot;" aria-label="Copiar data-bs-toggle=&quot;tooltip&quot;" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Activa un tooltip (requiere inicialización JS).</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .m-0 / .m-3 margin en todos los lados, niveles 0 a 5.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.m-0 / .m-3</code>
+        <button class="cheat-copy" type="button" data-copy=".m-0 / .m-3" aria-label="Copiar .m-0 / .m-3" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Margin en todos los lados, niveles 0 a 5.</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .mt-3 / .mb-4 margin superior o inferior.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.mt-3 / .mb-4</code>
+        <button class="cheat-copy" type="button" data-copy=".mt-3 / .mb-4" aria-label="Copiar .mt-3 / .mb-4" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Margin superior o inferior.</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .p-3 / .px-4 padding en todos los lados o solo horizontal.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.p-3 / .px-4</code>
+        <button class="cheat-copy" type="button" data-copy=".p-3 / .px-4" aria-label="Copiar .p-3 / .px-4" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Padding en todos los lados o solo horizontal.</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .d-flex activa flexbox en el elemento.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.d-flex</code>
+        <button class="cheat-copy" type="button" data-copy=".d-flex" aria-label="Copiar .d-flex" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Activa flexbox en el elemento.</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .d-none.d-md-block oculta en móvil y muestra desde md.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.d-none.d-md-block</code>
+        <button class="cheat-copy" type="button" data-copy=".d-none.d-md-block" aria-label="Copiar .d-none.d-md-block" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Oculta en móvil y muestra desde md.</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .gap-2 espacio entre elementos de un contenedor flex o grid.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.gap-2</code>
+        <button class="cheat-copy" type="button" data-copy=".gap-2" aria-label="Copiar .gap-2" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Espacio entre elementos de un contenedor flex o grid.</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .text-truncate recorta el texto con puntos suspensivos.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.text-truncate</code>
+        <button class="cheat-copy" type="button" data-copy=".text-truncate" aria-label="Copiar .text-truncate" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Recorta el texto con puntos suspensivos.</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .border.rounded-3 borde y radio de esquina.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.border.rounded-3</code>
+        <button class="cheat-copy" type="button" data-copy=".border.rounded-3" aria-label="Copiar .border.rounded-3" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Borde y radio de esquina.</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .shadow-sm / .shadow-lg sombra suave o profunda.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.shadow-sm / .shadow-lg</code>
+        <button class="cheat-copy" type="button" data-copy=".shadow-sm / .shadow-lg" aria-label="Copiar .shadow-sm / .shadow-lg" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Sombra suave o profunda.</p>
+    </article>
+<article class="cheat-card" data-category="Utilidades" data-search="utilidades .visually-hidden oculta visualmente sin ocultar a lectores de pantalla.">
+      <span class="cheat-category">Utilidades</span>
+      <div class="cheat-code-row">
+        <code class="cheat-code">.visually-hidden</code>
+        <button class="cheat-copy" type="button" data-copy=".visually-hidden" aria-label="Copiar .visually-hidden" title="Copiar clase"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      </div>
+      <p class="cheat-description">Oculta visualmente sin ocultar a lectores de pantalla.</p>
+    </article>
+    </div>
+    <p class="search-empty" id="cheatEmpty" hidden>No encontramos coincidencias. Prueba con otra clase o categoría.</p>
+  </div>
+</section>
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="footer-brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="" width="30" height="30">
+          <span>Boot<span>Forge</span></span>
+        </a>
+        <p class="footer-tagline">Aprende Bootstrap 5 construyendo interfaces reales. Curso gratuito, open source y sin tracking.</p>
+        <p class="footer-small">Código bajo licencia MIT · Actualizado el 18 de noviembre de 2026</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h2 class="footer-title">Curso</h2>
+        <ul class="footer-links">
+          <li><a href="tutorial.html">Todas las lecciones</a></li>
+          <li><a href="playground.html">Playground</a></li>
+          <li><a href="cheatsheet.html">Cheatsheet</a></li>
+          <li><a href="quiz.html">Quiz final</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h2 class="footer-title">Proyecto</h2>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Sebitas13/BootForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://github.com/Sebitas13/BootForge/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+          <li><a href="https://github.com/Sebitas13/BootForge#readme" target="_blank" rel="noopener noreferrer">README</a></li>
+          <li><a href="https://github.com/Sebitas13/BootForge/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Licencia MIT</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-4">
+        <h2 class="footer-title">Recursos</h2>
+        <ul class="footer-links footer-links-grid">
+          <li><a href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener noreferrer">Docs de Bootstrap</a></li>
+          <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML en MDN</a></li>
+          <li><a href="https://docs.github.com/es/pages" target="_blank" rel="noopener noreferrer">GitHub Pages</a></li>
+          <li><a href="https://www.w3.org/WAI/tutorials/" target="_blank" rel="noopener noreferrer">Accesibilidad WAI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> Sebastián Salazar. Hecho con Bootstrap 5.3.9.</p>
+      <p>Sin cookies. Sin analytics. Tu progreso vive en tu navegador.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js?v=20261118" defer></script>
+  <script src="assets/js/app.js?v=20261118" defer></script>
+  <script src="assets/js/cheatsheet.js?v=20261118" defer></script>
+</body>
+</html>

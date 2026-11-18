@@ -1,0 +1,27 @@
+{
+  "name": "bootforge",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Curso interactivo de Bootstrap 5 en español, generado como sitio estático.",
+  "homepage": "https://sebitas13.github.io/BootForge/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sebitas13/BootForge.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "^22.22.0 || >=24.8.0"
+  },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "package": "node tools/package.mjs",
+    "check:html": "html-validate \"*.html\" \"lecciones/*.html\"",
+    "check:links": "node tools/check-links.mjs",
+    "check:claims": "node tools/check-claims.mjs",
+    "test": "npm run build && npm run check:html && npm run check:links && npm run check:claims"
+  },
+  "devDependencies": {
+    "html-validate": "^11.21.1"
+  }
+}

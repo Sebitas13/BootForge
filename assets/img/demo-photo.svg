@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Ilustración abstracta de montañas al atardecer">
+  <defs>
+    <linearGradient id="bf-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#312e81"/>
+      <stop offset="0.55" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="bf-mountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bf-sky)"/>
+  <circle cx="610" cy="160" r="58" fill="#fde68a" opacity="0.9"/>
+  <path d="M0 390 180 220l130 120 110-90 160 150 100-70 120 80v90H0Z" fill="url(#bf-mountain)"/>
+  <path d="M0 430 160 300l120 90 150-90 170 120 100-50 100 60v70H0Z" fill="#0b1020" opacity="0.85"/>
+  <g fill="#e2e8f0" opacity="0.75">
+    <circle cx="120" cy="90" r="2"/>
+    <circle cx="230" cy="60" r="1.6"/>
+    <circle cx="330" cy="110" r="1.4"/>
+    <circle cx="460" cy="70" r="1.8"/>
+    <circle cx="720" cy="100" r="1.5"/>
+  </g>
+</svg>

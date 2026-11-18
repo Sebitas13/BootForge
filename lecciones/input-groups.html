@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light" data-base="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Input groups y floating labels — BootForge</title>
+  <meta name="description" content="Añade prefijos, sufijos y botones a un campo, o usa etiquetas flotantes sin perder claridad.">
+  <link rel="canonical" href="https://sebitas13.github.io/BootForge/lecciones/input-groups.html">
+  <meta name="robots" content="index, follow">
+  <meta name="bf-version" content="2026-11-18">
+  <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f8fc" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BootForge">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Input groups y floating labels — BootForge">
+  <meta property="og:description" content="Añade prefijos, sufijos y botones a un campo, o usa etiquetas flotantes sin perder claridad.">
+  <meta property="og:url" content="https://sebitas13.github.io/BootForge/lecciones/input-groups.html">
+  <meta property="og:image" content="https://sebitas13.github.io/BootForge/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Input groups y floating labels — BootForge">
+  <meta name="twitter:description" content="Añade prefijos, sufijos y botones a un campo, o usa etiquetas flotantes sin perder claridad.">
+  <meta name="twitter:image" content="https://sebitas13.github.io/BootForge/assets/img/og-cover.png">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <script src="../assets/js/theme-init.js?v=20261118"></script>
+  <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css?v=20261118">
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261118">
+  <meta property="article:section" content="Formularios">
+  <meta property="article:modified_time" content="2026-11-18">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://sebitas13.github.io/BootForge/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Curso",
+      "item": "https://sebitas13.github.io/BootForge/tutorial.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Formularios",
+      "item": "https://sebitas13.github.io/BootForge/tutorial.html#formularios"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Input groups y floating labels"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Input groups y floating labels",
+  "description": "Añade prefijos, sufijos y botones a un campo, o usa etiquetas flotantes sin perder claridad.",
+  "learningResourceType": "Lesson",
+  "inLanguage": "es",
+  "isAccessibleForFree": true,
+  "teaches": [
+    "Construir input groups con texto, iconos y botones.",
+    "Usar floating labels correctamente.",
+    "Evitar input groups para acciones que no están relacionadas con el campo."
+  ],
+  "dateModified": "2026-11-18",
+  "author": {
+    "@type": "Person",
+    "name": "Sebastián Salazar",
+    "url": "https://github.com/Sebitas13"
+  },
+  "isPartOf": {
+    "@type": "Course",
+    "name": "BootForge — Curso de Bootstrap 5",
+    "url": "https://sebitas13.github.io/BootForge/"
+  }
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <noscript>
+    <div class="noscript-banner" role="status">El contenido y los ejemplos funcionan sin JavaScript, pero el editor, el progreso y el quiz necesitan que lo actives.</div>
+  </noscript>
+  <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-glass" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html" aria-label="BootForge, inicio">
+        <img src="../assets/img/logo.svg" alt="" width="34" height="34">
+        <span class="brand-word">Boot<span>Forge</span></span>
+      </a>
+      <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="../tutorial.html" aria-current="page">Curso</a></li>
+          <li class="nav-item"><a class="nav-link" href="../playground.html">Playground</a></li>
+          <li class="nav-item"><a class="nav-link" href="../cheatsheet.html">Cheatsheet</a></li>
+          <li class="nav-item"><a class="nav-link" href="../quiz.html">Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="../github-pages.html">Guía</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="btn btn-icon js-only" type="button" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Buscar en el curso" title="Buscar (Ctrl + K)"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+          <a class="btn btn-icon" href="https://github.com/Sebitas13/BootForge" target="_blank" rel="noopener noreferrer" aria-label="Repositorio en GitHub" title="GitHub"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+          <button class="btn btn-icon" id="themeToggle" type="button" aria-label="Cambiar a tema oscuro" aria-pressed="false" title="Cambiar tema">
+            <span class="theme-icon theme-icon-moon"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg></span>
+            <span class="theme-icon theme-icon-sun"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></span>
+          </button>
+          <a class="btn btn-brand btn-sm nav-cta" href="../tutorial.html">Empezar curso</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+  <main id="main" class="course-page" tabindex="-1">
+<div class="container course-layout">
+  <aside class="course-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="courseSidebar" aria-label="Lecciones del curso">
+  <div class="offcanvas-header">
+    <p class="offcanvas-title h6 mb-0">Contenido del curso</p>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#courseSidebar" aria-label="Cerrar índice"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="sidebar-progress">
+      <div class="sidebar-progress-head"><span>Tu progreso</span><strong data-progress-text>0%</strong></div>
+      <div class="progress" role="progressbar" aria-label="Progreso del curso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-progress-track>
+        <div class="progress-bar" data-progress-bar></div>
+      </div>
+      <p class="sidebar-progress-count" data-progress-count>0 de 24 lecciones</p>
+    </div>
+    <nav class="course-nav" aria-label="Lecciones del curso">
+      <div class="course-group">
+        <p class="course-group-title"><span>01</span>Primeros pasos</p>
+        <ul>
+          <li><a class="course-link" href="que-es-bootstrap.html" data-lesson-link="que-es-bootstrap">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">¿Qué es Bootstrap 5?</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="instalacion.html" data-lesson-link="instalacion">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Instala Bootstrap en 3 formas</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="estructura.html" data-lesson-link="estructura">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">La estructura de una página</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li>
+        </ul>
+      </div><div class="course-group">
+        <p class="course-group-title"><span>02</span>Layout y grid</p>
+        <ul>
+          <li><a class="course-link" href="containers.html" data-lesson-link="containers">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Containers</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="grid.html" data-lesson-link="grid">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Grid de 12 columnas</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="breakpoints.html" data-lesson-link="breakpoints">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Breakpoints y diseño responsive</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li>
+        </ul>
+      </div><div class="course-group">
+        <p class="course-group-title"><span>03</span>Contenido</p>
+        <ul>
+          <li><a class="course-link" href="typography.html" data-lesson-link="typography">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Tipografía</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="colors.html" data-lesson-link="colors">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Colores y helpers</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="images.html" data-lesson-link="images">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Imágenes y figuras</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li>
+        </ul>
+      </div><div class="course-group">
+        <p class="course-group-title"><span>04</span>Componentes</p>
+        <ul>
+          <li><a class="course-link" href="buttons.html" data-lesson-link="buttons">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Botones</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="badges-alerts.html" data-lesson-link="badges-alerts">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Badges y alerts</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="cards.html" data-lesson-link="cards">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Cards</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li>
+        </ul>
+      </div><div class="course-group">
+        <p class="course-group-title"><span>05</span>Formularios</p>
+        <ul>
+          <li><a class="course-link" href="forms.html" data-lesson-link="forms">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Formularios básicos</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="validation.html" data-lesson-link="validation">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Validación de formularios</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link active" href="input-groups.html" aria-current="page" data-lesson-link="input-groups">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Input groups y floating labels</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li>
+        </ul>
+      </div><div class="course-group">
+        <p class="course-group-title"><span>06</span>Datos</p>
+        <ul>
+          <li><a class="course-link" href="tables.html" data-lesson-link="tables">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Tablas</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="lists-pagination.html" data-lesson-link="lists-pagination">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">List groups y pagination</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li>
+        </ul>
+      </div><div class="course-group">
+        <p class="course-group-title"><span>07</span>Navegación</p>
+        <ul>
+          <li><a class="course-link" href="navbar.html" data-lesson-link="navbar">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Navbar</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="navs-dropdowns.html" data-lesson-link="navs-dropdowns">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Navs, tabs y dropdowns</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li>
+        </ul>
+      </div><div class="course-group">
+        <p class="course-group-title"><span>08</span>Interacción</p>
+        <ul>
+          <li><a class="course-link" href="modals.html" data-lesson-link="modals">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Modals</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="offcanvas-toasts.html" data-lesson-link="offcanvas-toasts">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Offcanvas y toasts</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li>
+        </ul>
+      </div><div class="course-group">
+        <p class="course-group-title"><span>09</span>Utilidades y proyecto</p>
+        <ul>
+          <li><a class="course-link" href="utilities.html" data-lesson-link="utilities">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Utilidades clave</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="proyecto-landing.html" data-lesson-link="proyecto-landing">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Proyecto: landing page</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li><li><a class="course-link" href="publicar.html" data-lesson-link="publicar">
+              <span class="course-link-dot" aria-hidden="true"></span>
+              <span class="course-link-title">Publica en GitHub Pages</span>
+              <span class="course-link-check" aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg></span>
+            </a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <a class="btn btn-sm btn-outline-secondary w-100" href="../tutorial.html"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg> Ver el curso completo</a>
+      <button class="btn btn-sm btn-link w-100" type="button" data-bs-toggle="modal" data-bs-target="#resetProgressModal">Reiniciar progreso</button>
+    </div>
+  </div>
+</aside>
+  <div class="course-main">
+    <div class="lesson-topbar">
+      <button class="btn btn-sm btn-outline-secondary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#courseSidebar" aria-controls="courseSidebar"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg> Lecciones</button>
+      <nav class="breadcrumb-wrap" aria-label="Migas de pan">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="../tutorial.html">Curso</a></li>
+          <li class="breadcrumb-item"><a href="../tutorial.html#formularios">Formularios</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Input groups y floating labels</li>
+        </ol>
+      </nav>
+      <span class="lesson-position">Lección 15 / 24</span>
+    </div>
+
+    <article class="lesson" data-lesson-id="input-groups" data-total="24">
+      <header class="lesson-header">
+        <p class="eyebrow">Módulo 05 · Formularios</p>
+        <h1>Input groups y floating labels</h1>
+        <p class="lesson-summary">Añade prefijos, sufijos y botones a un campo, o usa etiquetas flotantes sin perder claridad.</p>
+        <div class="lesson-meta">
+          <span><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 5 min</span>
+          <span><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/></svg> Intermedio</span>
+          <span><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg> Lección 15 de 24</span>
+        </div>
+      </header>
+
+      <section class="objectives" aria-labelledby="objetivos-title">
+        <div class="objectives-icon"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+        <div>
+          <h2 id="objetivos-title">Lo que vas a aprender</h2>
+          <ul><li>Construir input groups con texto, iconos y botones.</li><li>Usar floating labels correctamente.</li><li>Evitar input groups para acciones que no están relacionadas con el campo.</li></ul>
+        </div>
+      </section>
+
+      <div class="lesson-body">
+        <div class="lesson-text"><p>Un <strong>input group</strong> une un control con texto o botones adyacentes. Es útil para prefijos monetarios, dominios de email o botones de búsqueda. La regla es simple: todo lo que pongas dentro debe estar relacionado con ese campo.</p></div>
+<figure class="code-example" id="ejemplo-input-groups-code-1">
+  <figcaption class="code-head">
+    <span class="code-file"><span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="code-lang">HTML</span><span class="code-title">Prefijos, sufijos y botón</span></span>
+    <div class="code-actions">
+        <button type="button" class="code-action" data-code-action="copy"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copiar</span></button>
+        <button type="button" class="code-action" data-code-action="run" aria-expanded="false" aria-controls="preview-input-groups-code-1"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 5 11 7-11 7V5Z"/></svg><span>Probar</span></button>
+        <button type="button" class="code-action" data-code-action="edit"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg><span>Editar</span></button>
+      </div>
+  </figcaption>
+  <pre class="code-pre" tabindex="0" aria-label="Código de ejemplo: Prefijos, sufijos y botón"><code class="language-html">&lt;div class=&quot;input-group mb-3&quot;&gt;
+  &lt;span class=&quot;input-group-text&quot;&gt;@&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;usuario&quot; aria-label=&quot;Usuario&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group mb-3&quot;&gt;
+  &lt;input type=&quot;email&quot; class=&quot;form-control&quot; placeholder=&quot;tu nombre&quot; aria-label=&quot;Nombre de usuario&quot;&gt;
+  &lt;span class=&quot;input-group-text&quot;&gt;@ejemplo.com&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;search&quot; class=&quot;form-control&quot; placeholder=&quot;Buscar en el curso&quot; aria-label=&quot;Buscar&quot;&gt;
+  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Buscar&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+  <div class="code-preview" id="preview-input-groups-code-1" hidden></div>
+</figure>
+<figure class="code-example" id="ejemplo-input-groups-code-2">
+  <figcaption class="code-head">
+    <span class="code-file"><span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="code-lang">HTML</span><span class="code-title">Floating label</span></span>
+    <div class="code-actions">
+        <button type="button" class="code-action" data-code-action="copy"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copiar</span></button>
+        <button type="button" class="code-action" data-code-action="run" aria-expanded="false" aria-controls="preview-input-groups-code-2"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 5 11 7-11 7V5Z"/></svg><span>Probar</span></button>
+        <button type="button" class="code-action" data-code-action="edit"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg><span>Editar</span></button>
+      </div>
+  </figcaption>
+  <pre class="code-pre" tabindex="0" aria-label="Código de ejemplo: Floating label"><code class="language-html">&lt;div class=&quot;form-floating mb-3&quot;&gt;
+  &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;floatingEmail&quot; placeholder=&quot;nombre@ejemplo.com&quot;&gt;
+  &lt;label for=&quot;floatingEmail&quot;&gt;Email&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-floating&quot;&gt;
+  &lt;select class=&quot;form-select&quot; id=&quot;floatingSelect&quot; aria-label=&quot;Elige un módulo&quot;&gt;
+    &lt;option selected&gt;Elige un módulo&lt;/option&gt;
+    &lt;option value=&quot;1&quot;&gt;Layout&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Componentes&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Formularios&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label for=&quot;floatingSelect&quot;&gt;Módulo&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+  <p class="code-note">El placeholder es obligatorio en las floating labels: Bootstrap lo usa para saber cuándo mostrar la etiqueta arriba.</p>
+  <div class="code-preview" id="preview-input-groups-code-2" hidden></div>
+</figure>
+<div class="callout callout-warning">
+  <span class="callout-icon"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10.3 3.9 2.4 17a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+  <div>
+    <p class="callout-title">No mezcles acciones</p>
+    <div class="callout-body">No pongas “Eliminar cuenta” dentro del input group de “Buscar”. El usuario puede pulsar el botón equivocado y la relación visual es engañosa.</div>
+  </div>
+</div>
+      </div>
+
+      <section class="lesson-quiz js-only" data-quiz data-answer="1" aria-labelledby="quiz-title">
+    <div class="quiz-topline"><span class="eyebrow">Comprueba lo aprendido</span><span class="quiz-badge">1 pregunta</span></div>
+    <h2 id="quiz-title">Mini quiz</h2>
+    <p class="quiz-question">¿Qué clase crea el contenedor de un input group?</p>
+    <div class="quiz-options" role="group" aria-labelledby="quiz-title">
+      <button type="button" class="quiz-option" data-option="0">
+        <span class="quiz-letter" aria-hidden="true">A</span>
+        <span>form-group</span>
+      </button><button type="button" class="quiz-option" data-option="1">
+        <span class="quiz-letter" aria-hidden="true">B</span>
+        <span>input-group</span>
+      </button><button type="button" class="quiz-option" data-option="2">
+        <span class="quiz-letter" aria-hidden="true">C</span>
+        <span>form-control-group</span>
+      </button><button type="button" class="quiz-option" data-option="3">
+        <span class="quiz-letter" aria-hidden="true">D</span>
+        <span>input-addon</span>
+      </button>
+    </div>
+    <p class="quiz-feedback" data-quiz-feedback role="status" aria-live="polite"></p>
+    <template class="quiz-explanation">input-group es el contenedor. Dentro van el control y los addons (input-group-text o botones). form-group era el patrón de Bootstrap 3/4.</template>
+  </section>
+
+      <section class="lesson-complete" aria-labelledby="complete-title">
+        <div>
+          <p class="eyebrow">Progreso</p>
+          <h2 id="complete-title">¿Terminaste esta lección?</h2>
+          <p>Márcala como completada para actualizar tu progreso. Se guarda solo en este navegador.</p>
+        </div>
+        <button class="btn btn-brand js-only" type="button" data-complete-btn>Marcar como completada</button>
+      </section>
+
+      <nav class="lesson-pager" aria-label="Lecciones anterior y siguiente">
+    <a class="pager-card pager-prev" href="validation.html"><span class="pager-label"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Anterior</span><span class="pager-title">Validación de formularios</span></a>
+    <a class="pager-card pager-next" href="tables.html"><span class="pager-label">Siguiente <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="pager-title">Tablas</span></a>
+  </nav>
+    </article>
+  </div>
+</div>
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="footer-brand" href="../index.html">
+          <img src="../assets/img/logo.svg" alt="" width="30" height="30">
+          <span>Boot<span>Forge</span></span>
+        </a>
+        <p class="footer-tagline">Aprende Bootstrap 5 construyendo interfaces reales. Curso gratuito, open source y sin tracking.</p>
+        <p class="footer-small">Código bajo licencia MIT · Actualizado el 18 de noviembre de 2026</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h2 class="footer-title">Curso</h2>
+        <ul class="footer-links">
+          <li><a href="../tutorial.html">Todas las lecciones</a></li>
+          <li><a href="../playground.html">Playground</a></li>
+          <li><a href="../cheatsheet.html">Cheatsheet</a></li>
+          <li><a href="../quiz.html">Quiz final</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h2 class="footer-title">Proyecto</h2>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Sebitas13/BootForge" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://github.com/Sebitas13/BootForge/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+          <li><a href="https://github.com/Sebitas13/BootForge#readme" target="_blank" rel="noopener noreferrer">README</a></li>
+          <li><a href="https://github.com/Sebitas13/BootForge/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Licencia MIT</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-4">
+        <h2 class="footer-title">Recursos</h2>
+        <ul class="footer-links footer-links-grid">
+          <li><a href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener noreferrer">Docs de Bootstrap</a></li>
+          <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML en MDN</a></li>
+          <li><a href="https://docs.github.com/es/pages" target="_blank" rel="noopener noreferrer">GitHub Pages</a></li>
+          <li><a href="https://www.w3.org/WAI/tutorials/" target="_blank" rel="noopener noreferrer">Accesibilidad WAI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> Sebastián Salazar. Hecho con Bootstrap 5.3.9.</p>
+      <p>Sin cookies. Sin analytics. Tu progreso vive en tu navegador.</p>
+    </div>
+  </div>
+</footer>
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchTitle">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content search-modal">
+      <div class="modal-header">
+        <h2 class="modal-title h5" id="searchTitle">Buscar en el curso</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar búsqueda"></button>
+      </div>
+      <div class="modal-body">
+        <label class="visually-hidden" for="courseSearchInput">Buscar lecciones, componentes o conceptos</label>
+        <div class="search-input-wrap">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" class="form-control form-control-lg" id="courseSearchInput" placeholder="Busca «grid», «modal», «formulario»..." autocomplete="off" spellcheck="false">
+        </div>
+        <p class="search-hint">Escribe al menos 2 caracteres. Usa <kbd>Ctrl</kbd> + <kbd>K</kbd> desde cualquier lección.</p>
+        <p class="search-status" id="searchStatus" aria-live="polite"></p>
+        <div class="search-results" id="searchResults"></div>
+        <p class="search-empty" id="searchEmpty" hidden>No encontramos resultados. Prueba con otro término.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="modal fade" id="resetProgressModal" tabindex="-1" aria-labelledby="resetProgressTitle">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h5" id="resetProgressTitle">Reiniciar tu progreso</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Se borrarán las lecciones marcadas como completadas y los borradores del editor guardados en este navegador.</p>
+        <p class="mb-0">Esta acción no se puede deshacer.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="confirmResetBtn">Sí, reiniciar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="modal fade" id="editorModal" tabindex="-1" aria-labelledby="editorTitle">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content editor-modal">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow mb-1">Editor en vivo</p>
+          <h2 class="modal-title h5" id="editorTitle">Editar ejemplo</h2>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar editor"></button>
+      </div>
+      <div class="modal-body">
+        <div class="editor-toolbar">
+          <span class="editor-status" id="editorStatus">HTML</span>
+          <div class="editor-toolbar-actions">
+            <button type="button" class="btn btn-sm btn-outline-secondary" id="editorResetBtn"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg> Restablecer</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" id="editorCopyBtn"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg> Copiar</button>
+            <button type="button" class="btn btn-sm btn-brand" id="editorSaveBtn"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg> Guardar borrador</button>
+          </div>
+        </div>
+        <div class="editor-grid">
+          <div class="editor-pane">
+            <label class="visually-hidden" for="editorCode">Código HTML del ejemplo</label>
+            <textarea id="editorCode" class="editor-code" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+          </div>
+          <div class="editor-pane editor-preview-pane">
+            <div class="preview-bar">
+              <span>Vista previa</span>
+              <button type="button" class="preview-reload" id="editorReloadBtn"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg> Recargar</button>
+            </div>
+            <iframe id="editorPreview" sandbox="allow-scripts allow-forms" title="Vista previa del código editado"></iframe>
+            <div class="preview-console" id="editorConsole" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span class="editor-hint">Los borradores se guardan solo en este navegador.</span>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js?v=20261118" defer></script>
+  <script src="../assets/js/app.js?v=20261118" defer></script>
+  <script src="../assets/js/course.js?v=20261118" defer></script>
+</body>
+</html>

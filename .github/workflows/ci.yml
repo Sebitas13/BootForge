@@ -1,0 +1,44 @@
+name: QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Build, validate and package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Verify generated files are up to date
+        run: git diff --exit-code
+
+      - name: Validate HTML
+        run: npm run check:html
+
+      - name: Check links, ids, labels and metadata
+        run: npm run check:links
+
+      - name: Check README claims
+        run: npm run check:claims
+
+      - name: Package Pages artifact
+        run: npm run package
